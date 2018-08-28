@@ -1,0 +1,30 @@
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	font-family: "Roboto Regular";
+	position: relative;
+}
+
+.main {
+	width: 100%;
+	height: auto;
+	max-width: 1200px;
+	position: relative;
+	margin: 0 auto;
+	background-color: #FCFCFC;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	background: #FFF;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 50px;
+	background-color: #9CC283;
+}

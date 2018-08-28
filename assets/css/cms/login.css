@@ -1,0 +1,87 @@
+#titulo {
+    font-size: 112px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "Roboto Black";
+    padding-top: 200px;
+}
+
+#titulo span {
+    display: block;
+    line-height: 120px;
+}
+
+#subtitulo {
+    font-size: 32px;
+    color: rgb(149, 149, 149);
+    font-family: "Roboto Regular";
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#form-login>input {
+    display: block;
+    width: 724px;
+    height: 69px;
+    border-radius: 5px;
+    background-color: #eeeeee;
+    outline: none;
+    border: none;
+    margin: 20px auto;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 21px;
+}
+
+#form-login>input::placeholder {
+    color: rgb(212, 212, 212);
+    font-family: "Roboto Light";
+    font-weight: bold;
+    font-style: italic;
+}
+
+#form-login #rodape {
+    font-size: 21px;
+    font-family: "Roboto Bold";
+    font-weight: bold;
+}
+
+#form-login #rodape>a {
+    color: rgb(149, 149, 149);
+    text-decoration: none;
+}
+
+#form-login #rodape input {
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #414141;
+    outline: none;
+    border: none;
+    float: right;
+    color: rgb(255, 255, 255);
+    font-size: inherit;
+}
+
+#texto-nao-tenho-conta {
+    font-size: 21px;
+    line-height: 32px;
+    color: rgb(0,0,0);
+    font-family: "Segoe UI";
+    text-align: center;
+    margin-top: 100px;
+    max-width: 800px;
+}
+
+#botao-voltar {
+    font-size: 28px;
+    color: rgb(0,0,0);
+    font-family: "Segoe UI";
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    text-decoration: none;
+}
