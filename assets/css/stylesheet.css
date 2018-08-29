@@ -1,0 +1,1147 @@
+/* FOLHA DE ESTILO GERAL
+
+SITE: FOOD 4FIT;
+CRIADO POR: EQUIPE ARISCODE
+GUIA DE USO DE CLASSES: URL
+
+*/
+
+/* CORPO DO HTML */
+*{
+  	margin: 0;
+  	padding: 0;
+}
+body{
+	/*Corpo do site*/
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	font-family: "Roboto Regular";
+	position: relative;
+}
+.main{
+	/*Container-mãe do block do site*/
+	width: 100%;
+	height: auto;
+	max-width: 1200px;
+	position: relative;
+	margin: 0 auto;
+	background-color: #FCFCFC;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+::-webkit-scrollbar{
+	/*Estilização da scrollbar*/
+	width: 6px;
+	background: #FFF;
+}
+::-webkit-scrollbar-thumb{
+	/*Estilização da scrollbar*/
+	border-radius: 50px;
+	background-color: #9CC283;
+}
+/*==========================================*/
+
+/* TÍTULO DA PÁGINA */
+#page-title{
+	/*Título da página*/
+	display: block;
+	font-size: 18px;
+	letter-spacing: -0.2px;
+	font-family: "Roboto Bold";
+	color: #000;
+	padding: 30px;
+	text-align: center;
+	padding-bottom: 0px;
+}
+#page-title::after{
+	/*Barra separada do título da página*/
+	content: "";
+	display: block;
+	width: 30px;
+	height: 3px;
+	margin: auto;
+	border-radius: 30px;
+	background-color: #000;
+	margin-top: 8px;
+}
+/*==========================================*/
+
+/* BARRA DE NAVEGAÇÃO */
+#navbar-flat{
+	/*container-mãe da barra de navegação*/
+	width: 100%;
+	height: auto;
+	background-color: #FCFCFC;
+	z-index: 89999;
+}
+#navbar-flat-content{
+	/*container-filho da barra de navegação*/
+	width: 100%;
+	max-width: 1200px;
+	margin: auto;
+	position: relative;
+}
+#navbar-flat-logo{
+	/*Nome da loja*/
+	font-family: "Roboto Black";
+	font-weight: lighter;
+	display: block;
+	font-size: 28px;
+	color: #9CC283;
+	text-align: center;
+	padding: 12px;
+	margin: 0;
+}
+#navbar-flat-search{
+	/*Container-mãe da barra de pesquisa*/
+	width: 95%;
+	max-width: 520px;
+	margin: auto;
+	height: auto;
+}
+#navbar-flat-search input{
+	/*Barra de pesquisa*/
+	width: 100%;
+	height: 40px;
+	border-radius: 50px;
+	text-indent: 15px;
+	background-color: transparent;
+	border: 2px solid #9CC283;
+	outline: none;
+	font-family: "Roboto Regular";
+	margin-bottom: 20px;
+}
+#navbar-flat-login{
+	/*Botão de Usuário*/
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	overflow: hidden;
+}
+#navbar-flat-login img{
+	/*Imagem botão usuário*/
+	max-width: 100%;
+	max-height: 100%;
+	display: block;
+	cursor: pointer;
+}
+#user-bubble{
+	/*Balão que informa notificações no botão Usuário*/
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #E83131;
+	cursor: pointer;
+}
+#user-bubble span{
+	/*Texto no balão*/
+	font-size: 10px;
+	color: #FFF;
+}
+#buycart-bubble{
+	/*Balão de itens no carrinho*/
+	position: absolute;
+	top: 5px;
+	right: 55px;
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #E83131;
+	cursor: pointer;
+}
+#buycart-bubble span{
+	/*Texto no balão*/
+	font-size: 10px;
+	color: #FFF;
+}
+#navbar-flat-menu{
+	/*Botão do menu hamburguer*/
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	overflow: hidden;
+}
+#navbar-flat-menu img{
+	/*Imagem do menu hamburguer*/
+	max-width: 100%;
+	max-height: 100%;
+	display: block;
+	cursor: pointer;
+}
+#navbar-flat-buycart{
+	/*Botão do carrinho*/
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 17px;
+	right: 65px;
+	overflow: hidden;
+}
+#navbar-flat-buycart img{
+	/*Imagem do carrinho*/
+	max-width: 100%;
+	max-height: 100%;
+	display: block;
+	cursor: pointer;
+}
+/*==========================================*/
+
+/* RODAPÉ */
+#footer-flat{
+	/*Container-mãe do rodapé*/
+	width: 100%;
+	background: #FCFCFC;
+}
+#footer-flat-content{
+	/*Container-filho do rodapé*/
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	height: auto;
+}
+#footer-flat-content span{
+	/*Nome da Loja no rodapé*/
+	display: block;
+	font-size: 38px;
+	font-family: "Roboto Black";
+	text-align: center;
+	color: #000;
+	padding-top: 20px;
+}
+#footer-flat-content p{
+	/*Descrição no rodapé*/
+	font-size: 18px;
+	font-family: "Roboto Regular";
+	text-align: center;
+	color: #000;
+	padding: 20px;
+}
+#footer-flat-content b{
+	/*Copyright*/
+	display: block;
+	font-size: 21px;
+	font-family: "Roboto Bold";
+	text-align: center;
+	color: #000;
+	padding-bottom: 20px;
+}
+/*==========================================*/
+
+/*
+	MENU LATERAL ESQUERDO
+	Menu expansivo reservado para funcionalidades referentes ao conteúdo do site.
+*/
+#sidebar-left{
+	/*Container do menu lateral*/
+	width: 100%;
+	max-width: 350px;
+	height: 100vh;
+	background: #FCFCFC;
+	box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.1);
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	overflow-y: scroll;
+}
+#sidebar-left-close{
+	/*Botão para fechar o menu lateral*/
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	transition: 200ms ease-in-out;
+}
+#sidebar-left-close img{
+	/*Imagem do "X" do botão*/
+	max-width: 100%;
+	max-height: 100%;
+	display: block;
+	cursor: pointer;
+}
+#sidebar-left-close:hover{
+	/*Ação ao mover o mouse no botão fechar*/
+	transform: scale(1.02);
+}
+#sidebar-left h2{
+	/*Nome da loja no topo do menu*/
+	font-family: "Roboto Black";
+	font-weight: lighter;
+	font-size: 28px;
+	color: #9CC283;
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 20px;
+	padding-bottom: 0px;
+}
+#sidebar-left h3{
+	/*Título com opacidade para sessões dentro do menu lateral*/
+	font-family: "Roboto Light";
+	font-size: 16px;
+	color: #AAAAAA;
+}
+.filter-box{
+	/*Caixa com filtros de pesquisa*/
+	width: 90%;
+	height: auto;
+	max-height: 180px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background-color: #F5F5F5;
+	border-radius: 5px;
+}
+.sidebar-filter-label{
+	/*Título da caixa de filtros de pesquisa*/
+	font-family: "Roboto Medium";
+	font-size: 18px;
+	color: #000;
+	display: block;
+}
+.sidebar-separator{
+	/*Separador interno dos menus laterais*/
+	width: 85%;
+	height: 2px;
+	background: #ddd;
+	margin: 20px auto;
+}
+.sidebar-left-list{
+	/*Lista com UL para os menus laterais*/
+	margin: 0 auto;
+	padding-top: 0px;
+	list-style-type: none;
+}
+.sidebar-left-list li a{
+	/*Links das listas dos menus laterais*/
+	display: block;
+	text-decoration: none;
+	color: #000;
+	font-family: "Roboto Regular";
+	padding: 5px;
+}
+/*==========================================*/
+
+/*
+	MENU LATERAL DIREITO
+	Menu expansivo reservado para funcionalidades referentes ao usuário logado.
+*/
+#sidebar-right{
+	/*Container do menu lateral*/
+	width: 100%;
+	max-width: 350px;
+	height: 100vh;
+	background: #FCFCFC;
+	box-shadow: -5px 0px 5px 0px rgba(0,0,0,0.1);
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+#sidebar-right-close{
+	/*Botão para fechar o menu lateral*/
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	transition: 200ms ease-in-out;
+}
+#sidebar-right-close img{
+	/*Imagem do "X" do botão*/
+	max-width: 100%;
+	max-height: 100%;
+	display: block;
+	cursor: pointer;
+}
+#sidebar-right-close:hover{
+	/*Ação ao mover o mouse no botão fechar*/
+	transform: scale(1.02);
+}
+#sidebar-right h2{
+	/*Nome da loja no topo do menu*/
+	font-family: "Roboto Black";
+	font-size: 28px;
+	color: #9CC283;
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 20px;
+	padding-bottom: 0px;
+}
+.sidebar-right-list{
+	/*Lista com UL para os menus laterais*/
+	margin: 0 auto;
+	padding-top: 0px;
+	list-style-type: none;
+}
+.sidebar-right-list li a{
+	/*Links das listas dos menus laterais*/
+	display: block;
+	text-decoration: none;
+	color: #000;
+	text-align: right;
+	font-family: "Roboto Regular";
+	padding: 5px;
+	position: relative;
+}
+.sidebar-right-list li a span{
+	/*Número para informar a quantidade de itens dentro de um link*/
+	position: absolute;
+	left: 30px;
+	color: #5F5F5F;
+}
+/*==========================================*/
+
+/* CABEÇALHO INDEX */
+#header-flat{
+	/*Container-mãe do cabeçalho da página index*/
+	width: 100%;
+	height: auto;
+}
+#header-flat-row1{
+	/*Container-filho do cabeçalh da indexo*/
+	width: 100%;
+	height: 300px;
+	overflow-y: hidden;
+	position: relative;
+	box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+}
+#header-flat-row1 img{
+	/*Imagem do cabeçalho da index*/
+	max-width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+#header-flat-row2{
+	/*Segundo container-filho do cabeçalho da index*/
+	width: 100%;
+	height: auto;
+	background-color: #FCFCFC;
+}
+#header-flat-overlay{
+	/*Overlay container do cabeçalho da index*/
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: left;
+	background: linear-gradient(to right, #9CC283, rgba(255,217,76,0.5));
+}
+#header-flat-overlay h2{
+	/*Título cabeçalho produto-destaqu da indexe*/
+	font-size: 38px;
+	font-family: "Roboto Bold", sans-serif;
+	color: #FFF;
+}
+#header-flat-overlay p{
+	/*Descrição cabeçalho produto-destaque da index*/
+	font-size: 16px;
+	line-height: 21px;
+	font-family: "Roboto Regular", sans-serif;
+	color: #FFF;
+	width: 35%;
+}
+#header-flat-overlay-seemore{
+	/*Container do botão de ver mais do cabeçalho da index*/
+	width: 60px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	transition: 200ms ease-in-out;
+}
+#header-flat-overlay-seemore:hover{
+	/*Ação de mover o mouse no botão*/
+	background: rgba(0,0,0,0.2);
+	cursor: pointer;
+}
+#header-flat-overlay-seemore figure{
+	/*Container da imagem do botão*/
+	width: 30px;
+	height: 30px;
+	padding: 0;
+	margin: 0 auto;
+}
+#header-flat-overlay-seemore figure img{
+	/*Imagem do botão*/
+	width: 85%;
+	height: 85%;
+	display: block;
+	margin: 0 auto;
+}
+/*==========================================*/
+
+/* GRID DO CABEÇALHO DA INDEX */
+#header-grid-container{
+	/*Container-mãe da grelha de produtos da index*/
+	width: 95%;
+	height: 100%;
+	max-width: 100%;
+	margin: 0 auto;
+	display: grid;
+	grid-auto-flow: row;
+	grid-gap: 30px 30px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	grid-auto-rows: auto;
+	grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.hl-card{
+	/*Card da grelha de produtos da index*/
+	border-radius: 10px;
+	overflow: hidden;
+	background: rgba(0,0,0,0.7);
+	box-shadow: 4px 4px 10px 4px rgba(0,0,0,0.1);
+	transition: 300ms ease-out;
+	position: relative;
+}
+.hl-card:hover{
+	/*Ação de mover o mouse no card da grelha de produtos da index*/
+	box-shadow: 4px 4px 10px 4px rgba(0,0,0,0.2);
+	cursor: pointer;
+}
+/*Cards da grelha de produtos da index*/
+.highlight-one{
+	background: linear-gradient(transparent, rgba(0,0,0,0.5)), url('../images/backgrounds/cereal.jpg');
+	background-size: cover;
+}
+.highlight-two{
+	background: linear-gradient(transparent, rgba(0,0,0,0.5)), url('../images/backgrounds/asian.jpg');
+	background-size: cover;
+}
+.highlight-three{
+	background: linear-gradient(transparent, rgba(0,0,0,0.5)), url('../images/backgrounds/fit-card.jpeg');
+	background-size: cover;
+}
+.highlight-four{
+	background: linear-gradient(transparent, rgba(0,0,0,0.5)), url('../images/backgrounds/fruits.jpg');
+	background-size: cover;
+}
+.highlight-five{
+	background: linear-gradient(transparent, rgba(0,0,0,0.5)), url('../images/backgrounds/salad.jpg');
+	background-size: cover;
+}
+.highlight-six{
+	background: linear-gradient(transparent, rgba(0,0,0,0.5)), url('../images/backgrounds/steak.jpg');
+	background-size: cover;
+}
+.dish-name{
+	/*Nome do prato da index*/
+	display: block;
+	color: #FFF;
+	font-size: 21px;
+	font-family: "Roboto Bold";
+}
+.dish-separator{
+	/*Separador do card da index*/
+	width: 30px;
+	height: 3px;
+	border-radius: 30px;
+	background-color: #fff;
+}
+.dish-description{
+	/*Descrição do prato da index*/
+	width: 60%;
+	font-size: 16px;
+	line-height: 21px;
+	font-family: "Roboto Regular";
+	color: #FFF;
+	margin-left: 30px;
+	margin-bottom: 20px;
+}
+.dish-price{
+	/*Container do preço do prato da index*/
+	max-width: 65%;
+	height: 40px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background: #E83131;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.dish-price span{
+	/*Preço do prato da index*/
+	display: block;
+	font-size: 21px;
+	color: #FFF;
+	margin-left: 20px;
+	text-align: center;
+	font-family: "Roboto Bold";
+}
+.dish-price div{
+	/*Botão de compra do prato da index*/
+	height: 25px;
+	width: 25px;
+	margin-left: 12px;
+	background: transparent;
+}
+.dish-price div img{
+	/*Imagem do botão de compra do prato da index*/
+	max-width: 100%;
+	max-height: 100%;
+	display: block;
+
+}
+/*==========================================*/
+
+/* GRID GENÉRICO */
+.generic-grid{
+	/*Container-mãe da grelha genérica responsiva*/
+	width: 95%;
+	height: 100%;
+	max-width: 100%;
+	margin: 0 auto;
+	display: grid;
+	grid-auto-flow: row;
+	grid-gap: 30px 30px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	grid-auto-rows: auto;
+	grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.generic-card{
+	/*Card da grelha genérica responsiva*/
+	max-width: 100%;
+	height: auto;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 4px 4px 10px 4px rgba(0,0,0,0.1);
+	transition: 200ms ease-in-out;
+	cursor: pointer;
+}
+.generic-card:hover{
+	/*Ação ao mover o mouse no card da grelha genérica responsiva*/
+	box-shadow: 4px 4px 10px 4px rgba(0,0,0,0.2);
+}
+.generic-card-img{
+	/*Imagem do card da grelha genérica responsiva*/
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 10px;
+	z-index: -1;
+}
+.generic-card-overlay{
+	/*Container acima do card da grelha genérica responsiva*/
+	max-width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+	overflow: hidden;
+	z-index: 99999;
+	background: linear-gradient(transparent, #9CC283);
+	box-shadow: 4px 4px 10px 4px rgba(0,0,0,0.1);
+	transition: 300ms ease-out;
+}
+.card-dish-name{
+	/*Nome do prato da grelha genérica responsiva*/
+	display: block;
+	color: #FFF;
+	font-size: 21px;
+	font-family: "Roboto Bold";
+	text-align: center;
+	padding: 70px 0px 0px 0px;
+}
+.card-dish-separator{
+	/*Separador da grelha genérica responsiva*/
+	width: 30px;
+	height: 3px;
+	margin: 10px auto;
+	border-radius: 30px;
+	background-color: #fff;
+}
+.card-dish-description{
+	/*Descrição do prato da grelha genérica responsiva*/
+	width: 60%;
+	font-size: 16px;
+	line-height: 21px;
+	font-family: "Roboto Regular";
+	color: #FFF;
+	margin: 0px auto;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.card-dish-price{
+	/*Preço do prato da grelha genérica responsiva*/
+	display: block;
+	font-size: 21px;
+	background: linear-gradient(45deg, #E83131, #FF5344);
+	color: #FFF;
+	text-align: center;
+	width: 140px;
+    padding: 5px;
+    margin: 0 auto 30px auto;
+	font-family: "Roboto Bold";
+	border-radius: 5px;
+}
+/*==========================================*/
+
+/* PAGINADOR */
+.center {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.pagination {
+    display: inline-block;
+}
+.pagination a {
+    color: #000;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-family: "Roboto Bold";
+    font-size: 14px;
+    transition: background-color .3s;
+    box-sizing: border-box;
+    border: 1px solid #DDD;
+    margin: 0 4px;
+}
+.pagination a.active {
+    background: linear-gradient(-45deg, #9CC283, rgba(255,217,76,0.5));
+    color: #FFF;
+    box-sizing: border-box;
+}
+.pagination a:hover:not(.active) {background-color: #ddd;}
+/*==========================================*/
+
+/* BAIXAR APLICATIVO NA HOME */
+#app-section{
+	/*Container-mãe da sessão do aplicativo na index*/
+	width: 100%;
+	height: auto;
+	position: relative;
+	display: flex;
+}
+#app-section-content{
+	/*Container-filho da sessão do aplicativo na index*/
+	width: 100%;
+	max-width: 600px;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+#app-section-content h2{
+	/*Título da sessão do aplicativo na index*/
+	text-align: center;
+	color: #000;
+	font-size: 32px;
+	width: 80%;
+	font-family: 'Roboto Bold';
+}
+#app-section-separator{
+	/*separador da sessão do aplicativo na index*/
+	width: 80px;
+	height: 3px;
+	background: #000;
+	border-radius: 30px;
+}
+#app-section-content p{
+	/*Descrição da sessão do aplicativo na index*/
+	width: 70%;
+	font-size: 18px;
+	font-family:'Roboto Regular';
+	line-height: 23px;
+	text-align: center;
+}
+#app-section-image{
+	/*container da imagem do smartphone da sessão do aplicativo na index*/
+	width: 100%;
+	max-width: 600px;
+	height: auto;
+}
+#app-section-image img{
+	/*Imagem do smartphone da sessão do aplicativo na index*/
+	max-width: 100%;
+}
+#a-s-i-left{
+	/*Imagem à esquerda*/
+	display: block;
+}
+#a-s-i-center{
+	/*Imagem ao centro*/
+	display: none;
+}
+/*==========================================*/
+
+/* CASOS DE SUCESSO - JANELA DE ACESSO */
+#success-cases-section{
+	/*Container-mãe da sessão de casos de sucesso*/
+	width: 100%;
+	background: linear-gradient(#FCFCFC, #F9F9F9);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+#success-cases-content{
+	/*Container-filho da sessão de casos de sucesso*/
+	width: 80%;
+	max-width: 800px;
+	background-image: url('../images/backgrounds/img1.jpg');
+	background-size: cover;
+	border-radius: 10px;
+	height: auto;
+	padding: 0;
+	margin: 120px auto;
+	box-shadow: 4px 4px 10px 4px rgba(0,0,0,0.1);
+}
+#success-cases-content h2{
+	/*Título da sessão de casos de sucesso*/
+	color: #FFF;
+	font-size: 21px;
+	font-family: 'Roboto Bold';
+}
+#success-cases-separator{
+	/*Separador da sessão de casos de sucesso*/
+	width: 80px;
+	height: 3px;
+	background: #FFF;
+	border-radius: 50px;
+}
+#success-cases-content p{
+	/*Descrição da sessão de casos de sucesso*/
+	color: #FCFCFC;
+	font-size: 18px;
+	line-height: 24px;
+}
+/*==========================================*/
+
+/* BOTÃO GENÉRICO */
+.btn-generic{
+	/*Botão genérico*/
+	width: 120px;
+	height: auto;
+	background: #9CC283;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transition: 300ms ease-out;
+}
+.btn-generic span{
+	/*Texto do botão genérico*/
+	display: block;
+	color: #FFF;
+	font-family: "Roboto Bold";
+	font-size: 16px;
+	padding: 10px;
+}
+.btn-generic:hover{
+	/*Ação ao mover o mouse no botão genérico*/
+	transform: scale(1.02);
+	cursor: pointer;
+}
+/*==========================================*/
+
+/* SEPARADOR GENÉRICO */
+.separator-black{
+	/*Separador genérico preto*/
+	width: 80px;
+	height: 3px;
+	background-color: #000;
+	border-radius: 50px;
+}
+.separator-white{
+	/*Separador genérico branco*/
+	width: 80px;
+	height: 3px;
+	background-color: #FFF;
+	border-radius: 50px;
+}
+/*==========================================*/
+
+/* POSICIONADORES - MARGIN */
+
+/*Margin automático*/
+.margin-auto{
+	margin: 0 auto;
+}
+.margin-top-auto{
+	margin-top: auto;
+}
+.margin-bottom-auto{
+	margin-bottom: auto;
+}
+.margin-right-auto{
+	margin-right: auto;
+}
+.margin-left-auto{
+	margin-left: auto;
+}
+
+/*Margin em 0px*/
+.margin-top-0px{
+	margin-top: 0px;
+}
+.margin-bottom-0px{
+	margin-bottom: 0px;
+}
+.margin-right-0px{
+	margin-right: 0px;
+}
+.margin-left-0px{
+	margin-left: 0px;
+}
+
+/*Margin em 15px*/
+.margin-top-15px{
+	margin-top: 15px;
+}
+.margin-bottom-15px{
+	margin-bottom: 15px;
+}
+.margin-right-15px{
+	margin-right: 15px;
+}
+.margin-left-15px{
+	margin-left: 15px;
+}
+
+/*Margin em 30px*/
+.margin-top-30px{
+	margin-top: 30px;
+}
+.margin-bottom-30px{
+	margin-bottom: 30px;
+}
+.margin-right-30px{
+	margin-right: 30px;
+}
+.margin-left-30px{
+	margin-left: 30px;
+}
+
+/*Margin em 60px*/
+.margin-top-60px{
+	margin-top: 60px;
+}
+.margin-bottom-60px{
+	margin-bottom: 60px;
+}
+.margin-right-60px{
+	margin-right: 60px;
+}
+.margin-left-60px{
+	margin-left: 60px;
+}
+/*==========================================*/
+
+/* POSICIONADORES - PADDING */
+
+/*Padding automático*/
+.padding-top-auto{
+	padding-top: auto;
+}
+.padding-bottom-auto{
+	padding-bottom: auto;
+}
+.padding-right-auto{
+	padding-right: auto;
+}
+.padding-left-auto{
+	padding-left: auto;
+}
+
+/*Padding em 0px*/
+.padding-top-0px{
+	padding-top: 0px;
+}
+.padding-bottom-0px{
+	padding-bottom: 0px;
+}
+.padding-right-0px{
+	padding-right: 0px;
+}
+.padding-left-0px{
+	padding-left: 0px;
+}
+
+/*Padding em 15px*/
+.padding-top-15px{
+	padding-top: 15px;
+}
+.padding-bottom-15px{
+	padding-bottom: 15px;
+}
+.padding-right-15px{
+	padding-right: 15px;
+}
+.padding-left-15px{
+	padding-left: 15px;
+}
+
+/*Padding em 30px*/
+.padding-top-30px{
+	padding-top: 30px;
+}
+.padding-bottom-30px{
+	padding-bottom: 30px;
+}
+.padding-right-30px{
+	padding-right: 30px;
+}
+.padding-left-30px{
+	padding-left: 30px;
+}
+
+/*Padding em 60px*/
+.padding-top-60px{
+	padding-top: 60px;
+}
+.padding-bottom-60px{
+	padding-bottom: 60px;
+}
+.padding-right-60px{
+	padding-right: 60px;
+}
+.padding-left-60px{
+	padding-left: 60px;
+}
+/*==========================================*/
+
+/*==========================================*/
+
+/* ANIMAÇÕES */
+@-webkit-keyframes fadeIn{
+	from{
+    	opacity: 0;
+  	}
+ 	to{
+    	opacity: 1;
+  	}
+}
+@keyframes fadeIn {
+  	from {
+    	opacity: 0;
+  	}
+  	to{
+    	opacity: 1;
+  	}
+}
+.fadeIn {
+ 	-webkit-animation-name: fadeIn; animation-name: fadeIn;
+}
+@-webkit-keyframes fadeInDown{
+	from{
+    	opacity: 0;
+    	-webkit-transform: translate3d(0, -100%, 0); transform: translate3d(0, -100%, 0);
+  	}
+  	to{
+    	opacity: 1;
+    	-webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0);
+   	}
+}
+@keyframes fadeInDown{
+  	from{
+    	opacity: 0;
+    	-webkit-transform: translate3d(0, -100%, 0); transform: translate3d(0, -100%, 0);
+  	}
+  	to{
+    	opacity: 1;
+    	-webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0);
+  	}
+}
+.fadeInDown{
+	-webkit-animation-name: fadeInDown; animation-name: fadeInDown;
+}
+@-webkit-keyframes fadeInUp{
+  	from{
+    	opacity: 0;
+    	-webkit-transform: translate3d(0, 100%, 0); transform: translate3d(0, 100%, 0);
+  	}
+  	to{
+  		opacity: 1;
+    	-webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0);
+	}
+}
+@keyframes fadeInUp{
+  	from{
+    	opacity: 0;
+    	-webkit-transform: translate3d(0, 50px, 0); transform: translate3d(0, 50px, 0);
+  	}
+  	to{
+    	opacity: 1;
+   		-webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0);
+  	}
+}
+.fadeInUp{
+  	-webkit-animation-name: fadeInUp; animation-name: fadeInUp;
+  	transition-duration: 200ms ease-out;
+}
+.animate{
+	-webkit-animation-duration: 1s; animation-duration: 1s;
+	-webkit-animation-fill-mode: both; animation-fill-mode: both;
+}
+.animate.infinite {
+	-webkit-animation-iteration-count: infinite; animation-iteration-count: infinite;
+}
+.animate.delay-1s {
+	-webkit-animation-delay: 1s; animation-delay: 1s;
+}
+.animate.delay-2s {
+	-webkit-animation-delay: 2s; animation-delay: 2s;
+}
+.animate.delay-3s {
+	-webkit-animation-delay: 3s; animation-delay: 3s;
+}
+.animate.fast {
+	-webkit-animation-duration: 800ms; animation-duration: 800ms;
+}
+.animate.faster {
+	-webkit-animation-duration: 500ms; animation-duration: 500ms;
+}
+.animate.slow {
+	-webkit-animation-duration: 2s; animation-duration: 2s;
+}
+.animate.slower {
+  	-webkit-animation-duration: 3s; animation-duration: 3s;
+}
+@media (prefers-reduced-motion) {
+  	.animate{
+	    -webkit-animation: unset !important; animation: unset !important;
+	    -webkit-transition: none !important; transition: none !important;
+  	}
+}
+/*==========================================*/
