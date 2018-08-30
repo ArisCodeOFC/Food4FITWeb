@@ -19,7 +19,6 @@
         <link rel="stylesheet" href="../assets/css/cms/login.css">
 	    <script src="../assets/js/jquery-3.3.1.min.js"></script>
 	    <script src="../assets/js/cms/main.js"></script>
-	    <script src="../assets/js/cms/login.js"></script>
     </head>
     <body>
         <a id="botao-voltar" href="login.php">Voltar</a>
