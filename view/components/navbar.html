@@ -1,11 +1,11 @@
-<nav id="navbar-flat">
+<nav id="navbar-flat"><!-- BARRA DE NAVEGAÇÃO -->
 	<div id="navbar-flat-content">
 		<span id="navbar-flat-logo">FOOD 4FIT</span>
 		<div id="navbar-flat-search">
 			<input type="text" placeholder="Pesquise">
 		</div>
 
-		<div id="navbar-flat-menu">
+		<div id="navbar-flat-menu" onclick="sidenavLeft();">
 			<img src="assets/images/icons/menu.svg" alt="Menu">
 		</div>
 		<div id="navbar-flat-buycart">
@@ -14,11 +14,61 @@
 		<div id="buycart-bubble">
 			<span>2</span>
 		</div>
-		<div id="navbar-flat-login">
+		<div id="navbar-flat-login" onclick="sidenavRight();">
 			<img src="assets/images/icons/user.svg" alt="Login">
 		</div>
-		<div id="user-bubble">
+		<div id="user-bubble" onclick="sidenavRight();">
 			<span>12</span>
 		</div>
 	</div>
 </nav>
+<aside id="sidebar-left"><!-- MENU LATERAL ESQUERDO -->
+	<h2>FOOD 4FIT</h2>
+	<div class="sidebar-separator"></div>
+	<ul class="sidebar-left-list padding-left-30px">
+		<li><a href="index.php">Página Inicial</a></li>
+		<li><a href="">Pratos</a></li>
+		<li><a href="">Fit Session</a></li>
+		<li><a href="sobre.php">Sobre Nós</a></li>
+		<li><a href="contato.php">Fale Conosco</a></li>
+	</ul>
+	<div class="sidebar-separator"></div>
+	<ul class="sidebar-left-list padding-left-30px">
+		<li><a href="">Publicações</a></li>
+		<li><a href="">Dicas de Saúde</a></li>
+		<li><a href="">Personal Fitness</a></li>
+	</ul>
+	<div id="sidebar-left-close" onclick="sidenavLeft();">
+		<img src="assets/images/simbols/close.svg" alt="Fechar Menu">
+	</div>
+</aside>
+<aside id="sidebar-right"><!-- MENU LATERAL DIREITO -->
+	<h2>FOOD 4FIT</h2>
+	<div class="sidebar-separator"></div>
+	<ul class="sidebar-right-list padding-right-30px">
+		<li><a href="">Meu Perfil</a></li>
+		<li><a href="">Pedidos</a></li>
+		<li><a href="">Minhas Dietas</a></li>
+		<li><a href="">Favoritos</a></li>
+		<li><a href="">Diário de Bordo</a></li>
+		<li><a href=""><span>12</span>Notificações</a></li>
+	</ul>
+	<div class="sidebar-separator"></div>
+	<ul class="sidebar-right-list padding-right-30px">
+		<li><a href="">Meus Comentários</a></li>
+		<li><a href="">Minhas Publicações</a></li>
+		<li><a href="">Meus Pratos</a></li>
+		<li><a href="">Agenda</a></li>
+	</ul>
+	<div class="sidebar-separator"></div>
+	<ul class="sidebar-right-list padding-right-30px">
+		<li><a href="">Configurações</a></li>
+		<li><a href="">Termos de Uso</a></li>
+		<li><a href="">Logout</a></li>
+	</ul>
+	<div class="sidebar-separator"></div>
+
+	<div id="sidebar-right-close" onclick="sidenavRight();">
+		<img src="assets/images/simbols/close.svg" alt="Fechar Menu">
+	</div>
+</aside>

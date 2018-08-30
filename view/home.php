@@ -13,7 +13,7 @@
 	<script src="assets/js/scripts.js"></script>
 </head>
 <body>
-	<?php require_once("components/navbar.html") ?><!-- BARRA DE NAVEGAÇÃO VIA PHP -->
+	<?php require_once("components/navbar.html"); ?><!-- BARRA DE NAVEGAÇÃO VIA PHP -->
 	<section class="main"><!-- CONTAINER-MÃE DO SITE -->
 		<header id="header-flat"><!-- CABEÇALHO DA INDEX -->
 			<div id="header-flat-row1" class="animate fadeInUp"><!-- PRIMEIRO CONTAINER-FILHO DO CABEÇALHO DA INDEX -->
@@ -126,9 +126,6 @@
 			</div>
 		</article>
 	</section>
-	<?php require_once("components/sidebar-left.html"); ?><!-- MENU LATERAL ESQUERDO VIA PHP -->
-	<?php require_once("components/sidebar-right.html"); ?><!-- MENU LATERAL DIREITO VIA PHP -->
-
 	<?php require_once("components/footer.html"); ?><!-- RODAPÉ VIA PHP -->
 </body>
 </html>

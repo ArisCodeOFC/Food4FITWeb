@@ -31,6 +31,7 @@ body{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	z-index: 1;
 }
 ::-webkit-scrollbar{
 	/*Estilização da scrollbar*/
@@ -223,7 +224,6 @@ body{
 	font-family: "Roboto Black";
 	text-align: center;
 	color: #000;
-	padding-top: 20px;
 }
 #footer-flat-content p{
 	/*Descrição no rodapé*/
@@ -231,7 +231,6 @@ body{
 	font-family: "Roboto Regular";
 	text-align: center;
 	color: #000;
-	padding: 20px;
 }
 #footer-flat-content b{
 	/*Copyright*/
@@ -240,7 +239,6 @@ body{
 	font-family: "Roboto Bold";
 	text-align: center;
 	color: #000;
-	padding-bottom: 20px;
 }
 /*==========================================*/
 
@@ -261,6 +259,7 @@ body{
 	left: 0;
 	bottom: 0;
 	overflow-y: scroll;
+	z-index: 99999;
 }
 #sidebar-left-close{
 	/*Botão para fechar o menu lateral*/
@@ -292,29 +291,6 @@ body{
 	margin: 0 auto;
 	padding-top: 20px;
 	padding-bottom: 0px;
-}
-#sidebar-left h3{
-	/*Título com opacidade para sessões dentro do menu lateral*/
-	font-family: "Roboto Light";
-	font-size: 16px;
-	color: #AAAAAA;
-}
-.filter-box{
-	/*Caixa com filtros de pesquisa*/
-	width: 90%;
-	height: auto;
-	max-height: 180px;
-	overflow-x: hidden;
-	overflow-y: auto;
-	background-color: #F5F5F5;
-	border-radius: 5px;
-}
-.sidebar-filter-label{
-	/*Título da caixa de filtros de pesquisa*/
-	font-family: "Roboto Medium";
-	font-size: 18px;
-	color: #000;
-	display: block;
 }
 .sidebar-separator{
 	/*Separador interno dos menus laterais*/
@@ -355,6 +331,7 @@ body{
 	top: 0;
 	right: 0;
 	bottom: 0;
+	z-index: 99999;
 }
 #sidebar-right-close{
 	/*Botão para fechar o menu lateral*/
@@ -804,6 +781,76 @@ body{
 }
 /*==========================================*/
 
+/* SESSÃO SOBRE NÓS */
+#about-us-block{
+    /*Sessao-filho do cabeçalho da página sobre*/
+    width: 100%;
+	height: auto;
+}
+
+#about-us-content{
+    /*Container-filho do cabeçalho da página sobre*/
+    width: 90%;
+    max-width: 1200px;
+	height: auto;
+}
+
+#text-about-us{
+    /*Container-filho da introdução da página sobre*/
+    width: 100%;
+	height: auto;
+}
+.about-us-title{
+    /*Título da sessão*/
+    font-family: "Roboto Bold";
+    font-size: 21px;
+    color: #000;
+}
+.about-us-text{
+    /*Texto da sessão*/
+    font-size: 16px;
+    line-height: 24px;
+    color: #4F4F4F;
+    font-family: "Roboto Regular";
+}
+.about-us-image-container{
+    /*Container-mãe das imagens da página sobre*/
+    width: 100%;
+    max-width: 1200px;
+    height: 300px;
+    padding: 0;
+}
+.about-us-image-container img{
+    /*Imagem da página sobre*/
+    max-width: 100%;
+    display: block;
+}
+#physical-structure-content{
+    /*Container-filho da sessão de endereços físicos na página sobre*/
+    width: 90%;
+    max-width: 1200px;
+	height: auto;
+}
+
+#text-physical-structure{
+    /*Texto da sessão de endereços físicos na página sobre*/
+    width: 90%;
+    max-width: 1200px;
+	height: auto;
+}
+#online-service-content{
+    /*Container-mãe da sessão de serviços online na página sobre*/
+    width: 90%;
+    max-width: 1200px;
+	height: auto;
+}
+#text-online-service{
+    width: 90%;
+    max-width: 1200px;
+	height: auto;
+}
+/*==========================================*/
+
 /* CASOS DE SUCESSO - JANELA DE ACESSO */
 #success-cases-section{
 	/*Container-mãe da sessão de casos de sucesso*/
@@ -858,6 +905,8 @@ body{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	border: none;
+	outline: none;
 	transition: 300ms ease-out;
 }
 .btn-generic span{
@@ -923,6 +972,20 @@ body{
 }
 .margin-left-0px{
 	margin-left: 0px;
+}
+
+/*Margin em 5px*/
+.margin-top-5px{
+	margin-top: 5px;
+}
+.margin-bottom-5px{
+	margin-bottom: 5px;
+}
+.margin-right-5px{
+	margin-right: 5px;
+}
+.margin-left-5px{
+	margin-left: 5px;
 }
 
 /*Margin em 15px*/
@@ -998,6 +1061,20 @@ body{
 	padding-left: 0px;
 }
 
+/*Padding em 5px*/
+.padding-top-5px{
+	padding-top: 5px;
+}
+.padding-bottom-5px{
+	padding-bottom: 5px;
+}
+.padding-right-5px{
+	padding-right: 5px;
+}
+.padding-left-5px{
+	padding-left: 5px;
+}
+
 /*Padding em 15px*/
 .padding-top-15px{
 	padding-top: 15px;
@@ -1041,6 +1118,78 @@ body{
 }
 /*==========================================*/
 
+/* LARGURAS */
+.width-full{
+  width: 95%;
+  max-width: 1200px;
+}
+.width-big{
+  width: 95%;
+  max-width: 1000px;
+}
+.width-medium{
+  width: 95%;
+  max-width: 900px;
+}
+.width-small{
+  width: 95%;
+  max-width: 600px;
+}
+/*==========================================*/
+
+/* FORMULÁRIOS */
+.form-generic{
+  height: auto;
+  position: relative;
+}
+.form-generic-content{
+  height: auto;
+}
+.label-generic{
+  font-size: 18px;
+  font-family: "Roboto Medium";
+  color: #000;
+  display: block;
+}
+.label-rdo{
+  font-size: 16px;
+  font-family: "Roboto Regular";
+  color: #000;
+}
+.input-generic{
+  width: 100%;
+  border-radius: 5px;
+  display: block;
+  background-color: #E8E8E8;
+  border: none;
+  outline: none;
+  height: 40px;
+  text-indent: 15px;
+  font-family: "Roboto Regular";
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+input[type=radio]{
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.textarea-generic{
+  width: 100%;
+  resize: none;
+  height: 150px;
+  background-color: #E8E8E8;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Roboto Regular";
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  padding: 15px;
+}
 /*==========================================*/
 
 /* ANIMAÇÕES */
