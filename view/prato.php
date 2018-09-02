@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Sobre a Food 4fit</title>
+	<title>Nome do Prato - Food 4fit</title>
 	<link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
 	<link rel="stylesheet" href="assets/css/stylesheet.css">
 	<link rel="stylesheet" href="assets/css/mobile-stylesheet.css">
@@ -52,7 +52,7 @@
                     <img src="assets/images/icons/credit-card.svg" src="Bandeira">
                 </div>
                 <div class="buy-button margin-left-15px">
-                    <span>Comprar</span>
+                    <span class="padding-right-5px">Comprar</span>
                     <div class="buy-button-image">
                         <img src="assets/images/icons/shopping-cart-white.svg" alt="Comprar">
                     </div>
@@ -85,20 +85,20 @@
                 <span class="margin-left-30px">Nome da Subcategoria</span>
 
                 <h2 class="product-view-info-column-title margin-top-30px margin-left-30px margin-bottom-15px">Peso/Líquido:</h2>
-                <span class="margin-left-30px">0,00 mg/kg</span>
-                <span class="margin-left-30px margin-top-5px">000 L/mL</span>
+                <span class="weight margin-left-30px">0,00 mg/kg</span>
+                <span class="weight margin-left-30px margin-top-5px">000 L/mL</span>
             </div>
             <div class="product-view-info-column">
                 <h2 class="product-view-info-column-title margin-left-30px margin-bottom-15px">Informações Nutricionais</h2>
                 <ul class="product-view-info-column-list margin-left-30px">
-                    <li>Valor Energético: 000 kcal = 000 kJ</li>
-                    <li>Carboidratos: 000 g</li>
-                    <li>Proteínas: 000 g</li>
-                    <li>Gorduras Totais: 000 g</li>
-                    <li>Gorduras Saturadas: 000 g</li>
-                    <li>Gorduras trans: 000 g</li>
-                    <li>Fibra Alimentar: 000 g</li>
-                    <li>Sódio: 000 mg</li>
+                    <li><b>Valor Energético:</b> 000 kcal = 000 kJ</li>
+                    <li><b>Carboidratos:</b> 000 g</li>
+                    <li><b>Proteínas:</b> 000 g</li>
+                    <li><b>Gorduras Totais:</b> 000 g</li>
+                    <li><b>Gorduras Saturadas:</b> 000 g</li>
+                    <li><b>Gorduras trans:</b> 000 g</li>
+                    <li><b>Fibra Alimentar:</b> 000 g</li>
+                    <li><b>Sódio:</b> 000 mg</li>
                 </ul>
             </div>
         </section>

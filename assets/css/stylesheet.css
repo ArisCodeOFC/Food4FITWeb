@@ -242,6 +242,56 @@ body{
 }
 /*==========================================*/
 
+/* CHECKBOX ESTILIZADO */
+.switch_box{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 45px;
+    justify-content: center;
+    align-items: center;
+}
+input[type="checkbox"].switch-styled{
+    font-size: 30px;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    width: 45px;
+    height: 26px;
+    background: #ddd;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+input[type="checkbox"].switch-styled:checked{
+    background: #9CC823;
+}
+
+input[type="checkbox"].switch-styled:after{
+    position: absolute;
+    content: "";
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #fff;
+    -webkit-box-shadow: 0 0 .25em rgba(0,0,0,.3);
+            box-shadow: 0 0 .25em rgba(0,0,0,.3);
+    -webkit-transform: scale(.7);
+            transform: scale(.7);
+    left: 0;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+input[type="checkbox"].switch-styled:checked:after{
+    left: calc(100% - 26px);
+}
+/*==========================================*/
+
 /*
 	MENU LATERAL ESQUERDO
 	Menu expansivo reservado para funcionalidades referentes ao conteúdo do site.
@@ -900,7 +950,7 @@ body{
 	width: 120px;
 	height: auto;
 	background: #9CC283;
-	border-radius: 10px;
+	border-radius: 5px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
