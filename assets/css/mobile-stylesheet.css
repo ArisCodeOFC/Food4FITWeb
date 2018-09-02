@@ -1,9 +1,12 @@
 @media screen and (max-device-width: 968px) {
-
+	#shopping-cart-confirm-block{
+	    flex-direction: column;
+	}
 }
 @media screen and (max-width: 968px) {
-
-
+	#shopping-cart-confirm-block{
+	    flex-direction: column;
+	}
 }
 /*--------------------------------------------------*/
 @media screen and (max-device-width: 768px) {

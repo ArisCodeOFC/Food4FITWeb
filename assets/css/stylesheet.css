@@ -1196,7 +1196,7 @@ input[type="checkbox"].switch-styled:checked:after{
 }
 .label-generic{
   font-size: 18px;
-  font-family: "Roboto Medium";
+  font-family: "Roboto Regular";
   color: #000;
   display: block;
 }
