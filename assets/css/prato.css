@@ -1,0 +1,212 @@
+#product-view-block{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+}
+#product-view-image-container{
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    box-sizing: border-box;
+    border: 30px solid #FCFCFC;
+    background-color: #FCFCFC;
+}
+#product-view-image-carrousel{
+    width: 100%;
+    height: auto;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.next-image{
+    width: 25%;
+    max-height: 130px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.next-image img{
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+#product-view-image{
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+}
+/* ======================================================== */
+#product-view-info-container{
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    box-sizing: border-box;
+    background-color: #FCFCFC;
+}
+#product-view-dish-name{
+    font-size: 28px;
+    color: #000;
+    font-family: 'Roboto Bold';
+}
+#product-view-dish-code{
+    font-size: 14px;
+    color: #7f7f7f;
+    font-family: 'Roboto Regular';
+    display: block;
+}
+.avaliation-stars{
+    height: auto;
+    width: 125px;
+    display: flex;
+    justify-content: space-between;
+}
+.avaliation-stars-image{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+#product-view-price{
+    font-size: 28px;
+    font-family: 'Roboto Bold';
+    display: block;
+    color: #000;
+}
+#product-view-price-descrip{
+    font-size: 14px;
+    color: #7F7F7F;
+    display: block;
+}
+#product-view-price-full{
+    font-size: 32px;
+    font-family: 'Roboto Bold';
+}
+#product-view-price-full span{
+    font-size: 21px;
+    color: #282828;
+    font-family: 'Roboto Regular';
+}
+#credit-card-flag{
+    width: 38px;
+    height: auto;
+    position: relative;
+}
+#credit-card-flag img{
+    max-width: 100%;
+    display: block;
+}
+.buy-button{
+    width: 140px;
+    height: 50px;
+    background: #9CC283;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.buy-button span{
+    font-size: 18px;
+    font-family: 'Roboto Bold';
+    color: #FFF;
+}
+.buy-button-image{
+    width: 18px;
+    height: 18px;
+}
+.buy-button-image img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+/* ======================================================== */
+.social-share{
+    height: auto;
+    width: 114px;
+    display: flex;
+    justify-content: space-between;
+}
+.social-share-image{
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+}
+/* ======================================================== */
+#product-view-info-block{
+    width: 100%;
+    height: auto;
+    background: #FCFCFC;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.product-view-info-column{
+    width: 33.33%;
+    height: auto;
+}
+.product-view-info-column-title{
+    font-family: 'Roboto Medium';
+    font-size: 21px;
+}
+.product-view-info-column-list{
+    list-style-type: none;
+}
+.product-view-info-column-list li{
+    padding-bottom: 5px;
+    font-family: "Roboto Light";
+    font-size: 16px;
+}
+.product-view-info-colum span{
+    font-family: 'Roboto Regular'; font-size: 16px;
+}
+/* ======================================================== */
+#product-view-comments-block{
+    width: 100%;
+    height: auto;
+    background: #FCFCFC;
+    box-sizing: border-box;
+    border: 30px solid #FCFCFC;
+}
+#product-view-comments-title{
+    font-family: "Roboto Bold";
+    font-size: 21px;
+    color: #000;
+}
+.comment-row{
+    width: 100%;
+    background-color: #FFF;
+    border-radius: 5px;
+    height: auto;
+    position: relative;
+    display: flex;
+}
+.comment-row-image{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: block;
+    margin: 0px 0px 0px 30px;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+}
+.comment-row-image img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+.comment-row-info{
+    width: 75%; height: auto;
+}
+.comment-row-info h2{
+    font-size: 21px; font-family:'Roboto Regular'; color: #000;
+}
+.comment-row-info p{
+    font-size: 16px; color: #282828; line-height: 24px; font-family: 'Roboto Light';
+}
+.comment-row-info span{
+    font-family: 'Roboto Italic'; font-size: 12px; color: #8F8F8F; display: block;
+}
