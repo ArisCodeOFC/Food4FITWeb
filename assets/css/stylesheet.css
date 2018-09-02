@@ -278,8 +278,7 @@ input[type="checkbox"].switch-styled:after{
     height: 26px;
     border-radius: 50%;
     background: #fff;
-    -webkit-box-shadow: 0 0 .25em rgba(0,0,0,.3);
-            box-shadow: 0 0 .25em rgba(0,0,0,.3);
+
     -webkit-transform: scale(.7);
             transform: scale(.7);
     left: 0;

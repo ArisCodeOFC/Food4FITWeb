@@ -41,7 +41,6 @@
 .shopping-cart-grid{
     width: 100%;
     height: auto;
-    display: flex;
 }
 .shopping-cart-menu-column{
     width: 25%;
@@ -49,6 +48,11 @@
 }
 .shopping-cart-menu-column span{
     display: block; text-align: center; font-size: 18px; font-family: 'Roboto Bold'; color: #000;
+}
+.shopping-cart-row{
+  display: flex;
+  width: 100%;
+  height: auto;
 }
 .shopping-cart-column{
     width: 25%;

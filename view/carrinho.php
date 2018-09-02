@@ -36,37 +36,39 @@
         		</div>
         	</div>
         	<section class="shopping-cart-grid">
-        		<div class="shopping-cart-column">
-        			<figure class="shopping-cart-image-container">
-        				<img src="assets/images/dishs/img1.jpg" alt="Nome do Prato">
-        			</figure>
-        		</div>
-        		<div class="shopping-cart-column">
-        			<div class="switch_box margin-bottom-15px">
-						<input type="checkbox" name="chkdish" class="switch-styled">
-					</div>
-        			<h2 class="padding-bottom-5px">Nome do Prato</h2>
-        			<h3 class="padding-bottom-15px">Categoria: Nome da Categoria</h3>
-        			<span class="padding-bottom-5px">Ingredientes:</span>
-        			<p class="padding-bottom-15px">Item 1, Item 2, Item 3, Item 4, Item 5, Item 6, Item 7</p>
-        		</div>
-        		<div class="shopping-cart-column align">
-        			<span id="shopping-cart-price">R$ 000,00</span>
-        		</div>
-        		<div class="shopping-cart-column align">
-        			<div class="input-group input-number-group">
-						<div class="input-group-button">
-					    	<span class="input-number-decrement">-</span>
-					 	</div>
-						<input class="input-number" type="number" value="1" min="0" max="1000">
-						<div class="input-group-button">
-							<span class="input-number-increment">+</span>
-					  	</div>
-					</div>
-        		</div>
-        		<div class="shopping-cart-column align">
-        			<span id="shopping-cart-price-total">R$ 000,00</span>
-        		</div>
+        		<div class="shopping-cart-row">
+	        		<div class="shopping-cart-column">
+	        			<figure class="shopping-cart-image-container">
+	        				<img src="assets/images/dishs/img1.jpg" alt="Nome do Prato">
+	        			</figure>
+	        		</div>
+	        		<div class="shopping-cart-column">
+	        			<div class="switch_box margin-bottom-15px">
+							<input type="checkbox" name="chkdish" class="switch-styled">
+						</div>
+	        			<h2 class="padding-bottom-5px">Nome do Prato</h2>
+	        			<h3 class="padding-bottom-15px">Categoria: Nome da Categoria</h3>
+	        			<span class="padding-bottom-5px">Ingredientes:</span>
+	        			<p class="padding-bottom-15px">Item 1, Item 2, Item 3, Item 4, Item 5, Item 6, Item 7</p>
+	        		</div>
+	        		<div class="shopping-cart-column align">
+	        			<span id="shopping-cart-price">R$ 000,00</span>
+	        		</div>
+	        		<div class="shopping-cart-column align">
+	        			<div class="input-group input-number-group">
+							<div class="input-group-button">
+						    	<span class="input-number-decrement">-</span>
+						 	</div>
+							<input class="input-number" type="number" value="1" min="0" max="1000">
+							<div class="input-group-button">
+								<span class="input-number-increment">+</span>
+						  	</div>
+						</div>
+	        		</div>
+	        		<div class="shopping-cart-column align">
+	        			<span id="shopping-cart-price-total">R$ 000,00</span>
+	        		</div>
+	        	</div>
         	</section>
         	<div id="shopping-cart-select-block">
         		<div class="switch_box margin-left-30px">
