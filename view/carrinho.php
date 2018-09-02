@@ -90,7 +90,7 @@
         		</div>
         		<div id="shopping-cart-confirm-column-two">
         			<h2 class="padding-right-30px padding-top-30px padding-bottom-30px" style="font-family: 'Roboto light'; font-size: 21px; color: #282828;">Total a Pagar: <span style="font-family: 'Roboto Bold'; font-size: 28px; color: #000;">R$ 000,00</b></h2>
-        			<div class="btn-generic margin-right-30px">
+        			<div class="btn-generic margin-right-30px"  onclick="location.href='carrinho-endereco.php';">
         				<span>Comprar</span>
         			</div>
         		</div>

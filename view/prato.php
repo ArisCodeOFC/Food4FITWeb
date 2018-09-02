@@ -51,7 +51,7 @@
                 <div id="credit-card-flag" class="padding-left-15px padding-top-5px padding-bottom-30px">
                     <img src="assets/images/icons/credit-card.svg" src="Bandeira">
                 </div>
-                <div class="buy-button margin-left-15px">
+                <div class="buy-button margin-left-15px" onclick="location.href='carrinho.php';">
                     <span class="padding-right-5px">Comprar</span>
                     <div class="buy-button-image">
                         <img src="assets/images/icons/shopping-cart-white.svg" alt="Comprar">

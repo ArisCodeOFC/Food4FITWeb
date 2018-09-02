@@ -32,7 +32,7 @@
 			<div id="header-flat-row2"><!-- SEGUNDO CONTAINER-FILHO DO CABEÇALHO DA INDEX -->
 				<span id="page-title" class="animate fadeInUp">Destaques</span><!-- TÍTULO DA PÁGINA -->
 				<div id="header-grid-container"><!-- CONTAINER COM GRID DA INDEX -->
-					<div class="highlight-one hl-card animate fadeInUp"><!-- CARD DA INDEX -->
+					<div class="highlight-one hl-card animate fadeInUp"  onclick="location.href='prato.php';"><!-- CARD DA INDEX -->
 						<span class="dish-name margin-top-60px margin-left-30px margin-bottom-15px">Frango Grelhado</span><!-- NOME DO PRATO NA INDEX -->
 				  		<div class="dish-separator margin-top-0px margin-left-30px margin-bottom-15px"></div><!-- SEPARADOR -->
 				  		<p class="dish-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni magnam saepe reiciendis.</p><!-- DESCRIÇÃO DO PRATO NA INDEX -->

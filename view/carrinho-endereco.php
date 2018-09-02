@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Carrinho - Food 4fit</title>
+	<title>Endereço :: Carrinho - Food 4fit</title>
 	<link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
 	<link rel="stylesheet" href="assets/css/stylesheet.css">
 	<link rel="stylesheet" href="assets/css/mobile-stylesheet.css">
@@ -96,7 +96,7 @@
         </section>
         <div style="width: 100%; display: flex; align-items: center; justify-content: flex-end;">
         	<span class="padding-right-15px" style="font-size: 18px; font-family: 'Roboto Medium Italic'; color: #7F7F7F;">Passo 1 de 2</span>
-        	<div class="btn-generic margin-right-30px margin-top-30px margin-bottom-30px">
+        	<div class="btn-generic margin-right-30px margin-top-30px margin-bottom-30px"  onclick="location.href='carrinho-pagamento.php';">
         		<span>Próximo</span>
         	</div>
         </div>
