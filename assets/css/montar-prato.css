@@ -1,0 +1,215 @@
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#monte-seu-prato-container {
+    width: 100%;
+    height: 0;
+    min-height: 1000px;
+    margin: 20px 0;
+}
+
+#ingredientes-categorias {
+    width: 360px;
+    height: 100%;
+    float: left;
+    background-color: #DDDDDD;
+    overflow-y: scroll;
+}
+
+#categorias, #ingredientes {
+    margin: 0 auto;
+    width: 320px;
+}
+
+#categorias h2, #ingredientes h2 {
+    font-family: "Roboto Bold";
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+#lista-categorias {
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: 0;
+    padding-bottom: 5px;
+}
+
+#lista-categorias::-webkit-scrollbar {
+    height: 5px;
+}
+
+.categoria {
+    width: 155px;
+    height: 150px;
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.categoria:first-of-type {
+    margin: 0;
+}
+
+.categoria img, .ingrediente img {
+    width: 100%;
+    height: 100%;
+}
+
+.categoria .titulo, .ingrediente .titulo {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.categoria .titulo h3, .ingrediente .titulo h3 {
+    font-size: 22px;
+    color: #ffffff;
+    font-family: "Roboto Bold";
+    white-space: normal;
+}
+
+.ingrediente {
+    width: 155px;
+    height: 150px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.ingrediente:nth-child(2n) {
+    margin-left: 10px;
+}
+
+.ingrediente:nth-child(n+3) {
+    margin-top: 10px;
+}
+
+#ingredientes-categorias.sem-ingredientes #lista-categorias {
+    overflow-x: visible;
+    white-space: normal;
+}
+
+#ingredientes-categorias.sem-ingredientes #ingredientes {
+    display: none;
+}
+
+#ingredientes-categorias.sem-categorias #categorias {
+    display: none;
+}
+
+#ingredientes-categorias.sem-ingredientes.sem-categorias #categoria-vazia {
+    display: block;
+}
+
+#ingredientes-categorias.sem-ingredientes .categoria {
+    margin-left: 0;
+}
+
+#ingredientes-categorias.sem-ingredientes .categoria:nth-child(2n) {
+    margin-left: 10px;
+}
+
+#ingredientes-categorias.sem-ingredientes .categoria:nth-child(n+3) {
+    margin-top: 10px;
+}
+
+#categoria-vazia {
+    text-align: center;
+    display: none;
+    font-size: 25px;
+    font-family: "Roboto Regular";
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#breadcrumb {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    padding-bottom: 0;
+    text-overflow: clip;
+    position: relative;
+    background-color: inherit;
+    min-height: 30px;
+    font-family: "Roboto Regular";
+}
+
+#breadcrumb::before {
+    content: "\02026";
+    position: absolute;
+    z-index: 1;
+    left: -1em;
+    background-color: inherit;
+    padding-left: 1em;
+    margin-left: 0.5em;
+}
+
+#breadcrumb>span {
+    min-width: 100%;
+    position: relative;
+    display: inline-block;
+    float: right;
+    overflow: visible;
+    background-color: inherit;
+    text-indent: 0.5em;
+}
+
+#breadcrumb>span::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-color: inherit;
+    z-index: 200;
+    left: -.5em;
+}
+
+#breadcrumb a {
+    color: #000000;
+    text-decoration: none;
+    font-family: "Roboto Regular";
+}
+
+#breadcrumb a::after {
+    content: ">";
+    margin: 0 5px;
+}
+
+#breadcrumb a:last-of-type::after {
+    display: none;
+}
+
+#meus-ingredientes {
+    width: calc(100% - 360px);
+    height: 100%;
+    float: left;
+    background-color: #9CC283;
+    overflow-y: auto;
+}
+
+#meus-ingredientes::-webkit-scrollbar-thumb {
+    background-color: #dddddd;
+}
+
+#meus-ingredientes .ingrediente {
+    margin: 10px 0 0 10px;
+}

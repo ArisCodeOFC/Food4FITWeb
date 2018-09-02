@@ -834,14 +834,14 @@ input[type="checkbox"].switch-styled:checked:after{
 	height: auto;
 }
 
-#about-us-content{
+.about-us-content{
     /*Container-filho do cabeçalho da página sobre*/
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
 	height: auto;
 }
 
-#text-about-us{
+.text-about-us{
     /*Container-filho da introdução da página sobre*/
     width: 100%;
 	height: auto;
@@ -863,37 +863,12 @@ input[type="checkbox"].switch-styled:checked:after{
     /*Container-mãe das imagens da página sobre*/
     width: 100%;
     max-width: 1200px;
-    height: 300px;
-    padding: 0;
+    box-sizing: border-box;
 }
 .about-us-image-container img{
     /*Imagem da página sobre*/
     max-width: 100%;
     display: block;
-}
-#physical-structure-content{
-    /*Container-filho da sessão de endereços físicos na página sobre*/
-    width: 90%;
-    max-width: 1200px;
-	height: auto;
-}
-
-#text-physical-structure{
-    /*Texto da sessão de endereços físicos na página sobre*/
-    width: 90%;
-    max-width: 1200px;
-	height: auto;
-}
-#online-service-content{
-    /*Container-mãe da sessão de serviços online na página sobre*/
-    width: 90%;
-    max-width: 1200px;
-	height: auto;
-}
-#text-online-service{
-    width: 90%;
-    max-width: 1200px;
-	height: auto;
 }
 /*==========================================*/
 

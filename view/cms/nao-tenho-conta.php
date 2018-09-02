@@ -16,13 +16,12 @@
         <link rel="icon" type="image/png" href="../assets/images/icons/favicon.png" />
 	    <link rel="stylesheet" href="../assets/css/font-style.css">
         <link rel="stylesheet" href="../assets/css/cms/main.css">
-        <link rel="stylesheet" href="../assets/css/cms/login.css">
 	    <script src="../assets/js/jquery-3.3.1.min.js"></script>
 	    <script src="../assets/js/cms/main.js"></script>
     </head>
     <body>
         <a id="botao-voltar" href="login.php">Voltar</a>
-        <section class="main">
+        <section id="main-login">
             <div id="titulo">
                 <span>Food</span>
                 <span>4FIT</span>

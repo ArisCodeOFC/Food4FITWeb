@@ -1,3 +1,9 @@
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -6,7 +12,7 @@ body {
 	position: relative;
 }
 
-.main {
+#main-login {
 	width: 100%;
 	height: auto;
 	max-width: 1200px;
@@ -21,7 +27,7 @@ body {
 
 ::-webkit-scrollbar {
 	width: 10px;
-	background: #FFF;
+	background-color: #ffffff;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -29,8 +35,7 @@ body {
 	background-color: #9CC283;
 }
 
-#titulo {
-    font-size: 112px;
+#main-login #titulo {
     color: #000000;
     font-weight: bold;
     text-transform: uppercase;
@@ -38,12 +43,13 @@ body {
     padding-top: 200px;
 }
 
-#titulo span {
+#main-login #titulo span {
     display: block;
     line-height: 120px;
+    font-size: 112px;
 }
 
-#subtitulo {
+#main-login #subtitulo {
     font-size: 32px;
     color: #959595;
     font-family: "Roboto Regular";
@@ -99,7 +105,7 @@ body {
     font-size: inherit;
 }
 
-#texto-nao-tenho-conta {
+#main-login #texto-nao-tenho-conta {
     font-size: 21px;
     line-height: 32px;
     color: #000000;
@@ -121,4 +127,308 @@ body {
     top: 10px;
     text-decoration: none;
     z-index: 1;
+}
+
+#main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#sidebar {
+    width: 350px;
+    height: 100%;
+    background-color: #dddddd;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    float: left;
+    transition: width 500ms;
+}
+
+#sidebar-header {
+    width: 100%;
+    height: 70px;
+    position: relative;
+}
+
+#sidebar h1 {
+    font-size: 26px;
+    color: #000000;
+    font-family: "Segoe UI";
+    font-weight: bold;
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+    transition: opacity 400ms;
+}
+
+#sidebar-collapse {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(360deg);
+    transition: transform 500ms;
+    font-weight: bold;
+}
+
+.separator {
+    width: 100%;
+    background-color: #aaaaaa;
+    border: 2px solid #aaaaaa;
+    box-sizing: border-box;
+}
+
+#perfil {
+    width: 100%;
+    height: 70px;
+    box-sizing: border-box;
+    position: relative;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+#perfil #avatar {
+    background-color: #ffffff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 500ms, height 500ms;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#perfil #avatar::before {
+    content: attr(data-siglas);
+    text-align: center;
+    vertical-align: middle;
+    font-size: 25px;
+    font-weight: bold;
+    transition: font-size 300ms;
+}
+
+#perfil #informacoes {
+    box-sizing: border-box;
+    position: absolute;
+    overflow: hidden;
+    width: calc(100% - 50px);
+    height: 50px;
+    transition: width 500ms;
+    left: 50px;
+    top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#perfil #informacoes-content {
+    padding-left: 10px;
+}
+
+#perfil #nome {
+    font-size: 18px;
+    color: #000000;
+    font-family: "Roboto Bold";
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#perfil #email {
+    font-size: 16px;
+    color: #000000;
+    font-family: "Roboto Regular";
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#perfil #dropdown {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #000000;
+    position: absolute;
+    right: 8px;
+    top: 0;
+}
+
+#sidebar nav {
+    padding: 5px 0;
+}
+
+#sidebar nav a {
+    color: #000000;
+    font-family: "Roboto Bold";
+    text-decoration: none;
+    display: block;
+    height: 35px;
+    padding: 2px 0;
+    position: relative;
+}
+
+#sidebar nav a::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#sidebar nav a.active, #sidebar nav a:hover {
+    background-color: #d4d4d4;
+}
+
+#sidebar nav .image {
+    width: 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sidebar nav .label {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    width: calc(100% - 45px);
+    height: 100%;
+    position: absolute;
+    left: 45px;
+    top: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width 500ms, color 300ms;
+}
+
+#sidebar nav .badge {
+    font-size: 18px;
+    color: #959595;
+    position: absolute;
+    right: 10px;
+}
+
+#sidebar.collapse {
+    width: 75px;
+}
+
+#sidebar.collapse #informacoes {
+    width: 0;
+}
+
+#sidebar.collapse nav .label {
+    width: 0;
+    color: rgba(0, 0, 0, 0);
+}
+
+#sidebar.collapse h1 {
+    opacity: 0;
+}
+
+#sidebar.collapse #perfil #avatar {
+    width: 45px;
+    height: 45px;
+}
+
+#sidebar.collapse #perfil #avatar::before {
+    font-size: 18px;
+}
+
+#sidebar.collapse #perfil #dropdown {
+    display: none;
+}
+
+#sidebar.collapse #sidebar-collapse {
+    transform: rotate(180deg);
+}
+
+#main-content {
+    height: 100%;
+    flex-grow: 1;
+}
+
+#main-content header {
+    height: 50px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#main-content header>div {
+    display: flex;
+    align-items: center;
+}
+
+#main-content header h2 {
+    font-size: 21px;
+    color: #959595;
+    font-family: "Roboto Bold";
+    text-transform: uppercase;
+}
+
+#main-content header input {
+    width: 400px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    outline: none;
+    border: none;
+}
+
+#main-content header input::placeholder {
+    color: #d4d4d4;
+    font-family: "Roboto Light";
+    font-weight: bold;
+    font-style: italic;
+}
+
+#main-content header #ultimas-interacoes {
+    font-size: 21px;
+    color: #c8c8c8;
+    font-family: "Roboto Bold";
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+
+#main-content header #notificacoes {
+    margin-right: 10px;
+    position: relative;
+}
+
+#main-content header #notificacoes span {
+    position: absolute;
+    font-size: 10px;
+	top: 5px;
+	right: 5px;
+	width: 15px;
+	height: 15px;
+    color: #ffffff;
+    top: 0;
+    right: 0;
+    background-color: #000000;
+    border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    padding: 1px;
+}
+
+img.btn-logout:hover {
+    cursor: pointer;
 }

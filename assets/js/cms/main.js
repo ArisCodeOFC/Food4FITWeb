@@ -8,7 +8,7 @@ function formToObject(dados) {
 
 $(document).ready(function() {
     /* Efetuar logout */
-    $("#btn-logout").click(function(event) {
+    $(".btn-logout").click(function(event) {
         event.preventDefault();
         $.ajax({
             url: "../api/v1/funcionarios/logout",
@@ -20,5 +20,10 @@ $(document).ready(function() {
                 alert("Não foi possível efetuar o logout.");
             }
         });
+    });
+
+    $("#sidebar-collapse").click(function(event) {
+        event.preventDefault();
+        $("#sidebar").toggleClass("collapse");
     });
 });
