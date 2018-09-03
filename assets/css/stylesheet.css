@@ -239,6 +239,20 @@ body{
 }
 /*==========================================*/
 
+/* ESTRELAS DE AVALIAÇÃO */
+.avaliation-stars{
+    height: auto;
+    width: 125px;
+    display: flex;
+    justify-content: space-between;
+}
+.avaliation-stars-image{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+/*==========================================*/
+
 /* CHECKBOX ESTILIZADO */
 .switch_box{
     display: -webkit-box;
@@ -664,6 +678,7 @@ input[type="checkbox"].switch-styled:checked:after{
 	box-shadow: 4px 4px 10px 4px rgba(0,0,0,0.1);
 	transition: 200ms ease-in-out;
 	cursor: pointer;
+	position: relative;
 }
 .generic-card:hover{
 	/*Ação ao mover o mouse no card da grelha genérica responsiva*/
@@ -671,15 +686,10 @@ input[type="checkbox"].switch-styled:checked:after{
 }
 .generic-card-img{
 	/*Imagem do card da grelha genérica responsiva*/
-	width: 100%;
-	height: 100%;
+	max-width: 100%;
 	object-fit: cover;
 	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
 	border-radius: 10px;
-	z-index: -1;
 }
 .generic-card-overlay{
 	/*Container acima do card da grelha genérica responsiva*/
@@ -687,62 +697,82 @@ input[type="checkbox"].switch-styled:checked:after{
 	height: auto;
 	display: flex;
 	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
 	border-radius: 10px;
 	overflow: hidden;
-	z-index: 99999;
-	background: linear-gradient(transparent, #9CC283);
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: linear-gradient(transparent, rgba(0,0,0,0.5));
 	box-shadow: 4px 4px 10px 4px rgba(0,0,0,0.1);
-	transition: 300ms ease-out;
+	transition: 200ms ease-in-out;
+}
+.generic-card:hover .generic-card-overlay{
+	/*Ação ao mover o mouse no card da grelha genérica responsiva*/
+	background: linear-gradient(transparent, #9CC283);
 }
 .card-dish-name{
 	/*Nome do prato da grelha genérica responsiva*/
 	display: block;
 	color: #FFF;
-	font-size: 21px;
+	font-size: 26px;
 	font-family: "Roboto Bold";
+	width: 80%;
+	margin: auto;
 	text-align: center;
-	padding: 70px 0px 0px 0px;
 }
 .card-dish-separator{
 	/*Separador da grelha genérica responsiva*/
 	width: 30px;
 	height: 3px;
-	margin: 10px auto;
 	border-radius: 30px;
 	background-color: #fff;
 }
 .card-dish-description{
 	/*Descrição do prato da grelha genérica responsiva*/
-	width: 60%;
+	width: 80%;
 	font-size: 16px;
 	line-height: 21px;
 	font-family: "Roboto Regular";
 	color: #FFF;
-	margin: 0px auto;
 	text-align: center;
-	margin-bottom: 20px;
 }
 .card-dish-price{
 	/*Preço do prato da grelha genérica responsiva*/
-	display: block;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 	font-size: 21px;
-	background: linear-gradient(45deg, #E83131, #FF5344);
-	color: #FFF;
-	text-align: center;
-	width: 140px;
-    padding: 5px;
-    margin: 0 auto 30px auto;
-	font-family: "Roboto Bold";
+	background: #E83131;
+	width: 160px;
+	height: 40px;
+	transition: 50ms ease-out;
 	border-radius: 5px;
+}
+.card-dish-price:hover{
+	transform: scale(1.02);
+}
+.card-dish-price span{
+	font-size: 18px;
+	color: #FFF;
+	font-family: "Roboto Medium";
+	display: block;
+}
+.card-dish-price div{
+	width: 28px;
+	height: 28px;
+}
+.card-dish-price div img{
+	max-width: 100%;
+	display: block;
 }
 /*==========================================*/
 
 /* PAGINADOR */
-.center {
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 30px;
-}
 .pagination {
     display: inline-block;
 }
@@ -755,8 +785,9 @@ input[type="checkbox"].switch-styled:checked:after{
     font-size: 14px;
     transition: background-color .3s;
     box-sizing: border-box;
-    border: 1px solid #DDD;
+    background: #E8E8E8;
     margin: 0 4px;
+    border-radius: 3px;
 }
 .pagination a.active {
     background: linear-gradient(-45deg, #9CC283, rgba(255,217,76,0.5));
