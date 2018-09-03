@@ -2,10 +2,16 @@
 	#shopping-cart-confirm-block{
 	    flex-direction: column;
 	}
+	.filter-menu{
+		display: block;
+	}
 }
 @media screen and (max-width: 968px) {
 	#shopping-cart-confirm-block{
 	    flex-direction: column;
+	}
+	.filter-menu{
+		display: block;
 	}
 }
 /*--------------------------------------------------*/
