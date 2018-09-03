@@ -16,7 +16,7 @@
     </div>
     <hr class="separator">
     <nav>
-        <a href="#" class="active">
+        <a href="#" class="active" data-page-load="dashboard.php">
             <span class="image"><img src="../assets/images/cms/icons/pagina-inicial.svg"></span>
             <span class="label">Página inicial</span>
         </a>
@@ -32,7 +32,7 @@
             <span class="image"><img src="../assets/images/cms/icons/ingredientes.svg"></span>
             <span class="label">Ingredientes</span>
         </a>
-        <a href="#">
+        <a href="#" data-page-load="sobre.php">
             <span class="image"><img src="../assets/images/cms/icons/publicacoes.svg"></span>
             <span class="label">Publicações</span>
         </a>
@@ -88,4 +88,5 @@
             <span class="label">Sair</span>
         </a>
     </nav>
+    <div id="tooltip"></div>
 </div>

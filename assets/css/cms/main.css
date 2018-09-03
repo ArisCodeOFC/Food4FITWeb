@@ -191,7 +191,6 @@ body {
 #perfil {
     width: 100%;
     height: 70px;
-    box-sizing: border-box;
     position: relative;
     padding: 10px 0;
     box-sizing: border-box;
@@ -431,4 +430,20 @@ body {
 
 img.btn-logout:hover {
     cursor: pointer;
+}
+
+#page-content {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#tooltip {
+    position: absolute;
+    background: #000000;
+    height: 25px;
+    line-height: 25px;
+    color: #ffffff;
+    padding: 3px 20px;
+    display: none;
+    font-family: "Roboto Bold";
 }

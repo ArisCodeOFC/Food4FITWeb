@@ -39,6 +39,9 @@
                         <img class="btn-logout" src="../assets/images/cms/icons/sair-navbar.svg">
                     </div>
                 </header>
+                <section id="page-content">
+                    <?php require_once("./dashboard.php") ?>
+                </section>
             </section>
         </section>
     </body>
