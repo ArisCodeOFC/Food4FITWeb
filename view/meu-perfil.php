@@ -16,21 +16,21 @@
 <body>
 	<?php require_once("components/navbar.html"); ?>
 	<section class="main">
-		<header class="profile-header-block">
+		<header class="profile-header-block box-shadow">
 			<img src="assets/images/backgrounds/cover.jpg" alt="" class="profile-header-block-img">
 			<div class="profile-header-overlay">
 				<div class="profile-header-option margin-right-30px animate fadeInUp">
 					<img src="assets/images/icons/settings.svg" alt="Configurações">
 				</div>
 				<figure class="profile-header-image margin-top-60px margin-bottom-60px animate fadeInUp">
-					<img src="assets/images/icons/person.jpg" alt="">
+					<img src="assets/images/icons/person.jpg" alt="Nome do Usuário" class="box-shadow">
 				</figure>
 				<div class="profile-header-option margin-left-30px animate fadeInUp">
 					<img src="assets/images/icons/edit.svg" alt="Editar Informações de Perfil">
 				</div>
 			</div>
 		</header>
-		<div class="profile-name-row">
+		<div class="profile-name-row ">
 			<h2 class="padding-top-30px padding-bottom-5px">João Guedez Ferraz</h2>
 			<span class="padding-top-5px padding-bottom-30px">endereco@provedor.com</span>
 		</div>

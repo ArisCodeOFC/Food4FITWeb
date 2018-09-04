@@ -40,6 +40,12 @@ body{
 	border-radius: 50px;
 	background-color: #9CC283;
 }
+.box-shadow{
+	/*Sombra padrão para elementos soltos*/
+	-webkit-box-shadow: 0px 25px 56px -13px rgba(0,0,0,0.37);
+-moz-box-shadow: 0px 25px 56px -13px rgba(0,0,0,0.37);
+box-shadow: 0px 25px 56px -13px rgba(0,0,0,0.37);
+}
 /*==========================================*/
 
 /* TÍTULO DA PÁGINA */
