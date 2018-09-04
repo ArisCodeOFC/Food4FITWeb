@@ -1,9 +1,11 @@
 <div id="sidebar">
     <div id="sidebar-header">
         <h1>FOOD 4FIT<br>CMS</h1>
-        <a href="#" id="sidebar-collapse">&lt;</a>
+        <a href="#" id="sidebar-collapse">
+            <img src="../assets/images/icons/menu-lateral.svg" alt="Menu Lateral">
+        </a>
     </div>
-    <hr class="separator">
+    <div class="separator"></div>
     <div id="perfil">
         <div id="avatar" data-siglas="<?= $funcionario->getIniciaisNome(); ?>"></div>
         <div id="informacoes">
@@ -14,7 +16,7 @@
             </div>
         </div>
     </div>
-    <hr class="separator">
+    <div class="separator"></div>
     <nav>
         <a href="#" class="active" data-page-load="dashboard.php">
             <span class="image"><img src="../assets/images/cms/icons/pagina-inicial.svg"></span>
@@ -61,7 +63,7 @@
             <span class="label">Parceiros</span>
         </a>
     </nav>
-    <hr class="separator">
+    <div class="separator"></div>
     <nav>
         <a href="#">
             <span class="image"><img src="../assets/images/cms/icons/meu-perfil.svg"></span>

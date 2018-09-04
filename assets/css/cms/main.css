@@ -36,7 +36,7 @@ body {
 }
 
 #main-login #titulo {
-    color: #000000;
+    color: #9CC283;
     font-weight: bold;
     text-transform: uppercase;
     font-family: "Roboto Black";
@@ -45,15 +45,13 @@ body {
 
 #main-login #titulo span {
     display: block;
-    line-height: 120px;
-    font-size: 112px;
+    font-size: 86px;
 }
 
 #main-login #subtitulo {
-    font-size: 32px;
-    color: #959595;
-    font-family: "Roboto Regular";
-    font-weight: bold;
+    font-size: 21px;
+    color: #7F7F7F;
+    font-family: "Roboto Medium";
     text-transform: uppercase;
 }
 
@@ -64,15 +62,16 @@ body {
 #form-login>input {
     display: block;
     width: 724px;
-    height: 69px;
+    height: 50px;
     border-radius: 5px;
-    background-color: #eeeeee;
+    background-color: #E8E8E8;
     outline: none;
     border: none;
     margin: 20px auto;
     padding: 10px;
+    text-indent: 12px;
     box-sizing: border-box;
-    font-size: 21px;
+    font-size: 16px;
 }
 
 #form-login>input::placeholder {
@@ -97,19 +96,20 @@ body {
     width: 100px;
     height: 40px;
     border-radius: 5px;
-    background-color: #414141;
+    background-color: #9cc283;
     outline: none;
     border: none;
     float: right;
     color: #ffffff;
     font-size: inherit;
+    font-family: "Roboto Bold";
 }
 
 #main-login #texto-nao-tenho-conta {
     font-size: 21px;
     line-height: 32px;
-    color: #000000;
-    font-family: "Segoe UI";
+    color: #7F7F7F;
+    font-family: "Roboto Medium Italic";
     text-align: center;
     margin-top: 100px;
     margin-bottom: 200px;
@@ -138,11 +138,12 @@ body {
 #sidebar {
     width: 350px;
     height: 100%;
-    background-color: #dddddd;
+    background-color: #fafafa;
     padding: 15px;
     box-sizing: border-box;
     overflow-y: auto;
     float: left;
+   box-shadow: 0px 0px 72px 10px rgba(0,0,0,0.1);
     transition: width 500ms;
 }
 
@@ -152,11 +153,10 @@ body {
     position: relative;
 }
 
-#sidebar h1 {
+#sidebar h1{
     font-size: 26px;
-    color: #000000;
-    font-family: "Segoe UI";
-    font-weight: bold;
+    color: #9CC283;
+    font-family: "Roboto bold";
     overflow: hidden;
     width: 100%;
     white-space: nowrap;
@@ -170,22 +170,20 @@ body {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: #000000;
-    color: #ffffff;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     transform: rotate(360deg);
     transition: transform 500ms;
-    font-weight: bold;
 }
-
+#sidebar-collapse img{
+    max-width: 100%;
+    display: block
+}
 .separator {
     width: 100%;
-    background-color: #aaaaaa;
-    border: 2px solid #aaaaaa;
+    height: 3px;
+    background-color: #9CC283;
+    border-radius: 50px;
     box-sizing: border-box;
+    margin: 5px auto;
 }
 
 #perfil {
@@ -197,7 +195,7 @@ body {
 }
 
 #perfil #avatar {
-    background-color: #ffffff;
+    background: linear-gradient(-45deg, #9CC283, #EDBF85);
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -208,6 +206,7 @@ body {
     position: absolute;
     left: 0;
     top: 50%;
+    box-shadow: 5px 5px 10px rgba(0,0,0,.1);
     transform: translateY(-50%);
 }
 
@@ -216,7 +215,8 @@ body {
     text-align: center;
     vertical-align: middle;
     font-size: 25px;
-    font-weight: bold;
+    font-family: "Roboto Bold";
+    color: #FFF;
     transition: font-size 300ms;
 }
 
@@ -271,13 +271,14 @@ body {
 }
 
 #sidebar nav a {
-    color: #000000;
+    color: #262626;
     font-family: "Roboto Bold";
     text-decoration: none;
     display: block;
     height: 35px;
     padding: 2px 0;
     position: relative;
+    transition: 100ms ease-in-out;
 }
 
 #sidebar nav a::after {
@@ -287,12 +288,12 @@ body {
 }
 
 #sidebar nav a.active, #sidebar nav a:hover {
-    background-color: #d4d4d4;
+    background-color: #F1F1F1;
 }
 
 #sidebar nav .image {
     width: 40px;
-    height: 100%;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -307,6 +308,8 @@ body {
     position: absolute;
     left: 45px;
     top: 0;
+    color: #262626;
+    font-family: "Roboto Medium";
     overflow: hidden;
     white-space: nowrap;
     transition: width 500ms, color 300ms;
@@ -360,7 +363,7 @@ body {
 
 #main-content header {
     height: 50px;
-    background-color: #f2f2f2;
+    background: linear-gradient(45deg, #9CC283, #EDBF85);
     padding: 20px;
     display: flex;
     flex-direction: row;
@@ -376,7 +379,7 @@ body {
 
 #main-content header h2 {
     font-size: 21px;
-    color: #959595;
+    color: #fff;
     font-family: "Roboto Bold";
     text-transform: uppercase;
 }
@@ -388,18 +391,20 @@ body {
     background-color: #ffffff;
     outline: none;
     border: none;
+    text-indent: 15px;
+    margin-right: 10px;
 }
 
 #main-content header input::placeholder {
-    color: #d4d4d4;
-    font-family: "Roboto Light";
-    font-weight: bold;
-    font-style: italic;
+    color: #9F9F9F;
+    font-size: 16px;
+    font-family: "Roboto Medium Italic";
+
 }
 
 #main-content header #ultimas-interacoes {
     font-size: 21px;
-    color: #c8c8c8;
+    color: #FFF;
     font-family: "Roboto Bold";
     text-transform: uppercase;
     margin-right: 10px;
@@ -420,7 +425,7 @@ body {
     color: #ffffff;
     top: 0;
     right: 0;
-    background-color: #000000;
+    background-color: #E83131;
     border-radius: 50%;
 	display: flex;
 	justify-content: center;
