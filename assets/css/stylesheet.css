@@ -58,6 +58,7 @@ box-shadow: 0px 25px 56px -13px rgba(0,0,0,0.37);
 	color: #000;
 	padding: 30px;
 	text-align: center;
+    margin: 0 auto;
 	padding-bottom: 0px;
 }
 #page-title::after{
@@ -70,6 +71,19 @@ box-shadow: 0px 25px 56px -13px rgba(0,0,0,0.37);
 	border-radius: 30px;
 	background-color: #000;
 	margin-top: 8px;
+}
+#page-subtitle{
+    width: 90%;
+    max-width: 460px;
+    height: auto;
+    text-align: center;
+    color: #7F7F7F;
+    font-family: "Roboto Regular";
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 auto;
+    margin-top: 5px;
 }
 /*==========================================*/
 
@@ -236,7 +250,9 @@ box-shadow: 0px 25px 56px -13px rgba(0,0,0,0.37);
 	font-size: 38px;
 	font-family: "Roboto Black";
 	text-align: center;
-	color: #000;
+	background: -webkit-linear-gradient(45deg, #9CC283, #EDBF85);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 #footer-flat-content p{
 	/*Descrição no rodapé*/
@@ -252,6 +268,16 @@ box-shadow: 0px 25px 56px -13px rgba(0,0,0,0.37);
 	font-family: "Roboto Bold";
 	text-align: center;
 	color: #000;
+}
+#footer-flat-content a{
+    /*Termos de Uso*/
+	display: block;
+	font-size: 18px;
+	font-family: "Roboto Medium Italic";
+	text-align: center;
+    margin: 0 auto;
+	color: #7f7f7f;
+    text-decoration: none;
 }
 /*==========================================*/
 
@@ -1149,105 +1175,22 @@ input[type=radio]{
 }
 /*==========================================*/
 
-/* ANIMAÇÕES */
-@-webkit-keyframes fadeIn{
-	from{
-    	opacity: 0;
-  	}
- 	to{
-    	opacity: 1;
-  	}
+/*BARRA DE REDES SOCIAIS*/
+.social-bar{
+	width: 100px;
+	height: 28px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	position: absolute;
+	bottom: 30px;
+	right: 20px;
 }
-@keyframes fadeIn {
-  	from {
-    	opacity: 0;
-  	}
-  	to{
-    	opacity: 1;
-  	}
-}
-.fadeIn {
- 	-webkit-animation-name: fadeIn; animation-name: fadeIn;
-}
-@-webkit-keyframes fadeInDown{
-	from{
-    	opacity: 0;
-    	-webkit-transform: translate3d(0, -100%, 0); transform: translate3d(0, -100%, 0);
-  	}
-  	to{
-    	opacity: 1;
-    	-webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0);
-   	}
-}
-@keyframes fadeInDown{
-  	from{
-    	opacity: 0;
-    	-webkit-transform: translate3d(0, -100%, 0); transform: translate3d(0, -100%, 0);
-  	}
-  	to{
-    	opacity: 1;
-    	-webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0);
-  	}
-}
-.fadeInDown{
-	-webkit-animation-name: fadeInDown; animation-name: fadeInDown;
-}
-@-webkit-keyframes fadeInUp{
-  	from{
-    	opacity: 0;
-    	-webkit-transform: translate3d(0, 100%, 0); transform: translate3d(0, 100%, 0);
-  	}
-  	to{
-  		opacity: 1;
-    	-webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0);
-	}
-}
-@keyframes fadeInUp{
-  	from{
-    	opacity: 0;
-    	-webkit-transform: translate3d(0, 50px, 0); transform: translate3d(0, 50px, 0);
-  	}
-  	to{
-    	opacity: 1;
-   		-webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0);
-  	}
-}
-.fadeInUp{
-  	-webkit-animation-name: fadeInUp; animation-name: fadeInUp;
-  	transition-duration: 200ms ease-out;
-}
-.animate{
-	-webkit-animation-duration: 1s; animation-duration: 1s;
-	-webkit-animation-fill-mode: both; animation-fill-mode: both;
-}
-.animate.infinite {
-	-webkit-animation-iteration-count: infinite; animation-iteration-count: infinite;
-}
-.animate.delay-1s {
-	-webkit-animation-delay: 1s; animation-delay: 1s;
-}
-.animate.delay-2s {
-	-webkit-animation-delay: 2s; animation-delay: 2s;
-}
-.animate.delay-3s {
-	-webkit-animation-delay: 3s; animation-delay: 3s;
-}
-.animate.fast {
-	-webkit-animation-duration: 800ms; animation-duration: 800ms;
-}
-.animate.faster {
-	-webkit-animation-duration: 500ms; animation-duration: 500ms;
-}
-.animate.slow {
-	-webkit-animation-duration: 2s; animation-duration: 2s;
-}
-.animate.slower {
-  	-webkit-animation-duration: 3s; animation-duration: 3s;
-}
-@media (prefers-reduced-motion) {
-  	.animate{
-	    -webkit-animation: unset !important; animation: unset !important;
-	    -webkit-transition: none !important; transition: none !important;
-  	}
+.social-bar img{
+	width: 28px;
+	height: 28px;
+	display: block;
 }
 /*==========================================*/
+

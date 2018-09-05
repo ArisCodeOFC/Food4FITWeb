@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="assets/css/stylesheet.css">
 	<link rel="stylesheet" href="assets/css/mobile-stylesheet.css">
 	<link rel="stylesheet" href="assets/css/font-style.css">
+    <link rel="stylesheet" href="assets/css/keyframes.css">
     <link rel="stylesheet" href="assets/css/carrinho.css">
 	<script src="assets/js/jquery-3.3.1.min.js"></script>
 	<script src="assets/js/scripts.js"></script>

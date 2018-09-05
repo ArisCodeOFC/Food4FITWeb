@@ -113,18 +113,6 @@
     display: block;
 }
 /* ======================================================== */
-.social-share{
-    height: auto;
-    width: 114px;
-    display: flex;
-    justify-content: space-between;
-}
-.social-share-image{
-    width: 28px;
-    height: 28px;
-    display: inline-block;
-}
-/* ======================================================== */
 #product-view-info-block{
     width: 100%;
     height: auto;

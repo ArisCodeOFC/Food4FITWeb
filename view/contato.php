@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="assets/css/stylesheet.css">
 	<link rel="stylesheet" href="assets/css/mobile-stylesheet.css">
 	<link rel="stylesheet" href="assets/css/font-style.css">
+    <link rel="stylesheet" href="assets/css/keyframes.css">
 	<link rel="stylesheet" href="assets/css/contato.css">
 	<script src="assets/js/jquery-3.3.1.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
@@ -17,7 +18,7 @@
 	<?php require_once("components/navbar.html"); ?><!-- BARRA DE NAVEGAÇÃO VIA PHP -->
 	<section class="main"><!-- CONTAINER-MÃE DO SITE -->
         <h2 id='page-title' class="margin-left-auto margin-right-auto">ENTRE EM CONTATO</h2>
-        <div class="form-generic width-small margin-left-auto margin-right-auto margin-top-30px" >
+        <div class="form-generic width-small margin-left-auto margin-right-auto margin-top-30px animate slow fadeInDown">
             <form class="form-generic-content">
                 <label for="txtnome" class="label-generic">Nome:</label>
                 <input id='txtnome' name="txtnome" class="input-generic">
