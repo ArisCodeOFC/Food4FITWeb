@@ -74,11 +74,13 @@
 	height: auto;
 	display: flex;
 	flex-direction: row;
+
 }
 .profile-section-column{
 	width: 100%;
 	height: auto;
 	box-sizing: border-box;
+    overflow: hidden;
 	border: 30px solid #FCFCFC;
 }
 .profile-section-column h3{

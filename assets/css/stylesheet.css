@@ -29,6 +29,7 @@ body{
 	justify-content: flex-start;
 	align-items: flex-start;
 	z-index: 1;
+    overflow: hidden;
 }
 ::-webkit-scrollbar{
 	/*Estilização da scrollbar*/

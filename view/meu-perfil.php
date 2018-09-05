@@ -31,12 +31,12 @@
 				</div>
 			</div>
 		</header>
-		<div class="profile-name-row ">
+		<div class="profile-name-row animate fadeInLeft slow">
 			<h2 class="padding-top-30px padding-bottom-5px">João Guedez Ferraz</h2>
 			<span class="padding-top-5px padding-bottom-30px">endereco@provedor.com</span>
 		</div>
 		<section class="profile-section-block">
-			<div class="profile-section-column">
+			<div class="profile-section-column animate fadeInUp slow">
 				<h3 class="padding-bottom-15px">Informações de Perfil</h3>
 				<ul class="profile-info-list padding-top-5px padding-bottom-30px">
 					<li>Data de Nascimento: <span>11/08/2000</span></li>
@@ -50,9 +50,9 @@
 				<a href="" class="padding-bottom-5px">Meus Endereços de Entrega</a>
 				<a href="" class="padding-top-5px">Meus Cartões Salvos</a>
 			</div>
-			<div class="profile-section-column">
+			<div class="profile-section-column animate fadeInUp">
 				<h3 class="padding-bottom-15px">Minhas Ações</h3>
-				<div class="profile-myactions-card margin-bottom-30px">
+				<div class="profile-myactions-card animate fadeInLeft slow margin-bottom-30px">
 					<span class="profile-myactions-location padding-top-30px padding-left-30px padding-bottom-15px">Em: Dicas de Saúde</span>
 					<h2 class="profile-myactions-pub-name padding-left-30px padding-bottom-15px">Nome da Publicação</h2>
 					<p class="profile-myactions-description padding-left-30px padding-bottom-30px">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
@@ -67,7 +67,7 @@
 					</div>
 				</div>
 
-				<div class="profile-myactions-card margin-bottom-30px">
+				<div class="profile-myactions-card animate fadeInLeft slow margin-bottom-30px">
 					<span class="profile-myactions-location padding-top-30px padding-left-30px padding-bottom-15px">Em: Dicas de Saúde</span>
 					<p class="profile-myactions-description padding-left-30px padding-bottom-30px">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
 					<figure class="profile-myactions-image margin-bottom-30px">
@@ -84,7 +84,7 @@
 					</div>
 				</div>
 
-				<div class="profile-myactions-card margin-bottom-30px">
+				<div class="profile-myactions-card animate fadeInLeft slow margin-bottom-30px">
 					<span class="profile-myactions-location padding-top-30px padding-left-30px padding-bottom-15px">Em: Dicas de Saúde</span>
 					<div class="avaliation-stars margin-left-30px margin-bottom-15px">
 	                    <img src="assets/images/icons/star.svg" class="avaliation-stars-image" alt="Star">
