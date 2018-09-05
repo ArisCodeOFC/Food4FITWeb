@@ -29,12 +29,7 @@ $(document).ready(function() {
 
     $("a[data-page-load]").click(function(event) {
         event.preventDefault();
-        var anchor = $(this);
-        $.get(anchor.data("page-load"), function(conteudo) {
-            $("#page-content").html(conteudo);
-            $("#sidebar nav a").removeClass("active");
-            anchor.addClass("active");
-        });
+        abrirPagina($(this).data("page-load"));
     });
 
     $(document).on("mouseenter", "#sidebar.collapse nav a", function() {
@@ -46,4 +41,16 @@ $(document).ready(function() {
     $(document).on("mouseleave", "#sidebar.collapse nav a", function() {
         $("#tooltip").hide();
     });
+
+    abrirPagina(location.hash.replace(/[#\/]/g, '') || "dashboard");
 });
+
+function abrirPagina(pagina) {
+    $.get(pagina + ".php", function(conteudo) {
+        $("#page-content").html(conteudo);
+        $("#sidebar nav a").removeClass("active");
+        $("#sidebar nav a[data-page-load='" + pagina + "']").addClass("active");
+        window.location.hash = "#/" + pagina;
+        $("#titulo-pagina").text(pagina);
+    });
+}

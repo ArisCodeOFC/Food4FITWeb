@@ -25,7 +25,7 @@
             <?php require_once("./components/sidebar.php") ?>
             <section id="main-content">
                 <header>
-                    <h2>Dashboard</h2>
+                    <h2 id="titulo-pagina"></h2>
                     <div>
                         <input type="search" placeholder="Pesquise por algo">
                         <img src="../assets/images/cms/icons/pesquisa.svg">
@@ -40,7 +40,7 @@
                     </div>
                 </header>
                 <section id="page-content">
-                    <?php require_once("./dashboard.php") ?>
+
                 </section>
             </section>
         </section>

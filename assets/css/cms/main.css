@@ -382,6 +382,7 @@ body {
     color: #fff;
     font-family: "Roboto Bold";
     text-transform: uppercase;
+    flex: 0 0 250px;
 }
 
 #main-content header input {

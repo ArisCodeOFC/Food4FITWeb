@@ -18,9 +18,9 @@
     </div>
     <div class="separator"></div>
     <nav>
-        <a href="#" class="active" data-page-load="dashboard.php">
+        <a href="#" data-page-load="dashboard">
             <span class="image"><img src="../assets/images/cms/icons/pagina-inicial.svg"></span>
-            <span class="label">Página inicial</span>
+            <span class="label">Dashboard</span>
         </a>
         <a href="#">
             <span class="image"><img src="../assets/images/cms/icons/estatisticas.svg"></span>
@@ -34,7 +34,7 @@
             <span class="image"><img src="../assets/images/cms/icons/ingredientes.svg"></span>
             <span class="label">Ingredientes</span>
         </a>
-        <a href="#" data-page-load="sobre.php">
+        <a href="#" data-page-load="sobre">
             <span class="image"><img src="../assets/images/cms/icons/publicacoes.svg"></span>
             <span class="label">Publicações</span>
         </a>
