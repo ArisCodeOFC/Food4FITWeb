@@ -23,7 +23,7 @@
 			<h2 class="padding-top-15px padding-bottom-15px padding-left-30px">Promoções Válidas Até 01/01</h2>
 		</section>
 		<article class="promotion-block">
-			<div class="promotions-grid">
+			<div class="promotions-grid animate fadeInUp">
 				<div class="promotion-grid-card">
 					<figure class="promotion-grid-card-column-image">
 						<img src="assets/images/backgrounds/img.jpg" alt="Imagem">

@@ -16,7 +16,7 @@
 	<?php require_once("components/navbar.html"); ?><!-- BARRA DE NAVEGAÇÃO VIA PHP -->
 	<section class="main"><!-- CONTAINER-MÃE DO SITE -->
 		<header id="header-flat"><!-- CABEÇALHO DA INDEX -->
-			<div id="header-flat-row1" class="animate fadeInUp"><!-- PRIMEIRO CONTAINER-FILHO DO CABEÇALHO DA INDEX -->
+			<div id="header-flat-row1" class="animate fadeInDown"><!-- PRIMEIRO CONTAINER-FILHO DO CABEÇALHO DA INDEX -->
 				<img src="assets/images/backgrounds/fit.jpeg" alt="Header"><!-- IMAGEM DO CONTAINER-FILHO DO CABEÇALHO DA INDEX -->
 				<div id="header-flat-overlay"><!-- CAMADA DO CONTAINER-FILHO DO CABEÇALHO DA INDEX -->
 					<h2 class="padding-left-30px padding-bottom-15px">Grãos como principal</h2><!-- TÍTULO DO DESTAQUE -->
@@ -30,69 +30,81 @@
 				</div>
 			</div>
 			<div id="header-flat-row2"><!-- SEGUNDO CONTAINER-FILHO DO CABEÇALHO DA INDEX -->
-				<span id="page-title" class="animate fadeInUp">Destaques</span><!-- TÍTULO DA PÁGINA -->
-				<div id="header-grid-container"><!-- CONTAINER COM GRID DA INDEX -->
-					<div class="highlight-one hl-card animate fadeInUp"  onclick="location.href='prato.php';"><!-- CARD DA INDEX -->
-						<span class="dish-name margin-top-60px margin-left-30px margin-bottom-15px">Frango Grelhado</span><!-- NOME DO PRATO NA INDEX -->
-				  		<div class="dish-separator margin-top-0px margin-left-30px margin-bottom-15px"></div><!-- SEPARADOR -->
-				  		<p class="dish-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni magnam saepe reiciendis.</p><!-- DESCRIÇÃO DO PRATO NA INDEX -->
-				  		<div class="dish-price margin-bottom-15px"><!-- CONTAINER DO PREÇO DO PRATO NA INDEX -->
-				  			<span>R$ 129,90</span><!-- PREÇO -->
-				  			<div><img src="assets/images/simbols/shopping-cart.svg" alt="Comprar"></div><!-- ADICIONAR AO CARRINHO -->
-				  			<div><img src="assets/images/simbols/delivery-truck.svg" alt="Compra Rápida"></div><!-- COMPRA RAPIDA -->
-				  		</div>
+				<span id="page-title">ÚLTIMOS ADICIONADOS</span><!-- TÍTULO DA PÁGINA -->
+				<article class="generic-grid animate fadeInUp">
+					<div class="generic-card">
+						<img src="assets/images/backgrounds/img.jpg" alt="Teste" class="generic-card-img">
+						<div class="generic-card-overlay">
+							<span class="card-dish-name margin-bottom-15px">Frango Grelhado</span>
+					  		<div class="card-dish-separator margin-bottom-15px"></div>
+					  		<p class="card-dish-description margin-bottom-30px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni magnam saepe reiciendis.</p>
+					  		<div class="card-dish-price margin-bottom-30px"><!-- CONTAINER DO PREÇO DO PRATO NA INDEX -->
+					  			<span class="padding-right-15px">R$ 129,90</span><!-- PREÇO -->
+					  			<div><img src="assets/images/simbols/delivery-truck.svg" alt="Compra Rápida"></div><!-- COMPRA RAPIDA -->
+					  		</div>
+						</div>
 					</div>
-					<div class="highlight-two hl-card animate fadeInUp"><!-- CARD DA INDEX -->
-						<span class="dish-name margin-top-60px margin-left-30px margin-bottom-15px">Frango Grelhado</span><!-- NOME DO PRATO NA INDEX -->
-				  		<div class="dish-separator margin-top-0px margin-left-30px margin-bottom-15px"></div><!-- SEPARADOR -->
-				  		<p class="dish-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni magnam saepe reiciendis.</p><!-- DESCRIÇÃO DO PRATO NA INDEX -->
-				  		<div class="dish-price margin-bottom-15px"><!-- CONTAINER DO PREÇO DO PRATO NA INDEX -->
-				  			<span>R$ 129,90</span><!-- PREÇO -->
-				  			<div><img src="assets/images/simbols/shopping-cart.svg" alt="Comprar"></div><!-- ADICIONAR AO CARRINHO -->
-				  			<div><img src="assets/images/simbols/delivery-truck.svg" alt="Compra Rápida"></div><!-- COMPRA RAPIDA -->
-				  		</div>
+					<div class="generic-card">
+						<img src="assets/images/backgrounds/img.jpg" alt="Teste" class="generic-card-img">
+						<div class="generic-card-overlay">
+							<span class="card-dish-name margin-bottom-15px">Frango Grelhado</span>
+					  		<div class="card-dish-separator margin-bottom-15px"></div>
+					  		<p class="card-dish-description margin-bottom-30px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni magnam saepe reiciendis.</p>
+					  		<div class="card-dish-price margin-bottom-30px"><!-- CONTAINER DO PREÇO DO PRATO NA INDEX -->
+					  			<span class="padding-right-15px">R$ 129,90</span><!-- PREÇO -->
+					  			<div><img src="assets/images/simbols/delivery-truck.svg" alt="Compra Rápida"></div><!-- COMPRA RAPIDA -->
+					  		</div>
+						</div>
 					</div>
-					<div class="highlight-three hl-card animate fadeInUp"><!-- CARD DA INDEX -->
-						<span class="dish-name margin-top-60px margin-left-30px margin-bottom-15px">Frango Grelhado</span><!-- NOME DO PRATO NA INDEX -->
-				  		<div class="dish-separator margin-top-0px margin-left-30px margin-bottom-15px"></div><!-- SEPARADOR -->
-				  		<p class="dish-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni magnam saepe reiciendis.</p><!-- DESCRIÇÃO DO PRATO NA INDEX -->
-				  		<div class="dish-price margin-bottom-15px"><!-- CONTAINER DO PREÇO DO PRATO NA INDEX -->
-				  			<span>R$ 129,90</span><!-- PREÇO -->
-				  			<div><img src="assets/images/simbols/shopping-cart.svg" alt="Comprar"></div><!-- ADICIONAR AO CARRINHO -->
-				  			<div><img src="assets/images/simbols/delivery-truck.svg" alt="Compra Rápida"></div><!-- COMPRA RAPIDA -->
-				  		</div>
+					<div class="generic-card">
+						<img src="assets/images/backgrounds/img.jpg" alt="Teste" class="generic-card-img">
+						<div class="generic-card-overlay">
+							<span class="card-dish-name margin-bottom-15px">Frango Grelhado</span>
+					  		<div class="card-dish-separator margin-bottom-15px"></div>
+					  		<p class="card-dish-description margin-bottom-30px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni magnam saepe reiciendis.</p>
+					  		<div class="card-dish-price margin-bottom-30px"><!-- CONTAINER DO PREÇO DO PRATO NA INDEX -->
+					  			<span class="padding-right-15px">R$ 129,90</span><!-- PREÇO -->
+					  			<div><img src="assets/images/simbols/delivery-truck.svg" alt="Compra Rápida"></div><!-- COMPRA RAPIDA -->
+					  		</div>
+						</div>
 					</div>
-					<div class="highlight-four hl-card animate fadeInUp"><!-- CARD DA INDEX -->
-						<span class="dish-name margin-top-60px margin-left-30px margin-bottom-15px">Frango Grelhado</span><!-- NOME DO PRATO NA INDEX -->
-				  		<div class="dish-separator margin-top-0px margin-left-30px margin-bottom-15px"></div><!-- SEPARADOR -->
-				  		<p class="dish-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni magnam saepe reiciendis.</p><!-- DESCRIÇÃO DO PRATO NA INDEX -->
-				  		<div class="dish-price margin-bottom-15px"><!-- CONTAINER DO PREÇO DO PRATO NA INDEX -->
-				  			<span>R$ 129,90</span><!-- PREÇO -->
-				  			<div><img src="assets/images/simbols/shopping-cart.svg" alt="Comprar"></div><!-- ADICIONAR AO CARRINHO -->
-				  			<div><img src="assets/images/simbols/delivery-truck.svg" alt="Compra Rápida"></div><!-- COMPRA RAPIDA -->
-				  		</div>
+					<div class="generic-card">
+						<img src="assets/images/backgrounds/img.jpg" alt="Teste" class="generic-card-img">
+						<div class="generic-card-overlay">
+							<span class="card-dish-name margin-bottom-15px">Frango Grelhado</span>
+					  		<div class="card-dish-separator margin-bottom-15px"></div>
+					  		<p class="card-dish-description margin-bottom-30px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni magnam saepe reiciendis.</p>
+					  		<div class="card-dish-price margin-bottom-30px"><!-- CONTAINER DO PREÇO DO PRATO NA INDEX -->
+					  			<span class="padding-right-15px">R$ 129,90</span><!-- PREÇO -->
+					  			<div><img src="assets/images/simbols/delivery-truck.svg" alt="Compra Rápida"></div><!-- COMPRA RAPIDA -->
+					  		</div>
+						</div>
 					</div>
-					<div class="highlight-five hl-card animate fadeInUp"><!-- CARD DA INDEX -->
-						<span class="dish-name margin-top-60px margin-left-30px margin-bottom-15px">Frango Grelhado</span><!-- NOME DO PRATO NA INDEX -->
-				  		<div class="dish-separator margin-top-0px margin-left-30px margin-bottom-15px"></div><!-- SEPARADOR -->
-				  		<p class="dish-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni magnam saepe reiciendis.</p><!-- DESCRIÇÃO DO PRATO NA INDEX -->
-				  		<div class="dish-price margin-bottom-15px"><!-- CONTAINER DO PREÇO DO PRATO NA INDEX -->
-				  			<span>R$ 129,90</span><!-- PREÇO -->
-				  			<div><img src="assets/images/simbols/shopping-cart.svg" alt="Comprar"></div><!-- ADICIONAR AO CARRINHO -->
-				  			<div><img src="assets/images/simbols/delivery-truck.svg" alt="Compra Rápida"></div><!-- COMPRA RAPIDA -->
-				  		</div>
+					<div class="generic-card">
+						<img src="assets/images/backgrounds/img.jpg" alt="Teste" class="generic-card-img">
+						<div class="generic-card-overlay">
+							<span class="card-dish-name margin-bottom-15px">Frango Grelhado</span>
+					  		<div class="card-dish-separator margin-bottom-15px"></div>
+					  		<p class="card-dish-description margin-bottom-30px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni magnam saepe reiciendis.</p>
+					  		<div class="card-dish-price margin-bottom-30px"><!-- CONTAINER DO PREÇO DO PRATO NA INDEX -->
+					  			<span class="padding-right-15px">R$ 129,90</span><!-- PREÇO -->
+					  			<div><img src="assets/images/simbols/delivery-truck.svg" alt="Compra Rápida"></div><!-- COMPRA RAPIDA -->
+					  		</div>
+						</div>
 					</div>
-					<div class="highlight-six hl-card animate fadeInUp"><!-- CARD DA INDEX -->
-						<span class="dish-name margin-top-60px margin-left-30px margin-bottom-15px">Frango Grelhado</span><!-- NOME DO PRATO NA INDEX -->
-				  		<div class="dish-separator margin-top-0px margin-left-30px margin-bottom-15px"></div><!-- SEPARADOR -->
-				  		<p class="dish-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni magnam saepe reiciendis.</p><!-- DESCRIÇÃO DO PRATO NA INDEX -->
-				  		<div class="dish-price margin-bottom-15px"><!-- CONTAINER DO PREÇO DO PRATO NA INDEX -->
-				  			<span>R$ 129,90</span><!-- PREÇO -->
-				  			<div><img src="assets/images/simbols/shopping-cart.svg" alt="Comprar"></div><!-- ADICIONAR AO CARRINHO -->
-				  			<div><img src="assets/images/simbols/delivery-truck.svg" alt="Compra Rápida"></div><!-- COMPRA RAPIDA -->
-				  		</div>
+					<div class="generic-card">
+						<img src="assets/images/backgrounds/img.jpg" alt="Teste" class="generic-card-img">
+						<div class="generic-card-overlay">
+							<span class="card-dish-name margin-bottom-15px">Frango Grelhado</span>
+					  		<div class="card-dish-separator margin-bottom-15px"></div>
+					  		<p class="card-dish-description margin-bottom-30px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni magnam saepe reiciendis.</p>
+					  		<div class="card-dish-price margin-bottom-30px"><!-- CONTAINER DO PREÇO DO PRATO NA INDEX -->
+					  			<span class="padding-right-15px">R$ 129,90</span><!-- PREÇO -->
+					  			<div><img src="assets/images/simbols/delivery-truck.svg" alt="Compra Rápida"></div><!-- COMPRA RAPIDA -->
+					  		</div>
+						</div>
 					</div>
-				</div>
+				</article>
 				<div class="btn-generic margin-right-auto margin-left-auto margin-top-15px margin-bottom-15px animate fadeInUp"><!-- BOTÃO PARA VER TODOS OS PRATOS -->
 					<span>Ver Todos</span>
 				</div>

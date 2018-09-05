@@ -35,8 +35,8 @@
 				</div>
 			</div>
 		</div>
-		<article class="generic-grid">
-			<div class="generic-card animated fadeInUp">
+		<article class="generic-grid animate fadeInUp">
+			<div class="generic-card">
 				<img src="assets/images/backgrounds/img.jpg" alt="Teste" class="generic-card-img">
 				<div class="generic-card-overlay">
 					<span class="card-dish-name margin-bottom-15px">Frango Grelhado</span>
@@ -48,7 +48,7 @@
 			  		</div>
 				</div>
 			</div>
-			<div class="generic-card animated fadeInUp">
+			<div class="generic-card">
 				<img src="assets/images/backgrounds/img.jpg" alt="Teste" class="generic-card-img">
 				<div class="generic-card-overlay">
 					<span class="card-dish-name margin-bottom-15px">Frango Grelhado</span>
@@ -60,7 +60,7 @@
 			  		</div>
 				</div>
 			</div>
-			<div class="generic-card animated fadeInUp">
+			<div class="generic-card">
 				<img src="assets/images/backgrounds/img.jpg" alt="Teste" class="generic-card-img">
 				<div class="generic-card-overlay">
 					<span class="card-dish-name margin-bottom-15px">Frango Grelhado</span>

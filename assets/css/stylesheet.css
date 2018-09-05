@@ -22,7 +22,7 @@ body{
 	width: 100%;
 	height: auto;
 	max-width: 1200px;
-	margin: 0 auto;
+	margin: 124px auto 0px auto;
 	background-color: #FCFCFC;
 	display: flex;
 	flex-direction: column;
@@ -80,6 +80,11 @@ box-shadow: 0px 25px 56px -13px rgba(0,0,0,0.37);
 	height: auto;
 	background-color: #FCFCFC;
 	z-index: 89999;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	box-shadow: 0px -4px 32px 16px rgba(0,0,0,0.05);
 }
 #navbar-flat-content{
 	/*container-filho da barra de navegação*/
@@ -113,10 +118,15 @@ box-shadow: 0px 25px 56px -13px rgba(0,0,0,0.37);
 	border-radius: 50px;
 	text-indent: 15px;
 	background-color: transparent;
-	border: 2px solid #9CC283;
+	border: 3px solid #9CC283;
 	outline: none;
 	font-family: "Roboto Regular";
 	margin-bottom: 20px;
+}
+#navbar-flat-search input::placeholder{
+	font-family: "Roboto Italic";
+	font-size: 16px;
+	color: #C8C8C8;
 }
 #navbar-flat-login{
 	/*Botão de Usuário*/
@@ -318,7 +328,7 @@ input[type="checkbox"].switch-styled:checked:after{
 	max-width: 350px;
 	height: 100vh;
 	background: #FCFCFC;
-	box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.1);
+	box-shadow: 0px -4px 32px 16px rgba(0,0,0,0.18);
 	display: none;
 	position: fixed;
 	top: 0;
@@ -391,7 +401,7 @@ input[type="checkbox"].switch-styled:checked:after{
 	max-width: 350px;
 	height: 100vh;
 	background: #FCFCFC;
-	box-shadow: -5px 0px 5px 0px rgba(0,0,0,0.1);
+	box-shadow: 0px -4px 32px 16px rgba(0,0,0,0.18);
 	display: none;
 	position: fixed;
 	top: 0;
@@ -466,6 +476,8 @@ input[type="checkbox"].switch-styled:checked:after{
 	overflow-y: hidden;
 	position: relative;
 	box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
 }
 #header-flat-row1 img{
 	/*Imagem do cabeçalho da index*/
@@ -473,6 +485,8 @@ input[type="checkbox"].switch-styled:checked:after{
 	height: 100%;
 	object-fit: cover;
 	display: block;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
 }
 #header-flat-row2{
 	/*Segundo container-filho do cabeçalho da index*/
@@ -492,6 +506,8 @@ input[type="checkbox"].switch-styled:checked:after{
 	justify-content: center;
 	align-items: left;
 	background: linear-gradient(to right, #9CC283, rgba(255,217,76,0.5));
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
 }
 #header-flat-overlay h2{
 	/*Título cabeçalho produto-destaqu da indexe*/
@@ -538,123 +554,6 @@ input[type="checkbox"].switch-styled:checked:after{
 	height: 85%;
 	display: block;
 	margin: 0 auto;
-}
-/*==========================================*/
-
-/* GRID DO CABEÇALHO DA INDEX */
-#header-grid-container{
-	/*Container-mãe da grelha de produtos da index*/
-	width: 95%;
-	height: 100%;
-	max-width: 100%;
-	margin: 0 auto;
-	display: grid;
-	grid-auto-flow: row;
-	grid-gap: 30px 30px;
-	padding-top: 30px;
-	padding-bottom: 30px;
-	grid-auto-rows: auto;
-	grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
-	justify-content: flex-start;
-	align-items: flex-start;
-}
-.hl-card{
-	/*Card da grelha de produtos da index*/
-	border-radius: 10px;
-	overflow: hidden;
-	background: rgba(0,0,0,0.7);
-	box-shadow: 4px 4px 10px 4px rgba(0,0,0,0.1);
-	transition: 300ms ease-out;
-	position: relative;
-}
-.hl-card:hover{
-	/*Ação de mover o mouse no card da grelha de produtos da index*/
-	box-shadow: 4px 4px 10px 4px rgba(0,0,0,0.2);
-	cursor: pointer;
-}
-/*Cards da grelha de produtos da index*/
-.highlight-one{
-	background: linear-gradient(transparent, rgba(0,0,0,0.5)), url('../images/backgrounds/cereal.jpg');
-	background-size: cover;
-}
-.highlight-two{
-	background: linear-gradient(transparent, rgba(0,0,0,0.5)), url('../images/backgrounds/asian.jpg');
-	background-size: cover;
-}
-.highlight-three{
-	background: linear-gradient(transparent, rgba(0,0,0,0.5)), url('../images/backgrounds/fit-card.jpeg');
-	background-size: cover;
-}
-.highlight-four{
-	background: linear-gradient(transparent, rgba(0,0,0,0.5)), url('../images/backgrounds/fruits.jpg');
-	background-size: cover;
-}
-.highlight-five{
-	background: linear-gradient(transparent, rgba(0,0,0,0.5)), url('../images/backgrounds/salad.jpg');
-	background-size: cover;
-}
-.highlight-six{
-	background: linear-gradient(transparent, rgba(0,0,0,0.5)), url('../images/backgrounds/steak.jpg');
-	background-size: cover;
-}
-.dish-name{
-	/*Nome do prato da index*/
-	display: block;
-	color: #FFF;
-	font-size: 21px;
-	font-family: "Roboto Bold";
-}
-.dish-separator{
-	/*Separador do card da index*/
-	width: 30px;
-	height: 3px;
-	border-radius: 30px;
-	background-color: #fff;
-}
-.dish-description{
-	/*Descrição do prato da index*/
-	width: 60%;
-	font-size: 16px;
-	line-height: 21px;
-	font-family: "Roboto Regular";
-	color: #FFF;
-	margin-left: 30px;
-	margin-bottom: 20px;
-}
-.dish-price{
-	/*Container do preço do prato da index*/
-	max-width: 65%;
-	height: 40px;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	background: #E83131;
-	border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px;
-}
-.dish-price span{
-	/*Preço do prato da index*/
-	display: block;
-	font-size: 21px;
-	color: #FFF;
-	margin-left: 20px;
-	text-align: center;
-	font-family: "Roboto Bold";
-}
-.dish-price div{
-	/*Botão de compra do prato da index*/
-	height: 25px;
-	width: 25px;
-	margin-left: 12px;
-	background: transparent;
-}
-.dish-price div img{
-	/*Imagem do botão de compra do prato da index*/
-	max-width: 100%;
-	max-height: 100%;
-	display: block;
-
 }
 /*==========================================*/
 
@@ -832,9 +731,9 @@ input[type="checkbox"].switch-styled:checked:after{
 #app-section-separator{
 	/*separador da sessão do aplicativo na index*/
 	width: 80px;
-	height: 3px;
+	height: 4px;
 	background: #000;
-	border-radius: 30px;
+	border-radius: 50px;
 }
 #app-section-content p{
 	/*Descrição da sessão do aplicativo na index*/
