@@ -4,3 +4,18 @@
     display: flex;
 
 }
+
+#txtpergunta{
+    width: 100%;
+    border-radius: 5px;
+    display: block;
+    background-color: #E8E8E8;
+    border: none;
+    outline: none;
+    height: 40px;
+    text-indent: 15px;
+    font-family: "Roboto Regular";
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}

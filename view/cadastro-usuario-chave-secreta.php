@@ -24,11 +24,12 @@
                 <label for="txtconfsenha" class="label-generic margin-top-30px">Confirme a Senha:</label>
                 <input type="password" name="txtconfsenha" id="txtconfsenha" class="input-generic" required>
                 <label for="txtpergunta" class="label-generic margin-top-30px">Pergunta Secreta:</label>
-                <select name="txtpergunta" id="txtpergunta" class="label-generic margin-top-30px">Selecione uma opção
+                <select name="txtpergunta" id="txtpergunta" class="margin-top-30px">Selecione uma opção
                     <option value="teste">Teste</option>
+                    <option value="teste1">Teste1</option>
                 </select>
                 <label for="txtcpf" class="label-generic margin-top-30px">Resposta:</label>
-                <input type="text" name="txtcpf" id="txtcpf" class="input-generic" required>
+                <input type="text" name="txtcpf" id="txtcpf" class="input-generic margin-bottom-60px" required>
                 <div class="butto-basic-information margin-top-60px margin-bottom-30px">
                     <div class="btn-generic">
                         <span>Voltar</span>
