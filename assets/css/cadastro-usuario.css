@@ -19,3 +19,30 @@
     margin-top: 5px;
     margin-bottom: 15px;
 }
+
+.texto{
+    font-size: 18px;
+    font-family: "Roboto Regular";
+}
+
+#modal-conf{
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    display: inline-block;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border: 1px solid #E8E8E8;
+    font-family: "Roboto Regular";
+    border-radius: 5px;
+}
+
+.frase-maior{
+    font-size: 30px;
+    font-family: "Roboto Bold";
+}
+
+.texto-modal{
+    font-size: 18px;
+    font-family: "Roboto Regular";
+}

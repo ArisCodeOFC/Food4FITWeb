@@ -24,13 +24,16 @@
                 <label for="txtsexo" class="label-generic margin-top-30px">Genero:</label>
                 <div id="txtsexo">
                     <input type="radio" name="rdosexo" value="H" required>Homem
-                    <input type="radio" name="rdosexo" value="M" required>Mulher
-                    <input type="radio" name="rdosexo">Prefiro não dizer
+                    <input type="radio" name="rdosexo" value="M" required >Mulher
                 </div>
                 <label for="txttelefone" class="label-generic margin-top-30px">Telefone:</label>
                 <input type="tel" name="txttelefone" id="txttelefone" class="input-generic" placeholder="Ex: (11)9999-9999" required>
                 <label for="txtcelular" class="label-generic margin-top-30px">Celular:</label>
                 <input type="text" name="txtcelular" id="txtcelular" class="input-generic" placeholder="Ex: (11)98888-8888" required>
+                <span class="aviso-contato">Caso necessário o contato através de e-mail ou<br>
+                    telefone/celular, usaremos o seu nome escolhido<br>
+                    como vulgo.
+                </span>
                 <div class="butto-basic-information margin-top-60px margin-bottom-30px">
                     <div class="btn-generic">
                         <span>Voltar</span>
