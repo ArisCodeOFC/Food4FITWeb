@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cadastro de Usuário</title>
+	<link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
+	<link rel="stylesheet" href="assets/css/stylesheet.css">
+	<link rel="stylesheet" href="assets/css/cadastro-usuario.css">
+	<link rel="stylesheet" href="assets/css/mobile-stylesheet.css">
+	<link rel="stylesheet" href="assets/css/font-style.css">
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
+	<script src="assets/js/scripts.js"></script>
+</head>
+<body>
+	<?php require_once("components/navbar.html") ?><!-- BARRA DE NAVEGAÇÃO VIA PHP -->
+    <section class="main">
+        <span id="page-title" class="margin-left-auto margin-right-auto animate fadeInUp">DADOS ADICIONAIS</span><!-- TÍTULO DA PÁGINA -->
+        <div class="form-generic width-small margin-left-auto margin-right-auto">
+            <form class="form-generic-content">
+                <label for="txtdatanasc" class="label-generic margin-top-30px">Data de Nascimento:</label>
+                <input type="text" name="txtdatanasc" id="txtdatanasc" class="input-generic" placeholder="Ex: 01/01/1990" required>
+                <label for="txtsexo" class="label-generic margin-top-30px">Genero:</label>
+                <div id="txtsexo">
+                    <input type="radio" name="rdosexo" value="H" required>Homem
+                    <input type="radio" name="rdosexo" value="M" required>Mulher
+                    <input type="radio" name="rdosexo">Prefiro não dizer
+                </div>
+                <label for="txttelefone" class="label-generic margin-top-30px">Telefone:</label>
+                <input type="tel" name="txttelefone" id="txttelefone" class="input-generic" placeholder="Ex: (11)9999-9999" required>
+                <label for="txtcelular" class="label-generic margin-top-30px">Celular:</label>
+                <input type="text" name="txtcelular" id="txtcelular" class="input-generic" placeholder="Ex: (11)98888-8888" required>
+                <div class="butto-basic-information margin-top-60px margin-bottom-30px">
+                    <div class="btn-generic">
+                        <span>Voltar</span>
+                    </div>
+                    <div class="btn-generic margin-left-auto">
+                        <span>Próximo</span>
+                    </div>
+                </div>
+            </form>
+        </div>
+	</section>
+	<?php require_once("components/footer.html"); ?><!-- RODAPÉ VIA PHP -->
+</body>
+</html>
