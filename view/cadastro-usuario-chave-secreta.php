@@ -29,7 +29,7 @@
                 </select>
                 <label for="txtcpf" class="label-generic margin-top-30px">Resposta:</label>
                 <input type="text" name="txtcpf" id="txtcpf" class="input-generic margin-bottom-60px" required>
-                <div class="butto-basic-information margin-top-60px margin-bottom-30px">
+                <div class="button-basic-information margin-top-30px margin-bottom-30px">
                     <div class="btn-generic">
                         <a href="cadastro-usuario-dados-adicionais.php">
                             <span>Voltar</span>

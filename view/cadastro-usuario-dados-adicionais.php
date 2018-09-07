@@ -31,10 +31,9 @@
                 <label for="txtcelular" class="label-generic margin-top-30px">Celular:</label>
                 <input type="text" name="txtcelular" id="txtcelular" class="input-generic" placeholder="Ex: (11)98888-8888" required>
                 <span class="aviso-contato">Caso necessário o contato através de e-mail ou<br>
-                    telefone/celular, usaremos o seu nome escolhido<br>
-                    como vulgo.
+                    telefone/celular, usaremos o seu nome escolhido como vulgo.
                 </span>
-                <div class="butto-basic-information margin-top-60px margin-bottom-30px">
+                <div class="button-basic-information margin-top-60px margin-bottom-30px">
                     <div class="btn-generic">
                         <a href="cadastro-usuario.php">
                             <span>Voltar</span>

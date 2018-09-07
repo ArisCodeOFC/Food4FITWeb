@@ -29,7 +29,7 @@
                 <input type="text" name="txtcpf" id="txtcpf" class="input-generic" placeholder="Ex: 111.222.333-44" required>
                 <label for="txtcep" class="label-generic margin-top-30px">CEP:</label>
                 <input type="text" name="txtcep" id="txtcep" class="input-generic" placeholder="Ex: 09933-888" required>
-                <div class="butto-basic-information margin-top-60px margin-bottom-30px">
+                <div class="button-basic-information margin-top-30px margin-bottom-30px">
                     <div class="btn-generic">
                         <span>Cancelar</span>
                     </div>
