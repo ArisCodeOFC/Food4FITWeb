@@ -34,7 +34,9 @@
                         <span>Cancelar</span>
                     </div>
                     <div class="btn-generic margin-left-auto">
-                        <span>Próximo</span>
+                        <a href="cadastro-usuario-dados-adicionais.php">
+                            <span>Próximo</span>
+                        </a>
                     </div>
                 </div>
             </form>
