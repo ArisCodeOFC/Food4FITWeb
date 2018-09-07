@@ -59,9 +59,9 @@
                     </div>
                 </div>
                 <div class="social-share padding-top-30px padding-left-15px">
-                    <img src="assets/images/icons/facebook-color.svg" class="social-share-image" alt="Compartilhar no Facebook">
-                    <img src="assets/images/icons/twitter-color.svg" class="social-share-image" alt="Compartilhar no Twitter">
-                    <img src="assets/images/icons/share.svg" class="social-share-image" alt="Obter link compartilhável">
+                    <img src="assets/images/icons/facebook-color.svg" alt="Compartilhar no Facebook">
+                    <img src="assets/images/icons/twitter-color.svg" alt="Compartilhar no Twitter">
+                    <img src="assets/images/icons/share.svg" alt="Obter link compartilhável">
                 </div>
             </article>
         </section>

@@ -197,6 +197,19 @@
     color: #8F8F8F;
     display: block;
 }
+.social-share{
+    width: 109px;
+    height: 28px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.social-share img{
+    width: 28px;
+    height: 28px;
+    display: block;
+    margin: 0;
+}
 /* ===================================================== */
 .filter-menu{
     width: 100%;
