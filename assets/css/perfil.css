@@ -54,7 +54,11 @@
 }
 .profile-name-row{
 	width: 100%;
-	background: linear-gradient(to right, #9CC283, #EDBF85);
+	background: linear-gradient(to right, #9CC283, #86AD6D);
+    box-shadow: 0px -4px 32px 16px rgba(0,0,0,0.05);
+    z-index: 999;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 .profile-name-row h2{
 	font-size: 28px;
@@ -145,18 +149,6 @@
 	font-size: 16px;
 	color: #282828;
 	line-height: 24px;
-}
-.options-dots{
-	width: 30px;
-	height: auto;
-	position: absolute;
-	top: 20px;
-	right: 10px;
-}
-.options-dots img{
-	max-width: 100%;
-	max-height: 100%;
-	display: block;
 }
 .social-bar{
 	width: 100px;
