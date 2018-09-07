@@ -36,10 +36,14 @@
                 </span>
                 <div class="butto-basic-information margin-top-60px margin-bottom-30px">
                     <div class="btn-generic">
-                        <span>Voltar</span>
+                        <a href="cadastro-usuario.php">
+                            <span>Voltar</span>
+                        </a>
                     </div>
                     <div class="btn-generic margin-left-auto">
-                        <span>Próximo</span>
+                        <a href="cadastro-usuario-chave-secreta.php">
+                            <span>Próximo</span>
+                        </a>
                     </div>
                 </div>
             </form>
