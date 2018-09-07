@@ -106,7 +106,7 @@
 						</div>
 					</div>
 				</article>
-				<div class="btn-generic margin-right-auto margin-left-auto margin-top-15px margin-bottom-15px animate fadeInUp"><!-- BOTÃO PARA VER TODOS OS PRATOS -->
+				<div class="btn-generic margin-right-auto margin-left-auto margin-bottom-30px animate fadeInUp"><!-- BOTÃO PARA VER TODOS OS PRATOS -->
 					<span>Ver Todos</span>
 				</div>
 			</div>

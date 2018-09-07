@@ -76,7 +76,7 @@
 					<input type="checkbox" name="chkall" class="switch-styled">
 				</div>
 				<label for="chkall" class="padding-left-15px">Selecionar Todos</label>
-        		<div class="btn-generic margin-left-30px"><span>Excluir</span></div>
+        		<div class="btn-generic-disabled margin-left-30px"><span>Excluir</span></div>
         	</div>
         	<section id="shopping-cart-confirm-block" class="padding-bottom-30px">
         		<div id="shopping-cart-confirm-column-one">
