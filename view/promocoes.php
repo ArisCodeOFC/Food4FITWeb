@@ -17,8 +17,14 @@
 <body>
 	<?php require_once("components/navbar.html"); ?>
 	<section class="main">
-		<header class="slider-1200-250" style="width: 100%; height: 250px;">
-
+		<header class="slider-1200-250">
+            <div class="slider_content"><!--CONTAINER DO SLIDER-->
+				<img class="slider animate fadeIn" src="assets/images/backgrounds/fit.jpeg" alt="Título">
+				<img class="slider animate fadeIn" src="assets/images/backgrounds/fit2.jpeg" alt="Título">
+                <img class="slider animate fadeIn" src="assets/images/backgrounds/fit3.jpeg" alt="Título">
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a><!--BOTÃO RETROCEDER-->
+				<a class="next" onclick="plusSlides(1)">&#10095;</a><!--BOTÃO AVANÇAR-->
+			</div>
 		</header>
 		<section class="gradient-header-60">
 			<h2 class="padding-top-15px padding-bottom-15px padding-left-30px">Promoções Válidas Até 01/01</h2>
@@ -247,5 +253,6 @@
 		</article>
 	</section>
 	<?php require_once("components/footer.html"); ?>
+	<script src="assets/js/slider.js"></script>
 </body>
 </html>

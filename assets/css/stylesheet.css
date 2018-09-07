@@ -617,9 +617,11 @@ input[type="checkbox"].switch-styled:checked:after{
 /* GRID GENÉRICO */
 .generic-grid{
 	/*Container-mãe da grelha genérica responsiva*/
-	width: 95%;
+	width: 100%;
 	height: 100%;
 	max-width: 100%;
+    box-sizing: border-box;
+    border: 30px solid #FCFCFC;
 	margin: 0 auto;
 	display: grid;
 	grid-auto-flow: row;
@@ -759,6 +761,49 @@ input[type="checkbox"].switch-styled:checked:after{
 }
 .pagination a:hover:not(.active) {background-color: #ddd;}
 /*==========================================*/
+
+/*CLASSES DO SLIDER*/
+.slider-1200-250{
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+.slider_content{
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: 500ms ease-out;
+}
+.slider {display:none; width: 100%;}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 300ms ease;
+  border-radius: 0 3px 3px 0;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: #202020;
+  color: #9CC283;
+  text-shadow: 1.5px 0px 0px gold;
+}
+/*==========================================*/
+
 
 /* BAIXAR APLICATIVO NA HOME */
 #app-section{
