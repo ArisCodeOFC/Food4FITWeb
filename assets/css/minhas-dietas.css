@@ -89,7 +89,7 @@
     background-color: #F1F1F1;
     border-radius: 5px;
     display: block;
-    overflow:auto;
+    overflow: hidden;
     box-sizing: border-box;
 }
 .diet-card h3{

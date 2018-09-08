@@ -23,24 +23,48 @@
 /*--------------------------------------------------*/
 @media screen and (max-device-width: 768px) {
 	#app-section{
-		width: 100%; height: auto; position: relative; display: block;
+		width: 100%; height: auto; position: relative; display: block; padding-top: 60px;
 	}
+    #app-section-image{
+        padding-top: 40px
+    }
 	#a-s-i-left{
 		display: none;
 	}
 	#a-s-i-center{
 		display: block;
+	}
+	.my-diets-sugestions-column{
+		display: none;
+	}
+	.profile-section-block{
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
 	}
 }
 @media screen and (max-width: 768px) {
 	#app-section{
-		width: 100%; height: auto; position: relative; display: block;
+		width: 100%; height: auto; position: relative; display: block; padding-top: 60px;
 	}
+    #app-section-image{
+        padding-top: 40px
+    }
 	#a-s-i-left{
 		display: none;
 	}
 	#a-s-i-center{
 		display: block;
+	}
+	.my-diets-sugestions-column{
+		display: none;
+	}
+	.profile-section-block{
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
 	}
 }
 /*--------------------------------------------------*/
