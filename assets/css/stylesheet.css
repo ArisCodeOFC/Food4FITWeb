@@ -792,6 +792,11 @@ input[type="checkbox"].switch-styled:checked:after{
   font-size: 18px;
   transition: 300ms ease;
   border-radius: 0 3px 3px 0;
+  z-index: 999;
+  text-decoration: none;
+}
+.prev {
+    left: 0;
 }
 .next {
   right: 0;
