@@ -1,5 +1,5 @@
-<html>
-    <head>
+<html lang="pt-br">
+<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +11,17 @@
 	<script src="assets/js/scripts.js"></script>
 </head>
 <body>
-	<div id="modal-conf" class="margin-top-60px width-small margin-left-auto margin-right-auto">
-        <span class="frase-maior width-small margin-left-auto margin-right-auto">Você está cadastrado!<br> </span>
+	<div id="modal-conf">
+
+        <h2 class="frase-maior">Você está cadastrado!</h2>
+        <p class="texto-modal margin-left-auto margin-right-auto">Seu navegador te redirecionará para a página de login em 5 segundos.</p>
+        <span class="margin-left-auto margin-right-auto">Clique <a href=""><em>aqui</em></a> para pular</span>
+
+<!--
+        <span class="frase-maior">Você está cadastrado!<br> </span>
         <span class="texto-modal width-small margin-left-auto margin-right-auto">Seu navegador te redirecionará para a página de login em 5 segundos.<br> </span>
         <span class="texto-modal width-small margin-left-auto margin-right-auto">Clique aqui para pular<br></span>
+-->
     </div>
 </body>
 </html>
