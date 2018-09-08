@@ -48,7 +48,7 @@ body {
     font-size: 86px;
 }
 
-#main-login #subtitulo {
+#main-login #titulo #subtitulo {
     font-size: 21px;
     color: #7F7F7F;
     font-family: "Roboto Medium";
@@ -103,6 +103,7 @@ body {
     color: #ffffff;
     font-size: inherit;
     font-family: "Roboto Bold";
+    cursor: pointer;
 }
 
 #main-login #texto-nao-tenho-conta {
@@ -142,9 +143,9 @@ body {
     padding: 15px;
     box-sizing: border-box;
     overflow-y: auto;
-    float: left;
-   box-shadow: 0px 0px 72px 10px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 72px 10px rgba(0,0,0,0.1);
     transition: width 500ms;
+    flex-shrink: 0;
 }
 
 #sidebar-header {
@@ -153,7 +154,7 @@ body {
     position: relative;
 }
 
-#sidebar h1{
+#sidebar h1 {
     font-size: 26px;
     color: #9CC283;
     font-family: "Roboto bold";
@@ -173,10 +174,12 @@ body {
     transform: rotate(360deg);
     transition: transform 500ms;
 }
-#sidebar-collapse img{
+
+#sidebar-collapse img {
     max-width: 100%;
     display: block
 }
+
 .separator {
     width: 100%;
     height: 3px;
@@ -288,7 +291,7 @@ body {
 }
 
 #sidebar nav a.active, #sidebar nav a:hover {
-    background-color: #F1F1F1;
+    background-color: #ededed;
 }
 
 #sidebar nav .image {
@@ -359,6 +362,7 @@ body {
 #main-content {
     height: 100%;
     flex-grow: 1;
+    overflow-y: auto;
 }
 
 #main-content header {
@@ -377,7 +381,7 @@ body {
     align-items: center;
 }
 
-#main-content header h2 {
+#main-content header #titulo-pagina {
     font-size: 21px;
     color: #fff;
     font-family: "Roboto Bold";
@@ -400,7 +404,6 @@ body {
     color: #9F9F9F;
     font-size: 16px;
     font-family: "Roboto Medium Italic";
-
 }
 
 #main-content header #ultimas-interacoes {
@@ -452,4 +455,153 @@ img.btn-logout:hover {
     padding: 3px 20px;
     display: none;
     font-family: "Roboto Bold";
+}
+
+
+.jq-toast-single {
+    background-color: #9cc283;
+    border-radius: 5px;
+    padding: 30px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    font-family: "Roboto Bold/Medium";
+    color: #ffffff;
+    line-height: 20px;
+    box-sizing: border-box;
+}
+
+#tabela-items {
+    width: 100%;
+    border: solid #9CC283 10px;
+    box-sizing: border-box;
+}
+
+#tabela-items .linha {
+    display: flex;
+	flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#tabela-items .linha:first-child {
+    background-color: #9CC283;
+}
+
+#tabela-items .linha:first-child .coluna {
+    font-size: 18px;
+    color: #ffffff;
+    font-family: "Roboto Bold";
+    text-transform: uppercase;
+    height: 60px;
+    line-height: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+#tabela-items .coluna {
+    flex: 1 1 0;
+    display: flex;
+}
+
+#tabela-items .coluna:last-of-type {
+	flex: 0 0 280px;
+    align-items: center;
+    justify-content: center;
+}
+
+#tabela-items .coluna:first-of-type {
+	flex: 0 0 385px;
+}
+
+#tabela-items .coluna.titulo {
+	flex: 2 1 0;
+}
+
+#tabela-items .coluna.descricao {
+	flex: 3 1 0;
+}
+
+#tabela-items .coluna + .coluna {
+    border-left: solid 8px #9CC283;
+    padding: 0 10px;
+}
+
+#tabela-items .linha + .linha .coluna {
+	height: 120px;
+}
+
+#tabela-items .linha + .linha .coluna.titulo>span {
+	font-size: 21px;
+    color: #282828;
+    font-family: "Roboto Bold";
+	margin: auto;
+}
+
+#tabela-items .linha + .linha .coluna.descricao {
+	overflow: hidden;
+}
+
+#tabela-items .linha + .linha .coluna.descricao>span {
+    font-size: 18px;
+    line-height: 24px;
+    color: #282828;
+    font-family: "Roboto";
+	margin: auto;
+}
+
+#tabela-items .linha + .linha .coluna:first-of-type img {
+	height: 90px;
+    margin: auto;
+}
+
+#tabela-items .linha + .linha .coluna:last-of-type img {
+	width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+#tabela-items .linha + .linha .coluna:last-of-type hr {
+    width: 3px;
+    height: 40px;
+    border-radius: 2px;
+    background-color: #000000;
+    margin: 0 10px;
+}
+
+#tabs {
+    width: 100%;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#tabs span {
+    width: 250px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 35px;
+    background-color: #d9d9d9;
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: "Roboto Bold";
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+#tabs span.active {
+    color: #ffffff;
+    background-color: #4d4d4d;
+}
+
+#tabs-content>* {
+    display: none;
+}
+
+#tabs-content>.active {
+    display: block;
 }
