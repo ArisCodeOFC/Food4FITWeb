@@ -1,4 +1,4 @@
-var sliderCount = 1;
+/*var sliderCount = 1;
 var count = 0;
 showSlides(sliderCount);
 carousel();
@@ -34,4 +34,13 @@ function carousel() {
     }
     x[count-1].style.display = "block";
     setTimeout(carousel, 3000);
-}
+}*/
+$(document).ready(function() {
+    $("#slider").responsiveSlides({
+        nav: true,
+        prevText: "&lt;",
+        nextText: "&gt;",
+        speed: 1000,
+        timeout: 3000
+    });
+});
