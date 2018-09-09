@@ -20,15 +20,15 @@
         <div class="form-generic width-small margin-left-auto margin-right-auto">
             <form class="form-generic-content">
                 <label for="txtnome" class="label-generic margin-top-30px">Nome:</label>
-                <input type="text" name="txtnome" id="txtnome" class="input-generic" placeholder="Ex: João" required>
+                <input type="text" name="nome" id="nome" class="input-generic" placeholder="Ex: João" required>
                 <label for="txtsobrenome" class="label-generic margin-top-30px">Sobrenome:</label>
-                <input type="text" name="txtsobrenome" id="txtsobrenome" class="input-generic" placeholder="Ex: Guedez da Silva" required>
+                <input type="text" name="sobrenome" id="sobrenome" class="input-generic" placeholder="Ex: Guedez da Silva" required>
                 <label for="txtemail" class="label-generic margin-top-30px">E-Mail:</label>
-                <input type="email" name="txtemail" id="txtemail" class="input-generic" placeholder="Ex: endereco@provedor.com" required>
+                <input type="email" name="email" id="email" class="input-generic" placeholder="Ex: endereco@provedor.com" required>
                 <label for="txtcpf" class="label-generic margin-top-30px">CPF:</label>
-                <input type="text" name="txtcpf" id="txtcpf" class="input-generic" placeholder="Ex: 111.222.333-44" required>
+                <input type="text" name="cpf" id="cpf" class="input-generic" placeholder="Ex: 111.222.333-44" required>
                 <label for="txtcep" class="label-generic margin-top-30px">CEP:</label>
-                <input type="text" name="txtcep" id="txtcep" class="input-generic" placeholder="Ex: 09933-888" required>
+                <input type="text" name="cep" id="cep" class="input-generic" placeholder="Ex: 09933-888" required>
                 <div class="button-basic-information margin-top-30px margin-bottom-30px">
                     <div class="btn-generic">
                         <span>Cancelar</span>

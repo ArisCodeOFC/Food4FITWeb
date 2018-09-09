@@ -26,15 +26,15 @@
         		<div class="shopping-cart-address-column">
         			<span class="shopping-cart-address-column-title margin-left-30px padding-top-60px margin-bottom-15px">Selecione um endereço:</span>
         			<div class="padding-left-30px">
-	        			<input type="radio" name="input1">
+	        			<input type="radio" name="endereco" value="1">
 	        			<label for="input1" class="margin-left-5px">R. Silverstone, 391, JD. Flores, Jandira, SP</label>
         			</div>
 					<div class="padding-left-30px">
-        				<input type="radio" name="input2">
+        				<input type="radio" name="endereco" value="1">
         				<label for="input2" class="margin-left-5px">R. São Roque, 142, Lago dos Cisnes, Barueri, SP</label>
 					</div>
 					<div class="padding-left-30px">
-        				<input type="radio" name="input3">
+        				<input type="radio" name="endereco" value="1">
         				<label for="input3" class="margin-left-5px">Av. Centuri, 938, João Bosques, Carapicuíba, SP</label>
         			</div>
         			<a href="" class="padding-left-30px">Cadastrar um endereço</a>
@@ -42,11 +42,11 @@
         		<div class="shopping-cart-address-column">
         			<span class="shopping-cart-address-column-title margin-left-30px padding-top-60px margin-bottom-15px">Selecione um frete:</span>
         			<div class="padding-left-30px">
-	        			<input type="radio" name="input1">
+	        			<input type="radio" name="frete" value="1">
 	        			<label for="input1" class="margin-left-5px">Frete Comum (R$12,90)</label>
         			</div>
 					<div class="padding-left-30px">
-        				<input type="radio" name="input2">
+        				<input type="radio" name="frete" value="1">
         				<label for="input2" class="margin-left-5px">Frete Expresso (R$25,90)</label>
 					</div>
         		</div>
