@@ -1,0 +1,200 @@
+/* CABEÇALHO INDEX */
+#header-flat{
+	/*Container-mãe do cabeçalho da página index*/
+	width: 100%;
+	height: auto;
+}
+#header-flat-row1{
+	/*Container-filho do cabeçalh da indexo*/
+	width: 100%;
+	height: 300px;
+	overflow-y: hidden;
+	position: relative;
+	box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+#header-flat-row1 img{
+	/*Imagem do cabeçalho da index*/
+	max-width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+#header-flat-row2{
+	/*Segundo container-filho do cabeçalho da index*/
+	width: 100%;
+	height: auto;
+	background-color: #FCFCFC;
+}
+#header-flat-overlay{
+	/*Overlay container do cabeçalho da index*/
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: left;
+	background: linear-gradient(to right, #9CC283, rgba(255,217,76,0.5));
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+#header-flat-overlay h2{
+	/*Título cabeçalho produto-destaqu da indexe*/
+	font-size: 38px;
+	font-family: "Roboto Bold", sans-serif;
+	color: #FFF;
+}
+#header-flat-overlay p{
+	/*Descrição cabeçalho produto-destaque da index*/
+	font-size: 16px;
+	line-height: 21px;
+	font-family: "Roboto Regular", sans-serif;
+	color: #FFF;
+	width: 35%;
+}
+#header-flat-overlay-seemore{
+	/*Container do botão de ver mais do cabeçalho da index*/
+	width: 60px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	transition: 200ms ease-in-out;
+}
+#header-flat-overlay-seemore:hover{
+	/*Ação de mover o mouse no botão*/
+	background: rgba(0,0,0,0.2);
+	cursor: pointer;
+}
+#header-flat-overlay-seemore figure{
+	/*Container da imagem do botão*/
+	width: 30px;
+	height: 30px;
+	padding: 0;
+	margin: 0 auto;
+}
+#header-flat-overlay-seemore figure img{
+	/*Imagem do botão*/
+	width: 85%;
+	height: 85%;
+	display: block;
+	margin: 0 auto;
+}
+/*==========================================*/
+
+/* BAIXAR APLICATIVO NA HOME */
+#app-section{
+	/*Container-mãe da sessão do aplicativo na index*/
+	width: 100%;
+	height: auto;
+	position: relative;
+	display: flex;
+    flex-direction: row;
+}
+#app-section-content{
+	/*Container-filho da sessão do aplicativo na index*/
+	width: 100%;
+	max-width: 600px;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    margin: 0 auto;
+}
+#app-section-content h2{
+	/*Título da sessão do aplicativo na index*/
+	text-align: center;
+	color: #000;
+	font-size: 32px;
+	width: 80%;
+	font-family: 'Roboto Bold';
+}
+#app-section-separator{
+	/*separador da sessão do aplicativo na index*/
+	width: 80px;
+	height: 4px;
+	background: #000;
+	border-radius: 50px;
+}
+#app-section-content p{
+	/*Descrição da sessão do aplicativo na index*/
+	width: 70%;
+	font-size: 18px;
+	font-family:'Roboto Regular';
+	line-height: 23px;
+	text-align: center;
+}
+#app-section-image{
+	/*container da imagem do smartphone da sessão do aplicativo na index*/
+	width: 100%;
+	max-width: 600px;
+	height: auto;
+    margin: 0 auto;
+}
+#app-section-image img{
+	/*Imagem do smartphone da sessão do aplicativo na index*/
+	max-width: 100%;
+}
+#a-s-i-left{
+	/*Imagem à esquerda*/
+	display: block;
+}
+#a-s-i-center{
+	/*Imagem ao centro*/
+	display: none;
+}
+/*==========================================*/
+
+/* CASOS DE SUCESSO - JANELA DE ACESSO */
+#success-cases-section{
+	/*Container-mãe da sessão de casos de sucesso*/
+	width: 100%;
+	background: linear-gradient(#FCFCFC, #F9F9F9);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+#success-cases-content{
+	/*Container-filho da sessão de casos de sucesso*/
+	width: 80%;
+	max-width: 800px;
+	background-image: url('../images/backgrounds/img1.jpg');
+	background-size: cover;
+	border-radius: 10px;
+	height: auto;
+	padding: 0;
+	margin: 120px auto;
+	box-shadow: 4px 4px 10px 4px rgba(0,0,0,0.1);
+}
+#success-cases-content h2{
+	/*Título da sessão de casos de sucesso*/
+	color: #FFF;
+	font-size: 21px;
+	font-family: 'Roboto Bold';
+}
+#success-cases-separator{
+	/*Separador da sessão de casos de sucesso*/
+	width: 80px;
+	height: 3px;
+	background: #FFF;
+	border-radius: 50px;
+}
+#success-cases-content p{
+	/*Descrição da sessão de casos de sucesso*/
+	color: #FCFCFC;
+	font-size: 18px;
+	line-height: 24px;
+}
+/*==========================================*/

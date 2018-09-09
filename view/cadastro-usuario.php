@@ -7,6 +7,7 @@
 	<title>Cadastro de Usuário</title>
 	<link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
 	<link rel="stylesheet" href="assets/css/stylesheet.css">
+    <link rel="stylesheet" href="assets/css/classes-genericas.css">
 	<link rel="stylesheet" href="assets/css/cadastro-usuario.css">
 	<link rel="stylesheet" href="assets/css/mobile-stylesheet.css">
 	<link rel="stylesheet" href="assets/css/font-style.css">
