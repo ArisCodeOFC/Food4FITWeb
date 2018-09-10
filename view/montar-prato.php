@@ -7,6 +7,7 @@
 	<title>Monte seu prato</title>
 	<link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
 	<link rel="stylesheet" href="assets/css/stylesheet.css">
+    <link rel="stylesheet" href="assets/css/classes-genericas.css">
 	<link rel="stylesheet" href="assets/css/font-style.css">
     <link rel="stylesheet" href="assets/css/keyframes.css">
 	<link rel="stylesheet" href="assets/css/montar-prato.css">

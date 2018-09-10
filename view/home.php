@@ -6,10 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Food 4fit</title>
 	<link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
+	<link rel="stylesheet" href="assets/css/home.css">
+	<link rel="stylesheet" href="assets/css/classes-genericas.css">
 	<link rel="stylesheet" href="assets/css/stylesheet.css">
-	<link rel="stylesheet" href="assets/css/mobile-stylesheet.css">
 	<link rel="stylesheet" href="assets/css/font-style.css">
     <link rel="stylesheet" href="assets/css/keyframes.css">
+	<link rel="stylesheet" href="assets/css/mobile-stylesheet.css">
 	<script src="assets/js/jquery-3.3.1.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 </head>

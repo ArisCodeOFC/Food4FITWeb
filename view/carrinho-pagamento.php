@@ -7,6 +7,7 @@
 	<title>Pagamento :: Carrinho - Food 4fit</title>
 	<link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
 	<link rel="stylesheet" href="assets/css/stylesheet.css">
+    <link rel="stylesheet" href="assets/css/classes-genericas.css">
 	<link rel="stylesheet" href="assets/css/font-style.css">
     <link rel="stylesheet" href="assets/css/keyframes.css">
     <link rel="stylesheet" href="assets/css/carrinho.css">
@@ -26,15 +27,15 @@
         		<div class="shopping-cart-address-column">
         			<span class="shopping-cart-address-column-title margin-left-30px padding-top-60px margin-bottom-15px">Selecione um cartão de crédito:</span>
         			<div class="padding-left-30px">
-	        			<input type="radio" name="input1">
+	        			<input type="radio" name="cartao" value="1">
 	        			<label for="input1" class="margin-left-5px">VISA ****6002, João Silva</label>
         			</div>
 					<div class="padding-left-30px">
-        				<input type="radio" name="input2">
+        				<input type="radio" name="cartao" value="1">
         				<label for="input2" class="margin-left-5px">VISA ****6002, João Silva</label>
 					</div>
 					<div class="padding-left-30px">
-        				<input type="radio" name="input3">
+        				<input type="radio" name="cartao" value="1">
         				<label for="input3" class="margin-left-5px">VISA ****6002, João Silva</label>
         			</div>
                     <a href="" class="padding-left-30px">Cadastrar um cartão</a>

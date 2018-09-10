@@ -7,7 +7,9 @@
 	<title>Sobre a Food 4fit</title>
 	<link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
 	<link rel="stylesheet" href="assets/css/stylesheet.css">
-	<link rel="stylesheet" href="assets/css/font-style.css">
+    <link rel="stylesheet" href="assets/css/sobre.css">
+	<link rel="stylesheet" href="assets/css/classes-genericas.css">
+    <link rel="stylesheet" href="assets/css/font-style.css">
     <link rel="stylesheet" href="assets/css/keyframes.css">
 	<link rel="stylesheet" href="assets/css/mobile-stylesheet.css">
 	<script src="assets/js/jquery-3.3.1.min.js"></script>

@@ -7,6 +7,7 @@
 	<title>Logue-se - Food 4fit</title>
 	<link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
 	<link rel="stylesheet" href="assets/css/stylesheet.css">
+    <link rel="stylesheet" href="assets/css/classes-genericas.css">
 	<link rel="stylesheet" href="assets/css/font-style.css">
     <link rel="stylesheet" href="assets/css/keyframes.css">
     <link rel="stylesheet" href="assets/css/login.css">
@@ -18,10 +19,10 @@
     <section class="main-login">
         <div class="form-generic width-small margin-left-auto margin-right-auto">
             <form class="form-generic-content">
-                <label for="txtlogin" class="label-generic margin-top-30px" style="color: #fff;">Login:</label>
-                <input type="text" name="txtlogin" id="txtlogin" class="input-generic">
-                <label for="txtsenha" class="label-generic" style="color: #fff;">Senha:</label>
-                <input type="password" name="txtsenha" id="txtsenha" class="input-generic">
+                <label for="login" class="label-generic margin-top-30px" style="color: #fff;">Login:</label>
+                <input type="text" name="login" id="login" class="input-generic">
+                <label for="senha" class="label-generic" style="color: #fff;">Senha:</label>
+                <input type="password" name="senha" id="senha" class="input-generic">
                 <div class="btn-generic margin-left-auto">
                     <span>Entrar</span>
                 </div>

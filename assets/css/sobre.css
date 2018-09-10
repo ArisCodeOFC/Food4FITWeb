@@ -1,0 +1,44 @@
+/* SESSÃO SOBRE NÓS */
+#about-us-block{
+    /*Sessao-filho do cabeçalho da página sobre*/
+    width: 100%;
+	height: auto;
+}
+
+.about-us-content{
+    /*Container-filho do cabeçalho da página sobre*/
+    width: 100%;
+    max-width: 1200px;
+	height: auto;
+}
+
+.text-about-us{
+    /*Container-filho da introdução da página sobre*/
+    width: 100%;
+	height: auto;
+}
+.about-us-title{
+    /*Título da sessão*/
+    font-family: "Roboto Bold";
+    font-size: 21px;
+    color: #000;
+}
+.about-us-text{
+    /*Texto da sessão*/
+    font-size: 16px;
+    line-height: 24px;
+    color: #4F4F4F;
+    font-family: "Roboto Regular";
+}
+.about-us-image-container{
+    /*Container-mãe das imagens da página sobre*/
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+.about-us-image-container img{
+    /*Imagem da página sobre*/
+    max-width: 100%;
+    display: block;
+}
+/*==========================================*/
