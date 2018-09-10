@@ -1,9 +1,11 @@
 <?php
+    require_once("UploadModel.class.php");
+
     /*
     * Classe abstrata, ou seja, não pode ser inicializada, apenas extendida
     * Serve como base para classes modelo, com um método construtor que transforma um array em propriedades do objeto
     */
-    abstract class Model {
+    abstract class Model extends UploadModel {
         /*
         * Método construtor
         * @param $classe Classe modelo que o json será descarregado (__CLASS no escopo de uma classe modelo)

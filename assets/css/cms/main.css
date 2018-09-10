@@ -457,7 +457,6 @@ img.btn-logout:hover {
     font-family: "Roboto Bold";
 }
 
-
 .jq-toast-single {
     background-color: #9cc283;
     border-radius: 5px;
@@ -475,7 +474,7 @@ img.btn-logout:hover {
 
 #tabela-items {
     width: 100%;
-    border: solid #9CC283 10px;
+    border: solid #9CC283 8px;
     box-sizing: border-box;
 }
 
@@ -525,8 +524,16 @@ img.btn-logout:hover {
 }
 
 #tabela-items .coluna + .coluna {
-    border-left: solid 8px #9CC283;
+    border-left: solid 5px #9CC283;
     padding: 0 10px;
+}
+
+#tabela-items .linha + .linha {
+    border-bottom: solid 5px #9CC283;
+}
+
+#tabela-items .linha:last-of-type {
+    border-bottom: none;
 }
 
 #tabela-items .linha + .linha .coluna {
@@ -554,13 +561,8 @@ img.btn-logout:hover {
 
 #tabela-items .linha + .linha .coluna:first-of-type img {
 	height: 90px;
+    width: 90%;
     margin: auto;
-}
-
-#tabela-items .linha + .linha .coluna:last-of-type img {
-	width: 40px;
-    height: 40px;
-    cursor: pointer;
 }
 
 #tabela-items .linha + .linha .coluna:last-of-type hr {
@@ -569,6 +571,28 @@ img.btn-logout:hover {
     border-radius: 2px;
     background-color: #000000;
     margin: 0 10px;
+}
+
+#tabela-items .toggle, #tabela-items .editar, #tabela-items .excluir {
+	width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+#tabela-items .toggle.desativar {
+    background-image: url("../../images/cms/symbols/desativar.svg");
+}
+
+#tabela-items .toggle.ativar {
+    background-image: url("../../images/cms/symbols/ativar.svg");
+}
+
+#tabela-items .editar {
+    background-image: url("../../images/cms/symbols/editar.svg");
+}
+
+#tabela-items .excluir {
+    background-image: url("../../images/cms/symbols/excluir.svg");
 }
 
 #tabs {
@@ -604,4 +628,41 @@ img.btn-logout:hover {
 
 #tabs-content>.active {
     display: block;
+}
+
+.sceditor-container {
+    margin-bottom: 15px;
+}
+
+.imagem-upload-wrapper {
+    position: relative;
+}
+
+.imagem-upload-wrapper div {
+    width: 100%;
+    height: 250px;
+    background-color: #E8E8E8;
+}
+
+.imagem-upload-wrapper img {
+    width: 100%;
+    height: 100%;
+}
+
+.imagem-upload-wrapper input {
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+input[type="submit"] {
+    display: none;
+}
+
+.imagem-upload-wrapper label {
+	font-size: 16px;
+    color: #616161;
+    font-family: "Roboto Italic";
+    margin: 10px 0;
 }

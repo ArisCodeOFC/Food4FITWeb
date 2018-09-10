@@ -12,7 +12,7 @@ function abrirToast(mensagem) {
         text: mensagem,
         loader: false,
         position: {right: "10px", bottom: "10px"},
-        showHideTransition: "slide",
+        showHideTransition: "fadeIn",
         textAlign: "center"
     });
 }

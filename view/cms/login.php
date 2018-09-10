@@ -14,7 +14,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Food 4fit - CMS</title>
         <link rel="icon" type="image/png" href="../assets/images/icons/favicon.png" />
-	    <link rel="stylesheet" href="../assets/css/cms/jquery.toast.min.css">
+	    <link rel="stylesheet" href="../assets/css/jquery.toast.min.css">
 	    <link rel="stylesheet" href="../assets/css/font-style.css">
         <link rel="stylesheet" href="../assets/css/cms/main.css">
 	    <script src="../assets/js/jquery-3.3.1.min.js"></script>

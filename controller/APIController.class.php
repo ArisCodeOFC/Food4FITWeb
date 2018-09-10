@@ -84,7 +84,7 @@
         * @param $resultado uma mensagem para ser mostrada
         */
         public function enviarResultado($resultado) {
-            echo(json_encode($resultado, JSON_UNESCAPED_UNICODE));
+            echo(preg_replace("/,\s*\"[^\"]+\":null|\"[^\"]+\":null,?/", "", json_encode($resultado, JSON_UNESCAPED_UNICODE)));
         }
 
         /*
