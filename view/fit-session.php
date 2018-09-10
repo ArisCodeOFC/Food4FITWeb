@@ -31,7 +31,7 @@
                 </div>
                 <div class="fit-session-content-column-image animate fadeInRight fast">
                     <figure class="image">
-                        <img src="assets/images/fit/img2.png" alt="Personal Fitness">
+                        <img src="assets/images/fit/woman.png" alt="Personal Fitness">
                     </figure>
                 </div>
             </section>
@@ -39,7 +39,7 @@
             <section class="fit-session-content-row padding-bottom-60px">
                 <div class="fit-session-content-column-image animate fadeInLeft fast">
                     <figure class="image">
-                        <img src="assets/images/fit/img3.png" alt="Personal Fitness">
+                        <img src="assets/images/fit/tips.png" alt="Personal Fitness">
                     </figure>
                 </div>
                 <div class="fit-session-content-column-text animate fadeInRight fast">
@@ -61,7 +61,7 @@
                 </div>
                 <div class="fit-session-content-column-image animate fadeInRight fast">
                     <figure class="image">
-                        <img src="assets/images/fit/img1.png" alt="Personal Fitness">
+                        <img src="assets/images/fit/weights.png" alt="Personal Fitness">
                     </figure>
                 </div>
             </section>

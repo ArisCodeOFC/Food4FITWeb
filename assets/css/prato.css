@@ -293,72 +293,67 @@
     box-sizing: border-box;
     border: 30px solid #fcfcfc;
 }
-.promotions-grid{
-  display: grid;
-  width: 100%;
-  clear: both;
-  height: auto;
-  grid-gap: 30px 30px;
-  grid-template-columns: repeat(2, minmax(0px, 555px));
-  grid-auto-rows: auto;
-  align-items: flex-start;
+#healthy-tricks-title{
+    font-size: 21px;
+    color: #000;
+    text-align: center;
+    font-family: "Roboto Bold";
+    padding-top: 30px;
+    margin-bottom: -30px;
 }
-.promotion-grid-card {
-    background: linear-gradient(to bottom, #292929, #3f3f3f);
-    border-radius: 10px;
-    color: #FFF;
+.healthy-tricks-intro{
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
-    overflow: hidden;
+    box-sizing: border-box;
+    border: 30px solid #FCFCFC;
+    justify-content: center;
 }
-.promotion-grid-card-column-image{
-    width: 100%;
-    max-width: 277px;
-    position: relative;
-    height: auto;
+.healthy-tricks-intro.image{
+    width: 90%;
+    height: 90%;
+    max-width: 500px;
+    max-height: 500px;
+    padding: 0;
+    margin: 0;
 }
-.promotion-grid-card-column-image img{
-    width: 100%;
-    height: 100%;
+.healthy-tricks-intro.image>img{
+    max-width: 100%;
+    display: block;
     object-fit: cover;
 }
-.promotion-grid-card-column-pullover{
-    width: 40px;
-    height: 40px;
-    background-color: #E83131;
-    position: absolute;
-    top: 15px;
-    right: -20px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.promotion-grid-card-column-pullover span{
-    font-family: "Roboto Bold";
-    font-size: 16px;
-    color: #FFF;
-    display: block;
-}
-.promotion-grid-card-column-info{
+.healthy-tricks-intro.details{
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
 }
-.promotion-grid-card-column-info h2{
-    font-family: "Roboto Bold";
-    font-size: 18px;
-    color: #FFF;
-    display: block;
+.healthy-tricks-intro.details>h3{
+    font-family: 'Roboto Bold';
+    font-size: 28px;
+    color: #000;
 }
-.promotion-grid-card-column-info p{
-    font-family: "Roboto Light";
-    font-size: 16px;
-    color: #FFF;
-    line-height: 24px;
-    width: 85%;
+.healthy-tricks-intro.details>h3::after{
+    content: "";
     display: block;
+    width: 80px;
+    height: 5px;
+    background: #9CC293;
+    border-radius: 50px;
+    margin: 20px 0px 20px 0px;
+}
+.healthy-tricks-intro.details>p{
+    font-family: "Roboto Regular";
+    font-size: 18px;
+    line-height: 26px;
+    color: #282828;
+    width: 85%;
+    margin: 0;
+    text-align: left;
 }
 #rotator img { position: absolute; }

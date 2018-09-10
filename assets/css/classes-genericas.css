@@ -1,3 +1,13 @@
+/* BLOCO/WRAPPER GENÉRICO - 100% DE LARGURA */
+.generic-block{
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-color: #FCFCFC;
+    overflow: hidden;
+}
+/*==========================================*/
+
 /* ESTRELAS DE AVALIAÇÃO */
 .avaliation-stars{
     height: auto;
@@ -287,6 +297,10 @@ input[type="checkbox"].switch-styled:checked:after{
 .btn-generic span{
     /*Texto do botão genérico*/
     display: block;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    box-sizing: border-box;
     color: #FFF;
     font-family: "Roboto Bold";
     font-size: 16px;

@@ -57,6 +57,7 @@
     width: 100%;
     height: auto;
     display: flex;
+    margin-top: 30px;
     background-color: #F2F2F2;
 }
 .shopping-cart-grid{
