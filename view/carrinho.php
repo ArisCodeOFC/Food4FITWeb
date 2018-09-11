@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Carrinho - Food 4fit</title>
+	<title>Carrinho - Food 4Fit</title>
 	<link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
 	<link rel="stylesheet" href="assets/css/stylesheet.css">
 	<link rel="stylesheet" href="assets/css/classes-genericas.css">
@@ -19,7 +19,7 @@
 	<?php require_once("components/navbar.html") ?><!-- BARRA DE NAVEGAÇÃO VIA PHP -->
     <section class="main">
         <h2 id="page-title" class="margin-left-auto margin-right-auto margin-bottom-30px">MEU CARRINHO</h2>
-        <section class="shopping-cart-block">
+        <div class="shopping-cart-block">
         	<div class="shopping-cart-title-menu">
         		<div class="shopping-cart-menu-column align">
         			<span class="padding-top-15px padding-bottom-15px">IMAGEM</span>
@@ -74,7 +74,7 @@
         	</section>
         	<div id="shopping-cart-select-block">
         		<div class="switch_box margin-left-30px">
-					<input type="checkbox" name="chkall" class="switch-styled">
+					<input type="checkbox" name="chkall" id="chkall" class="switch-styled">
 				</div>
 				<label for="chkall" class="padding-left-15px">Selecionar Todos</label>
         		<div class="btn-generic-disabled margin-left-30px"><span>Excluir</span></div>
@@ -91,13 +91,13 @@
         			</div>
         		</div>
         		<div id="shopping-cart-confirm-column-two">
-        			<h2 class="padding-right-30px padding-top-30px padding-bottom-30px" style="font-family: 'Roboto light'; font-size: 21px; color: #282828;">Total a Pagar: <span style="font-family: 'Roboto Bold'; font-size: 28px; color: #000;">R$ 000,00</b></h2>
+        			<h2 class="padding-right-30px padding-top-30px padding-bottom-30px" style="font-family: 'Roboto light'; font-size: 21px; color: #282828;">Total a Pagar: <span style="font-family: 'Roboto Bold'; font-size: 28px; color: #000;">R$ 000,00</span></h2>
         			<div class="btn-generic margin-right-30px"  onclick="location.href='carrinho-endereco.php';">
         				<span>Comprar</span>
         			</div>
         		</div>
         	</section>
-        </section>
+        </div>
 	</section>
 	<?php require_once("components/footer.html"); ?><!-- RODAPÉ VIA PHP -->
 </body>

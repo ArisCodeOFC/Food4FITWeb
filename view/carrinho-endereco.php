@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Endereço :: Carrinho - Food 4fit</title>
+	<title>Endereço :: Carrinho - Food 4Fit</title>
 	<link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
 	<link rel="stylesheet" href="assets/css/stylesheet.css">
     <link rel="stylesheet" href="assets/css/classes-genericas.css">
@@ -20,22 +20,22 @@
     <section class="main">
         <h2 id="page-title" class="margin-left-auto margin-right-auto margin-bottom-30px">MEU CARRINHO</h2>
         <section id="shopping-cart-address-block">
-        	<a href="" class="margin-left-30px margin-top-30px">Cancelar</a>
         	<h3>ENDEREÇO DE ENTREGA</h3>
         	<p class="shopping-cart-address-subtitle">Selecione ou cadastre um endereço de entrega</p>
+        	<a href="" class="margin-left-30px margin-top-30px">Cancelar</a>
         	<div id="shopping-cart-address-row">
         		<div class="shopping-cart-address-column">
         			<span class="shopping-cart-address-column-title margin-left-30px padding-top-60px margin-bottom-15px">Selecione um endereço:</span>
         			<div class="padding-left-30px">
-	        			<input type="radio" name="endereco" value="1">
+	        			<input type="radio" name="endereco" id="input1" value="1">
 	        			<label for="input1" class="margin-left-5px">R. Silverstone, 391, JD. Flores, Jandira, SP</label>
         			</div>
 					<div class="padding-left-30px">
-        				<input type="radio" name="endereco" value="1">
+        				<input type="radio" name="endereco" id="input2" value="1">
         				<label for="input2" class="margin-left-5px">R. São Roque, 142, Lago dos Cisnes, Barueri, SP</label>
 					</div>
 					<div class="padding-left-30px">
-        				<input type="radio" name="endereco" value="1">
+        				<input type="radio" name="endereco" id="input3" value="1">
         				<label for="input3" class="margin-left-5px">Av. Centuri, 938, João Bosques, Carapicuíba, SP</label>
         			</div>
         			<a href="" class="padding-left-30px">Cadastrar um endereço</a>
@@ -43,17 +43,17 @@
         		<div class="shopping-cart-address-column">
         			<span class="shopping-cart-address-column-title margin-left-30px padding-top-60px margin-bottom-15px">Selecione um frete:</span>
         			<div class="padding-left-30px">
-	        			<input type="radio" name="frete" value="1">
-	        			<label for="input1" class="margin-left-5px">Frete Comum (R$12,90)</label>
+	        			<input type="radio" name="frete" id="input4" value="1">
+	        			<label for="input4" class="margin-left-5px">Frete Comum (R$12,90)</label>
         			</div>
 					<div class="padding-left-30px">
-        				<input type="radio" name="frete" value="1">
-        				<label for="input2" class="margin-left-5px">Frete Expresso (R$25,90)</label>
+        				<input type="radio" name="frete" id="input5" value="1">
+        				<label for="input5" class="margin-left-5px">Frete Expresso (R$25,90)</label>
 					</div>
         		</div>
         	</div>
         </section>
-        <section class="shopping-cart-block">
+        <div class="shopping-cart-block">
         	<div class="shopping-cart-title-menu margin-top-30px">
         		<div class="shopping-cart-menu-column align">
         			<span class="padding-top-15px padding-bottom-15px">IMAGEM</span>
@@ -95,7 +95,7 @@
 	        		</div>
 	        	</div>
         	</section>
-        </section>
+        </div>
         <div style="width: 100%; display: flex; align-items: center; justify-content: flex-end;">
         	<span class="padding-right-15px" style="font-size: 18px; font-family: 'Roboto Medium Italic'; color: #7F7F7F;">Passo 1 de 2</span>
         	<div class="btn-generic margin-right-30px margin-top-30px margin-bottom-30px"  onclick="location.href='carrinho-pagamento.php';">

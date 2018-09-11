@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Minhas Dietas - Food 4fit</title>
+	<title>Minhas Dietas - Food 4Fit</title>
 	<link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
 	<link rel="stylesheet" href="assets/css/stylesheet.css">
     <link rel="stylesheet" href="assets/css/classes-genericas.css">
@@ -18,7 +18,8 @@
 <body>
 	<?php require_once("components/navbar.html"); ?>
 	<section class="main">
-        <div class="my-diets-header">
+       <h2 id="page-title">MINHAS DIETAS</h2>
+        <div class="my-diets-header margin-top-30px">
             <img src="assets/images/backgrounds/diet.jpg" alt="Capa de fundo">
             <section class="my-diets-header-overlay">
                 <h2 class="padding-left-30px">Nome da Dieta</h2>
@@ -30,7 +31,7 @@
                 <img src="assets/images/icons/dots-white.svg" alt="Opções">
             </div>
         </div>
-        <article class="my-diets-block">
+        <div class="my-diets-block">
             <section class="my-diets-saved-column">
                 <h2>Minhas Dietas (3)</h2>
                 <section class="diet-card margin-top-15px">
@@ -105,7 +106,7 @@
                     <span>Ver Mais</span>
                 </div>
             </aside>
-        </article>
+        </div>
 	</section>
 	<?php require_once("components/footer.html"); ?>
 </body>

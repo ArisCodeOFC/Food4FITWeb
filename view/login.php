@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Logue-se - Food 4fit</title>
+	<title>Logue-se - Food 4Fit</title>
 	<link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
 	<link rel="stylesheet" href="assets/css/stylesheet.css">
     <link rel="stylesheet" href="assets/css/classes-genericas.css">
@@ -17,6 +17,8 @@
 </head>
 <body>
     <section class="main-login">
+        <h2 class="title-login">FOOD<br>4FIT</h2>
+        <h3 class="subtitle-login">COMIDA FITNESS</h3>
         <div class="form-generic width-small margin-left-auto margin-right-auto">
             <form class="form-generic-content">
                 <label for="login" class="label-generic margin-top-30px" style="color: #fff;">Login:</label>
@@ -41,9 +43,6 @@
                 <a href="" class="login-link margin-bottom-30px">Cadastrar-me</a>
             </form>
         </div>
-
-        <span class="title-login">FOOD<br>4FIT</span>
-        <span class="subtitle-login">COMIDA FITNESS</span>
 	</section>
 </body>
 </html>

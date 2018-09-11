@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Sobre a Food 4fit</title>
+	<title>Sobre a Food 4Fit</title>
 	<link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
 	<link rel="stylesheet" href="assets/css/stylesheet.css">
     <link rel="stylesheet" href="assets/css/sobre.css">
@@ -18,7 +18,7 @@
 <body>
 	<?php require_once("components/navbar.html") ?><!-- BARRA DE NAVEGAÇÃO VIA PHP -->
     <section class="main">
-        <span id="page-title" class="margin-left-auto margin-right-auto animate fadeInUp">SOBRE A FOOD 4FIT</span><!-- TÍTULO DA PÁGINA -->
+        <h1 id="page-title" class="margin-left-auto margin-right-auto animate fadeInUp">SOBRE A FOOD 4FIT</h1><!-- TÍTULO DA PÁGINA -->
         <article id="about-us-block" class="margin-top-15px"><!-- BLOCO GERAL DA PÁGINA -->
             <div class="about-us-content animate fadeInUp margin-bottom-30px"><!-- CONTEÚDO SESSÃO 'SOBRE NÓS' -->
                 <div class="text-about-us margin-top-30px"><!-- TEXTO DA SESSÃO -->

@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Food 4fit</title>
+	<title>Food 4Fit</title>
 	<link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
 	<link rel="stylesheet" href="assets/css/home.css">
 	<link rel="stylesheet" href="assets/css/classes-genericas.css">
@@ -35,7 +35,7 @@
         </header>
         <article id="highlights-index"><!-- SEGUNDO CONTAINER-FILHO DO CABEÇALHO DA INDEX -->
             <h2 id="page-title">DESTAQUES</h2><!-- TÍTULO DA PÁGINA -->
-            <article class="generic-grid animate fadeInUp">
+            <div class="generic-grid animate fadeInUp">
                 <div class="generic-card">
                     <img src="assets/images/dishs/img1.jpg" alt="Teste" class="generic-card-img">
                     <div class="generic-card-overlay">
@@ -108,7 +108,7 @@
                         </div>
                     </div>
                 </div>
-            </article>
+            </div>
             <div class="btn-generic margin-right-auto margin-left-auto margin-bottom-30px animate fadeInUp"><!-- BOTÃO PARA VER TODOS OS PRATOS -->
                 <span>Ver Todos</span>
             </div>

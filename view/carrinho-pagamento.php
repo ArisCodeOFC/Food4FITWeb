@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Pagamento :: Carrinho - Food 4fit</title>
+	<title>Pagamento :: Carrinho - Food 4Fit</title>
 	<link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
 	<link rel="stylesheet" href="assets/css/stylesheet.css">
     <link rel="stylesheet" href="assets/css/classes-genericas.css">
@@ -27,15 +27,15 @@
         		<div class="shopping-cart-address-column">
         			<span class="shopping-cart-address-column-title margin-left-30px padding-top-60px margin-bottom-15px">Selecione um cartão de crédito:</span>
         			<div class="padding-left-30px">
-	        			<input type="radio" name="cartao" value="1">
+	        			<input type="radio" name="cartao" id="input1" value="1">
 	        			<label for="input1" class="margin-left-5px">VISA ****6002, João Silva</label>
         			</div>
 					<div class="padding-left-30px">
-        				<input type="radio" name="cartao" value="1">
+        				<input type="radio" name="cartao" id="input2" value="1">
         				<label for="input2" class="margin-left-5px">VISA ****6002, João Silva</label>
 					</div>
 					<div class="padding-left-30px">
-        				<input type="radio" name="cartao" value="1">
+        				<input type="radio" name="cartao" id="input3" value="1">
         				<label for="input3" class="margin-left-5px">VISA ****6002, João Silva</label>
         			</div>
                     <a href="" class="padding-left-30px">Cadastrar um cartão</a>
@@ -44,15 +44,15 @@
         			<span class="shopping-cart-address-column-title margin-left-30px padding-top-60px margin-bottom-15px">Por segurança...</span>
 
                     <div class="form-generic">
-                        <form class="form-generic-content width-small padding-left-30px" action="">
+                        <form class="form-generic-content width-small padding-left-30px" action="#" method="GET" name="frm">
                             <label for="dt-expire" class="label-generic">Data de Expiração:</label>
-                            <input type="text" name="dt-expire" placeholder="Ex: 11/20" class="input-generic" style="width: 60%;">
+                            <input type="text" name="dt-expire" id="dt-expire" placeholder="Ex: 11/20" class="input-generic" style="width: 60%;">
 
                             <label for="card-name" class="label-generic">Nome no Cartão:</label>
-                            <input type="text" name="card-name" placeholder="Como no cartão..." class="input-generic" style="width: 60%;">
+                            <input type="text" name="card-name" id="card-name" placeholder="Como no cartão..." class="input-generic" style="width: 60%;">
 
                             <label for="card-code" class="label-generic">Código de Segurança</label>
-                            <input type="text" name="card-code" placeholder="No verso do cartão..." class="input-generic" style="width: 60%;">
+                            <input type="text" name="card-code" id="card-code" placeholder="No verso do cartão..." class="input-generic" style="width: 60%;">
                         </form>
                     </div>
         		</div>

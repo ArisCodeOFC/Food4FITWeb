@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Cadastro de Usuário</title>
+	<title>Dados Adicionais - Cadastro de Usuário - Food 4Fit</title>
 	<link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
 	<link rel="stylesheet" href="assets/css/stylesheet.css">
     <link rel="stylesheet" href="assets/css/classes-genericas.css">
@@ -17,19 +17,22 @@
 <body>
 	<?php require_once("components/navbar.html") ?><!-- BARRA DE NAVEGAÇÃO VIA PHP -->
     <section class="main">
-        <span id="page-title" class="margin-left-auto margin-right-auto animate fadeInUp">DADOS ADICIONAIS</span><!-- TÍTULO DA PÁGINA -->
+        <h1 id="page-title" class="margin-left-auto margin-right-auto animate fadeInUp">DADOS ADICIONAIS</h1><!-- TÍTULO DA PÁGINA -->
         <div class="form-generic width-small margin-left-auto margin-right-auto">
-            <form class="form-generic-content">
-                <label for="txtdatanasc" class="label-generic margin-top-30px">Data de Nascimento:</label>
+            <form action="#" method="POST" name="frmsignup" class="form-generic-content">
+                <label for="dtnasc" class="label-generic margin-top-30px">Data de Nascimento:</label>
                 <input type="text" name="dtnasc" id="dtnasc" class="input-generic" placeholder="Ex: 01/01/1990" required>
-                <label for="txtsexo" class="label-generic margin-top-30px">Genero:</label>
-                <div id="txtsexo">
-                    <input type="radio" name="sexo" value="H" required>Homem
-                    <input type="radio" name="sexo" value="M" required >Mulher
+
+                <span style="display: block; font-size: 21px; font-family: 'Roboto Medium'; color: #000;" class="margin-left-30px padding-top-60px margin-bottom-15px">Gênero:</span>
+                <div id="sexo">
+                    <input type="radio" name="sexo" id="homem" value="H" required>
+                    <label for="homem" class="label-generic margin-top-30px">Homem</label>
+                    <input type="radio" name="sexo" id="mulher" value="M" required >r
+                    <label for="mulher" class="label-generic margin-top-30px">Mulher</label>
                 </div>
-                <label for="txttelefone" class="label-generic margin-top-30px">Telefone:</label>
+                <label for="telefone" class="label-generic margin-top-30px">Telefone:</label>
                 <input type="tel" name="telefone" id="telefone" class="input-generic" placeholder="Ex: (11)9999-9999" required>
-                <label for="txtcelular" class="label-generic margin-top-30px">Celular:</label>
+                <label for="celular" class="label-generic margin-top-30px">Celular:</label>
                 <input type="text" name="celular" id="celular" class="input-generic" placeholder="Ex: (11)98888-8888" required>
                 <span class="aviso-contato">Caso necessário o contato através de e-mail ou<br>
                     telefone/celular, usaremos o seu nome escolhido como vulgo.

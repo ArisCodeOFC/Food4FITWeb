@@ -17,8 +17,8 @@
 </head>
 <body>
 	<?php require_once("components/navbar.html") ?><!-- BARRA DE NAVEGAÇÃO VIA PHP -->
-    <section class="main">
-        <section id="product-view-block">
+    <div class="main">
+        <div id="product-view-block">
             <figure id="product-view-image-container">
                 <img src="assets/images/dishs/img1.jpg" alt="Nome do Prato" id="product-view-image">
                 <div id="product-view-image-carrousel">
@@ -51,7 +51,7 @@
 
                 <h3 id="product-view-price-full" class="padding-left-15px">R$ 000,00 <span>à vista</span></h3>
                 <div id="credit-card-flag" class="padding-left-15px padding-top-5px padding-bottom-30px">
-                    <img src="assets/images/icons/credit-card.svg" src="Bandeira">
+                    <img src="assets/images/icons/credit-card.svg" alt="Bandeira">
                 </div>
                 <div class="buy-button margin-left-15px" onclick="location.href='carrinho.php';">
                     <span class="padding-right-5px">Comprar</span>
@@ -65,7 +65,7 @@
                     <img src="assets/images/icons/share.svg" alt="Obter link compartilhável">
                 </div>
             </article>
-        </section>
+        </div>
         <section id="product-view-info-block" class="margin-top-60px margin-bottom-30px">
             <div class="product-view-info-column">
                 <h2 class="margin-left-30px margin-bottom-15px" style="font-family: 'Roboto Medium'; font-size: 21px;">Ingredientes</h2>
@@ -117,7 +117,7 @@
                 </div>
             </div>
         </section>
-	</section>
+	</div>
 	<?php require_once("components/footer.html"); ?><!-- RODAPÉ VIA PHP -->
 </body>
 </html>

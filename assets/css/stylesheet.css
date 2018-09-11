@@ -43,9 +43,9 @@ body{
 }
 .box-shadow{
 	/*Sombra padrão para elementos soltos*/
-	-webkit-box-shadow: 0px -4px 32px 16px rgba(0,0,0,0.05);
--moz-box-shadow: 0px -4px 32px 16px rgba(0,0,0,0.05);
-box-shadow: 0px -4px 32px 16px rgba(0,0,0,0.05);
+	-webkit-box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+    -moz-box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
 }
 /*==========================================*/
 
@@ -190,7 +190,7 @@ box-shadow: 0px -4px 32px 16px rgba(0,0,0,0.05);
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #E83131;
+	background-color: #E85858;
 	cursor: pointer;
 }
 #user-bubble span{
@@ -209,7 +209,7 @@ box-shadow: 0px -4px 32px 16px rgba(0,0,0,0.05);
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #E83131;
+	background-color: #E85858;
 	cursor: pointer;
 }
 #buycart-bubble span{

@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Cadastro de Usuário</title>
+	<title>Chave Secreta - Cadastro de Usuário - Food 4Fit</title>
 	<link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
 	<link rel="stylesheet" href="assets/css/stylesheet.css">
     <link rel="stylesheet" href="assets/css/classes-genericas.css">
@@ -17,18 +17,18 @@
 <body>
 	<?php require_once("components/navbar.html") ?><!-- BARRA DE NAVEGAÇÃO VIA PHP -->
     <section class="main">
-        <span id="page-title" class="margin-left-auto margin-right-auto animate fadeInUp">INFORMAÇÕES BÁSICAS</span><!-- TÍTULO DA PÁGINA -->
+        <h1 id="page-title" class="margin-left-auto margin-right-auto animate fadeInUp">INFORMAÇÕES BÁSICAS</h1><!-- TÍTULO DA PÁGINA -->
         <div class="form-generic width-small margin-left-auto margin-right-auto">
-            <form class="form-generic-content">
-                <label for="txtsenha" class="label-generic margin-top-30px">Senha:</label>
+            <form action="#" method="POST" name="frmsignup" class="form-generic-content">
+                <label for="senha" class="label-generic margin-top-30px">Senha:</label>
                 <input type="password" name="senha" id="senha" class="input-generic" required>
-                <label for="txtconfsenha" class="label-generic margin-top-30px">Confirme a Senha:</label>
-                <input type="password" name="confirmsenha" id="confirmsenha" class="input-generic" required>
-                <label for="txtpergunta" class="label-generic margin-top-30px">Pergunta Secreta:</label>
-                <select name="perguntasecreta" id="perguntasecreta" class="margin-top-30px">Selecione uma opção
+                <label for="confsenha" class="label-generic margin-top-30px">Confirme a Senha:</label>
+                <input type="password" name="confsenha" id="confsenha" class="input-generic" required>
+                <label for="perguntasecreta" class="label-generic margin-top-30px">Pergunta Secreta:</label>
+                <select name="perguntasecreta" id="perguntasecreta" class="input-generic margin-top-30px">
                     <option>Selecione uma opção</option>
                 </select>
-                <label for="txtcpf" class="label-generic margin-top-30px">Resposta:</label>
+                <label for="respostasecreta" class="label-generic margin-top-30px">Resposta:</label>
                 <input type="text" name="respostasecreta" id="respostasecreta" class="input-generic margin-bottom-60px" required>
                 <div class="button-basic-information margin-top-30px margin-bottom-30px">
                     <div class="btn-generic">

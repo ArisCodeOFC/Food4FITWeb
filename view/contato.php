@@ -4,13 +4,12 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Food 4fit</title>
+	<title>Fale Conosco - Food 4Fit</title>
 	<link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
 	<link rel="stylesheet" href="assets/css/stylesheet.css">
     <link rel="stylesheet" href="assets/css/classes-genericas.css">
 	<link rel="stylesheet" href="assets/css/font-style.css">
     <link rel="stylesheet" href="assets/css/keyframes.css">
-	<link rel="stylesheet" href="assets/css/contato.css">
 	<link rel="stylesheet" href="assets/css/mobile-stylesheet.css">
 	<script src="assets/js/jquery-3.3.1.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
@@ -20,8 +19,8 @@
 	<section class="main"><!-- CONTAINER-MÃE DO SITE -->
         <h2 id='page-title' class="margin-left-auto margin-right-auto">ENTRE EM CONTATO</h2>
         <div class="form-generic width-small margin-left-auto margin-right-auto margin-top-30px">
-            <form class="form-generic-content">
-                <label for="txtnome" class="label-generic">Nome:</label>
+            <form class="form-generic-content" action="#" method="POST" name="frmcontact">
+                <label for="nome" class="label-generic">Nome:</label>
                 <input id="nome" name="nome" class="input-generic" placeholder="Digite o seu nome...">
                 <label for="sobrenome" class="label-generic">Sobrenome:</label>
                 <input id="sobrenome" name="sobrenome" class="input-generic" placeholder="Digite o seu sobrenome...">
