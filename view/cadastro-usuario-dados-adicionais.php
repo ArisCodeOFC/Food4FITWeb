@@ -23,12 +23,12 @@
                 <label for="dtnasc" class="label-generic margin-top-30px">Data de Nascimento:</label>
                 <input type="text" name="dtnasc" id="dtnasc" class="input-generic" placeholder="Ex: 01/01/1990" required>
 
-                <span style="display: block; font-size: 21px; font-family: 'Roboto Medium'; color: #000;" class="margin-left-30px padding-top-60px margin-bottom-15px">Gênero:</span>
-                <div id="sexo">
+                <span style="display: block; font-size: 18px; font-family: 'Roboto Regular'; color: #000;" class="margin-top-30px margin-bottom-15px">Gênero:</span>
+                <div id="sexo" style="display: flex;">
                     <input type="radio" name="sexo" id="homem" value="H" required>
-                    <label for="homem" class="label-generic margin-top-30px">Homem</label>
-                    <input type="radio" name="sexo" id="mulher" value="M" required >r
-                    <label for="mulher" class="label-generic margin-top-30px">Mulher</label>
+                    <label for="homem" class="label-generic">Homem</label>
+                    <input type="radio" name="sexo" id="mulher" value="M" required class="margin-left-15px">
+                    <label for="mulher" class="label-generic">Mulher</label>
                 </div>
                 <label for="telefone" class="label-generic margin-top-30px">Telefone:</label>
                 <input type="tel" name="telefone" id="telefone" class="input-generic" placeholder="Ex: (11)9999-9999" required>
@@ -37,16 +37,10 @@
                 <span class="aviso-contato">Caso necessário o contato através de e-mail ou<br>
                     telefone/celular, usaremos o seu nome escolhido como vulgo.
                 </span>
-                <div class="button-basic-information margin-top-60px margin-bottom-30px">
-                    <div class="btn-generic">
-                        <a href="cadastro-usuario.php">
-                            <span>Voltar</span>
-                        </a>
-                    </div>
-                    <div class="btn-generic margin-left-auto">
-                        <a href="cadastro-usuario-chave-secreta.php">
-                            <span>Próximo</span>
-                        </a>
+                <div class="margin-top-30px margin-bottom-30px form-row">
+                    <span class="margin-right-15px" onclick="javascript:history.back()">Voltar</span>
+                    <div class="btn-generic" onclick="javascript:location.href='cadastro-usuario-chave-secreta.php'">
+                        <span>Próximo</span>
                     </div>
                 </div>
             </form>

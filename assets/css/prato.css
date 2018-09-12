@@ -280,11 +280,12 @@
         width: 100%;
     }
 }
-.gradient-header-60{
-    width: 100%; height: auto; background: linear-gradient(to right, #9CC283, #EDBF85);
-}
-.gradient-header-60 h2{
-    font-family: 'Roboto Bold'; font-size: 21px; color: #FFF;
+.promotion-subtitle{
+    font-size: 21px;
+    color: #282828;
+    font-family: "Roboto Regular";
+    margin-bottom: -15px;
+    z-index: 99;
 }
 .promotion-block{
     width: 100%;

@@ -30,21 +30,32 @@
                 </select>
                 <label for="respostasecreta" class="label-generic margin-top-30px">Resposta:</label>
                 <input type="text" name="respostasecreta" id="respostasecreta" class="input-generic margin-bottom-60px" required>
-                <div class="button-basic-information margin-top-30px margin-bottom-30px">
-                    <div class="btn-generic">
-                        <a href="cadastro-usuario-dados-adicionais.php">
-                            <span>Voltar</span>
-                        </a>
-                    </div>
-                    <div class="btn-generic margin-left-auto">
-                        <a href="modal-confirmacao-usuario.php">
-                            <span>Finalizar</span>
-                        </a>
+                <div class="margin-top-30px margin-bottom-30px form-row">
+                    <span class="margin-right-15px" onclick="javascript:history.back()">Voltar</span>
+                    <div class="btn-generic" onclick="$('.generic-modal').css('display', 'flex');">
+                        <span>Finalizar</span>
                     </div>
                 </div>
             </form>
         </div>
 	</section>
 	<?php require_once("components/footer.html"); ?><!-- RODAPÉ VIA PHP -->
+    <div class="generic-modal">
+        <article class="generic-modal-wrapper">
+            <h2 class="margin-top-60px">EXEMPLO DE MODAL GENÉRICA</h2>
+            <p>Esta é uma modal genérica de exemplo desenvolvida afim de testar seu layout. Este parágrafo pode, além de texto, conter <a href="#">links</a>.</p>
+            <div class="generic-modal-row margin-top-30px margin-bottom-60px">
+                <div class="btn-generic-modal cancel box-shadow margin-left-auto margin-right-15px">
+                    <span>Aceitar</span>
+                </div>
+                <div class="btn-generic-modal confirm box-shadow margin-right-auto">
+                    <span>Recusar</span>
+                </div>
+            </div>
+            <figure class="close-modal">
+                <img src="assets/images/icons/delete.svg" alt="Fechar Modal">
+            </figure>
+        </article>
+    </div>
 </body>
 </html>

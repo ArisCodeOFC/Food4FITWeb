@@ -14,4 +14,12 @@ $(document).ready(function(){
     $("#sidebar-right-close").click(function() {
         $("#sidebar-right").fadeOut("fast");
     });
+
+    $(".save-data-button").click(function() {
+        $(".form-generic").slideToggle(200);
+    });
+
+    $(".close-modal").click(function(){
+        $('.generic-modal').css('display', 'none');
+    });
 });

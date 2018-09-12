@@ -50,8 +50,6 @@
 						</div>
 	        			<h2 class="padding-bottom-5px">Nome do Prato</h2>
 	        			<h3 class="padding-bottom-15px">Categoria: Nome da Categoria</h3>
-	        			<span class="padding-bottom-5px">Ingredientes:</span>
-	        			<p class="padding-bottom-15px">Item 1, Item 2, Item 3, Item 4, Item 5, Item 6, Item 7</p>
 	        		</div>
 	        		<div class="shopping-cart-column align">
 	        			<span id="shopping-cart-price">R$ 000,00</span>

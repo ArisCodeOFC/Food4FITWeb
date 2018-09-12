@@ -19,9 +19,28 @@
 	<?php require_once("components/navbar.html") ?><!-- BARRA DE NAVEGAÇÃO VIA PHP -->
     <section class="main">
         <h2 id="page-title" class="margin-left-auto margin-right-auto margin-bottom-30px">MEU CARRINHO</h2>
-        <section id="shopping-cart-address-block">
-        	<a href="" class="margin-left-30px margin-top-30px">Cancelar</a>
-        	<h3>PAGAMENTO</h3>
+        <div class="form-generic width-small margin-right-auto margin-left-auto margin-top-30px hide">
+            <h3 class="form-title">Cadastre um Cartão de Crédito:</h3>
+            <form action="#" method="POST" name="frmendereco" class="form-generic-content">
+                <label for="numero" class="label-generic">Número do Cartão:</label>
+                <input type="text" name="numero" id="numero" placeholder="Ex: 1239 9434 2938 0093" class="input-generic">
+
+                <label for="titular" class="label-generic">Títular:</label>
+                <input type="text" name="titular" id="titular" placeholder="Como no cartão" class="input-generic">
+
+                <label for="expiracao" class="label-generic">Data de Expiração:</label>
+                <input type="text" name="expiracao" id="expiracao" placeholder="Ex: 11/20" class="input-generic">
+
+                <div class="margin-top-30px margin-bottom-30px form-row">
+                    <span class="margin-right-15px">Cancelar</span>
+                    <div class="btn-generic">
+                        <span>Salvar</span>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <section id="shopping-cart-address-block" class="margin-top-15px">
+            <h3>PAGAMENTO</h3>
             <p class="shopping-cart-address-subtitle">Selecione ou cadastre um cartão de crédito para<br>confirmar o pagamento do pedido</p>
         	<div id="shopping-cart-address-row">
         		<div class="shopping-cart-address-column">
@@ -38,12 +57,12 @@
         				<input type="radio" name="cartao" id="input3" value="1">
         				<label for="input3" class="margin-left-5px">VISA ****6002, João Silva</label>
         			</div>
-                    <a href="" class="padding-left-30px">Cadastrar um cartão</a>
+                    <span class="save-data-button padding-left-30px">Cadastrar um cartão</span>
         		</div>
         		<div class="shopping-cart-address-column">
         			<span class="shopping-cart-address-column-title margin-left-30px padding-top-60px margin-bottom-15px">Por segurança...</span>
 
-                    <div class="form-generic">
+                    <div style="height: auto; position: relative;">
                         <form class="form-generic-content width-small padding-left-30px" action="#" method="GET" name="frm">
                             <label for="dt-expire" class="label-generic">Data de Expiração:</label>
                             <input type="text" name="dt-expire" id="dt-expire" placeholder="Ex: 11/20" class="input-generic" style="width: 60%;">
@@ -57,13 +76,17 @@
                     </div>
         		</div>
         	</div>
+            <div id="total-price" style="">
+                <span>Total da compra:<br><b>R$ 000,00</b></span>
+            </div>
+            <div class="shopping-cart-row-next">
+                <span class="padding-left-30px">Passo 2 de 2</span>
+                <a href="" class="margin-right-30px">Cancelar</a>
+                <div class="btn-generic margin-right-30px margin-top-30px margin-bottom-30px" onclick="location.href='carrinho-pagamento.php';">
+                    <span>Finalizar</span>
+                </div>
+            </div>
         </section>
-        <div style="width: 100%; display: flex; align-items: center; justify-content: flex-end;">
-        	<span class="padding-right-15px" style="font-size: 18px; font-family: 'Roboto Medium Italic'; color: #7F7F7F;">Passo 2 de 2</span>
-        	<div class="btn-generic margin-right-30px margin-top-30px margin-bottom-30px">
-        		<span>Finalizar</span>
-        	</div>
-        </div>
 	</section>
 	<?php require_once("components/footer.html"); ?><!-- RODAPÉ VIA PHP -->
     <div class="modal">

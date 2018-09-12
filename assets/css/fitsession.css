@@ -1,60 +1,58 @@
 .fit-session-block{
     width: 100%;
     height: auto;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    border: 30px solid #FCFCFC;
 }
 .fit-session-content-row{
-    width: 90%;
-    height: auto;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.fit-session-content-column-text, .fit-session-content-column-image{
     width: 100%;
     height: auto;
+    max-height: 280px;
+    position: relative;
+}
+.fit-session-content-row>img{
+    width: 1200px;
+    height: 280px;
+    display: block;
+    object-fit: cover;
+}
+.fit-session-row-overlay{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.3);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: 300ms ease-in-out;
 }
-.fit-session-content-column-text h3{
-    color: #000;
-    font-size: 28px;
+.fit-session-row-overlay:hover{
+    background: linear-gradient(45deg, rgba(156, 194, 131, 0.7), rgba(237, 191, 133, 0.5) 30%);
+}
+.fit-session-row-overlay>h2{
+    font-size: 21px;
+    color: #FFF;
     font-family: "Roboto Bold";
 }
-.fit-session-content-column-text h3::after{
+.fit-session-row-overlay>h2::after{
     content: "";
     display: block;
     width: 80px;
     height: 5px;
-    background-color: #9CC283;
-    margin: 15px auto;
+    border-radius: 50px;
+    margin: 20px auto;
+    background: #FFF;
 }
-.fit-session-content-column-text p{
-    width: 75%;
-    margin: 0 auto;
-    font-size: 18px;
-    color: #282828;
-    text-align: center;
+.fit-session-row-overlay>p{
+    font-size: 16px;
+    line-height: 21px;
     font-family: "Roboto Regular";
-    line-height: 24px;
-}
-.fit-session-content-column-image>.image{
-    max-width: 350px;
-    max-height: 350px;
-    width: 100%;
-    height: auto;
-    padding: 0;
-    display: block;
-}
-.fit-session-content-column-image>.image img{
-    width: 350px;
-    height: 350px;
-    display: flex;
-    object-fit: cover;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    color: #FFf;
 }

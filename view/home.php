@@ -22,9 +22,8 @@
 			<div id="header-flat-row1" class="animate fadeInDown"><!-- PRIMEIRO CONTAINER-FILHO DO CABEÇALHO DA INDEX -->
 				<img src="assets/images/backgrounds/fit.jpeg" alt="Header"><!-- IMAGEM DO CONTAINER-FILHO DO CABEÇALHO DA INDEX -->
 				<div id="header-flat-overlay"><!-- CAMADA DO CONTAINER-FILHO DO CABEÇALHO DA INDEX -->
-					<h2 class="padding-left-30px padding-bottom-15px">Grãos como principal</h2><!-- TÍTULO DO DESTAQUE -->
-					<div class="separator-white margin-left-30px"></div><!-- SEPARADOR -->
-					<p class="padding-left-30px padding-top-15px">Veja pratos montados e temperados com diversos tipos de grãos integrais!</p><!-- DESCRIÇÃO DO DESTAQUE -->
+					<h2 class="padding-left-30px padding-bottom-15px">Legumes Sem Limite</h2><!-- TÍTULO DO DESTAQUE -->
+					<p class="padding-left-30px">Um prato repleto de legumes fresquinhos para a sua dieta!</p><!-- DESCRIÇÃO DO DESTAQUE -->
 					<div id="header-flat-overlay-seemore"><!-- RODAPÉ VIA PHP -->
 						<figure>
 							<img src="assets/images/icons/arrow.svg" alt="Ver Mais Sobre Prato Destaque"><!-- IMAGEM DO BOTÃO PARA VER MAIS SOBRE O DESTAQUE -->

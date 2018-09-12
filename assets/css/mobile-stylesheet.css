@@ -5,9 +5,6 @@
 	.filter-menu{
 		display: block;
 	}
-    .fit-session-content-column-image{
-        display: none;
-    }
 }
 @media screen and (max-width: 968px) {
 	#shopping-cart-confirm-block{
@@ -16,9 +13,6 @@
 	.filter-menu{
 		display: block;
 	}
-    .fit-session-content-column-image{
-        display: none;
-    }
 }
 /*--------------------------------------------------*/
 @media screen and (max-device-width: 768px) {

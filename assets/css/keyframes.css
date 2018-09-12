@@ -233,14 +233,29 @@
 .animate.infinite {
 	-webkit-animation-iteration-count: infinite; animation-iteration-count: infinite;
 }
+.animate.delay-500ms {
+  -webkit-animation-delay: 500ms; animation-delay: 500ms;
+}
 .animate.delay-1s {
 	-webkit-animation-delay: 1s; animation-delay: 1s;
+}
+.animate.delay-1500ms {
+  -webkit-animation-delay: 1.5s; animation-delay: 1.5s;
 }
 .animate.delay-2s {
 	-webkit-animation-delay: 2s; animation-delay: 2s;
 }
+.animate.delay-2500ms {
+  -webkit-animation-delay: 2.5s; animation-delay: 2.5s;
+}
 .animate.delay-3s {
 	-webkit-animation-delay: 3s; animation-delay: 3s;
+}
+.animate.delay-4s {
+  -webkit-animation-delay: 4s; animation-delay: 4s;
+}
+.animate.delay-5s {
+  -webkit-animation-delay: 5s; animation-delay: 5s;
 }
 .animate.fast {
 	-webkit-animation-duration: 800ms; animation-duration: 800ms;

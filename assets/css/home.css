@@ -50,13 +50,22 @@
 	font-family: "Roboto Bold", sans-serif;
 	color: #FFF;
 }
+#header-flat-overlay h2::after{
+    content: "";
+    display: block;
+    width: 80px;
+    height: 5px;
+    border-radius: 50px;
+    background-color: #FFF;
+    margin: 20px auto 10px 0px;
+}
 #header-flat-overlay p{
 	/*Descrição cabeçalho produto-destaque da index*/
-	font-size: 16px;
-	line-height: 21px;
+	font-size: 18px;
+	line-height: 24px;
 	font-family: "Roboto Regular", sans-serif;
 	color: #FFF;
-	width: 35%;
+	width: 50%;
 }
 #header-flat-overlay-seemore{
 	/*Container do botão de ver mais do cabeçalho da index*/

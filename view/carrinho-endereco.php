@@ -19,10 +19,41 @@
 	<?php require_once("components/navbar.html") ?><!-- BARRA DE NAVEGAÇÃO VIA PHP -->
     <section class="main">
         <h2 id="page-title" class="margin-left-auto margin-right-auto margin-bottom-30px">MEU CARRINHO</h2>
-        <section id="shopping-cart-address-block">
+        <div class="form-generic width-small margin-right-auto margin-left-auto margin-top-30px hide">
+            <h3 class="form-title">Cadastre um Endereço:</h3>
+            <form action="#" method="POST" name="frmendereco" class="form-generic-content">
+                <label for="logradouro" class="label-generic">Logradouro:</label>
+                <input type="text" name="logradouro" id="logradouro" placeholder="Ex: R. Flores/Av. 13 de Maio" class="input-generic">
+
+                <label for="numero" class="label-generic">Número:</label>
+                <input type="text" name="numero" id="numero" placeholder="Ex: 845" class="input-generic">
+
+                <label for="bairro" class="label-generic">Bairro:</label>
+                <input type="text" name="bairro" id="bairro" placeholder="Ex: Vila Almeida" class="input-generic">
+
+                <label for="complemento" class="label-generic">Complemento:</label>
+                <input type="text" name="complemento" id="complemento" placeholder="Ex: Ao lado do shopping" class="input-generic">
+
+                <label for="cep" class="label-generic">CEP:</label>
+                <input type="text" name="cep" id="cep" placeholder="Ex: 01234-567" class="input-generic">
+
+                <label for="cidade" class="label-generic">Cidade:</label>
+                <input type="text" name="cidade" id="cidade" placeholder="Ex: Sorocoba" class="input-generic">
+
+                <label for="estado" class="label-generic">Estado:</label>
+                <input type="text" name="estado" id="estado" placeholder="Ex: São Paulo" class="input-generic">
+
+                <div class="margin-top-30px margin-bottom-30px form-row">
+                    <span class="margin-right-15px">Cancelar</span>
+                    <div class="btn-generic">
+                        <span>Salvar</span>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <section id="shopping-cart-address-block" class="padding-top-15px">
         	<h3>ENDEREÇO DE ENTREGA</h3>
         	<p class="shopping-cart-address-subtitle">Selecione ou cadastre um endereço de entrega</p>
-        	<a href="" class="margin-left-30px margin-top-30px">Cancelar</a>
         	<div id="shopping-cart-address-row">
         		<div class="shopping-cart-address-column">
         			<span class="shopping-cart-address-column-title margin-left-30px padding-top-60px margin-bottom-15px">Selecione um endereço:</span>
@@ -38,20 +69,23 @@
         				<input type="radio" name="endereco" id="input3" value="1">
         				<label for="input3" class="margin-left-5px">Av. Centuri, 938, João Bosques, Carapicuíba, SP</label>
         			</div>
-        			<a href="" class="padding-left-30px">Cadastrar um endereço</a>
+        			<span class="save-data-button padding-left-30px">Cadastrar um endereço</span>
         		</div>
         		<div class="shopping-cart-address-column">
-        			<span class="shopping-cart-address-column-title margin-left-30px padding-top-60px margin-bottom-15px">Selecione um frete:</span>
-        			<div class="padding-left-30px">
-	        			<input type="radio" name="frete" id="input4" value="1">
-	        			<label for="input4" class="margin-left-5px">Frete Comum (R$12,90)</label>
-        			</div>
-					<div class="padding-left-30px">
-        				<input type="radio" name="frete" id="input5" value="1">
-        				<label for="input5" class="margin-left-5px">Frete Expresso (R$25,90)</label>
-					</div>
+        			<span class="shopping-cart-address-column-title margin-left-30px padding-top-60px margin-bottom-15px">Frete:</span>
+        			<p class="padding-left-30px">Frete Gerado: <b>R$ 00,00</b></p>
         		</div>
         	</div>
+            <div id="total-price" style="">
+                <span>Total da compra:<br><b>R$ 000,00</b></span>
+            </div>
+            <div class="shopping-cart-row-next">
+                <span class="padding-left-30px">Passo 1 de 2</span>
+                <a href="" class="margin-right-30px">Cancelar</a>
+                <div class="btn-generic margin-right-30px margin-top-30px margin-bottom-30px" onclick="location.href='carrinho-pagamento.php';">
+                    <span>Próximo</span>
+                </div>
+            </div>
         </section>
         <div class="shopping-cart-block">
         	<div class="shopping-cart-title-menu margin-top-30px">
@@ -81,8 +115,6 @@
 	        		<div class="shopping-cart-column">
 	        			<h2 class="padding-bottom-5px">Nome do Prato</h2>
 	        			<h3 class="padding-bottom-15px">Categoria: Nome da Categoria</h3>
-	        			<span class="padding-bottom-5px">Ingredientes:</span>
-	        			<p class="padding-bottom-15px">Item 1, Item 2, Item 3, Item 4, Item 5, Item 6, Item 7</p>
 	        		</div>
 	        		<div class="shopping-cart-column align">
 	        			<span id="shopping-cart-price">R$ 000,00</span>
@@ -95,12 +127,6 @@
 	        		</div>
 	        	</div>
         	</section>
-        </div>
-        <div style="width: 100%; display: flex; align-items: center; justify-content: flex-end;">
-        	<span class="padding-right-15px" style="font-size: 18px; font-family: 'Roboto Medium Italic'; color: #7F7F7F;">Passo 1 de 2</span>
-        	<div class="btn-generic margin-right-30px margin-top-30px margin-bottom-30px"  onclick="location.href='carrinho-pagamento.php';">
-        		<span>Próximo</span>
-        	</div>
         </div>
 	</section>
 	<?php require_once("components/footer.html"); ?><!-- RODAPÉ VIA PHP -->

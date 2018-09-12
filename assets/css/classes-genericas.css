@@ -1,3 +1,6 @@
+.hide{
+    display: none;
+}
 /* BLOCO/WRAPPER GENÉRICO - 100% DE LARGURA */
 .generic-block{
     width: 100%;
@@ -340,12 +343,13 @@ input[type="checkbox"].switch-styled:checked:after{
 .generic-modal{
 	width: 100vw;
 	height: 100vh;
+    z-index: 999999;
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	right: 0;
 	left: 0;
-	display: flex;
+	display: none;
 	justify-content: center;
 	align-items: center;
 	box-sizing: border-box;
@@ -680,18 +684,34 @@ input[type="checkbox"].switch-styled:checked:after{
   height: auto;
   position: relative;
 }
+.form-title{
+    font-size: 18px;
+    color: #000;
+    font-family: "Roboto Regular";
+    padding-bottom: 15px;
+    text-align: center;
+}
 .form-generic-content{
   height: auto;
 }
+.form-row{
+    width: 100%; height: auto; display: flex; align-items: center; justify-content: flex-end;
+}
+.form-row>span{
+    font-family:'Roboto Medium Italic'; color: #7F7F7F; font-size: 18px; display: block; transition: 200ms ease-in-out;
+}
+.form-row>span:hover{
+    color: #282828; cursor: pointer;
+}
 .label-generic{
   font-size: 18px;
-  font-family: "Roboto Regular";
+  font-family: "Roboto Bold";
   color: #000;
   display: block;
 }
 .label-rdo{
   font-size: 16px;
-  font-family: "Roboto Regular";
+  font-family: "Roboto Bold";
   color: #000;
 }
 .input-generic{

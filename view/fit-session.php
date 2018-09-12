@@ -20,51 +20,61 @@
 	<section class="main"><!-- CONTAINER-MÃE DO SITE -->
         <h2 id="page-title" class="margin-left-auto margin-right-auto">FIT SESSION</h2>
         <p id="page-subtitle" class="margin-left-auto margin-right-auto">Agrupamos os melhores assuntos sobre o<br>tema fitness em um lugar só, dê uma olhada!</p>
-        <div class="fit-session-block">
-            <section class="fit-session-content-row padding-bottom-60px">
-                <div class="fit-session-content-column-text animate fadeInLeft fast">
-                    <h3>Personal Fitness</h3>
-                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</p>
-                    <div class="btn-generic margin-top-30px">
+        <div class="fit-session-block margin-top-30px">
+            <figure class="fit-session-content-row animate fadeInDown">
+                <img src="assets/images/backgrounds/fitsession/img1.jpg" alt="Personal fitness">
+                <article class="fit-session-row-overlay">
+                    <h2>PERSONAL FITNESS</h2>
+                    <p class="padding-bottom-30px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean finibus finibus erat ut auctor. Donec vitae ipsum massa.</p>
+                    <div class="btn-generic" onclick="javascript:location.href='personal-fitness.php'">
                         <span>Ver Mais</span>
                     </div>
-                </div>
-                <div class="fit-session-content-column-image animate fadeInRight fast">
-                    <figure class="image">
-                        <img src="assets/images/fit/woman.png" alt="Personal Fitness">
-                    </figure>
-                </div>
-            </section>
-            <!-- ========================================================================== -->
-            <section class="fit-session-content-row padding-bottom-60px">
-                <div class="fit-session-content-column-image animate fadeInLeft fast">
-                    <figure class="image">
-                        <img src="assets/images/fit/tips.png" alt="Personal Fitness">
-                    </figure>
-                </div>
-                <div class="fit-session-content-column-text animate fadeInRight fast">
-                    <h3>Dicas de Saúde</h3>
-                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</p>
-                    <div class="btn-generic margin-top-30px">
+                </article>
+            </figure>
+            <!-- aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa -->
+            <figure class="fit-session-content-row animate fadeInDown delay-500ms">
+                <img src="assets/images/backgrounds/fitsession/img2.jpg" alt="Personal fitness">
+                <article class="fit-session-row-overlay">
+                    <h2>POR QUE A COMIDA FITNESS?</h2>
+                    <p class="padding-bottom-30px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean finibus finibus erat ut auctor. Donec vitae ipsum massa.</p>
+                    <div class="btn-generic" onclick="javascript:location.href='por-que-comida-fitness.php'">
                         <span>Ver Mais</span>
                     </div>
-                </div>
-            </section>
-            <!-- ========================================================================== -->
-            <section class="fit-session-content-row">
-                <div class="fit-session-content-column-text animate fadeInLeft fast">
-                    <h3>Por que o Fitness?</h3>
-                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</p>
-                    <div class="btn-generic margin-top-30px">
+                </article>
+            </figure>
+            <!-- aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa -->
+            <figure class="fit-session-content-row animate fadeInDown delay-1s">
+                <img src="assets/images/backgrounds/fitsession/img4.jpg" alt="Personal fitness">
+                <article class="fit-session-row-overlay">
+                    <h2>DICAS FITNESS</h2>
+                    <p class="padding-bottom-30px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean finibus finibus erat ut auctor. Donec vitae ipsum massa.</p>
+                    <div class="btn-generic" onclick="javascript:location.href='dicas-fitness.php'">
                         <span>Ver Mais</span>
                     </div>
-                </div>
-                <div class="fit-session-content-column-image animate fadeInRight fast">
-                    <figure class="image">
-                        <img src="assets/images/fit/weights.png" alt="Personal Fitness">
-                    </figure>
-                </div>
-            </section>
+                </article>
+            </figure>
+            <!-- aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa -->
+            <figure class="fit-session-content-row animate fadeInDown delay-1500ms">
+                <img src="assets/images/backgrounds/fitsession/img3.jpg" alt="Personal fitness">
+                <article class="fit-session-row-overlay">
+                    <h2>DICAS DE SAÚDE</h2>
+                    <p class="padding-bottom-30px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean finibus finibus erat ut auctor. Donec vitae ipsum massa.</p>
+                    <div class="btn-generic" onclick="javascript:location.href='dicas-de-saude.php'">
+                        <span>Ver Mais</span>
+                    </div>
+                </article>
+            </figure>
+            <!-- aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa -->
+            <figure class="fit-session-content-row animate fadeInDown delay-2s">
+                <img src="assets/images/backgrounds/fitsession/img5.jpg" alt="Personal fitness">
+                <article class="fit-session-row-overlay">
+                    <h2>VANTAGENS DA COMIDA FITNESS</h2>
+                    <p class="padding-bottom-30px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean finibus finibus erat ut auctor. Donec vitae ipsum massa.</p>
+                    <div class="btn-generic" onclick="javascript:location.href='vantagens-comida-fitness.php'">
+                        <span>Ver Mais</span>
+                    </div>
+                </article>
+            </figure>
         </div>
 	</section>
 	<?php require_once("components/footer.html"); ?><!-- RODAPÉ VIA PHP -->

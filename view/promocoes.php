@@ -20,7 +20,8 @@
 <body>
 	<?php require_once("components/navbar.html"); ?>
 	<section class="main">
-		<header class="slider-1200-250">
+		<h2 id="page-title">PROMOÇÕES</h2>
+        <header class="slider-1200-250 margin-top-30px">
             <div class="slider_content"><!--CONTAINER DO SLIDER-->
                 <ul id="slider">
                     <li>
@@ -34,10 +35,8 @@
                     </li>
                 </ul>
             </div>
-		</header>
-		<section class="gradient-header-60">
-			<h2 class="padding-top-15px padding-bottom-15px padding-left-30px">Promoções Válidas Até 01/01</h2>
-		</section>
+        </header>
+        <h3 class="promotion-subtitle padding-top-30px padding-left-30px">Promoções Válidas Até dd/MM</h3>
 		<article class="generic-grid animate fadeInUp">
 			<div class="generic-card">
 				<img src="assets/images/backgrounds/img.jpg" alt="Teste" class="generic-card-img">

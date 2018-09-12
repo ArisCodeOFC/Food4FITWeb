@@ -83,9 +83,6 @@
                 <h2 class="product-view-info-column-title margin-left-30px margin-bottom-15px">Categoria:</h2>
                 <span class="margin-left-30px">Nome da Categoria</span>
 
-                <h2 class="product-view-info-column-title margin-top-30px margin-left-30px margin-bottom-15px">Subcategoria:</h2>
-                <span class="margin-left-30px">Nome da Subcategoria</span>
-
                 <h2 class="product-view-info-column-title margin-top-30px margin-left-30px margin-bottom-15px">Peso/Líquido:</h2>
                 <span class="weight margin-left-30px">0,00 mg/kg</span>
                 <span class="weight margin-left-30px margin-top-5px">000 L/mL</span>
