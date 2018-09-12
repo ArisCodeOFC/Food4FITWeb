@@ -134,7 +134,7 @@
 
 				<p class="padding-left-30px padding-bottom-15px">Conheça as histórias das pessoas que utilizaram<br>nosso serviço e degustaram dos nossos produtos!</p><!-- DESCRIÇÃO DA SESSÃO -->
 
-				<div class="btn-generic margin-left-30px margin-bottom-60px"><!-- BOTÃO GENÉRICO -->
+				<div class="btn-generic margin-left-30px margin-bottom-60px" onclick="javascript:location.href='casos-de-sucesso.php'"><!-- BOTÃO GENÉRICO -->
 					<span>Ver Mais</span>
 				</div>
 			</div>
