@@ -1,0 +1,34 @@
+/* Cores exportadas do site 'coolors.co' - coolors.co/edbf85-9cc283-e85858-fcfcfc-282828 */
+
+/* RGB */
+$palegold: rgba(237, 191, 133, 1); /* #EDBF85 */
+$olivine: rgba(156, 194, 131, 1); /* #9CC283 */
+$sunsetorange: rgba(232, 88, 88, 1); /* #E85858 */
+$babypowder: rgba(252, 252, 252, 1); /* #FCFCFC */
+$charlestongray: rgba(40, 40, 40, 1); /* #282828 */
+$totalblack: rgba(0, 0, 0, 1); /* #000000 */
+$totalwhite: rgba(255, 255, 255, 1); /* #FFFFFF */
+$trolleygrey: rgba(127, 127, 127, 1); /* #7F7F7F */
+/* ===================================================================================== */
+@mixin title($fontsize, $fontfamily, $fontcolor, $lineheight, $textalign, $width, $margin, $padding){
+    font-size: $fontsize;
+    font-family: $fontfamily;
+    color: $fontcolor;
+    line-height: $lineheight;
+    text-align: $textalign;
+    width: $width;
+    margin: $margin;
+    padding: $padding;
+    display: block;
+}
+@mixin text($fontsize, $fontfamily, $fontcolor, $lineheight, $textalign, $width, $margin, $padding){
+    font-size: $fontsize;
+    font-family: $fontfamily;
+    color: $fontcolor;
+    line-height: $lineheight;
+    text-align: $textalign;
+    width: $width;
+    margin: $margin;
+    padding: $padding;
+    display: block;
+}
