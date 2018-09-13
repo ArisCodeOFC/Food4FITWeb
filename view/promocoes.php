@@ -162,10 +162,10 @@
 		<section class="generic-block">
 		    <h2 id="healthy-tricks-title">Não sabe por onde começar?<br>Deixa que a gente te ajuda!</h2>
 		    <div class="healthy-tricks-intro">
-                <figure class="healthy-tricks-intro image">
+                <figure class="healthy-tricks-intro image animate fadeInLeft">
                     <img src="assets/images/backgrounds/men.png" alt="Homem Amarrando Sapato">
                 </figure>
-		        <div class="healthy-tricks-intro details">
+		        <div class="healthy-tricks-intro details animate fadeInRight">
 		            <h3>Dicas de Saúde</h3>
 		            <p class="padding-bottom-30px">Confira dicas essenciais para manter a boa forma sem complicações, como se cuidar com refeições equilibradas e muito mais!</p>
 		            <div class="btn-generic">

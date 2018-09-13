@@ -38,10 +38,14 @@
                 <input type="text" name="cep" id="cep" placeholder="Ex: 01234-567" class="input-generic">
 
                 <label for="cidade" class="label-generic">Cidade:</label>
-                <input type="text" name="cidade" id="cidade" placeholder="Ex: Sorocoba" class="input-generic">
+                <select name="cidade" id="cidade" class="input-generic">
+                    <option>Selecione uma opção</option>
+                </select>
 
                 <label for="estado" class="label-generic">Estado:</label>
-                <input type="text" name="estado" id="estado" placeholder="Ex: São Paulo" class="input-generic">
+                <select name="estado" id="estado" class="input-generic">
+                    <option>Selecione uma opção</option>
+                </select>
 
                 <div class="margin-top-30px margin-bottom-30px form-row">
                     <span class="margin-right-15px">Cancelar</span>

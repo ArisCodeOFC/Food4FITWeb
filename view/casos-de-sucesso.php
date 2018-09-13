@@ -21,11 +21,13 @@
         <h2 id="page-title">CASOS DE SUCESSO</h2>
         <p id="page-subtitle">Conheça casos de sucesso de pessoas que utilizaram nossos serviços e aproveitaram nossos produtos, alcançando seus próprios objetivos</p>
         <div class="generic-block .margin-top-30px">
-            <div class="width-medium margin-left-auto margin-right-auto margin-top-30px success-case">
-                <figure class="padding-left-30px padding-top-30px padding-bottom-15px">
-                    <img src="assets/images/icons/person.jpg" alt="Usuario XXXXX" class="profile-picture">
-                </figure>
-                <span class="padding-left-30px padding-top-30px padding-bottom-15px s">Regina,32</span>
+            <div class="margin-left-auto margin-right-auto margin-top-30px success-case-card">
+                <div class="padding-top-30px margin-left-30px profile-picture">
+                    <div>
+                        <img src="assets/images/icons/person.jpg" alt="Usuario XXXXX">
+                    </div>
+                    <span>Regina,32</span>
+                </div>
                 <p class="padding-left-30px padding-top-30px padding-bottom-30px">Emagreci 21Kg com exercícios e as refeições da Food 4Fit!</p>
                 <div class="social-bar animate fadeInUp">
                     <img src="assets/images/icons/facebook-color.svg" alt="Facebook">
