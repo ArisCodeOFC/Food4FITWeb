@@ -687,15 +687,15 @@ input[type="checkbox"].switch-styled:checked:after{
   height: auto;
   position: relative;
 }
+.form-generic-content{
+  height: auto;
+}
 .form-title{
     font-size: 18px;
     color: #000;
     font-family: "Roboto Regular";
     padding-bottom: 15px;
     text-align: center;
-}
-.form-generic-content{
-  height: auto;
 }
 .form-row{
     width: 100%;

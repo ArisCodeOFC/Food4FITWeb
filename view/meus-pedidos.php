@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="assets/css/classes-genericas.css">
 	<link rel="stylesheet" href="assets/css/font-style.css">
     <link rel="stylesheet" href="assets/css/keyframes.css">
-    <link rel="stylesheet" href="assets/css/carrinho.css">
+    <link rel="stylesheet" href="assets/css/meus-pedidos.css">
 	<link rel="stylesheet" href="assets/css/mobile-stylesheet.css">
 	<script src="assets/js/jquery-3.3.1.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
@@ -36,6 +36,9 @@
         		<div class="shopping-cart-menu-column align">
         			<span class="padding-top-15px padding-bottom-15px">SUBT0TAL</span>
         		</div>
+        		<div class="shopping-cart-menu-column align">
+        			<span class="padding-top-15px padding-bottom-15px">AGENDAR PRATO</span>
+        		</div>
         	</div>
         	<section class="shopping-cart-grid">
         		<div class="shopping-cart-row">
@@ -60,7 +63,63 @@
 	        			<span id="shopping-cart-price-total">R$ 000,00</span>
 	        		</div>
                     <div class="shopping-cart-column align">
-
+						<div class="switch_box">
+							<input type="checkbox" name="chkdish" class="switch-styled">
+						</div>
+                    </div>
+	        	</div>
+	        	<div class="shopping-cart-row">
+	        		<div class="shopping-cart-column">
+	        			<figure class="shopping-cart-image-container">
+	        				<img src="assets/images/dishs/img1.jpg" alt="Nome do Prato">
+	        			</figure>
+	        		</div>
+	        		<div class="shopping-cart-column">
+	        			<h2 class="padding-bottom-5px">Nome do Prato</h2>
+	        			<h3 class="padding-bottom-15px">Categoria: Nome da Categoria</h3>
+	        		</div>
+	        		<div class="shopping-cart-column align">
+	        			<span id="shopping-cart-price">R$ 000,00</span>
+	        		</div>
+	        		<div class="shopping-cart-column align">
+	        			<div class="input-group input-number-group">
+				            <span>1</span>
+						</div>
+	        		</div>
+	        		<div class="shopping-cart-column align">
+	        			<span id="shopping-cart-price-total">R$ 000,00</span>
+	        		</div>
+                    <div class="shopping-cart-column align">
+						<div class="switch_box">
+							<input type="checkbox" name="chkdish" class="switch-styled">
+						</div>
+                    </div>
+	        	</div>
+	        	<div class="shopping-cart-row">
+	        		<div class="shopping-cart-column">
+	        			<figure class="shopping-cart-image-container">
+	        				<img src="assets/images/dishs/img1.jpg" alt="Nome do Prato">
+	        			</figure>
+	        		</div>
+	        		<div class="shopping-cart-column">
+	        			<h2 class="padding-bottom-5px">Nome do Prato</h2>
+	        			<h3 class="padding-bottom-15px">Categoria: Nome da Categoria</h3>
+	        		</div>
+	        		<div class="shopping-cart-column align">
+	        			<span id="shopping-cart-price">R$ 000,00</span>
+	        		</div>
+	        		<div class="shopping-cart-column align">
+	        			<div class="input-group input-number-group">
+				            <span>1</span>
+						</div>
+	        		</div>
+	        		<div class="shopping-cart-column align">
+	        			<span id="shopping-cart-price-total">R$ 000,00</span>
+	        		</div>
+                    <div class="shopping-cart-column align">
+						<div class="switch_box">
+							<input type="checkbox" name="chkdish" class="switch-styled">
+						</div>
                     </div>
 	        	</div>
         	</section>
