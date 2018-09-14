@@ -98,7 +98,7 @@ body{
 	height: auto;
 	background-color: #FCFCFC;
 	z-index: 89999;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;

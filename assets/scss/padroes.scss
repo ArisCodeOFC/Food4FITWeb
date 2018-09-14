@@ -10,17 +10,6 @@ $totalblack: rgba(0, 0, 0, 1); /* #000000 */
 $totalwhite: rgba(255, 255, 255, 1); /* #FFFFFF */
 $trolleygrey: rgba(127, 127, 127, 1); /* #7F7F7F */
 /* ===================================================================================== */
-@mixin title($fontsize, $fontfamily, $fontcolor, $lineheight, $textalign, $width, $margin, $padding){
-    font-size: $fontsize;
-    font-family: $fontfamily;
-    color: $fontcolor;
-    line-height: $lineheight;
-    text-align: $textalign;
-    width: $width;
-    margin: $margin;
-    padding: $padding;
-    display: block;
-}
 @mixin text($fontsize, $fontfamily, $fontcolor, $lineheight, $textalign, $width, $margin, $padding){
     font-size: $fontsize;
     font-family: $fontfamily;
@@ -31,4 +20,7 @@ $trolleygrey: rgba(127, 127, 127, 1); /* #7F7F7F */
     margin: $margin;
     padding: $padding;
     display: block;
+}
+.font-teste{
+    @include text(21px, 'Roboto Bold', $olivine, 24px, center, auto, 0 auto, 0px);
 }

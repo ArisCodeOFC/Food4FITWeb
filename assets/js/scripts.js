@@ -22,4 +22,12 @@ $(document).ready(function(){
     $(".close-modal").click(function(){
         $('.generic-modal').css('display', 'none');
     });
+
+    $('.switch-styled').change(function(){
+        if($(this).is(':checked')) {
+            $(".form-generic").slideToggle(200);
+        } else {
+            $(".form-generic").fadeOut("fast");
+        }
+    });
 });
