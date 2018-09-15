@@ -21,8 +21,9 @@
 <body>
     <?php require_once("components/navbar.html") ?>
     <section class="main">
-        <span id="page-title" class="animate fadeInUp">MONTE SEU PRATO</span>
-        <section id="monte-seu-prato-container" class="clearfix animate fadeInUp">
+        <h2 id="page-title" class="animate fadeInUp">MONTE SEU PRATO</h2>
+        <p id="page-subtitle">Monte o seu prato de acordo com as<br>suas necessidades, e deixa<br>que a gente prepara tudo para você!</p>
+        <section id="monte-seu-prato-container" class="clearfix animate fadeInUp margin-top-30px">
             <div id="ingredientes-categorias" class="sem-ingredientes clearfix">
                 <div id="breadcrumb">
                     <span>
@@ -32,8 +33,7 @@
                 <p id="categoria-vazia">Esta categoria não possui nenhum ingrediente ou subcategoria.</p>
                 <div id="categorias" class="clearfix">
                     <h2>Categorias</h2>
-                    <div id="lista-categorias" class="clearfix dragscroll">
-                    </div>
+                    <div id="lista-categorias" class="clearfix dragscroll"></div>
                 </div>
                 <div id="ingredientes" class="clearfix">
                     <h2>Ingredientes</h2>
@@ -41,6 +41,14 @@
                 </div>
             </div>
             <div id="meus-ingredientes" class="clearfix">
+                <div class="bar">
+                    <a href="#" class="padding-top-15px padding-bottom-15px">Tabela Nutricial</a>
+                </div>
+            </div>
+            <div style="display: flex; width: 100%; height: auto; justify-content: center; align-items: center;">
+                <div class="btn-generic margin-top-15px margin-bottom-15px">
+                    <span>Avançar</span>
+                </div>
             </div>
         </section>
 	</section>

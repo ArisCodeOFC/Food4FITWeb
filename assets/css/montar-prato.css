@@ -6,27 +6,28 @@
 
 #monte-seu-prato-container {
     width: 100%;
-    height: 0;
-    min-height: 1000px;
-    margin: 20px 0;
+    height: auto;
+    box-sizing: border-box;
 }
 
 #ingredientes-categorias {
-    width: 360px;
+    width: 100%;
+    max-width: 360px;
     height: 100%;
     float: left;
-    background-color: #DDDDDD;
-    overflow-y: scroll;
+    background-color: #9CC283;
+    overflow: auto;
 }
 
 #categorias, #ingredientes {
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
     width: 320px;
 }
 
-#categorias h2, #ingredientes h2 {
+#categorias h2,#ingredientes h2{
     font-family: "Roboto Bold";
-    font-size: 24px;
+    font-size: 21px;
+    color: #fff;
     margin-bottom: 10px;
     margin-top: 10px;
     box-sizing: border-box;
@@ -43,29 +44,41 @@
     height: 5px;
 }
 
-.categoria {
+.categoria{
     width: 155px;
-    height: 150px;
+    height: 155px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
     position: relative;
     display: inline-block;
     margin-left: 10px;
     cursor: pointer;
+    animation: fadeIn 200ms linear;
 }
-
+.ingrediente{
+    width: 155px;
+    height: 155px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    animation: fadeIn 200ms linear;
+}
 .categoria:first-of-type {
     margin: 0;
 }
-
 .categoria img, .ingrediente img {
     width: 100%;
     height: 100%;
 }
-
 .categoria .titulo, .ingrediente .titulo {
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.25);
     top: 0;
     left: 0;
     display: flex;
@@ -76,22 +89,12 @@
     overflow: hidden;
     padding: 10px;
 }
-
 .categoria .titulo h3, .ingrediente .titulo h3 {
     font-size: 22px;
-    color: #ffffff;
+    color: #fff;
     font-family: "Roboto Bold";
     white-space: normal;
 }
-
-.ingrediente {
-    width: 155px;
-    height: 150px;
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-}
-
 .ingrediente:nth-child(2n) {
     margin-left: 10px;
 }
@@ -128,7 +131,6 @@
 #ingredientes-categorias.sem-ingredientes .categoria:nth-child(n+3) {
     margin-top: 10px;
 }
-
 #categoria-vazia {
     text-align: center;
     display: none;
@@ -137,21 +139,19 @@
     padding: 10px;
     box-sizing: border-box;
 }
-
 #breadcrumb {
     white-space: nowrap;
     overflow: hidden;
     width: 100%;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 15px;
     padding-bottom: 0;
     text-overflow: clip;
     position: relative;
     background-color: inherit;
     min-height: 30px;
-    font-family: "Roboto Regular";
+    font-family: "Roboto Bold";
 }
-
 #breadcrumb::before {
     content: "\02026";
     position: absolute;
@@ -160,8 +160,8 @@
     background-color: inherit;
     padding-left: 1em;
     margin-left: 0.5em;
+    color: #fff;
 }
-
 #breadcrumb>span {
     min-width: 100%;
     position: relative;
@@ -182,34 +182,55 @@
     z-index: 200;
     left: -.5em;
 }
-
 #breadcrumb a {
-    color: #000000;
+    color: #F2F2F2;
     text-decoration: none;
-    font-family: "Roboto Regular";
+    font-family: "Roboto Bold Italic";
 }
-
 #breadcrumb a::after {
     content: ">";
     margin: 0 5px;
 }
-
 #breadcrumb a:last-of-type::after {
     display: none;
 }
-
+.bar{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+.bar>a{
+    font-family: 'Roboto Bold';
+    color: #3f3f3f;
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+    text-transform: uppercase;
+    transition: 200ms ease-in-out;
+}
+.bar>a:hover{
+    color: #000;
+}
 #meus-ingredientes {
     width: calc(100% - 360px);
     height: 100%;
+    min-height: 424px;
     float: left;
-    background-color: #9CC283;
+    background-color: #E8E8E8;
     overflow-y: auto;
 }
 
 #meus-ingredientes::-webkit-scrollbar-thumb {
-    background-color: #dddddd;
+    background-color: #fff;
 }
-
+#lista-categorias::-webkit-scrollbar {
+    background-color: #ddd;
+}
+#lista-categorias::-webkit-scrollbar-thumb {
+    background-color: #fff;
+}
 #meus-ingredientes .ingrediente {
     margin: 10px 0 0 10px;
 }

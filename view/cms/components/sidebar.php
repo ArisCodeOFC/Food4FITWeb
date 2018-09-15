@@ -54,9 +54,9 @@
             <span class="image"><img src="../assets/images/cms/icons/pedidos.svg" alt="Pedidos"></span>
             <span class="label">Pedidos<span class="badge">12</span></span>
         </a>
-        <a href="#">
-            <span class="image"><img src="../assets/images/cms/icons/relatorios.svg" alt="Relatórios"></span>
-            <span class="label">Relatórios</span>
+        <a href="sobre.php">
+            <span class="image"><img src="../assets/images/cms/icons/pagina-inicial.svg" alt="Sobre a Empresa"></span>
+            <span class="label">Sobre a Empresa</span>
         </a>
         <a href="#">
             <span class="image"><img src="../assets/images/cms/icons/parceiros.svg" alt="Parceiros"></span>

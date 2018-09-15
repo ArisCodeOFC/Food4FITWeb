@@ -68,6 +68,7 @@
 						</div>
                     </div>
 	        	</div>
+	        	<?php include('form-agendar-prato.php'); ?>
 	        	<div class="shopping-cart-row">
 	        		<div class="shopping-cart-column">
 	        			<figure class="shopping-cart-image-container">
