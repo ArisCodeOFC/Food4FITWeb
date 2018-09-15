@@ -30,7 +30,9 @@
                 <input id="telefone" name="telefone" class="input-generic" placeholder="Fixo">
                 <label for="celular" class="label-generic">Celular:</label>
                 <input id="celular" name="celular" class="input-generic" placeholder="(DDD) 98888-8888">
-                <label for="celular" class="label-generic">O que deseja nos dizer?</label>
+                <label for="assunto" class="label-generic">Assunto:</label>
+                <input id="assunto" name="assunto" class="input-generic" placeholder="Sobre o que é esta mensagem?">
+                <label for="comentario" class="label-generic">O que deseja nos dizer?</label>
                 <textarea id="comentario" name="comentario" class="textarea-generic"></textarea>
             </form>
             <div class='btn-generic'>
