@@ -368,7 +368,7 @@ body {
 #main-content header {
     height: 50px;
     background: linear-gradient(45deg, #9CC283, #EDBF85);
-    padding: 20px;
+    padding: 5px;
     display: flex;
     flex-direction: row;
     align-self: flex-end;
@@ -383,6 +383,7 @@ body {
 
 #main-content header #titulo-pagina {
     font-size: 21px;
+    padding-left: 20px;
     color: #fff;
     font-family: "Roboto Bold";
     text-transform: uppercase;
