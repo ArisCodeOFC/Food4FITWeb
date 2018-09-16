@@ -23,11 +23,8 @@ $(document).ready(function(){
         $('.generic-modal').css('display', 'none');
     });
 
-    $('.switch-styled').change(function(){
-        if($(this).is(':checked')) {
-            $(".form-generic").slideToggle(200);
-        } else {
-            $(".form-generic").fadeOut("fast");
-        }
+    $("#show").click(function() {
+        $('.dish-form').css('display', 'block');
+        $('.dish-form').addClass("animate fadeInUp");
     });
 });

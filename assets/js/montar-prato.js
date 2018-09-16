@@ -4,14 +4,7 @@ $(document).ready(function() {
             id: 1,
             titulo: "Frutas para matar o Marcel",
             imagem: "frutas.jpg",
-            ingredientes: [
-                {
-                    id: 1,
-                    titulo: "Laranja",
-                    imagem: "laranja.jpg",
-                    categoria: 1
-                }
-            ],
+            ingredientes: [],
             categorias: [
                 {
                     id: 4,
@@ -21,12 +14,14 @@ $(document).ready(function() {
                         {
                             id: 2,
                             titulo: "Banana",
+                            preco: "R$ 00,00",
                             imagem: "banana.jpg",
                             categoria: 4
                         },
                         {
                             id: 3,
                             titulo: "Maçã",
+                            preco: "R$ 00,00",
                             imagem: "maca.jpg",
                             categoria: 4
                         }
@@ -42,6 +37,7 @@ $(document).ready(function() {
                         {
                             id: 4,
                             titulo: "Abacate",
+                            preco: "R$ 00,00",
                             imagem: "abacate.jpg",
                             categoria: 5
                         }
@@ -57,6 +53,7 @@ $(document).ready(function() {
                         {
                             id: 5,
                             titulo: "Morango",
+                            preco: "R$ 00,00",
                             imagem: "morango.jpg",
                             categoria: 6
                         }
@@ -72,6 +69,7 @@ $(document).ready(function() {
                         {
                             id: 6,
                             titulo: "Mamão",
+                            preco: "R$ 00,00",
                             imagem: "mamao.jpg",
                             categoria: 7
                         }
@@ -85,6 +83,7 @@ $(document).ready(function() {
                                 {
                                     id: 7,
                                     titulo: "Mexerica",
+                                    preco: "R$ 00,00",
                                     imagem: "mexerica.jpg",
                                     categoria: 16
                                 }
@@ -111,12 +110,14 @@ $(document).ready(function() {
                         {
                             id: 8,
                             titulo: "Beterraba",
+                            preco: "R$ 00,00",
                             imagem: "beterraba.jpg",
                             categoria: 8
                         },
                         {
                             id: 9,
                             titulo: "Abóbora",
+                            preco: "R$ 00,00",
                             imagem: "abobora.jpg",
                             categoria: 8
                         }
@@ -132,6 +133,7 @@ $(document).ready(function() {
                         {
                             id: 10,
                             titulo: "Cenoura",
+                            preco: "R$ 00,00",
                             imagem: "cenoura.jpg",
                             categoria: 8
                         }
@@ -147,6 +149,7 @@ $(document).ready(function() {
                         {
                             id: 11,
                             titulo: "Mandioca",
+                            preco: "R$ 00,00",
                             imagem: "mandioca.jpg",
                             categoria: 10
                         }
@@ -162,6 +165,7 @@ $(document).ready(function() {
                         {
                             id: 12,
                             titulo: "Pepino",
+                            preco: "R$ 00,00",
                             imagem: "pepino.jpg",
                             categoria: 10
                         }
@@ -185,6 +189,7 @@ $(document).ready(function() {
                         {
                             id: 13,
                             titulo: "Alface",
+                            preco: "R$ 00,00",
                             imagem: "alface.jpg",
                             categoria: 12
                         }
@@ -200,6 +205,7 @@ $(document).ready(function() {
                         {
                             id: 15,
                             titulo: "Repolho",
+                            preco: "R$ 00,00",
                             imagem: "repolho.jpg",
                             categoria: 13
                         }
@@ -215,6 +221,7 @@ $(document).ready(function() {
                         {
                             id: 16,
                             titulo: "Salsa",
+                            preco: "R$ 00,00",
                             imagem: "salsa.jpg",
                             categoria: 14
                         }
@@ -230,6 +237,7 @@ $(document).ready(function() {
                         {
                             id: 17,
                             titulo: "Couve",
+                            preco: "R$ 00,00",
                             imagem: "couve.png",
                             categoria: 15
                         }
@@ -267,7 +275,7 @@ $(document).ready(function() {
                 if (meusIngredientes.indexOf(ingrediente) < 0) {
                     var div = $("<div class='ingrediente'>").data("ingrediente", ingrediente);
                     div.append($("<img>").attr("src", "assets/images/ingredientes/" + ingrediente.imagem).attr("alt", ingrediente.titulo));
-                    div.append($("<div class='titulo'>").append($("<h3>").text(ingrediente.titulo)));
+                    div.append($("<div class='titulo'>").append($("<h3>").text(ingrediente.titulo)).append($("<h4>").text(ingrediente.preco)));
                     div.appendTo("#lista-ingredientes");
                     habilitarIngrediente(div);
                 }
