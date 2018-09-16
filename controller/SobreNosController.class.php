@@ -71,7 +71,7 @@
 
         public function excluir($id) {
             if (SobreNosDAO::excluir($id)) {
-               $this->api->enviarStatus(204);
+                $this->api->enviarStatus(204);
             } else {
                 $this->api->enviarStatus(404, "Item não encontrado");
             }

@@ -1,0 +1,30 @@
+#map-canvas {
+    width: 100%;
+    height: 500px;
+    margin-top: 20px;
+}
+
+.map-info {
+    width: 350px;
+    padding: 10px 0;
+    font-family: "Roboto Light";
+}
+
+.map-info>h3 {
+    font-size: 20px;
+}
+
+.map-info>p {
+	line-height: 20px;
+    font-size: 14px;
+}
+
+.map-info span {
+	font-weight: bold;
+    font-size: 14px;
+}
+
+.map-info>span {
+	margin-top: 20px;
+    display: block;
+}

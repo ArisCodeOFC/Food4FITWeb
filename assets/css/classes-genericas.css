@@ -359,6 +359,9 @@ input[type="checkbox"].switch-styled:checked:after{
 	border: 30px solid transparent;
 	background: rgba(0, 0, 0, 0.5);
 }
+.generic-modal.show{
+    display: flex;
+}
 .generic-modal-wrapper{
 	width: auto;
 	height: auto;

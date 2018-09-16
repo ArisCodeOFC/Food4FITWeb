@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="assets/css/cadastro-usuario.css">
 	<link rel="stylesheet" href="assets/css/mobile-stylesheet.css">
 	<link rel="stylesheet" href="assets/css/font-style.css">
-	<script src="assets/js/jquery-3.3.1.min.js"></script>
+	<script src="assets/public/js/jquery-3.3.1.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 </head>
 <body>

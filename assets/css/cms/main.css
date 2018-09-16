@@ -475,7 +475,7 @@ img.btn-logout:hover {
 
 #tabela-items {
     width: 100%;
-    border: solid #9CC283 8px;
+    border: solid #9CC283 5px;
     box-sizing: border-box;
 }
 
@@ -484,6 +484,10 @@ img.btn-logout:hover {
 	flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+
+#tabela-items .linha + .linha:nth-child(even) {
+	background-color: #efefef;
 }
 
 #tabela-items .linha:first-child {
@@ -529,14 +533,6 @@ img.btn-logout:hover {
     padding: 0 10px;
 }
 
-#tabela-items .linha + .linha {
-    border-bottom: solid 5px #9CC283;
-}
-
-#tabela-items .linha:last-of-type {
-    border-bottom: none;
-}
-
 #tabela-items .linha + .linha .coluna {
 	height: 120px;
 }
@@ -552,7 +548,7 @@ img.btn-logout:hover {
 	overflow: hidden;
 }
 
-#tabela-items .linha + .linha .coluna.descricao>span {
+#tabela-items .linha + .linha .coluna.descricao>div {
     font-size: 18px;
     line-height: 24px;
     color: #282828;
@@ -608,14 +604,22 @@ img.btn-logout:hover {
     width: 250px;
     height: 70px;
     line-height: 70px;
-    border-radius: 35px;
     background-color: #d9d9d9;
     text-align: center;
     font-size: 18px;
     text-transform: uppercase;
     font-family: "Roboto Bold";
-    margin: 0 10px;
     cursor: pointer;
+}
+
+#tabs span:first-child {
+    border-top-left-radius: 35px;
+    border-bottom-left-radius: 35px;
+}
+
+#tabs span:last-child {
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
 }
 
 #tabs span.active {
@@ -657,13 +661,36 @@ img.btn-logout:hover {
     left: 0;
 }
 
-input[type="submit"] {
-    display: none;
-}
-
 .imagem-upload-wrapper label {
 	font-size: 16px;
     color: #616161;
     font-family: "Roboto Italic";
     margin: 10px 0;
+}
+
+#container-form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.form-generic .controls {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.form-generic .controls .cancel {
+	font-size: 16px;
+    line-height: 28px;
+    color: #616161;
+    font-family: "Roboto Italic";
+    cursor: pointer;
+    margin: 0 20px;
+}
+
+.form-generic-content input[type="submit"] {
+    display: none;
 }

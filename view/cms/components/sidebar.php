@@ -18,13 +18,13 @@
     </div>
     <div class="separator"></div>
     <nav>
-        <a href="#" data-page-load="dashboard">
+        <a href="#" data-page-load="dashboard" data-page-controller="DashboardController">
             <span class="image"><img src="../assets/images/cms/icons/pagina-inicial.svg" alt="Dashboard"></span>
             <span class="label">Dashboard</span>
         </a>
         <a href="#">
-            <span class="image"><img src="../assets/images/cms/icons/estatisticas.svg" alt="Estatísticas"></span>
-            <span class="label">Estatísticas</span>
+            <span class="image"><img src="../assets/images/cms/icons/diario-de-bordo.svg" alt="Diário de Bordo"></span>
+            <span class="label">Diário de Bordo</span>
         </a>
         <a href="#">
             <span class="image"><img src="../assets/images/cms/icons/pratos.svg" alt="Pratos"></span>
@@ -34,7 +34,7 @@
             <span class="image"><img src="../assets/images/cms/icons/ingredientes.svg" alt="Ingredientes"></span>
             <span class="label">Ingredientes</span>
         </a>
-        <a href="#" data-page-load="sobre">
+        <a href="#">
             <span class="image"><img src="../assets/images/cms/icons/publicacoes.svg" alt="Publicações"></span>
             <span class="label">Publicações</span>
         </a>
@@ -54,9 +54,9 @@
             <span class="image"><img src="../assets/images/cms/icons/pedidos.svg" alt="Pedidos"></span>
             <span class="label">Pedidos<span class="badge">12</span></span>
         </a>
-        <a href="sobre.php">
-            <span class="image"><img src="../assets/images/cms/icons/pagina-inicial.svg" alt="Sobre a Empresa"></span>
-            <span class="label">Sobre a Empresa</span>
+        <a href="#">
+            <span class="image"><img src="../assets/images/cms/icons/fit-session.svg" alt="Fit Session"></span>
+            <span class="label">Fit Session</span>
         </a>
         <a href="#">
             <span class="image"><img src="../assets/images/cms/icons/parceiros.svg" alt="Parceiros"></span>
@@ -73,9 +73,9 @@
             <span class="image"><img src="../assets/images/cms/icons/fale-conosco.svg" alt="Fale Conosco"></span>
             <span class="label">Fale Conosco<span class="badge">12</span></span>
         </a>
-        <a href="#">
-            <span class="image"><img src="../assets/images/cms/icons/a-fazer.svg" alt="A fazer"></span>
-            <span class="label">A fazer<span class="badge">9</span></span>
+        <a href="#" data-page-load="sobre" data-page-controller="SobreEmpresaController">
+            <span class="image"><img src="../assets/images/cms/icons/sobre-empresa.svg" alt="Sobre a Empresa"></span>
+            <span class="label">Sobre a Empresa</span>
         </a>
         <a href="#">
             <span class="image"><img src="../assets/images/cms/icons/outras-funcoes.svg" alt="Outras Funções"></span>

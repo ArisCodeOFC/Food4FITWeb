@@ -14,16 +14,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Food 4fit - CMS</title>
         <link rel="icon" type="image/png" href="../assets/images/icons/favicon.png" />
-	    <link rel="stylesheet" href="../assets/css/jquery.toast.min.css">
+	    <link rel="stylesheet" href="../assets/public/css/jquery.toast.min.css">
 	    <link rel="stylesheet" href="../assets/css/font-style.css">
         <link rel="stylesheet" href="../assets/css/cms/main.css">
-	    <script src="../assets/js/jquery-3.3.1.min.js"></script>
-	    <script src="../assets/js/jquery.toast.min.js"></script>
+	    <script src="../assets/public/js/jquery-3.3.1.min.js"></script>
+	    <script src="../asset/publics/js/jquery.toast.min.js"></script>
 	    <script src="../assets/js/cms/main.js"></script>
-	    <script src="../assets/js/cms/login.js"></script>
+	    <script src="../assets/js/cms/login.controller.js"></script>
     </head>
     <body>
-        <section id="main-login">
+        <section id="main-login" data-controller="LoginController">
             <h2 id="titulo">
                 <span>Food</span>
                 <span>4FIT</span>
