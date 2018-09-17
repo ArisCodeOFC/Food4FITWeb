@@ -6,12 +6,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Dicas de Saúde - Food 4Fit</title>
 	<link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
-	<link rel="stylesheet" href="assets/css/stylesheet.css">
-    <link rel="stylesheet" href="assets/css/classes-genericas.css">
-	<link rel="stylesheet" href="assets/css/font-style.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bases.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/colors.css">
+    <link rel="stylesheet" href="assets/css/font-style.css">
+    <link rel="stylesheet" href="assets/css/align.css">
     <link rel="stylesheet" href="assets/css/keyframes.css">
-    <link rel="stylesheet" href="assets/css/saude.css">
-	<link rel="stylesheet" href="assets/css/mobile-stylesheet.css">
+    <link rel="stylesheet" href="assets/css/mobile.css">
 	<script src="assets/public/js/jquery-3.3.1.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 </head>
@@ -21,7 +24,7 @@
         <h2 id="page-title">DICAS DE SAÚDE</h2>
         <p id="page-subtitle">Acompanhe dicas sobre saúde e bem estar que nossos colaboradores desenvolvem especialmente para os nossos clientes!</p>
         <article class="health-tricks-block">
-            <div class="health-tricks-card">
+            <div class="health-tricks-card animate fadeInUp">
                 <h2 class="padding-top-30px">Dica #05</h2>
                 <p class="padding-top-15px">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
                 <span class="health-tricks-card-publishedby padding-top-30px padding-bottom-15px">Publicado por <b>João Guedes</b></span>
@@ -35,7 +38,7 @@
                 </div>
             </div>
 
-            <div class="health-tricks-card">
+            <div class="health-tricks-card animate fadeInUp">
                 <h2 class="padding-top-30px">Dica #05</h2>
                 <p class="padding-top-15px">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
                 <span class="health-tricks-card-publishedby padding-top-30px padding-bottom-15px">Publicado por <b>João Guedes</b></span>
@@ -49,7 +52,7 @@
                 </div>
             </div>
 
-            <div class="health-tricks-card">
+            <div class="health-tricks-card animate fadeInUp">
                 <h2 class="padding-top-30px">Dica #05</h2>
                 <p class="padding-top-15px">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
                 <span class="health-tricks-card-publishedby padding-top-30px padding-bottom-15px">Publicado por <b>João Guedes</b></span>
@@ -63,7 +66,7 @@
                 </div>
             </div>
 
-            <div class="health-tricks-card">
+            <div class="health-tricks-card animate fadeInUp">
                 <h2 class="padding-top-30px">Dica #05</h2>
                 <p class="padding-top-15px">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
                 <span class="health-tricks-card-publishedby padding-top-30px padding-bottom-15px">Publicado por <b>João Guedes</b></span>
@@ -77,7 +80,7 @@
                 </div>
             </div>
 
-            <div class="health-tricks-card">
+            <div class="health-tricks-card animate fadeInUp">
                 <h2 class="padding-top-30px">Dica #05</h2>
                 <p class="padding-top-15px">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
                 <span class="health-tricks-card-publishedby padding-top-30px padding-bottom-15px">Publicado por <b>João Guedes</b></span>

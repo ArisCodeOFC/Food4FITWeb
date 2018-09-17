@@ -6,12 +6,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Todos os Pratos - Food 4Fit</title>
 	<link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
-	<link rel="stylesheet" href="assets/css/stylesheet.css">
-	<link rel="stylesheet" href="assets/css/classes-genericas.css">
-	<link rel="stylesheet" href="assets/css/font-style.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bases.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/colors.css">
+    <link rel="stylesheet" href="assets/css/font-style.css">
+    <link rel="stylesheet" href="assets/css/align.css">
     <link rel="stylesheet" href="assets/css/keyframes.css">
-	<link rel="stylesheet" href="assets/css/prato.css">
-	<link rel="stylesheet" href="assets/css/mobile-stylesheet.css">
+    <link rel="stylesheet" href="assets/css/mobile.css">
 	<script src="assets/public/js/jquery-3.3.1.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 </head>
@@ -20,8 +23,8 @@
 	<div class="main">
 		<header class="filter-menu">
 			<div class="filter-menu-column">
-				<label for="categorias" class="dishes-filter-label padding-left-15px">Categorias:</label>
-				<select name="categorias" id="categorias" class="dishes-filter-select margin-bottom-15px margin-top-15px margin-left-15px margin-right-15px">
+				<label for="categoria" class="dishes-filter-label padding-left-15px">Categorias:</label>
+				<select name="categoria" id="categoria" class="dishes-filter-select margin-bottom-15px margin-top-15px margin-left-15px margin-right-15px">
 					<option>Selecione uma opção</option>
 				</select>
 			</div>

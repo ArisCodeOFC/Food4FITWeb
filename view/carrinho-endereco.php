@@ -6,12 +6,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Endereço :: Carrinho - Food 4Fit</title>
 	<link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
-	<link rel="stylesheet" href="assets/css/stylesheet.css">
-    <link rel="stylesheet" href="assets/css/classes-genericas.css">
-	<link rel="stylesheet" href="assets/css/font-style.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bases.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/colors.css">
+    <link rel="stylesheet" href="assets/css/font-style.css">
+    <link rel="stylesheet" href="assets/css/align.css">
+    <link rel="stylesheet" href="assets/css/sizes.css">
     <link rel="stylesheet" href="assets/css/keyframes.css">
-    <link rel="stylesheet" href="assets/css/carrinho.css">
-	<link rel="stylesheet" href="assets/css/mobile-stylesheet.css">
+    <link rel="stylesheet" href="assets/css/mobile.css">
 	<script src="assets/public/js/jquery-3.3.1.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 </head>
@@ -19,7 +23,7 @@
 	<?php require_once("components/navbar.html") ?><!-- BARRA DE NAVEGAÇÃO VIA PHP -->
     <section class="main">
         <h2 id="page-title" class="margin-left-auto margin-right-auto margin-bottom-30px">MEU CARRINHO</h2>
-        <div class="form-generic width-small margin-right-auto margin-left-auto margin-top-30px hide">
+        <div class="form-generic width-500px margin-right-auto margin-left-auto margin-top-30px hide">
             <h3 class="form-title">Cadastre um Endereço:</h3>
             <form action="#" method="POST" name="frmendereco" class="form-generic-content">
                 <label for="logradouro" class="label-generic">Logradouro:</label>
@@ -65,15 +69,15 @@
 	        			<input type="radio" name="endereco" id="input1" value="1">
 	        			<label for="input1" class="margin-left-5px">R. Silverstone, 391, JD. Flores, Jandira, SP</label>
         			</div>
-					<div class="padding-left-30px">
+					<div class="padding-left-30px padding-top-15px">
         				<input type="radio" name="endereco" id="input2" value="1">
         				<label for="input2" class="margin-left-5px">R. São Roque, 142, Lago dos Cisnes, Barueri, SP</label>
 					</div>
-					<div class="padding-left-30px">
+					<div class="padding-left-30px padding-top-15px">
         				<input type="radio" name="endereco" id="input3" value="1">
         				<label for="input3" class="margin-left-5px">Av. Centuri, 938, João Bosques, Carapicuíba, SP</label>
         			</div>
-        			<span class="save-data-button padding-left-30px">Cadastrar um endereço</span>
+        			<span class="save-data-button padding-left-30px padding-top-20px">Cadastrar um endereço</span>
         		</div>
         		<div class="shopping-cart-address-column">
         			<span class="shopping-cart-address-column-title margin-left-30px padding-top-60px margin-bottom-15px">Frete:</span>

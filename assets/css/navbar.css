@@ -1,0 +1,292 @@
+@charset "UTF-8";
+@font-face { font-family: "Roboto Black"; src: url("../fonts/Roboto-Black.ttf"); }
+
+@font-face { font-family: "Roboto Black Italic"; src: url("../fonts/Roboto-BlackItalic.ttf"); }
+
+@font-face { font-family: "Roboto Bold"; src: url("../fonts/Roboto-Bold.ttf"); }
+
+@font-face { font-family: "Roboto Bold Italic"; src: url("../fonts/Roboto-BoldItalic.ttf"); }
+
+@font-face { font-family: "Roboto Italic"; src: url("../fonts/Roboto-Italic.ttf"); }
+
+@font-face { font-family: "Roboto Light"; src: url("../fonts/Roboto-Light.ttf"); }
+
+@font-face { font-family: "Roboto Light Italic"; src: url("../fonts/Roboto-LightItalic.ttf"); }
+
+@font-face { font-family: "Roboto Medium"; src: url("../fonts/Roboto-Medium.ttf"); }
+
+@font-face { font-family: "Roboto Medium Italic"; src: url("../fonts/Roboto-MediumItalic.ttf"); }
+
+@font-face { font-family: "Roboto Regular"; src: url("../fonts/Roboto-Regular.ttf"); }
+
+@font-face { font-family: "Roboto Thin"; src: url("../fonts/Roboto-Thin.ttf"); }
+
+@font-face { font-family: "Roboto Thin Italic"; src: url("../fonts/Roboto-ThinItalic.ttf"); }
+
+@font-face { font-family: "Roboto Black"; src: url("../fonts/Roboto-Black.ttf"); }
+
+@font-face { font-family: "Roboto Black Italic"; src: url("../fonts/Roboto-BlackItalic.ttf"); }
+
+@font-face { font-family: "Roboto Bold"; src: url("../fonts/Roboto-Bold.ttf"); }
+
+@font-face { font-family: "Roboto Bold Italic"; src: url("../fonts/Roboto-BoldItalic.ttf"); }
+
+@font-face { font-family: "Roboto Italic"; src: url("../fonts/Roboto-Italic.ttf"); }
+
+@font-face { font-family: "Roboto Light"; src: url("../fonts/Roboto-Light.ttf"); }
+
+@font-face { font-family: "Roboto Light Italic"; src: url("../fonts/Roboto-LightItalic.ttf"); }
+
+@font-face { font-family: "Roboto Medium"; src: url("../fonts/Roboto-Medium.ttf"); }
+
+@font-face { font-family: "Roboto Medium Italic"; src: url("../fonts/Roboto-MediumItalic.ttf"); }
+
+@font-face { font-family: "Roboto Regular"; src: url("../fonts/Roboto-Regular.ttf"); }
+
+@font-face { font-family: "Roboto Thin"; src: url("../fonts/Roboto-Thin.ttf"); }
+
+@font-face { font-family: "Roboto Thin Italic"; src: url("../fonts/Roboto-ThinItalic.ttf"); }
+
+::-webkit-scrollbar { /*Estilização da scrollbar*/ width: 6px; background: #FFFFFF; }
+
+::-webkit-scrollbar-thumb { /*Estilização da scrollbar*/ border-radius: 50px; background-color: #9CC283; }
+
+.main { /*Container-mãe do block do site*/ width: 100%; max-width: 1200px; height: auto; min-height: auto; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; background-color: #FCFCFC; margin: 124px auto 0px auto; z-index: 1; }
+
+/* TÍTULO DA PÁGINA */
+#page-title { /*Título da página*/ display: block; font-size: 18px; letter-spacing: -0.2px; font-family: "Roboto Bold"; color: #000; padding: 30px; text-align: center; margin: 0 auto; padding-bottom: 0px; animation: fadeIn 1.5s linear; }
+
+#page-title:after { /*Barra separada do título da página*/ content: ""; display: block; width: 30px; height: 3px; margin: auto; border-radius: 30px; background-color: #000; margin-top: 8px; animation: fadeIn 1s linear; }
+
+#page-subtitle { width: 90%; max-width: 460px; height: auto; text-align: center; color: #7F7F7F; font-family: "Roboto Regular"; font-weight: normal; font-size: 16px; line-height: 24px; margin: 0 auto; margin-top: 5px; animation: fadeIn 1s linear; }
+
+/* GRID GENÉRICO */
+.generic-grid { /*Container-mãe da grelha genérica responsiva*/ width: 100%; max-width: 100%; height: 100%; min-height: auto; box-sizing: border-box; border: 30px solid #FCFCFC; margin: 0 auto; display: grid; flex-direction: row; justify-content: flex-start; align-items: flex-start; grid-auto-flow: row; grid-gap: 30px 30px; grid-auto-rows: auto; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+
+.generic-card { /*Card da grelha genérica responsiva*/ width: auto; max-width: 100%; height: auto; min-height: auto; border-radius: 10px; overflow: hidden; box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.1); transition: 200ms ease-in-out; cursor: pointer; position: relative; }
+
+.generic-card:hover { /*Ação ao mover o mouse no card da grelha genérica responsiva*/ box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.2); }
+
+.generic-card:hover .generic-card-img { /*Ação ao mover o mouse no card da grelha genérica responsiva*/ transform: scale(1.08); }
+
+.generic-card-img { /*Imagem do card da grelha genérica responsiva*/ width: false; height: false; display: block; object-fit: cover; cursor: pointer; max-width: 100%; border-radius: 10px; transition: 300ms ease-in-out; }
+
+.generic-card-overlay { /*Container acima do card da grelha genérica responsiva*/ width: 100%; max-width: 100%; height: auto; min-height: auto; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; position: absolute; top: 0; right: 0; bottom: 0; left: 0; border-radius: 10px; overflow: hidden; background: linear-gradient(transparent, rgba(0, 0, 0, 0.5)); box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.1); transition: 200ms ease-in-out; }
+
+.card-dish-name { /*Nome do prato da grelha genérica responsiva*/ font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 26px; color: #FFFFFF; font-family: "Roboto Bold"; line-height: 24px; text-align: center; display: block; text-decoration: none; width: 80%; margin: 0 auto; }
+
+.card-dish-separator { /*Separador da grelha genérica responsiva*/ width: 30px; height: 3px; border-radius: 30px; background-color: #FFFFFF; }
+
+.card-dish-description { /*Descrição do prato da grelha genérica responsiva*/ font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #FFFFFF; font-family: "Roboto Regular"; line-height: 21px; text-align: center; display: block; text-decoration: none; width: 80%; margin: 0 auto; }
+
+.card-dish-price { /*Preço do prato da grelha genérica responsiva*/ width: 160px; max-width: 100%; height: 40px; min-height: auto; display: flex; flex-direction: row; justify-content: center; align-items: center; background: #E85858; transition: 50ms ease-out; border-radius: 5px; }
+
+.card-dish-price > span { font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 18px; color: #FFFFFF; font-family: "Roboto Medium"; line-height: 21px; text-align: left; display: block; text-decoration: none; }
+
+.card-dish-price > div { width: 28px; max-width: 100%; height: 28px; min-height: auto; }
+
+.card-dish-price > div > img { max-width: 100%; display: block; }
+
+.card-dish-price:hover { transform: scale(1.02); }
+
+/* MODAL GENERICO */
+.generic-modal { width: 100vw; max-width: 100vw; height: 100vh; min-height: auto; position: absolute; top: 0; right: 0; bottom: 0; left: 0; display: none; flex-direction: column; justify-content: center; align-items: center; z-index: 999999; box-sizing: border-box; border: 30px solid transparent; background: rgba(0, 0, 0, 0.5); }
+
+.generic-modal .generic-modal-wrapper { width: auto; max-width: 100%; height: auto; min-height: auto; display: flex; flex-direction: column; justify-content: center; align-items: center; box-sizing: border-box; padding-left: 30px; padding-right: 30px; border-radius: 10px; background-color: #FFFFFF; position: relative; }
+
+.generic-modal .generic-modal-wrapper .close-modal { width: 21px; max-width: 100%; height: 21px; min-height: auto; position: absolute; top: 15px; right: 15px; overflow: hidden; }
+
+.generic-modal .generic-modal-wrapper .close-modal > img { width: 21px; height: 21px; display: block; object-fit: cover; cursor: pointer; }
+
+.generic-modal .generic-modal-wrapper > p { width: 80%; display: block; font-family: "Roboto Regular"; color: #282828; text-align: center; font-size: 16px; line-height: 21px; margin: 0 auto; }
+
+.generic-modal .generic-modal-wrapper > p a { font-family: "Roboto Bold Italic"; color: #E85858; text-decoration: none; }
+
+.generic-modal .generic-modal-row { width: 100%; max-width: 100%; height: auto; min-height: auto; box-sizing: border-box; padding-left: 30px; padding-right: 30px; display: flex; flex-direction: row; justify-content: flex-start; align-items: flex-start; }
+
+.generic-modal .generic-modal-row > h2 { font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 28px; color: #000000; font-family: "Roboto Bold"; line-height: 31px; text-align: center; display: block; text-decoration: none; }
+
+.generic-modal .generic-modal-row > h2:after { content: ""; display: block; width: 80px; height: 5px; border-radius: 50px; background-color: #000000; margin: 20px auto; }
+
+.generic-modal .btn-generic-modal { width: auto; max-width: 100%; height: auto; min-height: auto; box-sizing: border-box; border-radius: 5px; transition: 200ms ease-in-out; cursor: pointer; }
+
+.generic-modal .btn-generic-modal:hover { -webkit-transform: scale(1.05); -moz-transform: scale(1.05); -ms-transform: scale(1.05); -o-transform: scale(1.05); transform: scale(1.05); }
+
+.generic-modal .btn-generic-modal .confirm { background-color: #9CC283; }
+
+.generic-modal .btn-generic-modal .confirm > span { font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 18px; color: #FFFFFF; font-family: "Roboto Bold"; line-height: 24px; text-align: center; display: block; text-decoration: none; padding: 16px; width: 90%; box-sizing: border-box; }
+
+.generic-modal .btn-generic-modal .cancel { background-color: #282828; }
+
+.generic-modal .btn-generic-modal .cancel > span { font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 18px; color: #7F7F7F; font-family: "Roboto Medium Italic"; line-height: 24px; text-align: center; display: block; text-decoration: none; padding: 16px; width: 90%; box-sizing: border-box; }
+
+/* FORMULÁRIOS */
+.form-generic { position: relative; }
+
+.form-generic .form-title { font-size: 18px; color: #000; font-family: "Roboto Regular"; padding-bottom: 15px; text-align: center; }
+
+.form-generic-content { height: auto; }
+
+.form-generic-content .label-generic { font-size: 18px; font-family: "Roboto Bold"; color: #000; display: block; }
+
+.form-generic-content .label-rdo { font-size: 16px; font-family: "Roboto Bold"; color: #000; }
+
+.form-generic-content .input-generic { width: 100%; border-radius: 5px; display: block; background-color: #E8E8E8; border: none; outline: none; height: 40px; text-indent: 15px; font-family: "Roboto Regular"; font-size: 16px; margin-top: 5px; margin-bottom: 15px; }
+
+.form-generic-content input[type=radio] { margin-right: 5px; margin-top: 5px; margin-bottom: 15px; }
+
+.form-generic-content .textarea-generic { width: 100%; resize: none; height: 150px; background-color: #E8E8E8; border-radius: 5px; border: none; outline: none; box-sizing: border-box; font-family: "Roboto Regular"; font-size: 16px; margin-top: 5px; margin-bottom: 15px; padding: 15px; }
+
+.form-row { width: 100%; height: auto; display: flex; align-items: center; justify-content: flex-end; }
+
+.form-row > span { font-family: 'Roboto Medium Italic'; color: #7F7F7F; font-size: 18px; display: block; transition: 200ms ease-in-out; }
+
+.form-row > span:hover { color: #282828; cursor: pointer; }
+
+/* BOTÃO GENÉRICO */
+.btn-generic { /*Botão genérico*/ width: 120px; max-width: 120px; height: auto; min-height: auto; display: flex; flex-direction: column; justify-content: center; align-items: center; background: #9CC283; border-radius: 5px; border: none; outline: none; transition: 300ms ease-out; }
+
+.btn-generic > span { /*Texto do botão genérico*/ font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #FFFFFF; font-family: "Roboto Bold"; line-height: 18px; text-align: center; display: block; text-decoration: none; width: 90%; margin: 0 auto; box-sizing: border-box; padding: 10px; }
+
+.btn-generic:hover { /*Ação ao mover o mouse no botão genérico*/ transform: scale(1.02); cursor: pointer; }
+
+.btn-generic-disabled { /*Botão genérico desabilitado*/ width: 120px; max-width: 120px; height: auto; min-height: auto; display: flex; flex-direction: column; justify-content: center; align-items: center; background: #9F9F9F; border-radius: 5px; border: none; outline: none; transition: 300ms ease-out; }
+
+.btn-generic-disabled span { /*Texto do botão genérico desativado*/ font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #7F7F7F; font-family: "Roboto Bold Italic"; line-height: 18px; text-align: center; display: block; text-decoration: none; width: 90%; margin: 0 auto; box-sizing: border-box; padding: 10px; }
+
+/*CLASSES DO SLIDER*/
+.slider-1200-250 { width: 100%; max-width: 1200px; height: 250px; min-height: 250px; background: #FCFCFC; position: relative; overflow: hidden; }
+
+.slider-1200-250 .slider_content { width: 100%; max-width: 1200px; height: 250px; min-height: 250px; position: absolute; top: 0; right: 0; bottom: 0; left: 0; transition: 500ms ease-out; }
+
+.prev, .next { cursor: pointer; position: absolute; top: 50%; width: auto; padding: 16px; margin-top: -22px; color: #FFF; font-weight: bold; font-size: 18px; transition: 300ms ease; border-radius: 0 3px 3px 0; z-index: 999; text-decoration: none; background: rgba(0, 0, 0, 0.2); }
+
+.prev:hover, .next:hover { background: rgba(0, 0, 0, 0.5); color: #9CC283; }
+
+.prev { left: 0; }
+
+.next { right: 0; border-radius: 3px 0 0 3px; }
+
+/* CHECKBOX ESTILIZADO */
+.switch_box { display: -webkit-box; display: -ms-flexbox; display: flex; width: 45px; justify-content: center; align-items: center; }
+
+input[type="checkbox"].switch-styled { font-size: 30px; -webkit-appearance: none; -moz-appearance: none; appearance: none; width: 45px; height: 26px; background: #7f7f7f; border-radius: 50px; position: relative; cursor: pointer; outline: none; -webkit-transition: all .2s ease-in-out; transition: all .2s ease-in-out; }
+
+input[type="checkbox"].switch-styled:checked { background: #9CC823; }
+
+input[type="checkbox"].switch-styled:after { position: absolute; content: ""; width: 26px; height: 26px; border-radius: 50%; background: #fff; -webkit-transform: scale(0.7); transform: scale(0.7); left: 0; -webkit-transition: all .2s ease-in-out; transition: all .2s ease-in-out; }
+
+input[type="checkbox"].switch-styled:checked:after { left: calc(100% - 26px); }
+
+.hide { display: none; }
+
+/* BLOCO/WRAPPER GENÉRICO - 100% DE LARGURA */
+.generic-block { width: 100%; max-width: 100%; height: auto; min-height: auto; position: relative; background-color: #FCFCFC; overflow: hidden; }
+
+/* ESTRELAS DE AVALIAÇÃO */
+.avaliation-stars { width: 125px; max-width: 100%; height: auto; min-height: auto; display: flex; flex-direction: row; justify-content: space-between; align-items: flex-start; }
+
+.avaliation-stars .avaliation-stars-image { width: 20px; max-width: 100%; height: 20px; min-height: auto; display: inline-block; flex-direction: row; justify-content: flex-start; align-items: flex-start; transition: 200ms ease-in-out; }
+
+.avaliation-stars .avaliation-stars-image:hover { -webkit-transform: scale(1.02); -moz-transform: scale(1.02); -ms-transform: scale(1.02); -o-transform: scale(1.02); transform: scale(1.02); }
+
+/* MENU CONTEXTUAL DE TRÊS PONTOS */
+.options-dots { width: 30px; max-width: 100%; height: auto; min-height: auto; position: absolute; top: 20px; right: 10px; }
+
+.options-dots > img { width: 30px; height: 30px; display: block; object-fit: cover; cursor: pointer; transition: 200ms ease-in-out; }
+
+.options-dots > img:hover { -webkit-transform: scale(1.02); -moz-transform: scale(1.02); -ms-transform: scale(1.02); -o-transform: scale(1.02); transform: scale(1.02); }
+
+/*BARRA DE REDES SOCIAIS*/
+.social-bar { width: 100px; max-width: 100%; height: 28px; min-height: auto; display: flex; flex-direction: row; justify-content: space-between; align-items: center; position: absolute; right: 20px; bottom: 30px; }
+
+.social-bar > img { width: 28px; height: 28px; display: block; object-fit: cover; cursor: pointer; transition: 200ms ease-in-out; }
+
+.social-bar > img:hover { -webkit-transform: scale(1.02); -moz-transform: scale(1.02); -ms-transform: scale(1.02); -o-transform: scale(1.02); transform: scale(1.02); }
+
+.social-share { width: 109px; height: 28px; display: flex; flex-direction: row; justify-content: space-between; }
+
+.social-share > img { width: 28px; height: 28px; display: block; object-fit: cover; cursor: pointer; }
+
+#navbar-flat { width: 100%; max-width: 100%; height: auto; min-height: auto; position: fixed; top: 0; right: 0px; left: 0; background-color: #FCFCFC; box-shadow: 0px -4px 32px 16px rgba(0, 0, 0, 0.05); z-index: 89999; }
+
+#navbar-flat-content { width: 100%; max-width: 1200px; height: auto; min-height: auto; position: relative; margin: auto; }
+
+#navbar-flat-logo { font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 28px; color: #9CC283; font-family: "Roboto Black"; line-height: 34px; text-align: center; display: block; text-decoration: none; width: 140px; padding: 12px; margin: 0 auto; }
+
+#navbar-flat-menu { width: 40px; height: 40px; position: absolute; top: 10px; left: 10px; overflow: hidden; }
+
+#navbar-flat-menu > img { width: 40px; height: 40px; display: block; object-fit: cover; cursor: pointer; }
+
+#navbar-flat-buycart { width: 30px; height: 30px; position: absolute; top: 17px; right: 65px; overflow: hidden; }
+
+#navbar-flat-buycart > a > img { width: 30px; height: 30px; display: block; object-fit: cover; cursor: pointer; }
+
+#buycart-bubble { width: 22px; height: 22px; position: absolute; top: 5px; right: 55px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 50%; background-color: #E85858; cursor: pointer; }
+
+#buycart-bubble > span { font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 10px; color: #FFFFFF; font-family: 'Roboto Regular'; line-height: 21px; text-align: left; display: block; text-decoration: none; }
+
+#navbar-flat-login { width: 40px; height: 40px; border-radius: 50%; position: absolute; top: 10px; right: 10px; overflow: hidden; }
+
+#navbar-flat-login > img { width: 40px; height: 40px; display: block; object-fit: cover; cursor: pointer; }
+
+#user-bubble { width: 22px; height: 22px; position: absolute; top: 5px; right: 5px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 50%; background-color: #E85858; cursor: pointer; }
+
+#user-bubble > span { font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 10px; color: #FFFFFF; font-family: 'Roboto Regular'; line-height: 21px; text-align: left; display: block; text-decoration: none; }
+
+#navbar-flat-search { width: 95%; max-width: 520px; height: auto; min-height: auto; margin: 0px auto 20px auto; position: relative; }
+
+#navbar-flat-search { width: 95%; max-width: 520px; height: auto; min-height: auto; margin: 0px auto 20px auto; position: relative; }
+
+#navbar-flat-search > form #navbar-flat-search-button { width: 24px; height: 24px; background-color: transparent; position: absolute; top: 10px; right: 10px; }
+
+#navbar-flat-search > form #navbar-flat-search-button > img { width: 24px; height: 24px; display: block; object-fit: cover; cursor: pointer; }
+
+#navbar-flat-search > form > input { /*Barra de pesquisa*/ width: 100%; height: 40px; border-radius: 50px; text-indent: 15px; background-color: transparent; border: 3px solid #9CC283; outline: none; font-family: "Roboto Regular"; }
+
+#navbar-flat-search > form > input::placeholder { font-family: "Roboto Italic"; font-size: 16px; color: #C8C8C8; }
+
+/*
+	MENU LATERAL ESQUERDO
+	Menu expansivo reservado para funcionalidades referentes ao conteúdo do site.
+*/
+#sidebar-left { /*Container do menu lateral*/ width: 100%; max-width: 350px; height: 100vh; background: #FCFCFC; box-shadow: 0px -4px 32px 16px rgba(0, 0, 0, 0.18); display: none; position: fixed; top: 0; left: 0; bottom: 0; overflow-y: scroll; z-index: 99999; }
+
+#sidebar-left-close { /*Botão para fechar o menu lateral*/ width: 30px; height: 30px; position: absolute; top: 20px; right: 20px; transition: 200ms ease-in-out; }
+
+#sidebar-left-close > img { /*Imagem do "X" do botão*/ max-width: 100%; max-height: 100%; display: block; cursor: pointer; }
+
+#sidebar-left-close:hover { /*Ação ao mover o mouse no botão fechar*/ transform: scale(1.02); }
+
+#sidebar-left h2 { /*Nome da loja no topo do menu*/ font-family: "Roboto Black"; font-weight: lighter; font-size: 28px; color: #9CC283; text-align: center; margin: 0 auto; padding-top: 20px; padding-bottom: 0px; }
+
+.sidebar-separator { /*Separador interno dos menus laterais*/ width: 85%; height: 2px; background: #ddd; margin: 20px auto; }
+
+.sidebar-left-list { /*Lista com UL para os menus laterais*/ margin: 0 auto; padding-top: 0px; list-style-type: none; }
+
+.sidebar-left-list li a { /*Links das listas dos menus laterais*/ display: block; text-decoration: none; color: #000; font-family: "Roboto Medium"; padding: 5px; padding-bottom: 10px; transition: 50ms ease-in-out; }
+
+.sidebar-left-list > li > a:hover { color: #9CC283; padding-left: 7px; }
+
+/*==========================================*/
+/*
+	MENU LATERAL DIREITO
+	Menu expansivo reservado para funcionalidades referentes ao usuário logado.
+*/
+#sidebar-right { /*Container do menu lateral*/ width: 100%; max-width: 350px; height: 100vh; background: #FCFCFC; box-shadow: 0px -4px 32px 16px rgba(0, 0, 0, 0.18); display: none; position: fixed; top: 0; right: 0; bottom: 0; z-index: 99999; }
+
+#sidebar-right-close { /*Botão para fechar o menu lateral*/ width: 30px; height: 30px; position: absolute; top: 20px; left: 20px; transition: 200ms ease-in-out; }
+
+#sidebar-right-close > img { /*Imagem do "X" do botão*/ max-width: 100%; max-height: 100%; display: block; cursor: pointer; }
+
+#sidebar-right-close:hover { /*Ação ao mover o mouse no botão fechar*/ transform: scale(1.02); }
+
+#sidebar-right h2 { /*Nome da loja no topo do menu*/ font-family: "Roboto Black"; font-size: 28px; color: #9CC283; text-align: center; margin: 0 auto; padding-top: 20px; padding-bottom: 0px; }
+
+.sidebar-right-list { /*Lista com UL para os menus laterais*/ margin: 0 auto; padding-top: 0px; list-style-type: none; }
+
+.sidebar-right-list li a { /*Links das listas dos menus laterais*/ display: block; text-decoration: none; color: #000; font-family: "Roboto Medium"; padding: 5px; padding-bottom: 10px; transition: 50ms ease-in-out; text-align: right; position: relative; }
+
+.sidebar-right-list li a span { /*Número para informar a quantidade de itens dentro de um link*/ position: absolute; left: 30px; color: #5F5F5F; }
+
+.sidebar-right-list > li > a:hover { color: #9CC283; padding-right: 7px; }

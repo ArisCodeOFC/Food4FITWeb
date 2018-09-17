@@ -4,14 +4,18 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Carrinho - Food 4Fit</title>
+	<title>Meus Pedidos - Food 4Fit</title>
 	<link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
-	<link rel="stylesheet" href="assets/css/stylesheet.css">
-	<link rel="stylesheet" href="assets/css/classes-genericas.css">
-	<link rel="stylesheet" href="assets/css/font-style.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bases.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/colors.css">
+    <link rel="stylesheet" href="assets/css/font-style.css">
+    <link rel="stylesheet" href="assets/css/align.css">
+    <link rel="stylesheet" href="assets/css/sizes.css">
     <link rel="stylesheet" href="assets/css/keyframes.css">
-    <link rel="stylesheet" href="assets/css/meus-pedidos.css">
-	<link rel="stylesheet" href="assets/css/mobile-stylesheet.css">
+    <link rel="stylesheet" href="assets/css/mobile.css">
 	<script src="assets/public/js/jquery-3.3.1.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 </head>
@@ -62,7 +66,7 @@
 	        		<div class="shopping-cart-column align">
 	        			<span id="shopping-cart-price-total">R$ 000,00</span>
 	        		</div>
-                    <div class="shopping-cart-column align">
+                    <div class="shopping-cart-column align" style="align-items: center;">
 						<div class="switch_box">
 							<input type="checkbox" name="chkdish" class="switch-styled">
 						</div>
@@ -82,7 +86,7 @@
 	        		<div class="shopping-cart-column align">
 	        			<span id="shopping-cart-price">R$ 000,00</span>
 	        		</div>
-	        		<div class="shopping-cart-column align">
+	        		<div class="shopping-cart-column align" style="align-items: center;">
 	        			<div class="input-group input-number-group">
 				            <span>1</span>
 						</div>
@@ -90,7 +94,7 @@
 	        		<div class="shopping-cart-column align">
 	        			<span id="shopping-cart-price-total">R$ 000,00</span>
 	        		</div>
-                    <div class="shopping-cart-column align">
+                    <div class="shopping-cart-column align" style="align-items: center;">
 						<div class="switch_box">
 							<input type="checkbox" name="chkdish" class="switch-styled">
 						</div>
@@ -109,7 +113,7 @@
 	        		<div class="shopping-cart-column align">
 	        			<span id="shopping-cart-price">R$ 000,00</span>
 	        		</div>
-	        		<div class="shopping-cart-column align">
+	        		<div class="shopping-cart-column align" style="align-items: center;">
 	        			<div class="input-group input-number-group">
 				            <span>1</span>
 						</div>
@@ -117,7 +121,7 @@
 	        		<div class="shopping-cart-column align">
 	        			<span id="shopping-cart-price-total">R$ 000,00</span>
 	        		</div>
-                    <div class="shopping-cart-column align">
+                    <div class="shopping-cart-column align" style="align-items: center;">
 						<div class="switch_box">
 							<input type="checkbox" name="chkdish" class="switch-styled">
 						</div>

@@ -6,12 +6,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Food 4Fit</title>
 	<link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
-	<link rel="stylesheet" href="assets/css/home.css">
-	<link rel="stylesheet" href="assets/css/classes-genericas.css">
-	<link rel="stylesheet" href="assets/css/stylesheet.css">
-	<link rel="stylesheet" href="assets/css/font-style.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bases.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/colors.css">
+    <link rel="stylesheet" href="assets/css/font-style.css">
+    <link rel="stylesheet" href="assets/css/align.css">
     <link rel="stylesheet" href="assets/css/keyframes.css">
-	<link rel="stylesheet" href="assets/css/mobile-stylesheet.css">
+    <link rel="stylesheet" href="assets/css/mobile.css">
 	<script src="assets/public/js/jquery-3.3.1.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 </head>
@@ -32,13 +35,13 @@
 				</div>
 			</div>
         </header>
-        <article id="highlights-index"><!-- SEGUNDO CONTAINER-FILHO DO CABEÇALHO DA INDEX -->
+        <article class="generic-block"><!-- SEGUNDO CONTAINER-FILHO DO CABEÇALHO DA INDEX -->
             <h2 id="page-title">DESTAQUES</h2><!-- TÍTULO DA PÁGINA -->
             <div class="generic-grid animate fadeInUp">
                 <div class="generic-card">
                     <img src="assets/images/dishs/img1.jpg" alt="Teste" class="generic-card-img">
                     <div class="generic-card-overlay">
-                        <span class="card-dish-name margin-bottom-15px">Frango Com Batatas</span>
+                        <span class="card-dish-name margin-bottom-30px">Frango Com Batatas</span>
                         <div class="card-dish-separator margin-bottom-15px"></div>
                         <p class="card-dish-description margin-bottom-30px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni magnam saepe reiciendis.</p>
                         <div class="card-dish-price margin-bottom-30px"><!-- CONTAINER DO PREÇO DO PRATO NA INDEX -->
@@ -129,8 +132,6 @@
 		<article id="success-cases-section"><!-- CONTAINER-MÃE DO CASOS DE SUCESSO -->
 			<div id="success-cases-content" class="animate fadeInUp"><!-- CONTAINER-FILHO DO CASOS DE SUCESSO -->
 				<h2 class="padding-top-60px padding-left-30px padding-bottom-15px">Casos de Sucesso</h2><!-- TÍTULO DA SESSÃO -->
-
-				<div class="separator-white margin-left-30px margin-bottom-15px"></div><!-- SEPARADOR -->
 
 				<p class="padding-left-30px padding-bottom-15px">Conheça as histórias das pessoas que utilizaram<br>nosso serviço e degustaram dos nossos produtos!</p><!-- DESCRIÇÃO DA SESSÃO -->
 

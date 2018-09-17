@@ -6,11 +6,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Fale Conosco - Food 4Fit</title>
 	<link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
-	<link rel="stylesheet" href="assets/css/stylesheet.css">
-    <link rel="stylesheet" href="assets/css/classes-genericas.css">
-	<link rel="stylesheet" href="assets/css/font-style.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bases.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/colors.css">
+    <link rel="stylesheet" href="assets/css/font-style.css">
+    <link rel="stylesheet" href="assets/css/align.css">
+    <link rel="stylesheet" href="assets/css/sizes.css">
     <link rel="stylesheet" href="assets/css/keyframes.css">
-	<link rel="stylesheet" href="assets/css/mobile-stylesheet.css">
+    <link rel="stylesheet" href="assets/css/mobile.css">
 	<script src="assets/public/js/jquery-3.3.1.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 </head>
@@ -18,7 +23,7 @@
 	<?php require_once("components/navbar.html"); ?><!-- BARRA DE NAVEGAÇÃO VIA PHP -->
 	<section class="main"><!-- CONTAINER-MÃE DO SITE -->
         <h2 id='page-title' class="margin-left-auto margin-right-auto">ENTRE EM CONTATO</h2>
-        <div class="form-generic width-small margin-left-auto margin-right-auto margin-top-30px">
+        <div class="form-generic width-750px margin-left-auto margin-right-auto margin-top-30px">
             <form class="form-generic-content" action="#" method="POST" name="frmcontact">
                 <label for="nome" class="label-generic">Nome:</label>
                 <input id="nome" name="nome" class="input-generic" placeholder="Digite o seu nome...">
@@ -35,7 +40,7 @@
                 <label for="comentario" class="label-generic">O que deseja nos dizer?</label>
                 <textarea id="comentario" name="comentario" class="textarea-generic"></textarea>
             </form>
-            <div class='btn-generic'>
+            <div class='btn-generic margin-bottom-30px'>
                 <span>Enviar</span>
             </div>
         </div>

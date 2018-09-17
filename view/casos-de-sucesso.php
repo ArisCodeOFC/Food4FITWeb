@@ -6,12 +6,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Casos de Sucesso - Food 4Fit</title>
 	<link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
-	<link rel="stylesheet" href="assets/css/stylesheet.css">
-    <link rel="stylesheet" href="assets/css/classes-genericas.css">
-	<link rel="stylesheet" href="assets/css/font-style.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bases.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/colors.css">
+    <link rel="stylesheet" href="assets/css/font-style.css">
+    <link rel="stylesheet" href="assets/css/align.css">
+    <link rel="stylesheet" href="assets/css/sizes.css">
     <link rel="stylesheet" href="assets/css/keyframes.css">
-    <link rel="stylesheet" href="assets/css/casos-de-sucesso.css">
-	<link rel="stylesheet" href="assets/css/mobile-stylesheet.css">
+    <link rel="stylesheet" href="assets/css/mobile.css">
 	<script src="assets/public/js/jquery-3.3.1.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 </head>
@@ -26,7 +30,7 @@
                     <div>
                         <img src="assets/images/icons/person.jpg" alt="Usuario XXXXX">
                     </div>
-                    <span>Regina,32</span>
+                    <span class="padding-left-15px">Regina,32</span>
                 </div>
                 <p class="padding-left-30px padding-top-30px padding-bottom-30px">Emagreci 21Kg com exercícios e as refeições da Food 4Fit!</p>
                 <div class="social-bar animate fadeInUp">
@@ -44,7 +48,7 @@
                     <div>
                         <img src="assets/images/icons/person.jpg" alt="Usuario XXXXX">
                     </div>
-                    <span>Regina,32</span>
+                    <span class="padding-left-15px">Regina,32</span>
                 </div>
                 <p class="padding-left-30px padding-top-30px padding-bottom-30px">Emagreci 21Kg com exercícios e as refeições da Food 4Fit!</p>
                 <div class="social-bar animate fadeInUp">
@@ -62,7 +66,7 @@
                     <div>
                         <img src="assets/images/icons/person.jpg" alt="Usuario XXXXX">
                     </div>
-                    <span>Regina,32</span>
+                    <span class="padding-left-15px">Regina,32</span>
                 </div>
                 <p class="padding-left-30px padding-top-30px padding-bottom-30px">Emagreci 21Kg com exercícios e as refeições da Food 4Fit!</p>
                 <div class="social-bar animate fadeInUp">
@@ -80,7 +84,7 @@
                     <div>
                         <img src="assets/images/icons/person.jpg" alt="Usuario XXXXX">
                     </div>
-                    <span>Regina,32</span>
+                    <span class="padding-left-15px">Regina,32</span>
                 </div>
                 <p class="padding-left-30px padding-top-30px padding-bottom-30px">Emagreci 21Kg com exercícios e as refeições da Food 4Fit!</p>
                 <div class="social-bar animate fadeInUp">
@@ -98,7 +102,7 @@
                     <div>
                         <img src="assets/images/icons/person.jpg" alt="Usuario XXXXX">
                     </div>
-                    <span>Regina,32</span>
+                    <span class="padding-left-15px">Regina,32</span>
                 </div>
                 <p class="padding-left-30px padding-top-30px padding-bottom-30px">Emagreci 21Kg com exercícios e as refeições da Food 4Fit!</p>
                 <div class="social-bar animate fadeInUp">

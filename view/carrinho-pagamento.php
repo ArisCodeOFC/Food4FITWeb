@@ -12,13 +12,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Pagamento :: Carrinho - Food 4Fit</title>
 	<link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
-	<link rel="stylesheet" href="assets/css/stylesheet.css">
-    <link rel="stylesheet" href="assets/css/classes-genericas.css">
-	<link rel="stylesheet" href="assets/css/font-style.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bases.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/colors.css">
+    <link rel="stylesheet" href="assets/css/font-style.css">
+    <link rel="stylesheet" href="assets/css/align.css">
+    <link rel="stylesheet" href="assets/css/sizes.css">
     <link rel="stylesheet" href="assets/css/keyframes.css">
-    <link rel="stylesheet" href="assets/css/carrinho.css">
-    <link rel="stylesheet" href="assets/css/card.css">
-	<link rel="stylesheet" href="assets/css/mobile-stylesheet.css">
+    <link rel="stylesheet" href="assets/css/mobile.css">
 	<script src="assets/public/js/jquery-3.3.1.min.js"></script>
 	<script src="assets/public/js/jquery.mask.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
@@ -28,10 +31,10 @@
 	<?php require_once("components/navbar.html") ?><!-- BARRA DE NAVEGAÇÃO VIA PHP -->
     <section class="main">
         <h2 id="page-title" class="margin-left-auto margin-right-auto margin-bottom-30px">MEU CARRINHO</h2>
-        <div class="form-generic width-big margin-right-auto margin-left-auto margin-top-30px hide" data-card-form>
+        <div class="form-generic width-1100px margin-right-auto margin-left-auto margin-top-30px hide" data-card-form>
             <h3 class="form-title">Cadastre um Cartão de Crédito:</h3>
             <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
-                <form action="#" method="POST" name="frmendereco" class="form-generic-content" style="flex-grow: 1;">
+                <form action="#" method="POST" name="frmendereco" class="form-generic-content animate fadeInLeft" style="flex-grow: 1;">
                     <label for="numero" class="label-generic">Número do Cartão:</label>
                     <input type="text" name="numero" id="numero" placeholder="Ex: 1239 9434 2938 0093" class="input-generic" data-card-number>
 
@@ -69,7 +72,7 @@
                         </div>
                     </div>
                 </form>
-                <div class="card-container margin-left-30px" data-card-container>
+                <div class="card-container animate fadeInRight margin-left-30px" data-card-container>
                     <div class="front">
                         <div class="header">
                             <figure>
@@ -115,21 +118,20 @@
 	        			<input type="radio" name="cartao" id="input1" value="1">
 	        			<label for="input1" class="margin-left-5px">VISA ****6002, João Silva</label>
         			</div>
-					<div class="padding-left-30px">
+					<div class="padding-left-30px padding-top-15px">
         				<input type="radio" name="cartao" id="input2" value="1">
         				<label for="input2" class="margin-left-5px">VISA ****6002, João Silva</label>
 					</div>
-					<div class="padding-left-30px">
+					<div class="padding-left-30px padding-top-15px">
         				<input type="radio" name="cartao" id="input3" value="1">
         				<label for="input3" class="margin-left-5px">VISA ****6002, João Silva</label>
         			</div>
-                    <span class="save-data-button padding-left-30px">Cadastrar um cartão</span>
+                    <span class="save-data-button padding-left-30px padding-top-30px">Cadastrar um cartão</span>
         		</div>
         		<div class="shopping-cart-address-column">
         			<span class="shopping-cart-address-column-title margin-left-30px padding-top-60px margin-bottom-15px">Por segurança...</span>
-
                     <div style="height: auto; position: relative;">
-                        <form class="form-generic-content width-small padding-left-30px" action="#" method="GET" name="frm">
+                        <form class="form-generic-content width-600px padding-left-30px" action="#" method="GET" name="frm">
                             <label for="dt-expire" class="label-generic">Data de Expiração:</label>
                             <input type="text" name="dt-expire" id="dt-expire" placeholder="Ex: 11/20" class="input-generic" style="width: 60%;">
 

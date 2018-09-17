@@ -6,12 +6,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Nome do Prato - Food 4fit</title>
 	<link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
-	<link rel="stylesheet" href="assets/css/stylesheet.css">
-    <link rel="stylesheet" href="assets/css/classes-genericas.css">
-	<link rel="stylesheet" href="assets/css/font-style.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bases.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/colors.css">
+    <link rel="stylesheet" href="assets/css/font-style.css">
+    <link rel="stylesheet" href="assets/css/align.css">
+    <link rel="stylesheet" href="assets/css/sizes.css">
     <link rel="stylesheet" href="assets/css/keyframes.css">
-    <link rel="stylesheet" href="assets/css/prato.css">
-	<link rel="stylesheet" href="assets/css/mobile-stylesheet.css">
+    <link rel="stylesheet" href="assets/css/mobile.css">
 	<script src="assets/public/js/jquery-3.3.1.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 </head>
@@ -37,7 +41,7 @@
                 </div>
             </figure>
             <article id="product-view-info-container">
-                <h2 id="product-view-dish-name" class="padding-top-30px padding-left-15px padding-bottom-5px">Nome do Prato</h2>
+                <h2 id="product-view-dish-name" class="padding-top-70px padding-left-15px padding-bottom-5px">Nome do Prato</h2>
                 <span id="product-view-dish-code" class="padding-left-15px">código do produto: 029331</span>
                 <div class="avaliation-stars padding-top-15px padding-left-15px padding-bottom-30px">
                     <img src="assets/images/icons/star.svg" class="avaliation-stars-image" alt="Star">
@@ -50,7 +54,7 @@
                 <span id="product-view-price-descrip" class="padding-left-15px padding-bottom-30px">Em 12x sem juros no cartão de <b>R$ 00,00</b></span>
 
                 <h3 id="product-view-price-full" class="padding-left-15px">R$ 000,00 <span>à vista</span></h3>
-                <div id="credit-card-flag" class="padding-left-15px padding-top-5px padding-bottom-30px">
+                <div id="credit-card-flag" class="padding-left-15px padding-top-15px padding-bottom-30px">
                     <img src="assets/images/icons/credit-card.svg" alt="Bandeira">
                 </div>
                 <div class="buy-button margin-left-15px" onclick="location.href='carrinho.php';">
