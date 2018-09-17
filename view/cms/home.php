@@ -15,19 +15,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Food 4fit - CMS</title>
         <link rel="icon" type="image/png" href="../assets/images/icons/favicon.png" />
-	    <link rel="stylesheet" href="../assets/css/jquery.toast.min.css">
-        <link rel="stylesheet" href="../assets/css/sceditor.theme.min.css">
+	    <link rel="stylesheet" href="../assets/public/css/jquery.toast.min.css">
+        <link rel="stylesheet" href="../assets/public/css/sceditor.theme.min.css">
 	    <link rel="stylesheet" href="../assets/css/font-style.css">
+        <link rel="stylesheet" href="../assets/css/classes-genericas.css">
         <link rel="stylesheet" href="../assets/css/cms/main.css">
-        <link rel="stylesheet" href="../assets/css/cms/form.css">
-	    <script src="../assets/js/jquery-3.3.1.min.js"></script>
-	    <script src="../assets/js/jquery.toast.min.js"></script>
-        <script src="../assets/js/jquery.sceditor.xhtml.min.js"></script>
+	    <script src="../assets/public/js/jquery-3.3.1.min.js"></script>
+	    <script src="../assets/public/js/jquery.toast.min.js"></script>
+        <script src="../assets/public/js/jquery.sceditor.xhtml.min.js"></script>
 	    <script src="../assets/js/cms/main.js"></script>
-	    <script src="../assets/js/cms/home.js"></script>
+	    <script src="../assets/js/cms/home.controller.js"></script>
+	    <script src="../assets/js/cms/crud.controller.js"></script>
+	    <script src="../assets/js/cms/sobreempresa.controller.js"></script>
     </head>
     <body>
-        <section id="main">
+        <section id="main" data-controller="HomeController">
             <?php require_once("./components/sidebar.php") ?>
             <div id="main-content">
                 <header>
@@ -48,6 +50,7 @@
                 <div id="page-content">
                 </div>
             </div>
+            <?php require_once("./components/modal.html") ?>
         </section>
     </body>
 </html>
