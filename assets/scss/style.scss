@@ -587,6 +587,37 @@ a{
 }
 
 //Lojas
+.shop-row{
+	@include bloco($width: 100%, $height: auto);
+	@include display(flex, column, center, flex-start);
+	position: relative;
+	-webkit-transition: 200ms ease-in-out;
+	   -moz-transition: 200ms ease-in-out;
+	    -ms-transition: 200ms ease-in-out;
+	     -o-transition: 200ms ease-in-out;
+	        transition: 200ms ease-in-out;
+	&:hover{
+		background-color: #E8E8E8;
+		cursor: pointer;
+	}
+	>h2{
+		@include texto(18px, $grey, 'Roboto Light Italic');
+	}
+	>h3{
+		@include texto(21px, $black, 'Roboto Light');
+		@include display(flex, row, center, center);
+	}
+	>span{
+		@include texto(18px, $grey, 'Roboto Italic');
+		@include position(absolute, $top: 20px, $right: 30px);
+	}
+}
+.shop-details{
+	@include bloco($width: 16px, $height: 16px);
+	>img{
+		@include img-fit(16px, 16px);
+	}
+}
 
 //Pedidos
 
@@ -1268,6 +1299,17 @@ a{
     box-sizing: border-box;
     border: 30px solid #fcfcfc;
 }
+.promotion-identificator{
+	@include bloco($width: 42px, $height: 42px);
+	@include position(absolute, $top: 20px, $right: 20px);
+	@include display(flex, column, center, center);
+	background: $sunsetorange;
+	border-radius: 50px;
+	box-shadow: $shadow;
+	>span{
+		@include texto(14px, $white, 'Roboto Medium', 18px, center);
+	}
+}
 #healthy-tricks-title{
     font-size: 21px;
     color: #000;
@@ -1778,4 +1820,136 @@ a{
 			        transform: scale(1.04);
 		}
 	}
+}
+
+//Notificações
+.notifications-header{
+	@include bloco(100%, 1200px, auto);
+	@include display(flex, row, flex-start, center);
+	>span{
+		@include texto(16px, $grey, 'Roboto Bold Italic');
+		cursor: pointer;
+		-webkit-transition: 200ms ease-in-out;
+		   -moz-transition: 200ms ease-in-out;
+		    -ms-transition: 200ms ease-in-out;
+		     -o-transition: 200ms ease-in-out;
+		        transition: 200ms ease-in-out;
+		&:hover{
+			color: $black;
+		}
+	}
+}
+.label-markall{
+	@include texto(18px, $black, 'Roboto Bold', 21px); cursor: pointer;
+}
+.notifications-line{
+	@include bloco(100%, 1200px, auto);
+	@include display(flex, row, flex-start, center);
+	background: rgba(0,0,0,0.05);
+	position: relative;
+	-webkit-transition: 200ms ease-in-out;
+	   -moz-transition: 200ms ease-in-out;
+	    -ms-transition: 200ms ease-in-out;
+	     -o-transition: 200ms ease-in-out;
+	        transition: 200ms ease-in-out;
+	&:hover{
+		background: rgba(0,0,0,0.1);
+		cursor: pointer;
+	}
+	.archive-img{
+		@include bloco($width: 28px, $height: 28px);
+		>img{
+			@include img-fit(28px, 28px);
+		}
+	}
+	>h2{
+		@include texto(18px, $black, 'Roboto Black', 21px);
+	}
+	>p{
+		@include texto(16px, $grey, 'Roboto Medium Italic', 21px);
+	}
+	>span{
+		@include texto(18px, $grey, 'Roboto Bold Italic', 21px);
+		@include position(absolute, 13px, 65px, $bottom: null, $left: null);
+	}
+	.delete-img{
+		@include bloco($width: 28px, $height: 28px);
+		@include position(absolute, 8px, 20px, $bottom: null, $left: null);
+		>img{
+			@include img-fit(28px, 28px);
+		}
+	}
+}
+
+//Baixar o aplicativo
+#app-page{
+	@include bloco(100%, 100vw, 100vh);
+	@include display(flex, row, center, center);
+	position: relative;
+	background: url('../images/backgrounds/app.jpg') no-repeat center center fixed ;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	.app-page-back{
+		@include position(absolute, $top: 30px, $left: 30px);
+		@include texto(18px, $lightgrey, 'Roboto Medium Italic');
+		-webkit-transition: 200ms ease-in-out;
+		   -moz-transition: 200ms ease-in-out;
+		    -ms-transition: 200ms ease-in-out;
+		     -o-transition: 200ms ease-in-out;
+		        transition: 200ms ease-in-out;
+		&:hover{
+			color: $grey;
+		}
+	}
+}
+.app-page-wrapper{
+	@include bloco(100%, 1200px, auto);
+	@include display(flex, row, space-between, center);
+	box-sizing: border-box;
+	border: 30px solid transparent;
+	.column{
+		@include bloco(100%, 600px, auto);
+		>figure{
+			@include bloco(100%, 600px, auto);
+			box-sizing: border-box;
+			border: 12px solid #FFF;
+			padding: 0;
+			overflow: hidden;
+			box-shadow: $shadow;
+			border-radius: 5px;
+			>img{
+				@include img-fit(600px, 600px);
+				-webkit-animation: pulse 3s infinite ease-in-out;
+			    -o-animation: pulse 3s infinite ease-in-out;
+			    -ms-animation: pulse 3s infinite ease-in-out;
+			    -moz-animation: pulse 3s infinite ease-in-out;
+			    animation: pulse 3s infinite ease-in-out;
+			}
+		}
+		>h2{
+			@include texto(32px, $white, 'Roboto Black Italic', 38px);
+			text-shadow: 4px 4px 4px rgba(0,0,0,0.1);
+		}
+		>p{
+			@include texto(21px, $gold, 'Roboto Bold Italic', 28px);
+			text-shadow: 4px 4px 4px rgba(0,0,0,0.1);
+		}
+		>span{
+			@include texto(12px, $white, 'Roboto Light');
+			text-shadow: 4px 4px 4px rgba(0,0,0,0.1);
+		}
+	}
+}
+@-webkit-keyframes pulse {
+    0% { -webkit-transform: scale(1); }
+    50% { -webkit-transform: scale(1.02); }
+    100% { -webkit-transform: scale(1); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
 }

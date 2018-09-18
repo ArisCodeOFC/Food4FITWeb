@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="referrer" content="no-referrer">
-	<title>Nossas Lojas - Food 4fit</title>
+	<title>(12) Notificações - Food 4fit</title>
     <link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
 	<link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/bases.css">
@@ -19,22 +19,29 @@
     <link rel="stylesheet" href="assets/css/mobile.css">
 	<script src="assets/public/js/jquery-3.3.1.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
-	<script src="assets/js/lojas.js"></script>
-    <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
 </head>
 <body>
 	<?php require_once("components/navbar.html") ?><!-- BARRA DE NAVEGAÇÃO VIA PHP -->
     <section class="main">
-        <h2 id="page-title">NOSSAS LOJAS</h2>
-        <div id="map-canvas" class="animate fadeInDown"></div>
+        <h2 id="page-title">NOTIFICAÇÕES</h2>
         <div class="generic-block">
+            <header class="notifications-header padding-top-10px padding-bottom-10px">
+                <input type="checkbox" name="markall" id="markall" class="margin-left-30px margin-right-5px">
+                <label for="markall" class="label-markall">Marcar Todas</label>
+
+                <span class="margin-left-30px">Excluir</span>
+                <span class="margin-left-15px">Marcar como lida</span>
+            </header>
             <?php
-                for($i = 1; $i < 4; $i++){
+                for($i = 1; $i < 12; $i++){
             ?>
-            <div class="shop-row">
-                <h2 class="margin-left-30px padding-top-20px padding-bottom-10px">São Paulo</h2>
-                <h3 class="margin-left-30px padding-bottom-20px">R. Elton Silva, 905, JD. Salomão, Jandira - SP, 03485-923<div class="shop-details margin-left-15px"><img src="assets/images/icons/down-arrow.svg" alt="Ver detalhes"></div></h3>
-                <span>Ver no mapa</span>
+            <div class="notifications-line">
+                <input type="checkbox" name="check" class="margin-top-15px margin-bottom-15px margin-left-30px">
+                <div class="archive-img margin-left-15px"><img src="assets/images/icons/star.svg" alt="Guardar"></div>
+                <h2 class="margin-left-15px">Título</h2>
+                <p class="margin-left-25px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, tempora!</p>
+                <span>01/01/2018</span>
+                <div class="delete-img"><img src="assets/images/icons/delete.svg" alt="Excluir"></div>
             </div>
             <?php
                 }

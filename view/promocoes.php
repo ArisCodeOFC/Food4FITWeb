@@ -40,7 +40,10 @@
             </div>
         </header>
         <h3 class="promotion-subtitle padding-top-30px padding-left-30px">Promoções Válidas Até dd/MM</h3>
-		<article class="generic-grid animate fadeInUp">
+        <div class="generic-grid animate fadeInUp">
+            <?php
+                for($i = 1; $i < 10; $i++){
+            ?>
 			<div class="generic-card">
 				<img src="assets/images/backgrounds/img.jpg" alt="Teste" class="generic-card-img">
 				<div class="generic-card-overlay">
@@ -51,105 +54,16 @@
 			  			<span class="padding-right-15px">R$ 129,90</span><!-- PREÇO -->
 			  			<div><img src="assets/images/simbols/delivery-truck.svg" alt="Compra Rápida"></div><!-- COMPRA RAPIDA -->
 			  		</div>
+
+                    <div class="promotion-identificator">
+                        <span>12%</span>
+                    </div>
 				</div>
 			</div>
-			<div class="generic-card">
-				<img src="assets/images/backgrounds/img.jpg" alt="Teste" class="generic-card-img">
-				<div class="generic-card-overlay">
-					<span class="card-dish-name margin-bottom-15px">Frango Grelhado</span>
-			  		<div class="card-dish-separator margin-bottom-15px"></div>
-			  		<p class="card-dish-description margin-bottom-30px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni magnam saepe reiciendis.</p>
-			  		<div class="card-dish-price margin-bottom-30px"><!-- CONTAINER DO PREÇO DO PRATO NA INDEX -->
-			  			<span class="padding-right-15px">R$ 129,90</span><!-- PREÇO -->
-			  			<div><img src="assets/images/simbols/delivery-truck.svg" alt="Compra Rápida"></div><!-- COMPRA RAPIDA -->
-			  		</div>
-				</div>
-			</div>
-			<div class="generic-card">
-				<img src="assets/images/backgrounds/img.jpg" alt="Teste" class="generic-card-img">
-				<div class="generic-card-overlay">
-					<span class="card-dish-name margin-bottom-15px">Frango Grelhado</span>
-			  		<div class="card-dish-separator margin-bottom-15px"></div>
-			  		<p class="card-dish-description margin-bottom-30px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni magnam saepe reiciendis.</p>
-			  		<div class="card-dish-price margin-bottom-30px"><!-- CONTAINER DO PREÇO DO PRATO NA INDEX -->
-			  			<span class="padding-right-15px">R$ 129,90</span><!-- PREÇO -->
-			  			<div><img src="assets/images/simbols/delivery-truck.svg" alt="Compra Rápida"></div><!-- COMPRA RAPIDA -->
-			  		</div>
-				</div>
-			</div>
-			<div class="generic-card">
-                <img src="assets/images/dishs/img1.jpg" alt="Teste" class="generic-card-img">
-                <div class="generic-card-overlay">
-                    <span class="card-dish-name margin-bottom-15px">Frango Com Batatas</span>
-                    <div class="card-dish-separator margin-bottom-15px"></div>
-                    <p class="card-dish-description margin-bottom-30px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni magnam saepe reiciendis.</p>
-                    <div class="card-dish-price margin-bottom-30px"><!-- CONTAINER DO PREÇO DO PRATO NA INDEX -->
-                        <span class="padding-right-15px">R$ 9,90</span><!-- PREÇO -->
-                        <div><img src="assets/images/simbols/delivery-truck.svg" alt="Compra Rápida"></div><!-- COMPRA RAPIDA -->
-                    </div>
-                </div>
-            </div>
-            <div class="generic-card">
-                <img src="assets/images/dishs/img2.jpg" alt="Teste" class="generic-card-img">
-                <div class="generic-card-overlay">
-                    <span class="card-dish-name margin-bottom-15px">Bife Com Legumes</span>
-                    <div class="card-dish-separator margin-bottom-15px"></div>
-                    <p class="card-dish-description margin-bottom-30px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni magnam saepe reiciendis.</p>
-                    <div class="card-dish-price margin-bottom-30px"><!-- CONTAINER DO PREÇO DO PRATO NA INDEX -->
-                        <span class="padding-right-15px">R$ 12,90</span><!-- PREÇO -->
-                        <div><img src="assets/images/simbols/delivery-truck.svg" alt="Compra Rápida"></div><!-- COMPRA RAPIDA -->
-                    </div>
-                </div>
-            </div>
-            <div class="generic-card">
-                <img src="assets/images/dishs/img3.jpg" alt="Teste" class="generic-card-img">
-                <div class="generic-card-overlay">
-                    <span class="card-dish-name margin-bottom-15px">Salada De Frutas</span>
-                    <div class="card-dish-separator margin-bottom-15px"></div>
-                    <p class="card-dish-description margin-bottom-30px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni magnam saepe reiciendis.</p>
-                    <div class="card-dish-price margin-bottom-30px"><!-- CONTAINER DO PREÇO DO PRATO NA INDEX -->
-                        <span class="padding-right-15px">R$ 5,90</span><!-- PREÇO -->
-                        <div><img src="assets/images/simbols/delivery-truck.svg" alt="Compra Rápida"></div><!-- COMPRA RAPIDA -->
-                    </div>
-                </div>
-            </div>
-            <div class="generic-card">
-                <img src="assets/images/dishs/img4.jpg" alt="Teste" class="generic-card-img">
-                <div class="generic-card-overlay">
-                    <span class="card-dish-name margin-bottom-15px">Bife Grelhado Com Molho</span>
-                    <div class="card-dish-separator margin-bottom-15px"></div>
-                    <p class="card-dish-description margin-bottom-30px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni magnam saepe reiciendis.</p>
-                    <div class="card-dish-price margin-bottom-30px"><!-- CONTAINER DO PREÇO DO PRATO NA INDEX -->
-                        <span class="padding-right-15px">R$ 15,90</span><!-- PREÇO -->
-                        <div><img src="assets/images/simbols/delivery-truck.svg" alt="Compra Rápida"></div><!-- COMPRA RAPIDA -->
-                    </div>
-                </div>
-            </div>
-            <div class="generic-card">
-                <img src="assets/images/dishs/img5.jpg" alt="Teste" class="generic-card-img">
-                <div class="generic-card-overlay">
-                    <span class="card-dish-name margin-bottom-15px">Ovos Cozidos</span>
-                    <div class="card-dish-separator margin-bottom-15px"></div>
-                    <p class="card-dish-description margin-bottom-30px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni magnam saepe reiciendis.</p>
-                    <div class="card-dish-price margin-bottom-30px"><!-- CONTAINER DO PREÇO DO PRATO NA INDEX -->
-                        <span class="padding-right-15px">R$ 4,90</span><!-- PREÇO -->
-                        <div><img src="assets/images/simbols/delivery-truck.svg" alt="Compra Rápida"></div><!-- COMPRA RAPIDA -->
-                    </div>
-                </div>
-            </div>
-            <div class="generic-card">
-                <img src="assets/images/dishs/img6.jpg" alt="Teste" class="generic-card-img">
-                <div class="generic-card-overlay">
-                    <span class="card-dish-name margin-bottom-15px">Salada Simples</span>
-                    <div class="card-dish-separator margin-bottom-15px"></div>
-                    <p class="card-dish-description margin-bottom-30px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni magnam saepe reiciendis.</p>
-                    <div class="card-dish-price margin-bottom-30px"><!-- CONTAINER DO PREÇO DO PRATO NA INDEX -->
-                        <span class="padding-right-15px">R$ 3,90</span><!-- PREÇO -->
-                        <div><img src="assets/images/simbols/delivery-truck.svg" alt="Compra Rápida"></div><!-- COMPRA RAPIDA -->
-                    </div>
-                </div>
-            </div>
-		</article>
+            <?php
+                }
+            ?>
+        </div>
 		<div class="margin-right-auto margin-left-auto margin-bottom-30px">
 		  	<div class="pagination">
 			    <a href="#">&laquo;</a>

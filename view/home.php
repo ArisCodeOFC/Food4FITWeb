@@ -120,8 +120,8 @@
 				<h2 class="padding-bottom-15px">Baixe nosso aplicativo!</h2><!-- TÍTULO DA SESSÃO -->
 				<div id="app-section-separator" class="margin-bottom-15px"></div><!--SEPARADOR -->
 				<p class="padding-bottom-15px">Controle as suas dietas e encomendas semanais pelo aplicativo para Android! Baixe agora e mantenha sua saúde em dia!</p><!-- DESCRIÇÃO DA SESSÃO -->
-				<div class="btn-generic margin-auto animate fadeInUp"><!-- BOTÃO GENÉRICO -->
-					<span>Baixar</span>
+				<div class="btn-generic margin-auto animate fadeInUp" onclick="javascript:location.href='app.php'"><!-- BOTÃO GENÉRICO -->
+					<span>Detalhes</span>
 				</div>
 			</div>
 			<figure id="app-section-image"><!-- CONTAINER DE IMAGENS -->

@@ -346,6 +346,7 @@
     border: none;
     outline: none;
     transition: 300ms ease-out;
+    box-shadow: $shadow;
     >span{
     	/*Texto do botão genérico*/
     	@include texto(16px, $white, 'Roboto Bold', 18px, center);
