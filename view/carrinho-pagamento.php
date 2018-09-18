@@ -72,7 +72,7 @@
                         </div>
                     </div>
                 </form>
-                <div class="card-container animate fadeInRight margin-left-30px" data-card-container>
+                <div class="card-container margin-left-30px" data-card-container>
                     <div class="front">
                         <div class="header">
                             <figure>

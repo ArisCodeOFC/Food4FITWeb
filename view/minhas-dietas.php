@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="assets/css/sizes.css">
     <link rel="stylesheet" href="assets/css/keyframes.css">
     <link rel="stylesheet" href="assets/css/mobile.css">
-	<script src="assets/js/jquery-3.3.1.min.js"></script>
+	<script src="assets/public/js/jquery-3.3.1.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 </head>
 <body>
