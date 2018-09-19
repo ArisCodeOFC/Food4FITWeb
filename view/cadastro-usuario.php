@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="assets/css/colors.css">
     <link rel="stylesheet" href="assets/css/font-style.css">
     <link rel="stylesheet" href="assets/css/align.css">
+    <link rel="stylesheet" href="assets/css/sizes.css">
     <link rel="stylesheet" href="assets/css/keyframes.css">
     <link rel="stylesheet" href="assets/css/mobile.css">
 	<script src="assets/public/js/jquery-3.3.1.min.js"></script>
@@ -22,8 +23,8 @@
 	<?php require_once("components/navbar.html") ?><!-- BARRA DE NAVEGAÇÃO VIA PHP -->
     <section class="main">
         <h1 id="page-title" class="margin-left-auto margin-right-auto animate fadeInUp">INFORMAÇÕES BÁSICAS</h1><!-- TÍTULO DA PÁGINA -->
-        <div class="form-generic width-small margin-left-auto margin-right-auto">
-            <form action="#" method="POST" name="frmsignup" class="form-generic-content">
+        <div class="form-generic width-600px margin-left-auto margin-right-auto">
+            <form action="#" method="POST" name="frmsignup" class="form-generic-content" >
                 <span style="display: block; font-size: 18px; font-family: 'Roboto Bold'; color: #000;" class="margin-top-30px margin-bottom-15px">Eu sou...</span>
                 <div id="pessoa" style="display: flex;">
                     <input type="radio" name="pessoa" id="fisica" value="F" required checked>

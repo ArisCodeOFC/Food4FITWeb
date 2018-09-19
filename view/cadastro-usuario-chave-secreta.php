@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/css/colors.css">
     <link rel="stylesheet" href="assets/css/font-style.css">
     <link rel="stylesheet" href="assets/css/align.css">
+    <link rel="stylesheet" href="assets/css/sizes.css">
     <link rel="stylesheet" href="assets/css/keyframes.css">
     <link rel="stylesheet" href="assets/css/mobile.css">
 	<script src="assets/public/js/jquery-3.3.1.min.js"></script>
@@ -21,7 +22,7 @@
 	<?php require_once("components/navbar.html") ?><!-- BARRA DE NAVEGAÇÃO VIA PHP -->
     <section class="main">
         <h1 id="page-title" class="margin-left-auto margin-right-auto animate fadeInUp">INFORMAÇÕES BÁSICAS</h1><!-- TÍTULO DA PÁGINA -->
-        <div class="form-generic width-small margin-left-auto margin-right-auto">
+        <div class="form-generic width-600px margin-left-auto margin-right-auto">
             <form action="#" method="POST" name="frmsignup" class="form-generic-content">
                 <label for="senha" class="label-generic margin-top-30px">Senha:</label>
                 <input type="password" name="senha" id="senha" class="input-generic" required>
