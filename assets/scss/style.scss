@@ -384,7 +384,7 @@ a{
 	#header-flat-row1{
 		/*Container-filho do cabeçalh da indexo*/
 		@include bloco(100%, 100%, 300px, 300px);
-		overflow-y: hidden;
+		overflow: hidden;
 		position: relative;
 		box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
 		border-bottom-right-radius: 10px;
@@ -479,18 +479,16 @@ a{
     /*container da imagem do smartphone da sessão do aplicativo na index*/
     @include bloco(100%, 600px, auto);
     margin: 0 auto;
+    @include display(flex, row, flex-start, center);
     >img{
         /*Imagem do smartphone da sessão do aplicativo na index*/
         max-width: 100%;
+        -webkit-animation: pulse 3s infinite ease-in-out;
+        -o-animation: pulse 3s infinite ease-in-out;
+        -ms-animation: pulse 3s infinite ease-in-out;
+        -moz-animation: pulse 3s infinite ease-in-out;
+        animation: pulse 3s infinite ease-in-out;
     }
-}
-#a-s-i-left{
-    /*Imagem à esquerda*/
-    display: block;
-}
-#a-s-i-center{
-    /*Imagem ao centro*/
-    display: none;
 }
 
 /* CASOS DE SUCESSO - JANELA DE ACESSO */

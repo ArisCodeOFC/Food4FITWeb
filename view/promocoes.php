@@ -28,7 +28,13 @@
             <div class="slider_content"><!--CONTAINER DO SLIDER-->
                 <ul id="slider">
                     <li>
+                        <img src="assets/images/backgrounds/fit5.jpeg" alt="Título">
+                    </li>
+                    <li>
                         <img src="assets/images/backgrounds/fit.jpeg" alt="Título">
+                    </li>
+                    <li>
+                        <img src="assets/images/backgrounds/fit4.jpeg" alt="Título">
                     </li>
                     <li>
                         <img src="assets/images/backgrounds/fit2.jpeg" alt="Título">

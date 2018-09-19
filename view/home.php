@@ -125,8 +125,7 @@
 				</div>
 			</div>
 			<figure id="app-section-image"><!-- CONTAINER DE IMAGENS -->
-				<img src="assets/images/backgrounds/fade1.jpg" alt="Notificar-me" id="a-s-i-left"><!-- IMAGEM À ESQUERDA -->
-				<img src="assets/images/backgrounds/fade2.jpg" alt="Notificar-me" id="a-s-i-center"><!-- IMAGEM AO CENTRO -->
+				<img src="assets/images/backgrounds/fade1.png" alt="Notificar-me"><!-- IMAGEM MOCKUP -->
 			</figure>
 		</section>
 		<article id="success-cases-section"><!-- CONTAINER-MÃE DO CASOS DE SUCESSO -->
