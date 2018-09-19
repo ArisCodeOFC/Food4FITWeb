@@ -30,7 +30,7 @@
 				<figure class="profile-header-image margin-top-60px animate fadeInUp">
 					<img src="assets/images/icons/person.jpg" alt="Nome do Usuário" class="box-shadow">
 				</figure>
-				<div class="profile-header-option margin-left-30px animate fadeInUp">
+				<div class="profile-header-option margin-left-30px animate fadeInUp" onclick="javascript:location.href='editar-perfil.php'">
 					<img src="assets/images/icons/edit.svg" alt="Editar Informações de Perfil">
 				</div>
             </div>
