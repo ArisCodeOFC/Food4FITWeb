@@ -256,7 +256,6 @@
 		}
 	}
 }
-
 /* FORMULÁRIOS */
 .form-generic{
 	position: relative;
@@ -267,6 +266,9 @@
 	    padding-bottom: 15px;
 	    text-align: center;
 	}
+}
+.aviso-contato{
+    @include texto(14px, $darkgrey, 'Roboto Italic', 23px, left);
 }
 .form-generic-content{
   	height: auto;

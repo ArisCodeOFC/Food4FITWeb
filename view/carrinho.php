@@ -25,19 +25,19 @@
         <h2 id="page-title" class="margin-left-auto margin-right-auto margin-bottom-30px">MEU CARRINHO</h2>
         <div class="shopping-cart-block">
         	<div class="shopping-cart-title-menu">
-        		<div class="shopping-cart-menu-column align">
+        		<div class="shopping-cart-menu-column align-x">
         			<span class="padding-top-15px padding-bottom-15px">IMAGEM</span>
         		</div>
-        		<div class="shopping-cart-menu-column align">
+        		<div class="shopping-cart-menu-column align-x">
         			<span class="padding-top-15px padding-bottom-15px">INFORMAÇÕES</span>
         		</div>
-        		<div class="shopping-cart-menu-column align">
+        		<div class="shopping-cart-menu-column align-x">
         			<span class="padding-top-15px padding-bottom-15px">PREÇO UNIT.</span>
         		</div>
-        		<div class="shopping-cart-menu-column align">
+        		<div class="shopping-cart-menu-column align-x">
         			<span class="padding-top-15px padding-bottom-15px">QUANTIDADE</span>
         		</div>
-        		<div class="shopping-cart-menu-column align">
+        		<div class="shopping-cart-menu-column align-x">
         			<span class="padding-top-15px padding-bottom-15px">SUBT0TAL</span>
         		</div>
         	</div>
@@ -48,17 +48,17 @@
 	        				<img src="assets/images/dishs/img1.jpg" alt="Nome do Prato">
 	        			</figure>
 	        		</div>
-	        		<div class="shopping-cart-column">
+	        		<div class="shopping-cart-column align-flex-start">
 	        			<div class="switch_box margin-bottom-15px">
 							<input type="checkbox" name="chkdish" class="switch-styled">
 						</div>
 	        			<h2 class="padding-bottom-5px">Nome do Prato</h2>
 	        			<h3 class="padding-bottom-15px">Categoria: Nome da Categoria</h3>
 	        		</div>
-	        		<div class="shopping-cart-column align">
+	        		<div class="shopping-cart-column align-x">
 	        			<span id="shopping-cart-price">R$ 000,00</span>
 	        		</div>
-	        		<div class="shopping-cart-column align">
+	        		<div class="shopping-cart-column align-x">
 	        			<div class="input-group input-number-group">
 							<div class="input-group-button">
 						    	<span class="input-number-decrement">-</span>
@@ -69,7 +69,7 @@
 						  	</div>
 						</div>
 	        		</div>
-	        		<div class="shopping-cart-column align">
+	        		<div class="shopping-cart-column align-x">
 	        			<span id="shopping-cart-price-total">R$ 000,00</span>
 	        		</div>
 	        	</div>
