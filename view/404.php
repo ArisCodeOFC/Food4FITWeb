@@ -28,7 +28,7 @@
 
     <div class="error-content">
         <h1 class="padding-bottom-50px">404</h1>
-        <h2 class="padding-bottom-20px">Oops!</h2>
+        <h2 class="padding-bottom-20px">Erro 404fit... Não, pera</h2>
         <p class="padding-bottom-25px">Parece que algo deu errado por aqui<br>Tente novamente ou volte depois</p>
         <div class="btn-generic" onclick="javascript:window.history.back();">
             <span>Voltar</span>
