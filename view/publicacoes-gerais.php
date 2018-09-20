@@ -51,18 +51,21 @@
             <?php
                 for($i = 1; $i < 8; $i++){
             ?>
-            <article class="publication">
-                <figure>
-                    <img src="assets/images/backgrounds/img.jpg" alt="Imagem da Publicação">
-                </figure>
-                <div>
-                    <h2 class="padding-left-30px">Título da Publicação</h2>
-                    <h3 class="padding-left-30px padding-bottom-10px">Por <a href="">Maurício Linhares</a>, em 01/01/2018</h3>
-                    <span class="padding-left-30px"><b>12</b> Comentários</span>
-                    <div class="btn-generic margin-top-10px margin-left-30px">
-                        <span>Ler Mais</span>
+            <article class="publication margin-bottom-30px">
+                <header class="publication-header">
+                    <img src="assets/images/icons/person.jpg" alt="" class="profile-image-pub">
+                    <section class="profile-name-date-pub">
+                        <h2>Nome do Autor</h2>
+                        <h3>Em: 01/01/2018</h3>
+                    </section>
+                </header>
+                <figure class="publication-image">
+                    <img src="assets/images/backgrounds/cereal.jpg" alt="Imagem da Publicação">
+                    <div>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        <span>12 comentários</span>
                     </div>
-                </div>
+                </figure>
             </article>
             <?php
                 }

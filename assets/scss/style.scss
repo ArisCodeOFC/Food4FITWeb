@@ -567,55 +567,60 @@ a{
 	}
 }
 .publication{
-	@include bloco(100%, 100%, auto, 250px);
-	@include display(flex, row, center, center);
-	background: #F3F3F3;
-	border-radius: 5px;
-	margin-bottom: 30px;
-	overflow: hidden;
-	>figure{
-		@include bloco(100%, 250px, auto);
-		max-height: 250px;
-		overflow: hidden;
-		>img{
-			@include img-fit(250px, 250px);
-			transition: 200ms ease-in-out;
-			&:hover{
-				transform: scale(1.02);
-			}
-		}
-	}
-	>div{
-		@include bloco(100%, 100%, auto);
-		@include display(flex, column, center, flex-start);
-		max-height: 250px;
-		>h2{
-			@include texto(21px, $black, 'Roboto Bold', 24px);
-			&:after{
-				content: "";
-				display: block;
-				background: $black;
-				border-radius: 50px;
-				@include bloco($width: 40px, $height: 3px);
-				margin: 10px auto 10px 0px;
-			}
-		}
-		>h3{
-			@include texto(18px, $darkgrey, 'Roboto Light', 24px);
-			width: 80%;
-			>a{
-				@include texto(18px, $black, 'Roboto Bold', 24px);
-				display: inline-block;
-				transition: 200ms ease-in-out;
-				&:hover{
-					color: $olivine;
-				}
-			}
-		}
-		>span{
-			@include texto(18px, $darkgrey, 'Roboto Regular', 24px);
-		}
-	}
+	@include bloco(100%, 100%, auto);
+    background: #eaeaea;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: $shadow;
+}
+.publication-header{
+    @include bloco($width: 100%, $height: auto);
+    @include display(flex, row, flex-start, center);
+    box-sizing: border-box;
+    border: 20px solid transparent;
+}
+.profile-image-pub{
+    @include img-fit(60px, 60px);
+    border-radius: 50px;
+    margin-right: 20px;
+}
+.profile-name-date-pub{
+    @include bloco($width: 100%, $height: auto);
+    @include display(flex, column, center, flex-start);
+    >h2{
+        @include texto(21px, $black, 'Roboto Bold', 24px);
+    }
+    >h3{
+        @include texto(18px, $grey, 'Roboto Italic', 24px);
+    }
+}
+.publication-image{
+    @include bloco($width: 100%, $height: auto);
+    position: relative;
+    >img{
+        @include img-fit(100%, auto);
+        border-radius: 0px 0px 5px 5px;
+    }
+    >div{
+        @include bloco($width: 100%, $height: 100%);
+        @include position(absolute, 0, 0, 0, 0);
+        @include display(flex, column, flex-end, center);
+        background: linear-gradient(180deg, transparent, rgba(0,0,0,0.8) 70%);
+        >p{
+            @include texto(16px, $white, 'Roboto Light', 24px);
+            width: 90%;
+            margin: 0 auto 10px auto;
+        }
+        >span{
+            @include texto(21px, $black, 'Roboto Bold Italic', 24px, center);
+            background-color: $white;
+            width: auto;
+            height: auto;
+            padding: 12px;
+            border-radius: 5px;
+            margin: 10px auto 30px auto;
+        }
+    }
 }
 .pub-create-column.one{
 	width: 390px;
