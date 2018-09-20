@@ -44,7 +44,11 @@
         			<span class="padding-top-15px padding-bottom-15px">AGENDAR PRATO</span>
         		</div>
         	</div>
-        	<section class="shopping-cart-grid">
+        	<section class="generic-grid">
+                <?php
+                    for($i = 0; $i < 5; $i++){
+
+                ?>
         		<div class="shopping-cart-row">
 	        		<div class="shopping-cart-column">
 	        			<figure class="shopping-cart-image-container">
@@ -55,78 +59,24 @@
 	        			<h2 class="padding-bottom-5px">Nome do Prato</h2>
 	        			<h3 class="padding-bottom-15px">Categoria: Nome da Categoria</h3>
 	        		</div>
-	        		<div class="shopping-cart-column align">
+	        		<div class="shopping-cart-column align-x">
 	        			<span id="shopping-cart-price">R$ 000,00</span>
 	        		</div>
-	        		<div class="shopping-cart-column align">
+	        		<div class="shopping-cart-column align-x">
 	        			<div class="input-group input-number-group">
 				            <span>1</span>
 						</div>
 	        		</div>
-	        		<div class="shopping-cart-column align">
+	        		<div class="shopping-cart-column align-x">
 	        			<span id="shopping-cart-price-total">R$ 000,00</span>
 	        		</div>
-                    <div class="shopping-cart-column align" style="align-items: center;">
+                    <div class="shopping-cart-column align-x" style="align-items: center;">
 						<div class="switch_box">
 							<input type="checkbox" name="chkdish" class="switch-styled">
 						</div>
                     </div>
 	        	</div>
-	        	<?php include('form-agendar-prato.php'); ?>
-	        	<div class="shopping-cart-row">
-	        		<div class="shopping-cart-column">
-	        			<figure class="shopping-cart-image-container">
-	        				<img src="assets/images/dishs/img1.jpg" alt="Nome do Prato">
-	        			</figure>
-	        		</div>
-	        		<div class="shopping-cart-column">
-	        			<h2 class="padding-bottom-5px">Nome do Prato</h2>
-	        			<h3 class="padding-bottom-15px">Categoria: Nome da Categoria</h3>
-	        		</div>
-	        		<div class="shopping-cart-column align">
-	        			<span id="shopping-cart-price">R$ 000,00</span>
-	        		</div>
-	        		<div class="shopping-cart-column align" style="align-items: center;">
-	        			<div class="input-group input-number-group">
-				            <span>1</span>
-						</div>
-	        		</div>
-	        		<div class="shopping-cart-column align">
-	        			<span id="shopping-cart-price-total">R$ 000,00</span>
-	        		</div>
-                    <div class="shopping-cart-column align" style="align-items: center;">
-						<div class="switch_box">
-							<input type="checkbox" name="chkdish" class="switch-styled">
-						</div>
-                    </div>
-	        	</div>
-	        	<div class="shopping-cart-row">
-	        		<div class="shopping-cart-column">
-	        			<figure class="shopping-cart-image-container">
-	        				<img src="assets/images/dishs/img1.jpg" alt="Nome do Prato">
-	        			</figure>
-	        		</div>
-	        		<div class="shopping-cart-column">
-	        			<h2 class="padding-bottom-5px">Nome do Prato</h2>
-	        			<h3 class="padding-bottom-15px">Categoria: Nome da Categoria</h3>
-	        		</div>
-	        		<div class="shopping-cart-column align">
-	        			<span id="shopping-cart-price">R$ 000,00</span>
-	        		</div>
-	        		<div class="shopping-cart-column align" style="align-items: center;">
-	        			<div class="input-group input-number-group">
-				            <span>1</span>
-						</div>
-	        		</div>
-	        		<div class="shopping-cart-column align">
-	        			<span id="shopping-cart-price-total">R$ 000,00</span>
-	        		</div>
-                    <div class="shopping-cart-column align" style="align-items: center;">
-						<div class="switch_box">
-							<input type="checkbox" name="chkdish" class="switch-styled">
-						</div>
-                    </div>
-	        	</div>
+	        	<?php } include('form-agendar-prato.php'); ?>
         	</section>
         </div>
 	</section>

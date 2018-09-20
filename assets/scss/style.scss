@@ -2291,3 +2291,13 @@ a{
     text-align: center;
     margin: 0 auto 20px auto;
 }
+
+
+//Meus Favoritos
+.estrela-favoritos{
+    @include bloco($width:45px, $height:45px);
+    @include position(absolute, 20px, 20px, null, null);
+    >img{
+        @include img-fit(45px, 45px);
+    }
+}
