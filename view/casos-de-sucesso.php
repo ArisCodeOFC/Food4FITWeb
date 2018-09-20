@@ -8,7 +8,7 @@
 	<link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
 	<link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/bases.css">
-    <link rel="stylesheet" href="assets/css/navb ar.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/colors.css">
     <link rel="stylesheet" href="assets/css/font-style.css">
@@ -24,7 +24,7 @@
 	<section class="main"><!-- CONTAINER-MÃE DO SITE -->
         <h2 id="page-title">CASOS DE SUCESSO</h2>
         <p id="page-subtitle">Conheça casos de sucesso de pessoas que utilizaram nossos serviços e aproveitaram nossos produtos, alcançando seus próprios objetivos</p>
-        <div class="generic-block .margin-top-30px">
+        <div class="generic-block margin-top-30px">
             <div class="success-case-card margin-left-auto margin-right-auto margin-top-30px">
                 <div class="padding-top-30px margin-left-30px profile-picture">
                     <div>
