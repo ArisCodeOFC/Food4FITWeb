@@ -208,6 +208,7 @@ f4fApp.addController("CrudController", function($this, $element) {
                 },
 
                 error: function(error) {
+                    console.log(error);
                     f4fApp.abrirToast(error.responseJSON.result);
                 }
             });

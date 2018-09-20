@@ -37,7 +37,7 @@ f4fApp.addController("SobreEmpresaController", function($this, $element) {
         var linha = $("<div class='linha'>").attr("data-param-id", item.id);
 
         $("<div class='coluna'>")
-            .append($("<img>").attr("src", "../" + item.imagem).attr("alt", item.titulo))
+            .append($("<img>").attr("src", "../" + item.foto).attr("alt", item.titulo))
             .appendTo(linha);
 
         $("<div class='coluna titulo'>")
@@ -92,7 +92,7 @@ f4fApp.addController("SobreEmpresaController", function($this, $element) {
         if (!data.texto) {
             f4fApp.abrirToast("O texto não pode ficar vazio.");
             return false;
-        } else if (!data.uploadData && !data.imagem) {
+        } else if (!data.uploadData && !data.foto) {
             f4fApp.abrirToast("Selecione uma imagem.");
             return false;
         }

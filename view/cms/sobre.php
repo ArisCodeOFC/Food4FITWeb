@@ -19,7 +19,7 @@
                     <textarea id="texto" name="texto" class="textarea-generic" data-sceditor></textarea>
 
                     <span class="label-generic">Imagem</span>
-                    <div class="imagem-upload-wrapper" data-imagem-upload data-bind="imagem">
+                    <div class="imagem-upload-wrapper" data-imagem-upload data-bind="foto">
                         <div>
                             <img alt="">
                         </div>
@@ -46,18 +46,18 @@
                     <div class="coluna">Opções</div>
                 </div>
                 <?php foreach ($itens as $item) { ?>
-                    <div class="linha" data-param-id="<?= $item->id ?>">
+                    <div class="linha" data-param-id="<?= $item->getId() ?>">
                         <div class="coluna">
-                            <img src="../<?= $item->imagem ?>" alt="<?= $item->titulo ?>">
+                            <img src="../<?= $item->getFoto() ?>" alt="<?= $item->getTitulo() ?>">
                         </div>
-                        <div class="coluna titulo"><span><?= $item->titulo ?></span></div>
+                        <div class="coluna titulo"><span><?= $item->getTitulo() ?></span></div>
                         <div class="coluna descricao">
                             <div>
-                                <?= strip_tags($item->texto) ?>
+                                <?= strip_tags($item->getTexto()) ?>
                             </div>
                         </div>
                         <div class="coluna">
-                            <span class="toggle <?= $item->ativo ? "desativar" : "ativar" ?>"></span><hr>
+                            <span class="toggle <?= $item->isAtivo() ? "desativar" : "ativar" ?>"></span><hr>
                             <span class="editar"></span><hr>
                             <span class="excluir"></span>
                         </div>

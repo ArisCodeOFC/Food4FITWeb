@@ -4,6 +4,10 @@
     clear: both;
 }
 
+.generic-modal.show {
+	display: flex;
+}
+
 body {
 	margin: 0;
 	padding: 0;

@@ -5,7 +5,7 @@
         public static function listar() {
             $itens = array();
             $conn = Database::getConnection();
-            $stmt = $conn->prepare("SELECT * FROM tbl_item_sobre_nos");
+            $stmt = $conn->prepare("SELECT * FROM tbl_sobre_empresa");
 
             if ($stmt->execute()) {
                 while ($rs = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -19,7 +19,7 @@
 
         public static function selecionar($id) {
             $conn = Database::getConnection();
-            $stmt = $conn->prepare("SELECT * FROM tbl_item_sobre_nos WHERE id = ?");
+            $stmt = $conn->prepare("SELECT * FROM tbl_sobre_empresa WHERE id = ?");
             $stmt->bindParam(1, $id);
 
             $item = null;
@@ -35,14 +35,14 @@
 
         public static function inserir($item) {
             $conn = Database::getConnection();
-            $stmt = $conn->prepare("INSERT INTO tbl_item_sobre_nos (titulo, texto, imagem) VALUES (?, ?, ?)");
-            $stmt->bindParam(1, $item->titulo);
-            $stmt->bindParam(2, $item->texto);
-            $stmt->bindParam(3, $item->imagem);
+            $stmt = $conn->prepare("INSERT INTO tbl_sobre_empresa (titulo, texto, foto) VALUES (?, ?, ?)");
+            $stmt->bindValue(1, $item->getTitulo());
+            $stmt->bindValue(2, $item->getTexto());
+            $stmt->bindValue(3, $item->getFoto());
 
             $resultado = null;
             if ($stmt->execute()) {
-                $item->id = $conn->lastInsertId();
+                $item->setId($conn->lastInsertId());
             }
 
             $conn = null;
@@ -51,10 +51,10 @@
 
         public static function atualizar($id, $item) {
             $conn = Database::getConnection();
-            $stmt = $conn->prepare("UPDATE tbl_item_sobre_nos SET titulo = ?, texto = ?, imagem = ? WHERE id = ?");
-            $stmt->bindParam(1, $item->titulo);
-            $stmt->bindParam(2, $item->texto);
-            $stmt->bindParam(3, $item->imagem);
+            $stmt = $conn->prepare("UPDATE tbl_sobre_empresa SET titulo = ?, texto = ?, foto = ? WHERE id = ?");
+            $stmt->bindValue(1, $item->getTitulo());
+            $stmt->bindValue(2, $item->getTexto());
+            $stmt->bindValue(3, $item->getFoto());
             $stmt->bindParam(4, $id);
             $resultado = $stmt->execute() ? $stmt->rowCount() : -1;
             $conn = null;
@@ -63,7 +63,7 @@
 
         public static function ativar($id) {
             $conn = Database::getConnection();
-            $stmt = $conn->prepare("UPDATE tbl_item_sobre_nos SET ativo = !ativo WHERE id = ?");
+            $stmt = $conn->prepare("UPDATE tbl_sobre_empresa SET ativo = !ativo WHERE id = ?");
             $stmt->bindParam(1, $id);
             $resultado = $stmt->execute() ? $stmt->rowCount() : -1;
             $conn = null;
@@ -72,7 +72,7 @@
 
         public static function excluir($id) {
             $conn = Database::getConnection();
-            $stmt = $conn->prepare("DELETE FROM tbl_item_sobre_nos WHERE id = ?");
+            $stmt = $conn->prepare("DELETE FROM tbl_sobre_empresa WHERE id = ?");
             $stmt->bindParam(1, $id);
             $resultado = $stmt->execute() ? $stmt->rowCount() : -1;
             $conn = null;

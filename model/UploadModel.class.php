@@ -24,7 +24,7 @@
                         throw new Exception("Não foi possível concluir o upload do arquivo");
                     }
 
-                    $this->imagem = $caminhoArquivo;
+                    $this->foto = $caminhoArquivo;
 
                 } else {
                     throw new Exception("URI do arquivo incorreto");
