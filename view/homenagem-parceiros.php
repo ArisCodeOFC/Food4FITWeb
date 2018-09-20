@@ -24,9 +24,14 @@
 	<section class="main"><!-- CONTAINER-MÃE DO SITE -->
         <h2 id="page-title">HOMENAGEM À PARCEIROS</h2>
         <p id="page-subtitle">Conheça os nossos laços que foram e são <br> essenciais para que a Food 4Fit cresça <br> cada vez mais a cada dia!</p>
-        <div class="generic-block margin-top-30px width-900px">
-            <div>
-
+        <div class="generic-grid animate fadeInUp">
+            <div class="generic-card">
+                <div>
+                    <img src="assets/images/icons/person.jpg" alt="Imagem dos Parceiros">
+                </div>
+                <span>NOME DO PARCEIRO</span>
+                <div class="card-dish-separator margin-bottom-15px"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni magnam saepe reiciendis.</p>
             </div>
         </div>
 	</section>
