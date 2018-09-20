@@ -25,14 +25,20 @@
         <h2 id="page-title">HOMENAGEM À PARCEIROS</h2>
         <p id="page-subtitle">Conheça os nossos laços que foram e são <br> essenciais para que a Food 4Fit cresça <br> cada vez mais a cada dia!</p>
         <div class="generic-grid animate fadeInUp">
+            <?php
+                for($i = 1; $i < 10; $i++){
+            ?>
             <div class="generic-card">
-                <div>
+                <figure class="img-parceiro">
                     <img src="assets/images/icons/person.jpg" alt="Imagem dos Parceiros">
-                </div>
-                <span>NOME DO PARCEIRO</span>
-                <div class="card-dish-separator margin-bottom-15px"></div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni magnam saepe reiciendis.</p>
+                </figure>
+                <span class="nome-parceiro padding-top-15px">NOME DO PARCEIRO</span>
+
+                <p class="descritivo-homenagem-parceiro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni magnam saepe reiciendis.</p>
             </div>
+            <?php
+                }
+            ?>
         </div>
 	</section>
 	<?php require_once("components/footer.html"); ?><!-- RODAPÉ VIA PHP -->

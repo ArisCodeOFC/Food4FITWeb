@@ -2262,3 +2262,32 @@ a{
     50% { transform: scale(1.02); }
     100% { transform: scale(1); }
 }
+
+//Homenagem á Parceiros
+.img-parceiro{
+    > img{
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.nome-parceiro{
+    @include bloco($width:100%, $height:auto);
+    @include texto(16px, $darkgrey,"Roboto Regular",21px, center);
+    margin: 0 auto;
+    &:after{
+        content: "";
+        display: block;
+        background-color: #000;
+        @include bloco($width:50px, $height:3p);
+        border-radius: 50px;
+        margin: 10px auto 10px auto;
+    }
+}
+
+.descritivo-homenagem-parceiro{
+    width: 80%;
+    text-align: center;
+    margin: 0 auto 20px auto;
+}
