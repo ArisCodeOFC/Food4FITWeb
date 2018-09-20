@@ -413,14 +413,14 @@ a{
 			border-bottom-left-radius: 10px;
 			>h2{
 				/*Título cabeçalho produto-destaqu da indexe*/
-				@include texto(38px, $white, 'Roboto Bold', null, null);
+				@include texto(38px, $white, 'Roboto Bold', 48px, null);
 				&:after{
 				    content: "";
 				    @include bloco($width: 80px, $height: 5px);
 				    display: block;
 				    border-radius: 50px;
 				    background-color: $white;
-				    margin: 30px auto 0px 0px;
+				    margin: 15px auto 0px 0px;
 				}
 			}
 			>p{
@@ -513,7 +513,7 @@ a{
 		border-radius: 10px;
 		padding: 0;
 		margin: 120px auto;
-		box-shadow: 4px 4px 10px 4px rgba(0,0,0,0.1);
+		box-shadow: $shadow;
 		>h2{
 			/*Título da sessão de casos de sucesso*/
 			@include texto(21px, $white, 'Roboto bold', 23px, null);
@@ -538,6 +538,94 @@ a{
 		}
 	}
 }
+
+//Publicaçõe Gerais
+.geral-pubs-block{
+	@include bloco(100%, 780px, auto);
+	background: $lightgrey;
+	margin: 124px auto 0px auto;
+	.geral-pubs-wrapper{
+		width: 100%;
+		height: auto;
+		box-sizing: border-box;
+		border: 30px solid transparent;
+	}
+}
+.btn-add-pub{
+	@include bloco(100%, 100%, auto);
+	@include display(flex, row, center, center);
+	background: $olivine;
+	border-radius: 5px;
+	transition: 200ms ease-in-out;
+	>span{
+		@include texto(21px, $white, 'Roboto Bold', 24px);
+		padding: 12px;
+	}
+	&:hover{
+		box-shadow: $shadow;
+		cursor: pointer;
+	}
+}
+.publication{
+	@include bloco(100%, 100%, auto, 250px);
+	@include display(flex, row, center, center);
+	background: #F3F3F3;
+	border-radius: 5px;
+	margin-bottom: 30px;
+	overflow: hidden;
+	>figure{
+		@include bloco(100%, 250px, auto);
+		max-height: 250px;
+		overflow: hidden;
+		>img{
+			@include img-fit(250px, 250px);
+			transition: 200ms ease-in-out;
+			&:hover{
+				transform: scale(1.02);
+			}
+		}
+	}
+	>div{
+		@include bloco(100%, 100%, auto);
+		@include display(flex, column, center, flex-start);
+		max-height: 250px;
+		>h2{
+			@include texto(21px, $black, 'Roboto Bold', 24px);
+			&:after{
+				content: "";
+				display: block;
+				background: $black;
+				border-radius: 50px;
+				@include bloco($width: 40px, $height: 3px);
+				margin: 10px auto 10px 0px;
+			}
+		}
+		>h3{
+			@include texto(18px, $darkgrey, 'Roboto Light', 24px);
+			width: 80%;
+			>a{
+				@include texto(18px, $black, 'Roboto Bold', 24px);
+				display: inline-block;
+				transition: 200ms ease-in-out;
+				&:hover{
+					color: $olivine;
+				}
+			}
+		}
+		>span{
+			@include texto(18px, $darkgrey, 'Roboto Regular', 24px);
+		}
+	}
+}
+.pub-create-column.one{
+	width: 390px;
+	height: auto;
+}
+.pub-create-column.two{
+	width: 300px;
+	height: auto;
+}
+
 
 //Login
 .login-bg{
@@ -1005,7 +1093,7 @@ a{
 	background-color: #f6f6f6;
 	border-radius: 10px;
 	position: relative;
-	box-shadow: 0px 0px 30px -4px rgba(0,0,0,0.2);
+	box-shadow: $shadow;
 	z-index: 999;
 	.profile-myactions-location, .profile-myactions-postdate{
 		@include texto(18px, $grey, 'Roboto Medium Italic');
@@ -1066,7 +1154,93 @@ a{
         }
     }
 }
-
+//Endereços e Cartões
+.address-block{
+    @include bloco(100%, 100%, auto);
+    @include display(flex, row, center, flex-start);
+    >article{
+        @include bloco(100%, 600px, auto);
+        box-sizing: border-box;
+        background-color: #F5F5F5;
+        >h2{
+            @include texto(18px, $black, 'Roboto Bold', 23px, left);
+        }
+    }
+    >section{
+        @include bloco(100%, 600px, auto);
+        box-sizing: border-box;
+        background: $lightgrey;
+    }
+    .address-row{
+        @include bloco(100%, 100%, auto);
+        position: relative;
+        background-color: #F5F5F5;
+        margin-bottom: 5px;
+        transition: 200ms ease-in-out;
+        >span{
+            @include texto(18px, $grey, 'Roboto Bold', 21px, left);
+            transition: 200ms ease-in-out;
+        }
+        &:hover{
+            background-color: $olivine;
+            cursor: pointer;
+            >span{
+                color: $white;
+            }
+        }
+        #address-opts{
+            @include bloco($width: auto, $height: auto);
+            @include position(absolute, 10px, 10px, null, null);
+            @include display(flex, row, center, center);
+            >img{
+                @include img-fit(21px, 21px);
+            }
+        }
+    }
+}
+.card-block{
+    @include bloco(100%, 100%, auto);
+    @include display(flex, row, center, flex-start);
+    >article{
+        @include bloco(100%, 600px, auto);
+        box-sizing: border-box;
+        background-color: #F5F5F5;
+        >h2{
+            @include texto(18px, $black, 'Roboto Bold', 23px, left);
+        }
+    }
+    >div{
+        @include bloco(100%, 600px, auto);
+        box-sizing: border-box;
+        background: $lightgrey;
+    }
+    .card-row{
+        @include bloco(100%, 100%, auto);
+        position: relative;
+        background-color: #F5F5F5;
+        margin-bottom: 5px;
+        transition: 200ms ease-in-out;
+        >span{
+            @include texto(18px, $grey, 'Roboto Bold', 21px, left);
+            transition: 200ms ease-in-out;
+        }
+        &:hover{
+            background-color: $olivine;
+            cursor: pointer;
+            >span{
+                color: $white;
+            }
+        }
+        #cards-opts{
+            @include bloco($width: auto, $height: auto);
+            @include position(absolute, 10px, 10px, null, null);
+            @include display(flex, row, center, center);
+            >img{
+                @include img-fit(21px, 21px);
+            }
+        }
+    }
+}
 
 //Por que e vantagens da comida fitness
 .fit-title{
@@ -1980,6 +2154,50 @@ a{
 			text-shadow: 4px 4px 4px rgba(0,0,0,0.1);
 		}
 	}
+}
+
+//Dicas Fitness
+.fitness-tips-block{
+    @include bloco(100%, 1200px, auto);
+    box-sizing: border-box;
+    border: 30px solid transparent;
+}
+.fitness-tips-card{
+    @include bloco($width: 100%, $height: auto);
+    background-color: #F3F3F3;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    transition: 200ms ease-in-out;
+    >h2{
+        @include texto(21px, $black, 'Roboto Bold', 23px, left);
+    }
+    >p{
+        @include texto(18px, $black, 'Roboto Italic', 26px, left);
+        width: 80%;
+    }
+    .fitness-tips-row{
+        @include bloco($width: 100%, $height: auto);
+	    @include display(flex, row, space-between, center);
+        >span{
+            @include texto(18px, $grey, 'Roboto Bold Italic', 22px, left);
+        }
+    }
+    &:hover{
+        background: linear-gradient(45deg, $olivine, $gold);
+        box-shadow: $shadow;
+        cursor: pointer;
+        >h2{
+            color: $white;
+        }
+        >p{
+            color: $lightgrey;
+        }
+        .fitness-tips-row{
+            >span{
+                color: #F8F8F8;
+            }
+        }
+    }
 }
 
 //404 Error

@@ -27,4 +27,11 @@ $(document).ready(function(){
         $('.dish-form').css('display', 'block');
         $('.dish-form').addClass("animate fadeInUp");
     });
+
+    $("#abrir").click(function(){
+        $(".form-generic").slideToggle(200);
+    });
+    $("#fechar").click(function(){
+        $(".form-generic").fadeOut(200);
+    });
 });

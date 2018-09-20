@@ -49,8 +49,8 @@
 					<li>Telefone 2: <span>N/A</span></li>
 					<li>Celular: <span>(11) 98743-3487</span></li>
 				</ul>
-				<a href="" class="padding-bottom-5px">Meus Endereços de Entrega</a>
-				<a href="" class="padding-top-5px">Meus Cartões Salvos</a>
+				<a href="meus-enderecos.php" class="padding-bottom-5px">Meus Endereços de Entrega</a>
+				<a href="meus-cartoes.php" class="padding-top-5px">Meus Cartões Salvos</a>
 			</div>
 			<div class="profile-section-column">
 				<h3 class="padding-bottom-15px">Minhas Ações</h3>
