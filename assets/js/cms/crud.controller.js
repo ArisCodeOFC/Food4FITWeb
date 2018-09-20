@@ -262,7 +262,7 @@ f4fApp.addController("CrudController", function($this, $element) {
     $this._delete = function(context) {
         f4fApp.showModal("Exclusão", "Deseja realmente excluir este item?", function() {
             var id = $(context).parent().parent().data("param-id");
-            var url = $this.buildUrlFromData($this.listInstance.data($this.urls.delete), $(context).parent().parent().data());
+            var url = $this.buildUrlFromData($this.urls.delete, $(context).parent().parent().data());
             $.ajax({
                 type: "DELETE",
                 url: url,
