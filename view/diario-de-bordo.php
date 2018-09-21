@@ -19,59 +19,8 @@
     <link rel="stylesheet" href="assets/css/sizes.css">
     <link rel="stylesheet" href="assets/css/keyframes.css">
     <link rel="stylesheet" href="assets/css/mobile.css">
-    <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
 	<script src="assets/public/js/jquery-3.3.1.min.js"></script>
-    <script src="assets/public/js/jquery-ui.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
-    <script>
-        $( function() {
-            $( "#slider-range-max" ).slider({
-                range: "max",
-                min: 1,
-                max: 5,
-                value: 2,
-                slide: function( event, ui ) {
-                    $( "#progresso" ).val( ui.value );
-                }
-            });
-            $( "#progresso" ).val( $( "#slider-range-max" ).slider( "value" ) );
-      });
-    </script>
-    <style>
-        .diario-de-bordo-header{
-            width: 100%;
-            height: auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .diario-de-bordo-header>h2{
-            font-size: 4vw;
-            color: #9CC283;
-            font-family: 'Roboto Bold';
-            line-height: auto;
-            text-align: center;
-        }
-        .diario-de-bordo-header>h2::after{
-            content: "";
-            display: block;
-            width: 60px;
-            height: 3px;
-            border-radius: 50px;
-            background-color: #000;
-            margin: 20px auto;
-        }
-        .diario-de-bordo-header>p{
-            font-size: 16px;
-            color: #7F7F7F;
-            font-family: 'Roboto Regular';
-            line-height: 23px;
-            text-align: center;
-            width: 80%;
-            margin: 0 auto;
-        }
-    </style>
 </head>
 <body>
 	<?php require_once("components/navbar.html"); ?><!-- BARRA DE NAVEGAÇÃO VIA PHP -->
@@ -79,19 +28,57 @@
         <div class="generic-block">
             <header class="diario-de-bordo-header">
                 <h2 class="padding-top-60px">DIÁRIO<br>DE<br>BORDO</h2>
-                <p class="padding-bottom-70px">Fale para a gente como você evoluiu<br>com os serviços da Food 4Fit!</p>
+                <p class="padding-bottom-20px">Fale para a gente como você evoluiu<br>com os serviços da Food 4Fit!</p>
             </header>
-            <div class="form-generic width-550px margin-right-auto margin-left-auto">
+            <div style="background-color: #E8E8E8; height: 3px; border-radius: 10px; margin: 0 auto;" class="width-550px"></div>
+            <div class="form-generic width-550px margin-right-auto margin-left-auto margin-top-20px">
                 <form action="#" class="form-generic-content">
+                    <h2 class="form-title">Nos envie um depoimento!</h2>
+                    <p class="form-subtitle">O diário de bordo nos serve como pesquisa de campo para entender a situação de todos os nossos clientes e achar casos de sucesso para incentivar quem também está entrando no mundo fitness. Caso queira, mande-nos um depoimento sobre a sua dieta aqui em baixo!</p>
                     <label for="titulo" class="label-generic">Título:</label>
                     <input name="titulo" id="titulo" class="input-generic">
 
                     <label for="texto" class="label-generic">Depoimento:</label>
                     <textarea name="texto" id="texto" class="textarea-generic"></textarea>
 
-                    <label for="progresso" class="label-generic">Progresso:</label>
-                    <input type="text" id="progresso" name="progresso" readonly style="border:0; color:#f6931f; font-weight:bold;">
-                    <div id="slider-range-max"></div>
+                    <span style="display: block; font-size: 18px; font-family: 'Roboto Bold'; color: #000;" class="margin-top-30px margin-bottom-5px">Progresso:</span>
+                    <div style="display: flex; justify-content: space-between;" class="margin-bottom-30px">
+                        <input type="radio" name="progresso" id="p1" class="react-input">
+                        <label for="p1" class="react-label">
+                            <img src="assets/images/icons/reactions/angry.svg" alt="Péssimo" class="react-label-img">
+                            <span class="react-label-span">Péssimo</span>
+                        </label>
+
+                        <input type="radio" name="progresso" id="p2" class="react-input">
+                        <label for="p2" class="react-label">
+                            <img src="assets/images/icons/reactions/sad.svg" alt="Ruim" class="react-label-img">
+                            <span class="react-label-span">Ruim</span>
+                        </label>
+
+                        <input type="radio" name="progresso" id="p3" class="react-input">
+                        <label for="p3" class="react-label">
+                            <img src="assets/images/icons/reactions/thinking.svg" alt="Regular" class="react-label-img">
+                            <span class="react-label-span">Regular</span>
+                        </label>
+
+                        <input type="radio" name="progresso" id="p4" class="react-input">
+                        <label for="p4" class="react-label">
+                            <img src="assets/images/icons/reactions/happy.svg" alt="Bom" class="react-label-img">
+                            <span class="react-label-span">Bom</span>
+                        </label>
+
+                        <input type="radio" name="progresso" id="p5" class="react-input">
+                        <label for="p5" class="react-label">
+                            <img src="assets/images/icons/reactions/very-happy.svg" alt="Ótimo" class="react-label-img">
+                            <span class="react-label-span">Ótimo</span>
+                        </label>
+                    </div>
+                    <div class="margin-top-30px margin-bottom-30px form-row">
+                        <span class="margin-right-15px" onclick="javascript:history.back()">Cancelar</span>
+                        <div class="btn-generic">
+                            <span>Enviar</span>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>

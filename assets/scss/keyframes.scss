@@ -1,4 +1,11 @@
+@import 'mixins.scss';
+@import 'colors.scss';
 /* ANIMAÇÕES */
+@keyframes color-glow {
+    0% { color: $olivine; }
+    50% { color: $gold; }
+    100% { color: $olivine; }
+}
 @-webkit-keyframes fadeIn{
 	from { opacity: 0; }to{ opacity: 1; }
 }

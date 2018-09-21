@@ -3,8 +3,8 @@
 
 ::-webkit-scrollbar{
 	/*Estilização da scrollbar*/
-	width: 6px;
-	background: $white;
+	width: 7px;
+	background: transparent;
 }
 ::-webkit-scrollbar-thumb{
 	/*Estilização da scrollbar*/
@@ -257,8 +257,16 @@
 	position: relative;
 	.form-title{
 	    font-size: 18px;
-	    color: #000;
+	    color: $black;
 	    font-family: "Roboto Regular";
+	    padding-bottom: 15px;
+	    text-align: center;
+	}
+	.form-subtitle{
+	    font-size: 16px;
+	    color: $darkgrey;
+		font-family: "Roboto Light";
+		line-height: 21px;
 	    padding-bottom: 15px;
 	    text-align: center;
 	}

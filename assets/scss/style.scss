@@ -733,7 +733,7 @@ a{
 		@include bloco($width: 100%, $height: auto);
 		@include position(absolute, 0, 0, 0, 0);
 		@include display(flex, column, center, flex-start);
-    	background-color: rgba(0,0,0,0.1);
+    	background-color: rgba(0,0,0,0.2);
     	>h2{
 			@include texto(32px, $white, 'Roboto Bold');
     		&:after{
@@ -1072,7 +1072,6 @@ a{
 		width: 100%;
 		height: auto;
 		box-sizing: border-box;
-	    overflow: hidden;
 		border: 30px solid #FCFCFC;
 		>h3{
 			@include texto(21px, $black, 'Roboto Bold');
@@ -2300,4 +2299,95 @@ a{
     >img{
         @include img-fit(45px, 45px);
     }
+}
+
+//Diário de Bordo
+.diario-de-bordo-header{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	>h2{
+		@include texto(72px, $olivine, 'Roboto Bold', auto, center);
+		animation: color-glow 8s infinite;
+		&:after{
+			content: "";
+			display: block;
+			width: 60px;
+			height: 3px;
+			border-radius: 50px;
+			background-color: $black;
+			margin: 20px auto;
+		}
+	}
+	>p{
+		@include texto(16px, $grey, 'Roboto Regular', 23px, center);
+		width: 80%;
+		margin: 0 auto;
+	}
+}
+.react-input{
+	/*visibility: hidden;*/
+	display: none;
+}
+.react-label {
+	@include display(flex, column, center, center);
+	border: 5px solid transparent;
+	box-sizing: border-box;
+	border-radius: 5px;
+	width: auto;
+	height: auto;
+}
+.react-label-img{
+	@include img-fit(50px, 50px);
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 8px;
+}
+.react-label-span{
+	@include texto(16px, $black, 'Roboto Bold', 18px, center);
+	margin-top: 8px;
+}
+input:checked+.react-label{
+	background-color: #9CC283;
+	transition: 200ms ease-in-out;
+}
+
+//Pratos Reservados
+.prato-reservado-delete{
+	@include position(absolute, 20px, 20px, $bottom: null, $left: null);
+	@include bloco($width: 30px, $height: 30px);
+	>img{
+		@include img-fit(30px, 30px);
+	}
+}
+.prato-reservado-remaing{
+	@include texto(18px, #E8E8E8, 'Roboto Medium Italic', 28px, null);
+	@include position(absolute, $top: 20px, $left: 20px, $bottom: null, $right: null);
+}
+.dish-quantity{
+	@include texto(18px, #F7F7F7, 'Roboto Bold', 21px, null);
+	margin: 0 auto 20px auto;
+}
+
+//Termos de Uso
+.list{
+    list-style-type: decimal;
+    padding-left: 60px;
+    width: 90%;
+	>li{
+	    font-family: 'Roboto Bold';
+	}
+}
+.sublist{
+    list-style-type: decimal;
+    padding-left: 30px;
+    width: 90%;
+    font-family: 'Roboto Regular';
+	>li{
+	    padding-bottom: 15px;
+	    padding-top: 15px;
+	}
 }

@@ -1,7 +1,7 @@
 @mixin shadow($alpha){
 	box-shadow: 0px -4px 32px 16px rgba(0,0,0,$alpha);
 }
-$shadow: 10px 12px 39px -4px rgba(0,0,0,0.2);
+$shadow: 5px 5px 20px 0px rgba(0,0,0,0.2);
 
 @mixin img-fit($w, $h){
 	width: $w;
