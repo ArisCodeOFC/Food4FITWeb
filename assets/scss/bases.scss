@@ -153,7 +153,7 @@
 .generic-modal{
 	//Fundo do modal genérico
 	@include bloco(100vw, 100vw, 100vh);
-	@include position(absolute, 0, 0, 0, 0);
+	@include position(fixed, 0, 0, 0, 0);
     @include display(none, column, center, center);
     z-index: 999999;
 	box-sizing: border-box;
@@ -561,4 +561,12 @@ input[type="checkbox"].switch-styled:checked:after{
     >img{
     	@include img-fit(28px, 28px);
     }
+}
+
+.display-none {
+    display: none!important;
+}
+
+.display-flex {
+    display: flex!important;
 }
