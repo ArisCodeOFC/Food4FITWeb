@@ -2,13 +2,13 @@ $(document).ready(function() {
     var ingredientesTree = [
         {
             id: 1,
-            titulo: "Frutas para matar o Marcel",
+            titulo: "Frutas",
             imagem: "frutas.jpg",
             ingredientes: [],
             categorias: [
                 {
                     id: 4,
-                    titulo: "Frutas envenenadas",
+                    titulo: "Frutas",
                     imagem: "frutas.jpg",
                     ingredientes: [
                         {
@@ -31,7 +31,7 @@ $(document).ready(function() {
                 },
                 {
                     id: 5,
-                    titulo: "Frutas vencidas",
+                    titulo: "Frutas",
                     imagem: "frutas.jpg",
                     ingredientes: [
                         {
@@ -47,7 +47,7 @@ $(document).ready(function() {
                 },
                 {
                     id: 6,
-                    titulo: "Frutas podres",
+                    titulo: "Frutas",
                     imagem: "frutas.jpg",
                     ingredientes: [
                         {
@@ -63,7 +63,7 @@ $(document).ready(function() {
                 },
                 {
                     id: 7,
-                    titulo: "Frutas radioativas",
+                    titulo: "Frutas",
                     imagem: "frutas.jpg",
                     ingredientes: [
                         {
@@ -98,13 +98,13 @@ $(document).ready(function() {
         },
         {
             id: 2,
-            titulo: "Legumes para matar o Kassiano",
+            titulo: "Legumes",
             imagem: "legumes.jpg",
             ingredientes: [],
             categorias: [
                 {
                     id: 8,
-                    titulo: "Legumes envenenados",
+                    titulo: "Legumes",
                     imagem: "legumes.jpg",
                     ingredientes: [
                         {
@@ -127,7 +127,7 @@ $(document).ready(function() {
                 },
                 {
                     id: 9,
-                    titulo: "Legumes podres",
+                    titulo: "Legumes",
                     imagem: "legumes.jpg",
                     ingredientes: [
                         {
@@ -143,7 +143,7 @@ $(document).ready(function() {
                 },
                 {
                     id: 10,
-                    titulo: "Legumes vencidos",
+                    titulo: "Legumes",
                     imagem: "legumes.jpg",
                     ingredientes: [
                         {
@@ -159,7 +159,7 @@ $(document).ready(function() {
                 },
                 {
                     id: 11,
-                    titulo: "Legumes radioativos",
+                    titulo: "Legumes",
                     imagem: "legumes.jpg",
                     ingredientes: [
                         {
@@ -177,13 +177,13 @@ $(document).ready(function() {
         },
         {
             id: 3,
-            titulo: "Verduras para matar a Damaris",
+            titulo: "Verduras",
             imagem: "verduras.jpg",
             ingredientes: [],
             categorias: [
                 {
                     id: 12,
-                    titulo: "Verduras envenenadas",
+                    titulo: "Verduras",
                     imagem: "verduras.jpg",
                     ingredientes: [
                         {
@@ -199,7 +199,7 @@ $(document).ready(function() {
                 },
                 {
                     id: 13,
-                    titulo: "Verduras envenenadas",
+                    titulo: "Verduras",
                     imagem: "verduras.jpg",
                     ingredientes: [
                         {
@@ -215,7 +215,7 @@ $(document).ready(function() {
                 },
                 {
                     id: 14,
-                    titulo: "Verduras podres",
+                    titulo: "Verduras",
                     imagem: "verduras.jpg",
                     ingredientes: [
                         {
@@ -231,7 +231,7 @@ $(document).ready(function() {
                 },
                 {
                     id: 15,
-                    titulo: "Verduras radioativas",
+                    titulo: "Verduras",
                     imagem: "verduras.jpg",
                     ingredientes: [
                         {

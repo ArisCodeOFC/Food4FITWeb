@@ -53,7 +53,7 @@
                         <div style="width: 20%;" class="margin-left-15px">
                             <label for="anoExpiracao" class="label-generic">Ano:</label>
                             <select name="anoExpiracao" id="anoExpiracao" class="input-generic" data-card-year>
-                                <option value="" disabled selected>Ano</option>
+                                <option value="" disabled>Ano</option>
                                 <?php for ($i = $ano; $i < $ano + 15; $i++) { ?>
                                     <option value="<?= $i ?>" <?= $i == $ano ? "selected" : "" ?>><?= $i ?></option>
                                 <?php } ?>
