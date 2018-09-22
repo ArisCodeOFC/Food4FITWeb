@@ -619,6 +619,47 @@ a{
             padding: 12px;
             border-radius: 5px;
             margin: 10px auto 30px auto;
+            cursor: pointer;
+        }
+    }
+}
+.publication-comments{
+    @include bloco(100%, 100%, auto);
+    @include display(flex, column, flex-start, flex-start);
+    box-sizing: border-box;
+    border: 15px solid transparent;
+    margin-bottom: -15px;
+    .comment-row{
+        @include bloco(100%, 100%, auto);
+        background: $white;
+        box-shadow: $shadow;
+        box-sizing: border-box;
+        border: 15px solid transparent;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        >p{
+            @include texto(16px, $darkgrey, 'Roboto Regular', 24px, left);
+            width: 90%;
+            margin: 15px auto 15px 0px;
+        }
+    }
+    .comment-row>figure{
+        width: auto;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        >img{
+            @include img-fit(50px, 50x);
+            border-radius: 50%;
+        }
+        >span{
+            @include texto(18px, $black, 'Roboto Bold', 21px, left);
+            transition: 200ms ease-in-out;
+            margin-left: 15px;
+            &:hover{
+                color: $olivine;
+                cursor: pointer;
+            }
         }
     }
 }
@@ -630,8 +671,6 @@ a{
 	width: 300px;
 	height: auto;
 }
-
-
 //Login
 .login-bg{
     background: url("../images/backgrounds/steak.jpg") no-repeat center center fixed ;

@@ -44,7 +44,7 @@
         			<span class="padding-top-15px padding-bottom-15px">AGENDAR PRATO</span>
         		</div>
         	</div>
-        	<section class="generic-grid">
+        	<section class="shopping-cart-grid">
                 <?php
                     for($i = 0; $i < 5; $i++){
 

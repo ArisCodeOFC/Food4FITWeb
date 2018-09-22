@@ -371,7 +371,7 @@
     >span{
     	/*Texto do botão genérico*/
     	@include texto(16px, $white, 'Roboto Bold', 18px, center);
-    	width: 90%;
+    	max-width: 90%;
 	    margin: 0 auto;
 	    box-sizing: border-box;
 	    padding: 10px;

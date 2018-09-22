@@ -63,9 +63,38 @@
                     <img src="assets/images/backgrounds/cereal.jpg" alt="Imagem da Publicação">
                     <div>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                        <span>12 comentários</span>
+                        <span id="comentario">12 comentários</span>
                     </div>
                 </figure>
+                <div class="publication-comments hide">
+                    <div class="comment-row">
+                        <figure>
+                            <img src="assets/images/icons/person.jpg" alt="Nome do Perfil">
+                            <span>Nome do Usuário</span>
+                        </figure>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy!</p>
+                    </div>
+
+                    <div class="comment-row">
+                        <figure>
+                            <img src="assets/images/icons/person.jpg" alt="Nome do Perfil">
+                            <span>Nome do Usuário</span>
+                        </figure>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy!</p>
+                    </div>
+
+                    <div class="comment-row">
+                        <figure>
+                            <img src="assets/images/icons/person.jpg" alt="Nome do Perfil">
+                            <span>Nome do Usuário</span>
+                        </figure>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy!</p>
+                    </div>
+
+                    <div class="btn-generic margin-bottom-15px margin-right-auto margin-left-auto">
+                        <span>Carregar Mais</span>
+                    </div>
+                </div>
             </article>
             <?php
                 }

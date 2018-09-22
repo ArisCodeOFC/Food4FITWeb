@@ -34,4 +34,8 @@ $(document).ready(function(){
     $("#fechar").click(function(){
         $(".form-generic").fadeOut(200);
     });
+
+    $("#comentario").click(function() {
+        $('.publication-comments').slideToggle(50);
+    });
 });
