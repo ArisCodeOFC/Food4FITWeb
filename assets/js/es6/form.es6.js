@@ -63,7 +63,12 @@ $(document).ready(function() {
     });
 
     $("[data-f4f-form-submit]").on("click", function() {
-        $(this).closest("form").find(":submit").click();
+        let form = $(this).data("f4f-form-submit");
+        if (form) {
+            $(form).find(":submit").click();
+        } else {
+            $(this).closest("form").find(":submit").click();
+        }
     });
 
     $("[data-f4f-form-password], [data-f4f-form-password-confirm]").on("change", function() {

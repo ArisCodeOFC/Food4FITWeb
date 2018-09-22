@@ -17,30 +17,39 @@
     <link rel="stylesheet" href="assets/css/keyframes.css">
     <link rel="stylesheet" href="assets/css/mobile.css">
 	<script src="assets/public/js/jquery-3.3.1.min.js"></script>
+	<script src="assets/public/js/jquery.mask.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
+	<script src="assets/js/form.js"></script>
 </head>
 <body>
 	<?php require_once("components/navbar.html"); ?><!-- BARRA DE NAVEGAÇÃO VIA PHP -->
 	<section class="main"><!-- CONTAINER-MÃE DO SITE -->
-        <h2 id='page-title' class="margin-left-auto margin-right-auto">ENTRE EM CONTATO</h2>
+        <h2 id="page-title" class="margin-left-auto margin-right-auto">ENTRE EM CONTATO</h2>
         <div class="form-generic width-750px margin-left-auto margin-right-auto margin-top-30px">
-            <form class="form-generic-content" action="#" method="POST" name="frmcontact">
+            <form class="form-generic-content" id="form-contato">
                 <label for="nome" class="label-generic">Nome:</label>
-                <input id="nome" name="nome" class="input-generic" placeholder="Digite o seu nome...">
+                <input type="text" id="nome" name="nome" class="input-generic" placeholder="Digite o seu nome..." required>
+
                 <label for="sobrenome" class="label-generic">Sobrenome:</label>
-                <input id="sobrenome" name="sobrenome" class="input-generic" placeholder="Digite o seu sobrenome...">
+                <input type="text" id="sobrenome" name="sobrenome" class="input-generic" placeholder="Digite o seu sobrenome..." required>
+
                 <label for="email" class="label-generic">E-mail:</label>
-                <input id="email" name="email" class="input-generic" placeholder="Ex: endereco@provedor.com">
+                <input type="email" id="email" name="email" class="input-generic" placeholder="Ex: endereco@provedor.com" required>
+
                 <label for="telefone" class="label-generic">Telefone:</label>
-                <input id="telefone" name="telefone" class="input-generic" placeholder="Fixo">
+                <input type="tel" id="telefone" name="telefone" class="input-generic" placeholder="Fixo" data-mask="(00) 0000-0000" pattern="\(\d{2}\)\s\d{4}-\d{4}">
+
                 <label for="celular" class="label-generic">Celular:</label>
-                <input id="celular" name="celular" class="input-generic" placeholder="(DDD) 98888-8888">
+                <input type="text" id="celular" name="celular" class="input-generic" placeholder="(11) 98888-8888" required data-mask="(00) 00000-0000" pattern="\(\d{2}\)\s\d{5}-\d{4}">
+
                 <label for="assunto" class="label-generic">Assunto:</label>
-                <input id="assunto" name="assunto" class="input-generic" placeholder="Sobre o que é esta mensagem?">
+                <input type="text" id="assunto" name="assunto" class="input-generic" placeholder="Sobre o que é esta mensagem?" required>
+
                 <label for="comentario" class="label-generic">O que deseja nos dizer?</label>
-                <textarea id="comentario" name="comentario" class="textarea-generic"></textarea>
+                <textarea id="comentario" name="comentario" class="textarea-generic" required></textarea>
+                <input type="submit" class="display-none">
             </form>
-            <div class='btn-generic margin-bottom-30px'>
+            <div class="btn-generic margin-bottom-30px" data-f4f-form-submit="#form-contato">
                 <span>Enviar</span>
             </div>
         </div>

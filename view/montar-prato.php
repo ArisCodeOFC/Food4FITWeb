@@ -29,33 +29,35 @@
     <section class="main">
         <h2 id="page-title" class="animate fadeInUp">MONTE SEU PRATO</h2>
         <p id="page-subtitle">Monte o seu prato de acordo com as<br>suas necessidades, e deixa<br>que a gente prepara tudo para você!</p>
-        <div id="monte-seu-prato-container" class="clearfix animate fadeInUp margin-top-30px margin-bottom-30px">
-            <div id="ingredientes-categorias" class="sem-ingredientes clearfix">
-                <div id="breadcrumb">
-                    <span>
-                        <a href="#">Início</a>
-                    </span>
+        <div id="montar-prato">
+            <div id="monte-seu-prato-container" class="animate fadeInUp margin-top-30px margin-bottom-30px">
+                <div id="ingredientes-categorias" class="sem-ingredientes">
+                    <div id="breadcrumb">
+                        <span>
+                            <a href="#">Início</a>
+                        </span>
+                    </div>
+                    <p id="categoria-vazia">Esta categoria não possui nenhum ingrediente ou subcategoria.</p>
+                    <section id="categorias">
+                        <h2>Categorias</h2>
+                        <div id="lista-categorias" class="dragscroll"></div>
+                    </section>
+                    <section id="ingredientes">
+                        <h2>Ingredientes</h2>
+                        <div id="lista-ingredientes"></div>
+                    </section>
                 </div>
-                <p id="categoria-vazia">Esta categoria não possui nenhum ingrediente ou subcategoria.</p>
-                <section id="categorias" class="clearfix">
-                    <h2>Categorias</h2>
-                    <div id="lista-categorias" class="clearfix dragscroll"></div>
-                </section>
-                <section id="ingredientes" class="clearfix">
-                    <h2>Ingredientes</h2>
-                    <div id="lista-ingredientes" class="clearfix"></div>
-                </section>
+                <div id="meus-ingredientes">
+                    <div class="bar">
+                        <span class="bar-span padding-top-15px padding-bottom-15px">Meu Prato</span>
+                    </div>
+                </div>
             </div>
-            <div id="meus-ingredientes" class="clearfix">
-                <div class="bar">
-                    <span class="bar-span padding-top-15px padding-bottom-15px">Tabela Nutricial</span>
-                </div>
+            <div class="btn-generic animate fadeInUp margin-left-auto margin-right-auto" id="btn-processar">
+                <span>Processar</span>
             </div>
         </div>
-        <div class="btn-generic animate fadeInUp margin-left-auto margin-right-auto" id="show">
-            <span>Processar</span>
-        </div>
-        <div class="dish-form">
+        <div class="dish-form display-none margin-left-auto margin-right-auto" id="informacoes-adicionais">
             <section style="display: flex; width: 100%; height: auto; flex-direction: column; justify-content: center; align-items: center;">
                 <h2 style="font-size: 18px; color: #000; padding: 30px; padding-bottom: 0px; text-align: center; font-family: 'Roboto Bold';">INFORMAÇÕES ADICIONAIS</h2>
                 <div style="width: 30px; height: 3px; margin: auto; background: black; border-radius: 50px; margin-top: 8px;"></div>

@@ -866,38 +866,77 @@ a{
 	}
 }
 
-
 //Montar Prato
-.clearfix{
-	&:after{
-    	content: "";
-    	display: block;
-    	clear: both;
-    }
+#montar-prato {
+    @include bloco($width: 100%, $height: auto);
 }
 
 #monte-seu-prato-container {
-	@include bloco($width: 100%, $height: auto);
-    box-sizing: border-box;
+	@include bloco($width: 100%, $height: auto, $minheight: 800px);
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
 }
 
 #ingredientes-categorias {
-	@include bloco(100%, 360px, 100%);
-    float: left;
+	@include bloco(100%, 360px, auto);
     background-color: $olivine;
     overflow: auto;
+
+    #categorias, #ingredientes {
+        margin: 0 auto 20px auto;
+        width: 320px;
+    }
+
+    #categorias h2, #ingredientes h2 {
+        @include texto(21px, $white, "Roboto Bold", 23px, null);
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    &.sem-ingredientes #lista-categorias {
+        overflow-x: visible;
+        white-space: normal;
+    }
+
+    &.sem-ingredientes #ingredientes {
+        display: none;
+    }
+
+    &.sem-categorias #categorias {
+        display: none;
+    }
+
+    &.sem-ingredientes.sem-categorias #categoria-vazia {
+        display: block;
+    }
+
+    &.sem-ingredientes .categoria {
+        margin-left: 0;
+    }
+
+    &.sem-ingredientes .categoria:nth-child(2n) {
+        margin-left: 10px;
+    }
+
+    &.sem-ingredientes .categoria:nth-child(n+3) {
+        margin-top: 10px;
+    }
 }
 
-#categorias, #ingredientes {
-    margin: 0 auto 20px auto;
-    width: 320px;
-}
+#meus-ingredientes {
+	@include bloco($width: 100%, $height: auto);
+    min-height: 424px;
+    background-color: #E8E8E8;
+    overflow-y: auto;
 
-#categorias h2,#ingredientes h2{
-	@include texto(21px, $white, 'Roboto Bold', 23px, null);
-    margin-bottom: 10px;
-    margin-top: 10px;
-    box-sizing: border-box;
+    .ingrediente {
+    	margin: 10px 0 0 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #fff;
+    }
 }
 
 #lista-categorias {
@@ -905,13 +944,18 @@ a{
     white-space: nowrap;
     font-size: 0;
     padding-bottom: 5px;
+
+    &::-webkit-scrollbar {
+        height: 5px;
+        background-color: #ddd;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #fff;
+    }
 }
 
-#lista-categorias::-webkit-scrollbar {
-    height: 5px;
-}
-
-.categoria{
+.categoria {
 	@include bloco($width: 155px, $height: 155px);
     border-radius: 5px;
     overflow: hidden;
@@ -921,8 +965,17 @@ a{
     margin-left: 10px;
     cursor: pointer;
     animation: fadeIn 200ms linear;
+
+	&:first-of-type {
+    	margin: 0;
+    }
+
+    >img {
+		@include img-fit(100%, 100%);
+    }
 }
-.ingrediente{
+
+.ingrediente {
 	@include bloco($width: 155px, $height: 155px);
     width: 155px;
     height: 155px;
@@ -933,76 +986,50 @@ a{
     display: inline-block;
     cursor: pointer;
     animation: fadeIn 200ms linear;
-}
-.categoria{
-	&:first-of-type {
-    	margin: 0;
+
+    img {
+        @include img-fit(100%, 100%);
     }
-    >img{
-		@include img-fit(100%, 100%);
-    }
-}
-.ingrediente img {
-    @include img-fit(100%, 100%);
-}
-.categoria, .ingrediente{
-	.titulo{
-		@include bloco($width: 100%, $height: 100%);
-	    @include position(absolute, 0, false, false, 0);
-	    background-color: rgba(0, 0, 0, 0.25);
-	    @include display(flex, row, center, center);
-	    text-align: center;
-	    box-sizing: border-box;
-	    overflow: hidden;
-	    padding: 10px;
-	    >h3{
-	    	@include texto(22px, $white, 'Roboto Bold');
-	    	white-space: normal;
-	    }
-	}
-}
-.ingrediente{
+
 	&:nth-child(2n) {
     	margin-left: 10px;
     }
+
     &:nth-child(n+3) {
 	    margin-top: 10px;
 	}
 }
 
-#ingredientes-categorias.sem-ingredientes #lista-categorias {
-    overflow-x: visible;
-    white-space: normal;
+.categoria, .ingrediente {
+	.titulo {
+		@include bloco($width: 100%, $height: 100%);
+	    @include position(absolute, 0, false, false, 0);
+	    background-color: rgba(0, 0, 0, 0.25);
+	    @include display(flex, column, center, center);
+	    box-sizing: border-box;
+	    overflow: hidden;
+	    padding: 10px;
+
+	    >h3 {
+	    	@include texto(22px, $white, "Roboto Bold");
+	        text-align: center;
+	    	white-space: normal;
+	    }
+
+        >h4 {
+            @include texto(15px, #eee, "Roboto Regular");
+	        text-align: center;
+	    	white-space: normal;
+        }
+	}
 }
 
-#ingredientes-categorias.sem-ingredientes #ingredientes {
-    display: none;
-}
-
-#ingredientes-categorias.sem-categorias #categorias {
-    display: none;
-}
-
-#ingredientes-categorias.sem-ingredientes.sem-categorias #categoria-vazia {
-    display: block;
-}
-
-#ingredientes-categorias.sem-ingredientes .categoria {
-    margin-left: 0;
-}
-
-#ingredientes-categorias.sem-ingredientes .categoria:nth-child(2n) {
-    margin-left: 10px;
-}
-
-#ingredientes-categorias.sem-ingredientes .categoria:nth-child(n+3) {
-    margin-top: 10px;
-}
-#categoria-vazia{
-	@include texto(24px, $white, 'Roboto Regular', null, center);
+#categoria-vazia {
+	@include texto(24px, $white, "Roboto Regular", 25px, center);
     padding: 10px;
-    box-sizing: border-box;
+    display: none;
 }
+
 #breadcrumb {
     white-space: nowrap;
     overflow: hidden;
@@ -1015,15 +1042,17 @@ a{
     background-color: inherit;
     min-height: 30px;
     font-family: "Roboto Bold";
-    >span{
+
+    >span {
     	min-width: 100%;
 	    position: relative;
 	    display: inline-block;
 	    float: right;
 	    overflow: visible;
 	    background-color: inherit;
-	    text-indent: 0.5em;
-	    &:before{
+	    text-indent: 0.7em;
+
+	    &:before {
 	    	content: "";
 		    @include bloco($width: 1em, $height: 1em);
 		    @include display($display: inline-block);
@@ -1031,58 +1060,43 @@ a{
 		    background-color: inherit;
 		    z-index: 200;
 	    }
+
+        >a {
+            @include texto(null, #F2F2F2, "Roboto Bold Italic");
+            display: initial;
+            &:after {
+                content: ">";
+                margin: 0 5px;
+            }
+
+            &:last-of-type::after {
+                display: none;
+            }
+        }
     }
-    >a{
-    	@include texto(null, #F2F2F2, 'Roboto Bold Italic');
-	    &:after{
-	    	content: ">";
-    		margin: 0 5px;
-	    }
-	    &:last-of-type::after{
-	    	display: none;
-	    }
-    }
+
 	&:before {
 	    content: "\02026";
 	    @include position(absolute, false, false, false, -1em);
 	    z-index: 1;
 	    background-color: inherit;
 	    padding-left: 1em;
-	    margin-left: 0.5em;
+	    margin-left: 0.7em;
 	    color: $white;
 	}
 }
-.bar{
+
+.bar {
 	@include bloco($width: 100%, $height: auto);
 	@include display(flex, row, center, center);
-    >a{
-    	@include texto(14px, #3F3F3F, 'Roboto Bold');
+    >a {
+    	@include texto(14px, #3F3F3F, "Roboto Bold");
 	    text-transform: uppercase;
 	    transition: 200ms ease-in-out;
-    	&:hover{
+    	&:hover {
     		color: $black;
     	}
     }
-}
-#meus-ingredientes {
-	@include bloco($width: calc(100% - 360px), $height: 100%);
-    min-height: 424px;
-    float: left;
-    background-color: #E8E8E8;
-    overflow-y: auto;
-    .ingrediente{
-    	margin: 10px 0 0 10px;
-    }
-}
-
-#meus-ingredientes::-webkit-scrollbar-thumb {
-    background-color: #fff;
-}
-#lista-categorias::-webkit-scrollbar {
-    background-color: #ddd;
-}
-#lista-categorias::-webkit-scrollbar-thumb {
-    background-color: #fff;
 }
 
 //Perfil
