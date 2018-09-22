@@ -7,7 +7,7 @@
 	<meta name="theme-color" content="#9CC283">
     <meta name="msapplication-navbutton-color" content="#9CC283">
     <meta name="apple-mobile-web-app-status-bar-style" content="#9CC283">
-	<title>Food 4Fit</title>
+	<title>Meus Favoritos</title>
 	<link rel="icon" type="image/png" href="assets/images/icons/favicon.png"/>
 	<link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/bases.css">
@@ -41,7 +41,7 @@
                             <div><img src="assets/images/simbols/delivery-truck.svg" alt="Compra Rápida"></div><!-- COMPRA RAPIDA -->
                         </div>
                         <figure class="estrela-favoritos">
-                            <img src="assets/images/icons/star.svg">
+                            <img src="assets/images/icons/star.svg" alt="Favorito">
                         </figure>
                     </div>
                 </div>

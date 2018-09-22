@@ -51,7 +51,7 @@
             <?php
                 for($i = 1; $i < 8; $i++){
             ?>
-            <article class="publication margin-bottom-30px">
+            <div class="publication margin-bottom-30px">
                 <header class="publication-header">
                     <img src="assets/images/icons/person.jpg" alt="" class="profile-image-pub">
                     <section class="profile-name-date-pub">
@@ -95,7 +95,7 @@
                         <span>Carregar Mais</span>
                     </div>
                 </div>
-            </article>
+            </div>
             <?php
                 }
             ?>

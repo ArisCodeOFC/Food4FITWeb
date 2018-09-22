@@ -21,8 +21,8 @@
 <body>
 	<?php require_once("components/navbar.html"); ?><!-- BARRA DE NAVEGAÇÃO VIA PHP -->
 	<section class="main"><!-- CONTAINER-MÃE DO SITE -->
-        <h2 id="page-title">TERMOS DE USO</h2>
-        <article class="generic-block padding-top-30px">
+        <h2 id="page-title">POLÍTICAS DE PRIVACIDADE</h2>
+        <div class="generic-block padding-top-30px">
             <ul class="list">
                 <li class="padding-bottom-30px">Informações para identificação pessoal
                     <ul class="sublist">
@@ -73,7 +73,7 @@
                 </li>
             </ul>
             <span class="padding-left-30px padding-bottom-30px"><b>Data:</b> 14 de setembro de 2018</span>
-        </article>
+        </div>
 	</section>
 	<?php require_once("components/footer.html"); ?><!-- RODAPÉ VIA PHP -->
 </body>

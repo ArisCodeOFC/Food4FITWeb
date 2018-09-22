@@ -36,10 +36,10 @@
 		            <span>Remover Imagem</span>
 		        </div>
 		    </div>
-		    <article class="form-generic margin-right-auto margin-left-auto width-600px" style="box-sizing: border-box; background-color: #F1F1F1; border: 30px solid transparent">
+		    <div class="form-generic margin-right-auto margin-left-auto width-600px" style="box-sizing: border-box; background-color: #F1F1F1; border: 30px solid transparent">
 		        <form action="#" class="form-generic-content">
                     <span style="display: block; font-size: 18px; font-family: 'Roboto Regular'; color: #000;" class="margin-top-30px margin-bottom-15px">Eu sou...</span>
-                    <div id="sexo" class="padding-bottom-15px" style="display: flex;">
+                    <div id="tipo-pessoa" class="padding-bottom-15px" style="display: flex;">
                         <input type="radio" name="pessoa" id="fisica" value="F" required>
                         <label for="fisica" class="label-generic">Pessoa Física</label>
                         <input type="radio" name="pessoa" id="juridica" value="J" required class="margin-left-15px">
@@ -65,20 +65,20 @@
                         <label for="mulher" class="label-generic">Mulher</label>
                     </div>
                     <label for="telefone" class="label-generic">Telefone</label>
-		            <input type="text" class="input-generic">
+		            <input id="telefone" type="text" class="input-generic">
 		            <!-- ===================== -->
 		            <label for="celular" class="label-generic">Celular</label>
-		            <input type="text" class="input-generic">
+		            <input id="celular" type="text" class="input-generic">
 		            <span class="aviso-contato margin-bottom-20px">Caso necessário o contato através de e-mail ou<br>
                     telefone/celular, usaremos o seu nome escolhido como vulgo.</span>
 		            <!-- ===================== -->
-		            <label for="" class="label-generic">Pergunta Secreta</label>
-		            <select class="input-generic">
+		            <label for="pergunta-secreta" class="label-generic">Pergunta Secreta</label>
+		            <select id="pergunta-secreta" class="input-generic">
 		                <option selected>Pergunta Selecionada</option>
 		            </select>
 		            <!-- ===================== -->
-		            <label for="" class="label-generic">Resposta:</label>
-		            <input type="text" class="input-generic" value="Resposta Escolhida">
+		            <label for="resposta-secreta" class="label-generic">Resposta:</label>
+		            <input id="resposta-secreta" type="text" class="input-generic" value="Resposta Escolhida">
 		            <!-- ===================== -->
 		            <div class="margin-top-30px margin-bottom-30px form-row">
                         <span class="margin-right-15px" onclick="javascript:history.back()">Cancelar</span>
@@ -87,7 +87,7 @@
                         </div>
                     </div>
 		        </form>
-		    </article>
+		    </div>
 		</div>
 	</section>
 	<?php require_once("components/footer.html"); ?>
