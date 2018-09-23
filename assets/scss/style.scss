@@ -87,11 +87,12 @@ a{
 
 //Carrinho
 .modal{
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100vh;
     top: 0;
     left: 0;
+    z-index: 999999;
     background: rgba(0,0,0,0.5);
     display: none;
     /*O display deverá ser flex a partir do momento que a modal ficar visivvel*/
@@ -724,7 +725,7 @@ a{
     position: relative;
 	z-index: 1;
 	.title-login{
-		@include texto(58px, $white, 'Roboto Bold');
+		@include texto(58px, $white, 'Roboto Bold', unset);
 	    @include position(absolute, 30px, false, false, 15px);
 	}
 	.subtitle-login{
@@ -748,10 +749,10 @@ a{
 	>span{
 		@include texto(18px, $white, 'Roboto Medium');
 	}
-	.facebook{
+	&.facebook{
 		background-color: #3b5998;
 	}
-	.google{
+	&.google{
 		background-color: #dc4a3d;
 	}
 }
@@ -1084,6 +1085,13 @@ a{
 	    margin-left: 0.7em;
 	    color: $white;
 	}
+
+    &.product-view {
+        padding: 20px 20px 0 20px;
+        >span>a {
+            color: $black;
+        }
+    }
 }
 
 .bar {

@@ -19,11 +19,11 @@
 	<script src="assets/public/js/jquery-3.3.1.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 </head>
-<body>
+<body class=" login-bg">
     <section class="main-login">
         <h2 class="title-login">FOOD<br>4FIT</h2>
         <h3 class="subtitle-login">COMIDA FITNESS</h3>
-        <div class="form-generic width-small margin-left-auto margin-right-auto">
+        <div class="form-generic width-400px margin-left-auto margin-right-auto">
             <form class="form-generic-content">
                 <label for="login" class="label-generic margin-top-30px" style="color: #fff;">Login:</label>
                 <input type="text" name="login" id="login" class="input-generic">

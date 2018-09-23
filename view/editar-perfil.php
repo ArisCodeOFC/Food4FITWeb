@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="assets/css/keyframes.css">
     <link rel="stylesheet" href="assets/css/mobile.css">
 	<script src="assets/public/js/jquery-3.3.1.min.js"></script>
+	<script src="assets/public/js/jquery.mask.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 </head>
 <body>
@@ -38,13 +39,6 @@
 		    </div>
 		    <div class="form-generic margin-right-auto margin-left-auto width-600px" style="box-sizing: border-box; background-color: #F1F1F1; border: 30px solid transparent">
 		        <form action="#" class="form-generic-content">
-                    <span style="display: block; font-size: 18px; font-family: 'Roboto Regular'; color: #000;" class="margin-top-30px margin-bottom-15px">Eu sou...</span>
-                    <div id="tipo-pessoa" class="padding-bottom-15px" style="display: flex;">
-                        <input type="radio" name="pessoa" id="fisica" value="F" required>
-                        <label for="fisica" class="label-generic">Pessoa Física</label>
-                        <input type="radio" name="pessoa" id="juridica" value="J" required class="margin-left-15px">
-                        <label for="juridica" class="label-generic">Pessoa Jurídica</label>
-                    </div>
 		            <label for="nome" class="label-generic">Nome/Nome Fantasia</label>
 		            <input type="text" name="nome" class="input-generic" id="nome" value="João">
 		            <!-- ===================== -->
@@ -65,10 +59,10 @@
                         <label for="mulher" class="label-generic">Mulher</label>
                     </div>
                     <label for="telefone" class="label-generic">Telefone</label>
-		            <input id="telefone" type="text" class="input-generic">
+		            <input id="telefone" type="text" class="input-generic" data-mask="(00) 0000-0000" pattern="\(\d{2}\)\s\d{4}-\d{4}">
 		            <!-- ===================== -->
 		            <label for="celular" class="label-generic">Celular</label>
-		            <input id="celular" type="text" class="input-generic">
+		            <input id="celular" type="text" class="input-generic" data-mask="(00) 0000-0000" pattern="\(\d{2}\)\s\d{5}-\d{4}">
 		            <span class="aviso-contato margin-bottom-20px">Caso necessário o contato através de e-mail ou<br>
                     telefone/celular, usaremos o seu nome escolhido como vulgo.</span>
 		            <!-- ===================== -->

@@ -232,7 +232,7 @@
 			     -o-transform: scale(1.05);
 			        transform: scale(1.05);
 	    }
-	    .confirm{
+	    &.confirm{
 			background-color: #9CC283;
 			>span{
 				@include titulo(18px, $white, 'Roboto Bold', false, center);
@@ -241,7 +241,7 @@
 				box-sizing: border-box;
 			}
 		}
-		.cancel{
+		&.cancel{
 			background-color: #282828;
 			>span{
 				@include titulo(18px, $grey, 'Roboto Medium Italic', false, center);

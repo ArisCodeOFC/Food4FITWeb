@@ -110,11 +110,12 @@ a {
 }
 
 .modal {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100vh;
   top: 0;
   left: 0;
+  z-index: 999999;
   background: rgba(0, 0, 0, 0.5);
   display: none;
   /*O display deverá ser flex a partir do momento que a modal ficar visivvel*/
@@ -1215,7 +1216,7 @@ a {
   font-size: 58px;
   color: #FFFFFF;
   font-family: "Roboto Bold";
-  line-height: 21px;
+  line-height: unset;
   text-align: left;
   display: block;
   text-decoration: none;
@@ -1268,11 +1269,11 @@ a {
   text-decoration: none;
 }
 
-.social-login-button .facebook {
+.social-login-button.facebook {
   background-color: #3b5998;
 }
 
-.social-login-button .google {
+.social-login-button.google {
   background-color: #dc4a3d;
 }
 
@@ -1829,6 +1830,14 @@ a {
   padding-left: 1em;
   margin-left: 0.7em;
   color: #FFFFFF;
+}
+
+#breadcrumb.product-view {
+  padding: 20px 20px 0 20px;
+}
+
+#breadcrumb.product-view > span > a {
+  color: #000000;
 }
 
 .bar {

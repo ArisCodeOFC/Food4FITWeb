@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="assets/css/keyframes.css">
     <link rel="stylesheet" href="assets/css/mobile.css">
 	<script src="assets/public/js/jquery-3.3.1.min.js"></script>
+	<script src="assets/public/js/jquery.mask.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 </head>
 <body>
@@ -59,7 +60,7 @@
 		            <input type="text" name="complemento" id="complemento" placeholder="Ex: Próximo a X lugar" class="input-generic">
 
 		            <label for="cep" class="label-generic">CEP:</label>
-		            <input type="text" name="cep" id="cep" placeholder="Ex: 01234-567" class="input-generic">
+		            <input type="text" name="cep" id="cep" placeholder="Ex: 01234-567" class="input-generic"  data-mask="00000-000" pattern="\d{5}-\d{3}">
 
 		            <label for="cidade" class="label-generic">Cidade:</label>
 		            <select name="cidade" id="cidade" class="input-generic">

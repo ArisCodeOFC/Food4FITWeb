@@ -18,7 +18,6 @@
 	<script src="assets/public/js/jquery-3.3.1.min.js"></script>
 	<script src="assets/public/js/responsiveslides.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
-	<script src="assets/js/slider.js"></script>
 </head>
 <body>
 	<?php require_once("components/navbar.html"); ?>

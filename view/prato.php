@@ -17,15 +17,23 @@
     <link rel="stylesheet" href="assets/css/keyframes.css">
     <link rel="stylesheet" href="assets/css/mobile.css">
 	<script src="assets/public/js/jquery-3.3.1.min.js"></script>
+	<script src="assets/public/js/jquery.elevatezoom-3.0.8.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 </head>
 <body>
 	<?php require_once("components/navbar.html") ?><!-- BARRA DE NAVEGAÇÃO VIA PHP -->
     <div class="main">
+        <div id="breadcrumb" class="product-view">
+            <span>
+                <a href="#">Pratos para ganhar massa</a>
+                <a href="#">Pratos brasileiros</a>
+                <a href="#">Pratos nordestinos</a>
+            </span>
+        </div>
         <div id="product-view-block">
-            <figure id="product-view-image-container">
-                <img src="assets/images/dishs/img1.jpg" alt="Nome do Prato" id="product-view-image">
-                <div id="product-view-image-carrousel">
+            <figure id="product-view-image-container" data-f4f-image-gallery>
+                <img src="assets/images/dishs/img1.jpg" data-zoom-image="assets/images/dishs/img1.jpg" alt="Nome do Prato" id="product-view-image" data-f4f-main-image>
+                <div id="product-view-image-carrousel" data-f4f-image-list>
                     <div class="next-image" style="border-bottom-left-radius: 10px;">
                         <img src="assets/images/dishs/img1.jpg" alt="Mais Imagens">
                     </div>

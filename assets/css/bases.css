@@ -348,11 +348,11 @@
   transform: scale(1.05);
 }
 
-.generic-modal .btn-generic-modal .confirm {
+.generic-modal .btn-generic-modal.confirm {
   background-color: #9CC283;
 }
 
-.generic-modal .btn-generic-modal .confirm > span {
+.generic-modal .btn-generic-modal.confirm > span {
   font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
   font-size: 18px;
   color: #FFFFFF;
@@ -366,11 +366,11 @@
   box-sizing: border-box;
 }
 
-.generic-modal .btn-generic-modal .cancel {
+.generic-modal .btn-generic-modal.cancel {
   background-color: #282828;
 }
 
-.generic-modal .btn-generic-modal .cancel > span {
+.generic-modal .btn-generic-modal.cancel > span {
   font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
   font-size: 18px;
   color: #7F7F7F;

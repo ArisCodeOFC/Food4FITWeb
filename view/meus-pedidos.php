@@ -45,39 +45,37 @@
         		</div>
         	</div>
         	<section class="shopping-cart-grid">
-                <?php
-                    for($i = 0; $i < 5; $i++){
-
-                ?>
-        		<div class="shopping-cart-row">
-	        		<div class="shopping-cart-column">
-	        			<figure class="shopping-cart-image-container">
-	        				<img src="assets/images/dishs/img1.jpg" alt="Nome do Prato">
-	        			</figure>
-	        		</div>
-	        		<div class="shopping-cart-column">
-	        			<h2 class="padding-bottom-5px">Nome do Prato</h2>
-	        			<h3 class="padding-bottom-15px">Categoria: Nome da Categoria</h3>
-	        		</div>
-	        		<div class="shopping-cart-column align-x">
-	        			<span id="shopping-cart-price">R$ 000,00</span>
-	        		</div>
-	        		<div class="shopping-cart-column align-x">
-	        			<div class="input-group input-number-group">
-				            <span>1</span>
-						</div>
-	        		</div>
-	        		<div class="shopping-cart-column align-x">
-	        			<span id="shopping-cart-price-total">R$ 000,00</span>
-	        		</div>
-                    <div class="shopping-cart-column align-x" style="align-items: center;">
-						<div class="switch_box">
-							<input type="checkbox" name="chkdish" class="switch-styled">
-						</div>
+                <?php for ($i = 0; $i < 5; $i++) { ?>
+                    <div class="shopping-cart-row">
+                        <div class="shopping-cart-column">
+                            <figure class="shopping-cart-image-container">
+                                <img src="assets/images/dishs/img1.jpg" alt="Nome do Prato">
+                            </figure>
+                        </div>
+                        <div class="shopping-cart-column">
+                            <h2 class="padding-bottom-5px">Nome do Prato</h2>
+                            <h3 class="padding-bottom-15px">Categoria: Nome da Categoria</h3>
+                        </div>
+                        <div class="shopping-cart-column align-x">
+                            <span id="shopping-cart-price">R$ 000,00</span>
+                        </div>
+                        <div class="shopping-cart-column align-x">
+                            <div class="input-group input-number-group">
+                                <span>1</span>
+                            </div>
+                        </div>
+                        <div class="shopping-cart-column align-x">
+                            <span id="shopping-cart-price-total">R$ 000,00</span>
+                        </div>
+                        <div class="shopping-cart-column align-x" style="align-items: center;">
+                            <div class="switch_box">
+                                <input type="checkbox" name="chkdish" class="switch-styled" data-f4f-chk-reserve>
+                            </div>
+                        </div>
                     </div>
-	        	</div>
-	        	<?php } include('form-agendar-prato.php'); ?>
+	        	<?php } ?>
         	</section>
+        	<?php require_once("form-agendar-prato.php"); ?>
         </div>
 	</section>
 	<?php require_once("components/footer.html"); ?><!-- RODAPÉ VIA PHP -->
