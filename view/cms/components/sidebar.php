@@ -10,7 +10,7 @@
         <div id="avatar" data-siglas="<?= $funcionario->getIniciaisNome(); ?>"></div>
         <div id="informacoes">
             <div id="informacoes-content">
-                <span id="nome"><?= $funcionario->nome ?></span>
+                <span id="nome"><?= $funcionario->nome ?> <?= $funcionario->sobrenome ?></span>
                 <span id="email"><?= $funcionario->email ?></span>
                 <a href="#" id="dropdown"></a>
             </div>
@@ -30,17 +30,21 @@
             <span class="image"><img src="../assets/images/cms/icons/pratos.svg" alt="Pratos"></span>
             <span class="label">Pratos</span>
         </a>
-        <a href="#">
+        <a href="#" data-page-load="ingredientes" data-page-controller="IngredienteController">
             <span class="image"><img src="../assets/images/cms/icons/ingredientes.svg" alt="Ingredientes"></span>
             <span class="label">Ingredientes</span>
         </a>
         <a href="#">
-            <span class="image"><img src="../assets/images/cms/icons/publicacoes.svg" alt="Publicações"></span>
-            <span class="label">Publicações</span>
+            <span class="image"><img src="../assets/images/cms/icons/categorias.svg" alt="Categorias de Pratos"></span>
+            <span class="label">Categorias de Pratos</span>
+        </a>
+        <a href="#" data-page-load="categorias-ingredientes" data-page-controller="CategoriaIngredienteController">
+            <span class="image"><img src="../assets/images/cms/icons/categorias.svg" alt="Categorias de Ingredientes"></span>
+            <span class="label">Categorias de Ingredientes</span>
         </a>
         <a href="#">
-            <span class="image"><img src="../assets/images/cms/icons/armario.svg" alt="Armário"></span>
-            <span class="label">Armário</span>
+            <span class="image"><img src="../assets/images/cms/icons/marketing.svg" alt="Marketing"></span>
+            <span class="label">Marketing p/ E-Mail</span>
         </a>
         <a href="#">
             <span class="image"><img src="../assets/images/cms/icons/clientes.svg" alt="Clientes"></span>

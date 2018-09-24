@@ -18,7 +18,8 @@
 	    <link rel="stylesheet" href="../assets/css/font-style.css">
         <link rel="stylesheet" href="../assets/css/cms/main.css">
 	    <script src="../assets/public/js/jquery-3.3.1.min.js"></script>
-	    <script src="../asset/publics/js/jquery.toast.min.js"></script>
+	    <script src="../assets/public/js/jquery.toast.min.js"></script>
+	    <script src="../assets/js/util.js"></script>
 	    <script src="../assets/js/cms/main.js"></script>
 	    <script src="../assets/js/cms/login.controller.js"></script>
     </head>

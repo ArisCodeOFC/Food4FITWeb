@@ -5,11 +5,11 @@
         public static function listar() {
             $itens = array();
             $conn = Database::getConnection();
-            $stmt = $conn->prepare("SELECT * FROM tbl_sobre_empresa");
+            $stmt = $conn->prepare("SELECT * FROM tbl_sobre_empresa ORDER BY id DESC");
 
             if ($stmt->execute()) {
                 while ($rs = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                    $itens[] = new ItemSobreNos($rs);
+                    $itens[] = new ItemSobreNos(Model::convertArray($rs));
                 }
             }
 
@@ -25,7 +25,7 @@
             $item = null;
             if ($stmt->execute()) {
                 if ($rs = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                    $item = new ItemSobreNos($rs);
+                    $item = new ItemSobreNos(Model::convertArray($rs));
                 }
             }
 
@@ -40,7 +40,6 @@
             $stmt->bindValue(2, $item->getTexto());
             $stmt->bindValue(3, $item->getFoto());
 
-            $resultado = null;
             if ($stmt->execute()) {
                 $item->setId($conn->lastInsertId());
             }

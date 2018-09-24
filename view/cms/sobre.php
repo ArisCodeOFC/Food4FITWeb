@@ -40,18 +40,18 @@
         <div class="active" id="container-listagem">
             <div id="tabela-items" data-crud-list>
                 <div class="linha">
-                    <div class="coluna">Imagem</div>
-                    <div class="coluna titulo">Título</div>
-                    <div class="coluna descricao">Descrição</div>
+                    <div class="coluna image-large">Imagem</div>
+                    <div class="coluna middle-align medium">Título</div>
+                    <div class="coluna descricao large">Descrição</div>
                     <div class="coluna">Opções</div>
                 </div>
                 <?php foreach ($itens as $item) { ?>
                     <div class="linha" data-param-id="<?= $item->getId() ?>">
-                        <div class="coluna">
+                        <div class="coluna image-large">
                             <img src="../<?= $item->getFoto() ?>" alt="<?= $item->getTitulo() ?>">
                         </div>
-                        <div class="coluna titulo"><span><?= $item->getTitulo() ?></span></div>
-                        <div class="coluna descricao">
+                        <div class="coluna middle-align medium"><span><?= $item->getTitulo() ?></span></div>
+                        <div class="coluna descricao large">
                             <div>
                                 <?= strip_tags($item->getTexto()) ?>
                             </div>

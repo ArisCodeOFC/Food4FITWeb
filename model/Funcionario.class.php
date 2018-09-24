@@ -7,6 +7,7 @@
         public $id;
         public $matricula;
         public $nome;
+        public $sobrenome;
         public $email;
 
         /*
@@ -24,7 +25,7 @@
         */
         public function getIniciaisNome() {
             $iniciaisNome = "";
-            $listaNomes = explode(" ", $this->nome);
+            $listaNomes = explode(" ", $this->nome . " " . $this->sobrenome);
             $quantidadeNomes = count($listaNomes);
             if ($quantidadeNomes > 0) {
                 $iniciaisNome .= substr($listaNomes[0], 0, 1);

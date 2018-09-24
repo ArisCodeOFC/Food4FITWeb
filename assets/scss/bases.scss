@@ -354,8 +354,26 @@
 		    cursor: pointer;
 		}
 	}
-}
+    >.form-column {
+        margin-left: 5px;
+        margin-right: 5px;
+        &.form-group-6 {
+            width: 50%;
+        }
 
+        &.form-group-4 {
+            width: 33.33%;
+        }
+
+        &:first-of-type {
+            margin-left: 0;
+        }
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+}
 
 /* BOTÃO GENÉRICO */
 .btn-generic{

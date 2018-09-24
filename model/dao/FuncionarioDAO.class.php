@@ -1,4 +1,6 @@
 <?php
+    require_once("Database.class.php");
+
     /* Classe FuncionarioDAO, responsável por fazer o acesso ao banco de dados do objeto Funcionario */
     class FuncionarioDAO {
         /*
@@ -9,16 +11,20 @@
         * @return null Caso os dados estejam incorretos
         */
         public static function login($matricula, $senha) {
-            if ($matricula == "1234" && $senha == "xpto") {
-                $funcionario = new Funcionario();
-                $funcionario->id = 1;
-                $funcionario->nome = "Chico picadinho";
-                $funcionario->email = "chico@voutecortar.com.br";
-                $funcionario->matricula = 1234;
-                return $funcionario;
-            } else {
-                return null;
+            $funcionario = null;
+            $conn = Database::getConnection();
+            $stmt = $conn->prepare("SELECT id, nome, sobrenome, email, matricula FROM tbl_funcionario WHERE matricula = ? AND senha = ?");
+            $stmt->bindParam(1, $matricula);
+            $stmt->bindValue(2, md5($senha));
+
+            if ($stmt->execute()) {
+                while ($rs = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                    $funcionario = new Funcionario(Model::convertArray($rs));
+                }
             }
+
+            $conn = null;
+            return $funcionario;
         }
     }
 ?>

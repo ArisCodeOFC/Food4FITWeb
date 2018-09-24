@@ -508,6 +508,27 @@
   cursor: pointer;
 }
 
+.form-row > .form-column {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.form-row > .form-column.form-group-6 {
+  width: 50%;
+}
+
+.form-row > .form-column.form-group-4 {
+  width: 33.33%;
+}
+
+.form-row > .form-column:first-of-type {
+  margin-left: 0;
+}
+
+.form-row > .form-column:last-of-type {
+  margin-right: 0;
+}
+
 /* BOTÃO GENÉRICO */
 .btn-generic {
   /*Botão genérico*/

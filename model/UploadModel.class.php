@@ -1,6 +1,10 @@
 <?php
-    abstract class UploadModel {
+    abstract class UploadModel extends Model {
         public $uploadData;
+
+        public function __construct($classe, $array = null) {
+            parent::__construct($classe, $array);
+        }
 
         public function startUpload($path) {
             if ($this->uploadData) {

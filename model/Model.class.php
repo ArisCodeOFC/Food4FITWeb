@@ -1,11 +1,9 @@
 <?php
-    require_once("UploadModel.class.php");
-
     /*
     * Classe abstrata, ou seja, não pode ser inicializada, apenas extendida
     * Serve como base para classes modelo, com um método construtor que transforma um array em propriedades do objeto
     */
-    abstract class Model extends UploadModel implements JsonSerializable {
+    abstract class Model implements JsonSerializable {
         /*
         * Método construtor
         * @param $classe Classe modelo que o json será descarregado (__CLASS no escopo de uma classe modelo)
@@ -18,8 +16,13 @@
                 foreach ($array as $propriedade => $valor) {
                     // Verifica se o mesmo nome da propriedade do array existe na classe modelo
                     if (property_exists($classe, $propriedade)) {
-                        // Define a propriedade na classe, recebendo como valor o que veio do array
-                        $this->{$propriedade} = $valor;
+                        $type = $this->getType($propriedade);
+                        if ($type) {
+                            $this->{$propriedade} = new $type($valor);
+                        } else {
+                            // Define a propriedade na classe, recebendo como valor o que veio do array
+                            $this->{$propriedade} = $valor;
+                        }
                     }
                 }
             }
@@ -27,6 +30,38 @@
 
         public function jsonSerialize() {
             return get_object_vars($this);
+        }
+
+        public function getType($propriedade) {
+            return null;
+        }
+
+        private static function convertName($string) {
+            $str = str_replace(" ", "", ucwords(str_replace("_", " ", $string)));
+            $str[0] = strtolower($str[0]);
+            return $str;
+        }
+
+        public static function convertArray($array) {
+            $resultado = array();
+            foreach ($array as $propriedade => $valor) {
+                if (strpos($propriedade, ".") !== false) {
+                    Model::explodePath($resultado, $propriedade, $valor);
+                } else {
+                    $resultado[Model::convertName($propriedade)] = $valor;
+                }
+            }
+
+            return $resultado;
+        }
+
+        private static function explodePath(&$array, $path, $value) {
+            $keys = explode(".", $path);
+            foreach ($keys as $key) {
+                $array = &$array[$key];
+            }
+
+            $array = $value;
         }
     }
 ?>
