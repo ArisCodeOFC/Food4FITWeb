@@ -124,20 +124,31 @@ a{
   line-height: calc(80px/2 - 5px);
 }
 .input-number-group .input-number {
-  width: 80px;
-  padding: 0 12px;
-  vertical-align: top;
-  text-align: center;
-  outline: none;
-  display: block;
-  margin: 0;
+    width: 60px;
+    padding: 0 12px;
+    vertical-align: top;
+    text-align: center;
+    outline: none;
+    display: block;
+    margin: 0;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    font-family: 'Roboto Bold';
+    font-size: 21px;
 }
 .input-number-group .input-number-decrement {
-  margin-right: 0.3rem;
+    margin-right: 0.3rem;
+    font-family: 'Roboto Medium';
+    font-size: 26px;
+    cursor: pointer;
 }
 
 .input-number-group .input-number-increment {
-  margin-left: 0.3rem;
+    margin-left: 0.3rem;
+    font-family: 'Roboto Medium';
+    font-size: 26px;
+    cursor: pointer;
 }
 
 
@@ -709,24 +720,22 @@ a{
 }
 //Login
 .login-bg{
-    background: url("../images/backgrounds/steak.jpg") no-repeat center center fixed ;
+    background: url("../images/backgrounds/login.jpg") no-repeat center center fixed ;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 }
 .main-login{
-    /*Container-mãe do block do site*/
-    @include bloco(100%, 1200px, 100vh);
+    /*Container-mãe do block do login*/
+    @include bloco(100%, 100%, 100vh);
     margin: 0 auto;
-	background: rgba(0,0,0,0.5);
- 	@include shadow(0.18);
  	@include display(flex, column, center, center);
     position: relative;
 	z-index: 1;
 	.title-login{
-		@include texto(58px, $white, 'Roboto Bold', unset);
-	    @include position(absolute, 30px, false, false, 15px);
+		@include texto(58px, $white, 'Roboto Bold', 72px, left);
+	    @include position(absolute, 15px, false, false, 15px);
 	}
 	.subtitle-login{
 		@include texto(21px, $darkgrey, 'Roboto Medium');
@@ -736,7 +745,7 @@ a{
 .login-form-separator{
     width: 100%;
     height: 3px;
-    background: #DDD;
+    background: rgba(255,255,255,0.3);
     border-radius: 50px;
     margin: 20px auto;
 }
@@ -744,20 +753,41 @@ a{
     width: 100%;
     height: auto;
     border-radius: 5px;
+    background-color: $white;
     @include display(flex, row, flex-start, center);
     @include shadow(0.05);
+    cursor: pointer;
+    transition: 200ms ease-in-out;
 	>span{
-		@include texto(18px, $white, 'Roboto Medium');
+		@include texto($size: 18px, $family: 'Roboto Medium');
 	}
 	&.facebook{
-		background-color: #3b5998;
+        >span{
+            color: $facebook;
+        }
+        &:hover{
+            background: $facebook;
+            >span{color: $white;}
+        }
 	}
-	&.google{
-		background-color: #dc4a3d;
+    &.google{
+        >span{
+            color: $google;
+        }
+        &:hover{
+            background: $google;
+            >span{color: $white;}
+        }
 	}
 }
 .login-link{
-	@include texto(16px, $grey, 'Roboto Medium Italic');
+	@include texto(16px, $black, 'Roboto Medium');
+    background-color: $white;
+    padding: 12px;
+    border-radius: 5px;
+    >span{
+        color: $olivine;
+    }
 }
 
 //Lojas
@@ -2242,15 +2272,15 @@ a{
 			}
 		}
 		>h2{
-			@include texto(32px, $white, 'Roboto Black Italic', 38px);
+			@include texto(38px, $white, 'Roboto Black Italic', 38px);
 			text-shadow: 4px 4px 4px rgba(0,0,0,0.1);
 		}
 		>p{
-			@include texto(21px, $gold, 'Roboto Bold Italic', 28px);
+			@include texto(18px, $lightgrey, 'Roboto Bold Italic', 28px);
 			text-shadow: 4px 4px 4px rgba(0,0,0,0.1);
 		}
 		>span{
-			@include texto(12px, $white, 'Roboto Light');
+			@include texto(16px, $white, 'Roboto Light');
 			text-shadow: 4px 4px 4px rgba(0,0,0,0.1);
 		}
 	}
@@ -2366,7 +2396,18 @@ a{
         height: auto;
     }
 }
-
+.contact-buddy-button{
+    border-radius: 5px;
+    @include display(flex, row, center, center);
+    background-color: $olivine;
+    box-shadow: $shadow;
+    height: 40px;
+    box-sizing: border-box;
+    cursor: pointer;
+    >span{
+        @include texto(18px, $white, 'Roboto Bold', 21px, center);
+    }
+}
 .nome-parceiro{
     @include bloco($width:100%, $height:auto);
     @include texto(16px, $darkgrey,"Roboto Regular",21px, center);
