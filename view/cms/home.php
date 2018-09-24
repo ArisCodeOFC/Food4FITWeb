@@ -28,11 +28,11 @@
 	    <script src="../assets/public/js/jquery.mask.min.js"></script>
 	    <script src="../assets/js/util.js"></script>
 	    <script src="../assets/js/cms/main.js"></script>
-	    <script src="../assets/js/cms/home.controller.js"></script>
 	    <script src="../assets/js/cms/crud.controller.js"></script>
+	    <script src="../assets/js/cms/home.controller.js"></script>
 	    <script src="../assets/js/cms/sobreempresa.controller.js"></script>
-	    <script src="../assets/js/cms/ingrediente.controller.js"></script>
 	    <script src="../assets/js/cms/categoriaingrediente.controller.js"></script>
+	    <script src="../assets/js/cms/ingrediente.controller.js"></script>
     </head>
     <body>
         <section id="main" data-controller="HomeController">
