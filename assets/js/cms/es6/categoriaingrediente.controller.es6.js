@@ -29,7 +29,7 @@ class CategoriaIngredienteController {
             .appendTo(linha);
 
         $("<div class='coluna'>")
-            .append($("<span class='toggle'>").addClass(parseInt(categoria.ativo) ? "desativar" : "ativar"))
+            .append($("<span class='toggle'>").addClass(checkBoolean(categoria.ativo) ? "desativar" : "ativar"))
             .append($("<hr>"))
             .append($("<span class='editar'>"))
             .append($("<hr>"))

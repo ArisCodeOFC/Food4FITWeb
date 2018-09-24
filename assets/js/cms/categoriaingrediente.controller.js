@@ -36,7 +36,7 @@ var CategoriaIngredienteController = (function () {
 
             $("<div class='coluna middle-left-align'>").append($("<span>").text(categoria.titulo)).appendTo(linha);
 
-            $("<div class='coluna'>").append($("<span class='toggle'>").addClass(parseInt(categoria.ativo) ? "desativar" : "ativar")).append($("<hr>")).append($("<span class='editar'>")).append($("<hr>")).append($("<span class='excluir'>")).appendTo(linha);
+            $("<div class='coluna'>").append($("<span class='toggle'>").addClass(checkBoolean(categoria.ativo) ? "desativar" : "ativar")).append($("<hr>")).append($("<span class='editar'>")).append($("<hr>")).append($("<span class='excluir'>")).appendTo(linha);
 
             return linha;
         }

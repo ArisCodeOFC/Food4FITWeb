@@ -44,7 +44,7 @@ class IngredienteController {
             .appendTo(linha);
 
         $("<div class='coluna'>")
-            .append($("<span class='toggle'>").addClass(parseInt(ingrediente.ativo) ? "desativar" : "ativar"))
+            .append($("<span class='toggle'>").addClass(checkBoolean(ingrediente.ativo) ? "desativar" : "ativar"))
             .append($("<hr>"))
             .append($("<span class='editar'>"))
             .append($("<hr>"))

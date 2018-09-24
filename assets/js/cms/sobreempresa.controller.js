@@ -53,7 +53,7 @@ var SobreEmpresaController = (function () {
 
             $("<div class='coluna descricao large'>").append($("<div>").text($(item.texto).text())).appendTo(linha);
 
-            $("<div class='coluna'>").append($("<span class='toggle'>").addClass(parseInt(item.ativo) ? "desativar" : "ativar")).append($("<hr>")).append($("<span class='editar'>")).append($("<hr>")).append($("<span class='excluir'>")).appendTo(linha);
+            $("<div class='coluna'>").append($("<span class='toggle'>").addClass(checkBoolean(item.ativo) ? "desativar" : "ativar")).append($("<hr>")).append($("<span class='editar'>")).append($("<hr>")).append($("<span class='excluir'>")).appendTo(linha);
 
             return linha;
         }

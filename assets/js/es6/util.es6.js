@@ -41,6 +41,10 @@ function convertObject(obj, current, resultado = {}) {
 }
 
 function moneyFormat(value) {
-    var re = "\\d(?=(\\d{3})+\\D)", num = value.toFixed(Math.max(0, 2));
+    let re = "\\d(?=(\\d{3})+\\D)", num = value.toFixed(Math.max(0, 2));
     return num.replace(".", ",").replace(new RegExp(re, "g"), "$&.");
+}
+
+function checkBoolean(value) {
+    return value == "true" || parseInt(value);
 }

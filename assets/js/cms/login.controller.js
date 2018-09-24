@@ -27,7 +27,7 @@ var LoginController = (function () {
             $.ajax({
                 url: "../api/v1/funcionarios/login",
                 type: "POST",
-                data: JSON.stringify(formToObject($(event.currentTarget).serializeArray())),
+                data: JSON.stringify(formToObject(this.formLogin.serializeArray())),
                 success: function success() {
                     window.location.href = "home.php";
                 },

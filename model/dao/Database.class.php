@@ -2,7 +2,7 @@
     /* Classe responsável por montar conexões com o banco de dados */
     class Database {
         /* Atributos de conexão */
-        const HOST = "localhost";
+        const HOST = "127.0.0.1";
         const USUARIO = "root";
         const SENHA = "bcd127";
         const DB = "db_food4fit";
@@ -25,6 +25,7 @@
                 return $conn;
 
             } catch (PDOException $erro) {
+                header("HTTP/1.1 500 Internal Server Error");
                 die(json_encode(array("result" => $erro->getMessage())));
             }
         }

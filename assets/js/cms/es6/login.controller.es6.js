@@ -13,7 +13,7 @@ class LoginController {
         $.ajax({
             url: "../api/v1/funcionarios/login",
             type: "POST",
-            data: JSON.stringify(formToObject($(event.currentTarget).serializeArray())),
+            data: JSON.stringify(formToObject(this.formLogin.serializeArray())),
             success: () => {
                 window.location.href = "home.php";
             },

@@ -45,7 +45,7 @@ var IngredienteController = (function () {
 
             $("<div class='coluna middle-align medium'>").append($("<span>").text("R$ " + moneyFormat(ingrediente.preco))).appendTo(linha);
 
-            $("<div class='coluna'>").append($("<span class='toggle'>").addClass(parseInt(ingrediente.ativo) ? "desativar" : "ativar")).append($("<hr>")).append($("<span class='editar'>")).append($("<hr>")).append($("<span class='excluir'>")).appendTo(linha);
+            $("<div class='coluna'>").append($("<span class='toggle'>").addClass(checkBoolean(ingrediente.ativo) ? "desativar" : "ativar")).append($("<hr>")).append($("<span class='editar'>")).append($("<hr>")).append($("<span class='excluir'>")).appendTo(linha);
 
             return linha;
         }

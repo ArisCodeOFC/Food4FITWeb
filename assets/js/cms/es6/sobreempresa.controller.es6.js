@@ -54,7 +54,7 @@ class SobreEmpresaController {
             .appendTo(linha);
 
         $("<div class='coluna'>")
-            .append($("<span class='toggle'>").addClass(parseInt(item.ativo) ? "desativar" : "ativar"))
+            .append($("<span class='toggle'>").addClass(checkBoolean(item.ativo) ? "desativar" : "ativar"))
             .append($("<hr>"))
             .append($("<span class='editar'>"))
             .append($("<hr>"))

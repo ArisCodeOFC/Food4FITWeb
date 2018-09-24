@@ -49,3 +49,7 @@ function moneyFormat(value) {
         num = value.toFixed(Math.max(0, 2));
     return num.replace(".", ",").replace(new RegExp(re, "g"), "$&.");
 }
+
+function checkBoolean(value) {
+    return value == "true" || parseInt(value);
+}

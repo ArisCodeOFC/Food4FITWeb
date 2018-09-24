@@ -35,13 +35,15 @@
 
         public static function inserir($item) {
             $conn = Database::getConnection();
-            $stmt = $conn->prepare("INSERT INTO tbl_sobre_empresa (titulo, texto, foto) VALUES (?, ?, ?)");
+            $stmt = $conn->prepare("INSERT INTO tbl_sobre_empresa (titulo, texto, foto, ativo) VALUES (?, ?, ?, ?)");
             $stmt->bindValue(1, $item->getTitulo());
             $stmt->bindValue(2, $item->getTexto());
             $stmt->bindValue(3, $item->getFoto());
+            $stmt->bindValue(4, $item->isAtivo(), PDO::PARAM_INT);
 
             if ($stmt->execute()) {
                 $item->setId($conn->lastInsertId());
+                $item->setAtivo(true);
             }
 
             $conn = null;
