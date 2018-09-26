@@ -8,7 +8,7 @@
         <div id="form-left-side" class="no-padding">
             <div id="tabela-items" data-crud-list>
                 <div class="linha">
-                    <div class="coluna full">Categorias de Ingredientes</div>
+                    <div class="coluna full padding-left-15px">Categorias de Ingredientes</div>
                 </div>
                 <?php foreach ($categorias as $categoria) { ?>
                     <div class="linha" data-param-id="<?= $categoria->getId() ?>">

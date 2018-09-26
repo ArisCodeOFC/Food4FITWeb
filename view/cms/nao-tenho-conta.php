@@ -15,7 +15,7 @@
         <title>Food 4fit - CMS</title>
         <link rel="icon" type="image/png" href="../assets/images/icons/favicon.png" />
 	    <link rel="stylesheet" href="../assets/css/font-style.css">
-        <link rel="stylesheet" href="../assets/css/cms/main.css">
+        <link rel="stylesheet" href="../assets/css/cms/stylesheet-cms.css">
     </head>
     <body>
         <a id="botao-voltar" href="login.php">Voltar</a>

@@ -9,7 +9,7 @@
 <div data-crud-controller>
     <form id="form-content" class="display-none" data-crud-form>
         <div id="form-two-sides">
-            <div id="form-left-side">
+            <div id="form-left-side" class="padding-left-20px padding-right-20px">
                 <div class="form-generic">
                     <div class="form-generic-content">
                         <h3>Cadastrar um Ingrediente</h3>

@@ -16,7 +16,7 @@
         <link rel="icon" type="image/png" href="../assets/images/icons/favicon.png" />
 	    <link rel="stylesheet" href="../assets/public/css/jquery.toast.min.css">
 	    <link rel="stylesheet" href="../assets/css/font-style.css">
-        <link rel="stylesheet" href="../assets/css/cms/main.css">
+        <link rel="stylesheet" href="../assets/css/cms/stylesheet-cms.css">
 	    <script src="../assets/public/js/jquery-3.3.1.min.js"></script>
 	    <script src="../assets/public/js/jquery.toast.min.js"></script>
 	    <script src="../assets/js/util.js"></script>

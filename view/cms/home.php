@@ -21,7 +21,7 @@
         <link rel="stylesheet" href="../assets/css/bases.css">
         <link rel="stylesheet" href="../assets/css/sizes.css">
         <link rel="stylesheet" href="../assets/css/align.css">
-        <link rel="stylesheet" href="../assets/css/cms/main.css">
+        <link rel="stylesheet" href="../assets/css/cms/stylesheet-cms.css">
 	    <script src="../assets/public/js/jquery-3.3.1.min.js"></script>
 	    <script src="../assets/public/js/jquery.toast.min.js"></script>
         <script src="../assets/public/js/jquery.sceditor.xhtml.min.js"></script>
