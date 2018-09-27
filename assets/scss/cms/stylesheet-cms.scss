@@ -682,3 +682,61 @@ img.btn-logout:hover {
         text-transform: uppercase;
     }
 }
+
+.shops-wrapper{
+    @include bloco(100%, 100%, 100%);
+    @include display(flex, row, space-between, flex-start);
+    .shop-form{
+        box-sizing: border-box;
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+    }
+    .shops-view{
+        @include bloco(100%, 500px, 100%);
+        background-color: $mediumgrey;
+    }
+}
+.shop-card{
+    @include bloco($width: 100%, $height: 100%);
+    box-sizing: border-box;
+    border: 20px solid transparent;
+    transition: 200ms ease-in-out;
+    background-color: $lightgrey;
+    cursor: pointer;
+    &:hover{
+        background: $mediumgrey;
+    }
+    >h2{
+        @include texto(16px, $grey, 'Roboto Italic');
+        cursor: pointer;
+        &:hover{
+            color: $olivine;
+        }
+    }
+    >h3{
+        @include texto(18px, $black, 'Roboto Bold');
+        cursor: pointer;
+    }
+    >div{
+        @include bloco($width: 100%, $height: 100%);
+        @include display(flex, row, flex-start, center);
+        >span{
+            @include texto(14px, $black, 'Roboto Medium');
+            padding-right: 15px;
+            transition: 200ms ease-in-out;
+            &:hover{
+                color: $olivine;
+                cursor: pointer;
+            }
+        }
+        #dlt{
+            &:hover{
+                color: $sunsetorange;
+                cursor: pointer;
+            }
+        }
+    }
+}
+#message{
+    @include texto(16px, $grey, 'Roboto Medium Italic');
+}

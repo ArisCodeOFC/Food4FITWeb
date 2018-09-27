@@ -255,21 +255,21 @@
 /* FORMULÁRIOS */
 .form-generic{
 	position: relative;
-	.form-title{
-	    font-size: 18px;
-	    color: $black;
-	    font-family: "Roboto Regular";
-	    padding-bottom: 15px;
-	    text-align: center;
-	}
-	.form-subtitle{
-	    font-size: 16px;
-	    color: $darkgrey;
-		font-family: "Roboto Light";
-		line-height: 21px;
-	    padding-bottom: 15px;
-	    text-align: center;
-	}
+}
+.form-title{
+    font-size: 18px;
+    color: $black;
+    font-family: "Roboto Regular";
+    padding-bottom: 15px;
+    text-align: left;
+}
+    .form-subtitle{
+    font-size: 16px;
+    color: $darkgrey;
+    font-family: "Roboto Light";
+    line-height: 21px;
+    padding-bottom: 15px;
+    text-align: left;
 }
 .aviso-contato{
     @include texto(14px, $darkgrey, 'Roboto Italic', 23px, left);

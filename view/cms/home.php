@@ -21,6 +21,7 @@
         <link rel="stylesheet" href="../assets/css/bases.css">
         <link rel="stylesheet" href="../assets/css/sizes.css">
         <link rel="stylesheet" href="../assets/css/align.css">
+        <link rel="stylesheet" href="../assets/css/keyframes.css">
         <link rel="stylesheet" href="../assets/css/cms/stylesheet-cms.css">
 	    <script src="../assets/public/js/jquery-3.3.1.min.js"></script>
 	    <script src="../assets/public/js/jquery.toast.min.js"></script>
@@ -38,7 +39,7 @@
         <section id="main" data-controller="HomeController">
             <?php require_once("./components/sidebar.php") ?>
             <div id="main-content">
-                <header>
+                <header class="animate fadeInDown">
                     <span id="titulo-pagina"></span>
                     <div>
                         <input type="search" placeholder="Pesquise por algo">
