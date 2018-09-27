@@ -694,6 +694,7 @@ img.btn-logout:hover {
     .shops-view{
         @include bloco(100%, 500px, 100%);
         background-color: $mediumgrey;
+        overflow-y: auto;
     }
 }
 .shop-card{
@@ -739,4 +740,43 @@ img.btn-logout:hover {
 }
 #message{
     @include texto(16px, $grey, 'Roboto Medium Italic');
+}
+
+.dash-wrapper{
+    @include bloco(100%, 100%, 100%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 30px 30px;
+    grid-template-areas: "one two" "three four" "three five";
+    box-sizing: border-box;
+    border: 30px solid transparent;
+
+    .one { grid-area: one; }
+
+    .two { grid-area: two; }
+
+    .three { grid-area: three; }
+
+    .four { grid-area: four; }
+
+    .five { grid-area: five; }
+
+    .card-dash{
+        height: auto;
+        background-color: $lightgrey;
+        border-radius: 5px;
+        box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+        .title{
+            @include texto(18px, $black, 'Roboto Bold');
+            margin: 0;
+        }
+        .subtitle{
+            @include texto(16px, $grey, 'Roboto Medium Italic');
+        }
+        >p{
+            @include texto(16px, $darkgrey, 'Roboto Regular', 23px, left);
+            width: 90%;
+        }
+    }
 }
