@@ -32,9 +32,9 @@
                 <span>4FIT</span>
                 <span id="subtitulo">Comida Fitness</span>
             </h2>
-            <form id="form-login" class="width-700px margin-auto">
-                <input type="text" name="matricula" placeholder="Matrícula" class="margin-bottom-20px" required>
-                <input type="password" name="senha" id="senha" placeholder="Senha" required>
+            <form id="form-login" class="width-700px margin-auto" autocomplete="off">
+                <input type="text" name="matricula" placeholder="Matrícula" class="margin-bottom-20px" autocomplete="off" required>
+                <input type="password" name="senha" autocomplete="off" id="senha" placeholder="Senha" required>
                 <div id="rodape">
                     <a href="nao-tenho-conta.php">Não tenho uma conta</a>
                     <input type="submit" value="Entrar">

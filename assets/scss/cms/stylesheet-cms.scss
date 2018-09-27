@@ -8,7 +8,6 @@
         clear: both;
     }
 }
-
 .generic-modal.show{
 	display: flex;
 }
@@ -70,10 +69,13 @@ body {
         border: none;
         text-indent: 12px;
         box-sizing: border-box;
+        transition: 200ms ease-in-out;
         font-size: 16px;
-    }
-    >input::placeholder{
-        @include texto(16px, $mediumgrey, 'Roboto Medium Italic');
+        &:focus{
+            background-color: $olivine;
+            color: $white;
+        }
+        &:focus::-webkit-input-placeholder { color: $lightgrey; font-family: 'Roboto Medium Italic' }
     }
     #rodape{
         @include texto(21px, $grey, 'Roboto Bold');

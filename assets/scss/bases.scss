@@ -291,7 +291,7 @@
 	  	width: 100%;
 	  	border-radius: 5px;
 	  	display: block;
-	  	background-color: #E8E8E8;
+	  	background-color: $mediumgrey;
 	  	border: none;
 	  	outline: none;
 	  	height: 40px;
@@ -300,6 +300,12 @@
 	  	font-size: 16px;
 	  	margin-top: 5px;
 		margin-bottom: 15px;
+        transition: 200ms ease-in-out;
+        &:focus{
+            background-color: $olivine;
+            color: $white;
+        }
+        &:focus::-webkit-input-placeholder { color: $white; }
 	}
 	input[type=radio]{
 	  	margin-right: 5px;
