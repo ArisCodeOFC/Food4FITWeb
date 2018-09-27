@@ -5,6 +5,7 @@
     require_once("controller/SobreNosController.class.php");
     require_once("controller/IngredienteController.class.php");
     require_once("controller/CategoriaIngredienteController.class.php");
+    require_once("controller/LojaController.class.php");
 
     /* Cria uma nova instância da classe APIController e inicializa todas as rotas */
     new APIController();

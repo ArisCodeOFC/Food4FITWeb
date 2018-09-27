@@ -85,6 +85,10 @@
             <span class="image"><img src="../assets/images/cms/icons/outras-funcoes.svg" alt="Outras Funções"></span>
             <span class="label">Outras Funções</span>
         </a>
+        <a href="#" data-page-load="lojas" data-page-controller="LojaController">
+            <span class="image"><img src="../assets/images/cms/icons/diario-de-bordo.svg" alt="Diário de Bordo"></span>
+            <span class="label">Nossas Lojas</span>
+        </a>
         <a href="#">
             <span class="image"><img src="../assets/images/cms/icons/ajuda.svg" alt="Ajuda"></span>
             <span class="label">Ajuda</span>

@@ -4,7 +4,7 @@
         /* Atributos de conexão */
         const HOST = "127.0.0.1";
         const USUARIO = "root";
-        const SENHA = "1234";
+        const SENHA = "bcd127";
         const DB = "db_food4fit";
         /* Define que o método "rowsCount()" do PDO irá retornar o número de linhas encontradas, e não o número de linhas alteradas, garantindo que o usuário não receba um erro caso um UPDATE não faça nenhuma alteração */
         const CONFIG = array(
