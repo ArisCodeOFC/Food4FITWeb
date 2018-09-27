@@ -16,6 +16,8 @@
         <link rel="icon" type="image/png" href="../assets/images/icons/favicon.png" />
 	    <link rel="stylesheet" href="../assets/public/css/jquery.toast.min.css">
 	    <link rel="stylesheet" href="../assets/css/font-style.css">
+       <link rel="stylesheet" href="../assets/css/align.css">
+       <link rel="stylesheet" href="../assets/css/sizes.css">
         <link rel="stylesheet" href="../assets/css/cms/stylesheet-cms.css">
 	    <script src="../assets/public/js/jquery-3.3.1.min.js"></script>
 	    <script src="../assets/public/js/jquery.toast.min.js"></script>
@@ -30,8 +32,8 @@
                 <span>4FIT</span>
                 <span id="subtitulo">Comida Fitness</span>
             </h2>
-            <form id="form-login">
-                <input type="text" name="matricula" placeholder="Matrícula" required>
+            <form id="form-login" class="width-700px margin-auto">
+                <input type="text" name="matricula" placeholder="Matrícula" class="margin-bottom-20px" required>
                 <input type="password" name="senha" id="senha" placeholder="Senha" required>
                 <div id="rodape">
                     <a href="nao-tenho-conta.php">Não tenho uma conta</a>

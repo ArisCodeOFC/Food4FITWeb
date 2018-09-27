@@ -61,16 +61,13 @@ body {
 }
 #form-login{
     margin-bottom: 200px;
-    >input {
+    >input{
+        @include bloco($width: 100%, $height: 50px);
         display: block;
-        width: 724px;
-        height: 50px;
         border-radius: 5px;
-        background-color: #E8E8E8;
+        background-color: $mediumgrey;
         outline: none;
         border: none;
-        margin: 20px auto;
-        padding: 10px;
         text-indent: 12px;
         box-sizing: border-box;
         font-size: 16px;
@@ -80,9 +77,10 @@ body {
     }
     #rodape{
         @include texto(21px, $grey, 'Roboto Bold');
+        @include display(flex, row, space-between, center);
+        margin-top: 20px;
         >a{
-            color: $grey;
-            text-decoration: none;
+            @include texto(18px, $grey, 'Roboto Medium Italic');
         }
         >input{
             @include bloco($width: 100px, $height: 40px);
@@ -90,8 +88,7 @@ body {
             background-color: #9cc283;
             outline: none;
             border: none;
-            float: right;
-            @include texto(inherit, $white, 'Roboto Bold');
+            @include texto(inherit, $white, 'Roboto Bold', 18px, center);
             cursor: pointer;
         }
     }
@@ -127,25 +124,17 @@ body {
     box-sizing: border-box;
     #avatar {
         background: linear-gradient(-45deg, #9CC283, #EDBF85);
-        width: 50px;
-        height: 50px;
+        @include bloco($width: 50px, $height: 50px);
+        @include display(flex, row, center, center);
+        @include position(absolute, $top: 50%, $left: 0px, $right: null, $bottom: null);
         border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         transition: width 500ms, height 500ms;
-        position: absolute;
-        left: 0;
-        top: 50%;
         box-shadow: 5px 5px 10px rgba(0,0,0,.1);
         transform: translateY(-50%);
         &:before{
             content: attr(data-siglas);
-            text-align: center;
             vertical-align: middle;
-            font-size: 25px;
-            font-family: "Roboto Bold";
-            color: #FFF;
+            @include texto(25px, $white, 'Roboto Bold', 25px, center);
             transition: font-size 300ms;
         }
     }
@@ -203,17 +192,13 @@ body {
         height: 50px;
         background: linear-gradient(45deg, #9CC283, #EDBF85);
         padding: 5px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        @include display(flex, row, space-between, center);
         flex-shrink: 0;
         >div{
             display: flex;
             align-items: center;
             >input{
-                width: 400px;
-                height: 40px;
+                @include bloco($width: 400px, $height: 40px);
                 border-radius: 5px;
                 background-color: #ffffff;
                 outline: none;
@@ -231,40 +216,37 @@ body {
             }
         }
         #titulo-pagina{
-            font-size: 21px;
+            @include texto(21px, $white, 'Roboto Bold');
             padding-left: 20px;
-            color: #fff;
-            font-family: "Roboto Bold";
             text-transform: uppercase;
             flex: 0 0 350px;
         }
         #ultimas-interacoes {
-            font-size: 21px;
-            color: #FFF;
-            font-family: "Roboto Bold";
+            @include texto(18px, $white, 'Roboto Bold');
             text-transform: uppercase;
-            margin-right: 10px;
+            padding-right: 20px;
         }
         #notificacoes {
-            margin-right: 10px;
+            @include bloco($width: 30px, $height: 30px);
+            margin-right: 20px;
             position: relative;
+            >img{
+                @include img-fit(30px, 30px);
+            }
             >span {
-                position: absolute;
-                font-size: 10px;
-                top: 5px;
-                right: 5px;
-                width: 15px;
-                height: 15px;
-                color: #ffffff;
-                top: 0;
-                right: 0;
-                background-color: #E83131;
+                @include position(absolute, -5px, -5px, null, null);
+                @include bloco($width: 15px, $height: 15px);
+                @include texto(10px, $white, 'Roboto Light');
+                @include display(flex, row, center, center);
+                background-color: $sunsetorange;
                 border-radius: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 padding: 1px;
             }
+        }
+        .btn-logout{
+            padding-right: 10px;
+            width: 30px;
+            height: 30px;
         }
     }
 }
@@ -299,18 +281,12 @@ img.btn-logout:hover {
 }
 
 .jq-toast-single {
-    background-color: #9cc283;
+    @include display(flex, column, center, center);
+    @include texto(21px, $white, 'Roboto Bold', 20px);
+    background-color: $olivine;
     border-radius: 5px;
     padding: 30px 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 21px;
-    font-family: "Roboto Bold";
     width: 95%;
-    color: #ffffff;
-    line-height: 20px;
     box-sizing: border-box;
 }
 
@@ -343,19 +319,13 @@ img.btn-logout:hover {
         }
     }
     .linha {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+        @include display(flex, row, space-between, center);
         &:first-child {
             background-color: $mediumgrey;
             .coluna {
-                font-size: 18px;
-                color: #000;
-                font-family: "Roboto Bold";
+                @include texto(18px, $black, 'Roboto Bold', 60px);
                 text-transform: uppercase;
                 height: 60px;
-                line-height: 60px;
                 align-items: center;
                 justify-content: center;
             }
@@ -383,26 +353,18 @@ img.btn-logout:hover {
 	background-color: #FAFAFA;
 }
 #tabela-items .linha + .linha .coluna.middle-align>span {
-	font-size: 21px;
-    color: #282828;
-    font-family: "Roboto Bold";
+    @include texto(21px, $darkgrey, 'Roboto Bold', 23px, center);
 	margin: auto;
-    text-align: center;
 }
 #tabela-items .linha + .linha .coluna.middle-left-align>span {
-	font-size: 21px;
-    color: #282828;
-    font-family: "Roboto Bold";
+    @include texto(21px, $darkgrey, 'Roboto Bold');
 	margin: auto 0;
 }
 #tabela-items .linha + .linha .coluna.descricao {
 	overflow: hidden;
 }
 #tabela-items .linha + .linha .coluna.descricao>div {
-    font-size: 18px;
-    line-height: 24px;
-    color: #282828;
-    font-family: "Roboto";
+    @include texto(18px, $darkgrey, 'Roboto Regular', 24px);
 	margin: auto;
 }
 #tabela-items .linha + .linha .coluna:first-of-type img {
@@ -422,19 +384,11 @@ img.btn-logout:hover {
 
 
 #tabs {
-    width: 100%;
-    height: 110px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include bloco($width: 100%, $height: 110px);
+    @include display(flex, $justifycontent: center, $alignitems: center);
     >span {
-        width: 250px;
-        height: 70px;
-        line-height: 70px;
-        background-color: #d9d9d9;
-        text-align: center;
-        font-size: 18px;
-        font-family: "Roboto Bold";
+        @include bloco($width: 250px, $height: 70px);
+        @include texto(18px, #D9D9D9, 'Roboto Bold', 70px, center);
         cursor: pointer;
         &:first-child {
             border-top-left-radius: 35px;
@@ -445,7 +399,7 @@ img.btn-logout:hover {
             border-bottom-right-radius: 35px;
         }
         .active {
-            color: #ffffff;
+            color: $white;
             background-color: #4d4d4d;
         }
     }
@@ -469,7 +423,7 @@ img.btn-logout:hover {
     >div {
         width: 100%;
         height: 250px;
-        background-color: #E8E8E8;
+        background-color: $mediumgrey;
     }
     >img {
         width: 100%;
@@ -482,9 +436,7 @@ img.btn-logout:hover {
         left: 0;
     }
     >label {
-        font-size: 16px;
-        color: #616161;
-        font-family: "Roboto Italic";
+        @include texto(16px, $grey, 'Roboto Italic');
         margin: 10px 0;
     }
 }
@@ -496,17 +448,10 @@ img.btn-logout:hover {
 
 .form-generic{
     .controls {
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-end;
+        @include bloco($width: 100%, $height: auto);
+        @include display(flex, row, flex-end, center);
         .cancel{
-            font-size: 16px;
-            line-height: 28px;
-            color: #616161;
-            font-family: "Roboto Italic";
+            @include texto(16px, $grey, 'Roboto Italic', 28px);
             cursor: pointer;
             margin: 0 20px;
         }
@@ -533,20 +478,21 @@ img.btn-logout:hover {
     height: 70px;
     position: relative;
     >h1{
-        @include texto(26px, $olivine, 'Roboto Bold', 30px);
+        @include texto(26px, $olivine, 'Roboto Black', 30px);
         overflow: hidden;
         width: 100%;
         white-space: nowrap;
         transition: opacity 400ms;
+        >span{
+            font-family: 'Roboto Bold';
+            display: block;
+        }
     }
 }
 
 #sidebar-collapse {
-    position: absolute;
-    right: 7px;
-    top: 20px;
-    width: 30px;
-    height: 30px;
+    @include position(absolute, 20px, 7.8px, $bottom: null, $left: null);
+    @include bloco($width: 30px, $height: 30px);
     border-radius: 50%;
     transform: rotate(360deg);
     transition: transform 500ms;
@@ -560,10 +506,7 @@ img.btn-logout:hover {
 }
 
 #sidebar nav a {
-    color: #262626;
-    font-family: "Roboto Bold";
-    text-decoration: none;
-    display: block;
+    @include texto(16px, $darkgrey, 'Roboto Bold');
     height: 35px;
     padding: 2px 0;
     position: relative;
@@ -581,32 +524,23 @@ img.btn-logout:hover {
 }
 
 #sidebar nav .image {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include bloco($width: 40px, $height: 40px); @include display(flex, row, center, center);
 }
 
 #sidebar nav .label {
-    font-size: 18px;
-    display: flex;
-    align-items: center;
+    @include texto(18px, $darkgrey, 'Roboto Medium');
+    @include display(flex, row, $alignitems: center, $justifycontent: null);
+    @include position(absolute, 0px, $left: 45px, $right: null, $bottom: null);
     width: calc(100% - 45px);
-    height: 100%;
-    position: absolute;
-    left: 45px;
-    top: 0;
-    color: #262626;
-    font-family: "Roboto Medium";
+    height: 40px;
+    padding-top: 1.5px;
     overflow: hidden;
     white-space: nowrap;
     transition: width 500ms, color 300ms;
 }
 
 #sidebar nav .badge {
-    font-size: 18px;
-    color: #959595;
+    @include texto(18px, $grey, 'Roboto Regular');
     position: absolute;
     right: 10px;
 }
@@ -645,30 +579,20 @@ img.btn-logout:hover {
     transform: rotate(180deg);
 }
 #page-actions {
-    width: 100%;
-    height: 50px;
+    @include bloco($width: 100%, $height: 50px); @include display(flex, row, space-between, center);
     padding: 0 20px;
     box-sizing: border-box;
     margin: 15px 0px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
     >a {
         text-decoration: none;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
+        @include display(flex, row, center, center);
         >img {
             width: 50px;
             height: 50px;
             margin-right: 10px;
         }
         >span {
-            color: #000;
-            font-family: "Roboto Bold";
-            font-size: 16px;
+            @include texto(16px, $black, 'Roboto Bold');
         }
     }
 }
@@ -688,9 +612,7 @@ img.btn-logout:hover {
 #form-right-side {
     flex: 0 0 450px;
     background-color: $mediumgrey;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    @include display(flex, column, space-between, null);
     box-sizing: border-box;
 }
 [data-crud-controller] {
@@ -716,14 +638,9 @@ img.btn-logout:hover {
     .file-label {
         width: 400px;
         height: 50px;
-        background-color: #9CC283;
-        color: #ffffff;
-        display: block;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        font-family: "Roboto Bold";
+        background-color: $olivine;
+        @include display(flex, row, center, center);
+        @include texto(16px, $white, 'Roboto Bold');
         border-radius: 5px;
         margin: 10px 20px;
         cursor: pointer;
@@ -751,10 +668,7 @@ img.btn-logout:hover {
     width: 100%;
     height: 50px;
     margin-top: 10px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    @include display(flex, row, center, center);
     cursor: pointer;
     >img {
         width: 30px;
@@ -762,9 +676,7 @@ img.btn-logout:hover {
         margin-right: 10px;
     }
     >span {
-        font-family: "Roboto Regular";
-        font-size: 18px;
+        @include texto(18px, $white, 'Roboto Regular');
         text-transform: uppercase;
-        color: #ffffff;
     }
 }

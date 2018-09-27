@@ -1,6 +1,6 @@
 <div id="sidebar">
     <div id="sidebar-header">
-        <h1>FOOD 4FIT<br>CMS</h1>
+        <h1>FOOD 4FIT<br><span>CMS</span></h1>
         <a href="#" id="sidebar-collapse">
             <img src="../assets/images/icons/menu-lateral.svg" alt="Menu Lateral">
         </a>
