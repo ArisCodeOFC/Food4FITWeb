@@ -28,7 +28,6 @@
             /* Desabilita a proteção CORS e diz que o resultado da resposta será um JSON */
             header("Access-Control-Allow-Orgin: *");
             header("Access-Control-Allow-Methods: *");
-            header("Content-Type: application/json");
             //error_reporting(0);
 
             /* Pega a url da requisição que foi mandada pelo arquivo .htaccess */
@@ -50,13 +49,20 @@
 
                 /* Verfica se o método da requsição é autorizado pela API e decodifica os dados recebidos em formato JSON (ou via URL caso a requisição seja em GET) */
                 if ($this->metodo == "POST" || $this->metodo == "PUT" || $this->metodo == "DELETE") {
-                    $this->dados = json_decode(file_get_contents("php://input"));
+                    if (json_decode(file_get_contents("php://input"))) {
+                        $this->dados = json_decode(file_get_contents("php://input"));
+                    } else {
+                        $this->dados = (object) $_POST;
+                    }
+
                 } else if ($this->metodo == "GET") {
-                    $this->dados = $_GET;
+                    $this->dados = (object) $_GET;
                 } else {
                     $this->enviarStatus(405, "Metodo não autorizado");
                 }
             }
+
+            $this->inicializar();
         }
 
         /*
@@ -85,6 +91,7 @@
         * @param $resultado uma mensagem para ser mostrada
         */
         public function enviarResultado($resultado) {
+            header("Content-Type: application/json");
             echo(preg_replace("/,\s*\"[^\"]+\":null|\"[^\"]+\":null,?/", "", json_encode($resultado, JSON_UNESCAPED_UNICODE)));
         }
 
@@ -127,7 +134,7 @@
             /* Faz um loop em todas as classes PHP */
             foreach (get_declared_classes() as $nomeClasse) {
                 /* Verifica se a classe implementa a interface "InterfaceAPI" */
-                if (in_array("InterfaceAPI", class_implements($nomeClasse))) {
+                if (in_array("Controller", class_parents($nomeClasse))) {
                     /* Cria uma nova instância da classe e inicializa ela */
                     $classe = new $nomeClasse($this);
                     $classe->init();

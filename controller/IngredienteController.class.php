@@ -1,29 +1,18 @@
 <?php
-    require_once("InterfaceAPI.class.php");
+    require_once("Controller.class.php");
     require_once(__DIR__ . "/../model/Ingrediente.class.php");
     require_once(__DIR__ . "/../model/dao/IngredienteDAO.class.php");
     require_once(__DIR__ . "/../model/dao/UnidadeMedidaDAO.class.php");
 
-    class IngredienteController implements InterfaceAPI {
-        /* Objeto API utilizado para tratar as rotas */
-        private $api;
-
-        /*
-        * Método construtor
-        * @param $api Objeto da classe API
-        */
-        public function __construct($api) {
-            $this->api = $api;
-        }
-
+    class IngredienteController extends Controller {
         /* Inicializa todas as rotas que serão tratadas */
         public function init() {
-            $this->api->criarRota("GET", "ingrediente", [$this, "listarTodos"]);
-            $this->api->criarRota("POST", "ingrediente", [$this, "inserir"]);
-            $this->api->criarRota("GET", "ingrediente/{id}", [$this, "selecionarItem"]);
-            $this->api->criarRota("PUT", "ingrediente/{id}", [$this, "atualizar"]);
-            $this->api->criarRota("PUT", "ingrediente/{id}/ativar", [$this, "ativar"]);
-            $this->api->criarRota("DELETE", "ingrediente/{id}", [$this, "excluir"]);
+            $this->criarRota("GET", "ingrediente", "listarTodos");
+            $this->criarRota("POST", "ingrediente", "inserir");
+            $this->criarRota("GET", "ingrediente/{id}", "selecionarItem");
+            $this->criarRota("PUT", "ingrediente/{id}", "atualizar");
+            $this->criarRota("PUT", "ingrediente/{id}/ativar", "ativar");
+            $this->criarRota("DELETE", "ingrediente/{id}", "excluir");
         }
 
         public function listarTodos() {
@@ -31,7 +20,7 @@
         }
 
         public function inserir() {
-            $ingrediente = new Ingrediente($this->api->dados);
+            $ingrediente = new Ingrediente($this->dados);
             if (!$ingrediente->getUnidadeMedida() || !$ingrediente->getCategoria()) {
                 $this->api->enviarStatus(403, "Preencha todos os campos.");
             } else {
@@ -60,7 +49,7 @@
         }
 
         public function atualizar($id) {
-            $ingrediente = new Ingrediente($this->api->dados);
+            $ingrediente = new Ingrediente($this->dados);
             try {
                 $ingrediente->startUpload("assets/images/ingredientes");
                 $resultado = IngredienteDAO::atualizar($id, $ingrediente);

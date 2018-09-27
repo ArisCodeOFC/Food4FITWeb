@@ -1,32 +1,19 @@
 <?php
-    require_once("InterfaceAPI.class.php");
+    require_once("Controller.class.php");
     require_once(__DIR__ . "/../model/Funcionario.class.php");
     require_once(__DIR__ . "/../model/dao/FuncionarioDAO.class.php");
 
     /* Classe responsável por controlar todas as APIs relacionadas a funcionário */
-    class FuncionarioController implements InterfaceAPI {
-        /* Objeto API utilizado para tratar as rotas */
-        private $api;
-
-        /*
-        * Método construtor
-        * @param $api Objeto da classe API
-        */
-        public function __construct($api) {
-            $this->api = $api;
-        }
-
+    class FuncionarioController extends Controller {
         /* Inicializa todas as rotas que serão tratadas */
         public function init() {
-            $this->api->criarRota("POST", "funcionarios/login", [$this, "login"]);
-            $this->api->criarRota("POST", "funcionarios/logout", [$this, "logout"]);
+            $this->criarRota("POST", "funcionarios/login", "login");
+            $this->criarRota("POST", "funcionarios/logout", "logout");
         }
 
         /* Login de funcionários no CMS */
         public function login() {
-            $dados = $this->api->dados;
-            $funcionario = FuncionarioDAO::login($dados->matricula, $dados->senha);
-
+            $funcionario = FuncionarioDAO::login($this->dados->matricula, $this->dados->senha);
             if ($funcionario) {
                 session_start();
                 $_SESSION["funcionario"] = $funcionario;

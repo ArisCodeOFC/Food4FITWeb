@@ -1,31 +1,20 @@
 <?php
-    require_once("InterfaceAPI.class.php");
+    require_once("Controller.class.php");
     require_once(__DIR__ . "/../model/CategoriaIngrediente.class.php");
     require_once(__DIR__ . "/../model/dao/CategoriaIngredienteDAO.class.php");
 
-    class CategoriaIngredienteController implements InterfaceAPI {
-        /* Objeto API utilizado para tratar as rotas */
-        private $api;
-
-        /*
-        * Método construtor
-        * @param $api Objeto da classe API
-        */
-        public function __construct($api) {
-            $this->api = $api;
-        }
-
+    class CategoriaIngredienteController extends Controller {
         /* Inicializa todas as rotas que serão tratadas */
         public function init() {
-            $this->api->criarRota("POST", "categoria-ingrediente", [$this, "inserir"]);
-            $this->api->criarRota("GET", "categoria-ingrediente/{id}", [$this, "selecionarItem"]);
-            $this->api->criarRota("PUT", "categoria-ingrediente/{id}", [$this, "atualizar"]);
-            $this->api->criarRota("PUT", "categoria-ingrediente/{id}/ativar", [$this, "ativar"]);
-            $this->api->criarRota("DELETE", "categoria-ingrediente/{id}", [$this, "excluir"]);
+            $this->criarRota("POST", "categoria-ingrediente", "inserir");
+            $this->criarRota("GET", "categoria-ingrediente/{id}", "selecionarItem");
+            $this->criarRota("PUT", "categoria-ingrediente/{id}", "atualizar");
+            $this->criarRota("PUT", "categoria-ingrediente/{id}/ativar", "ativar");
+            $this->criarRota("DELETE", "categoria-ingrediente/{id}", "excluir");
         }
 
         public function inserir() {
-            $categoria = new CategoriaIngrediente($this->api->dados);
+            $categoria = new CategoriaIngrediente($this->dados);
             try {
                 $categoria->startUpload("assets/images/categorias");
                 if (CategoriaIngredienteDAO::inserir($categoria)) {
@@ -49,7 +38,7 @@
         }
 
         public function atualizar($id) {
-            $categoria = new CategoriaIngrediente($this->api->dados);
+            $categoria = new CategoriaIngrediente($this->dados);
             try {
                 $categoria->startUpload("assets/images/categorias");
                 if (CategoriaIngredienteDAO::atualizar($id, $categoria)) {

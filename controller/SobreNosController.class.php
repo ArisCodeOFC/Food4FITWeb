@@ -1,31 +1,20 @@
 <?php
-    require_once("InterfaceAPI.class.php");
+    require_once("Controller.class.php");
     require_once(__DIR__ . "/../model/ItemSobreNos.class.php");
     require_once(__DIR__ . "/../model/dao/SobreNosDAO.class.php");
 
-    class SobreNosController implements InterfaceAPI {
-        /* Objeto API utilizado para tratar as rotas */
-        private $api;
-
-        /*
-        * Método construtor
-        * @param $api Objeto da classe API
-        */
-        public function __construct($api) {
-            $this->api = $api;
-        }
-
+    class SobreNosController extends Controller {
         /* Inicializa todas as rotas que serão tratadas */
         public function init() {
-            $this->api->criarRota("POST", "sobre-nos", [$this, "inserir"]);
-            $this->api->criarRota("GET", "sobre-nos/{id}", [$this, "selecionarItem"]);
-            $this->api->criarRota("PUT", "sobre-nos/{id}", [$this, "atualizar"]);
-            $this->api->criarRota("PUT", "sobre-nos/{id}/ativar", [$this, "ativar"]);
-            $this->api->criarRota("DELETE", "sobre-nos/{id}", [$this, "excluir"]);
+            $this->criarRota("POST", "sobre-nos", "inserir");
+            $this->criarRota("GET", "sobre-nos/{id}", "selecionarItem");
+            $this->criarRota("PUT", "sobre-nos/{id}", "atualizar");
+            $this->criarRota("PUT", "sobre-nos/{id}/ativar", "ativar");
+            $this->criarRota("DELETE", "sobre-nos/{id}", "excluir");
         }
 
         public function inserir() {
-            $item = new ItemSobreNos($this->api->dados);
+            $item = new ItemSobreNos($this->dados);
             try {
                 $item->startUpload("assets/images/sobre-nos");
                 if (SobreNosDAO::inserir($item)) {
@@ -47,7 +36,7 @@
         }
 
         public function atualizar($id) {
-            $item = new ItemSobreNos($this->api->dados);
+            $item = new ItemSobreNos($this->dados);
             try {
                 $item->startUpload("assets/images/sobre-nos");
                 if (SobreNosDAO::atualizar($id, $item)) {

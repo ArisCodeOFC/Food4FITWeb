@@ -21,8 +21,6 @@
         protected $gorduraTrans;
         protected $fibraAlimentar;
         protected $sodio;
-        protected $unidadeMedida;
-        protected $categoria;
 
         public function __construct($json = null) {
             parent::__construct(__CLASS__, $json);
