@@ -39,7 +39,7 @@
         <section id="main" data-controller="HomeController">
             <?php require_once("./components/sidebar.php") ?>
             <div id="main-content">
-                <header class="animate fadeInDown">
+                <header class="animate fast fadeInDown">
                     <span id="titulo-pagina"></span>
                     <div>
                         <input type="search" placeholder="Pesquise por algo">
