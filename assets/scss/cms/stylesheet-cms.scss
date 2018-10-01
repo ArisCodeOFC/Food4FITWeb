@@ -336,7 +336,10 @@ img.btn-logout:hover {
             }
         }
     }
-    .toggle, .editar, .excluir, .visualizar{
+    .toggle, .editar, .excluir{
+        @include img-fit(40px, 40px);
+    }
+    .visualizar{
         @include img-fit(40px, 40px);
     }
 }
@@ -833,31 +836,39 @@ img.btn-logout:hover {
         @include bloco($width: 100%, $height: auto);
         @include display(flex, row, flex-start, center);
         padding: 20px;
-        .mark{
-            @include texto(18px, $black, 'Roboto Medium');
-        }
         >div{
+            background-color: $olivine;
             @include bloco($width: auto, $height: auto);
-            background: $olivine;
             border-radius: 5px;
             >span{
-                @include texto(18px, $white, 'Roboto Bold');
-                padding: 12px;
+                @include texto(18px, $white, 'Roboto Medium');
+                padding: 10px;
             }
         }
     }
-    .contact-table{
+    >table{
         @include bloco($width: 100%, $height: auto);
-        border-collapse:collapse;
+        border-collapse: collapse;
+        #contact-table-trow{
+            background-color: $mediumgrey;
+            >td{
+                >span{
+                    @include texto(18px, $black, 'Roboto Bold');
+                    padding: 12px;
+                }
+            }
+        }
+        .contact-table-rrow{
+            >td{
+                >span{
+                    @include texto(16px, $grey, 'Roboto Medium');
+                }
+                >div>img{
+                    @include img-fit(40px, 40px);
+                    display: inline-block;
+                    padding: 10px 0px 10px 0px;
+                }
+            }
+        }
     }
-}
-.title{
-    padding: 20px;
-    @include texto(18px, $black, 'Roboto Bold');
-}
-.table-result{
-    padding: 20px;
-    font-size: 18px;
-    color: $darkgrey;
-    font-family: 'Roboto Medium';
 }

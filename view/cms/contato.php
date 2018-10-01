@@ -4,26 +4,28 @@
 		<div class="margin-right-20px"><span>Marcar Como Lida</span></div>
 		<div class="margin-right-20px"><span>Excluir</span></div>
 	</div>
-	<table id="tabela-items">
-		<tr style="background-color: #E8E8E8;">
-			<td colspan="2"><span class="title">NOME</span></td>
-			<td><span class="title">E-MAIL</span></span></td>
-			<td><span class="title">ASSUNTO</span></td>
-			<td><span class="title">DATA ENVIO</span></td>
-			<td colspan="2"><span class="title">OPÇÕES</span></td>
+	<table>
+		<tr id="contact-table-trow">
+			<td colspan="2"><span>NOME</span></td>
+			<td><span>E-MAIL</span></td>
+			<td><span>ASSUNTO</span></td>
+			<td><span>DATA ENVIO</span></td>
+			<td colspan="2"><span>OPÇÕES</span></td>
 		</tr>
-		<tr>
-			<td><input type="checkbox"></td>
-			<td class="table-result">Nome do Usuário</td>
-			<td class="table-result">E-Mail do Usuário</td>
-			<td class="table-result">Assunto do Contato</td>
-			<td class="table-result">01/01/2018</td>
+		<tr class="contact-table-rrow">
+			<td colspan="2">
+				<input type="checkbox">
+				<span style="display: inline-block;">Nome do Usuário</span>
+			</td>
+			<td><span>endereco@provedor.com</span></td>
+			<td><span>Assunto do Contato</span></td>
+			<td><span>01/01/2018</span></td>
 			<td>
 				<div class="coluna">
-                    <span class="visualizar"></span><hr>
-                    <span class="excluir"></span>
-                </div>
-            </td>
+					<img src="../assets/images/cms/symbols/visualizar.svg" alt="" class="margin-right-10px">
+					<img src="../assets/images/cms/symbols/excluir.svg" alt="">
+				</div>
+			</td>
 		</tr>
 	</table>
 </div>
