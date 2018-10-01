@@ -73,7 +73,7 @@
             <span class="image"><img src="../assets/images/cms/icons/meu-perfil.svg" alt="Meu perfil"></span>
             <span class="label">Meu perfil</span>
         </a>
-        <a href="#">
+        <a href="#" data-page-load="contato">
             <span class="image"><img src="../assets/images/cms/icons/fale-conosco.svg" alt="Fale Conosco"></span>
             <span class="label">Fale Conosco<span class="badge">12</span></span>
         </a>

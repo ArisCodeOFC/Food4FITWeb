@@ -11,7 +11,10 @@
 .generic-modal.show{
 	display: flex;
 }
-
+* {
+    margin: 0;
+    padding: 0;
+}
 body {
 	margin: 0;
 	padding: 0;
@@ -333,7 +336,7 @@ img.btn-logout:hover {
             }
         }
     }
-    .toggle, .editar, .excluir{
+    .toggle, .editar, .excluir, .visualizar{
         @include img-fit(40px, 40px);
     }
 }
@@ -349,6 +352,9 @@ img.btn-logout:hover {
     }
     .excluir{
         background-image: url("../../images/cms/symbols/excluir.svg");
+    }
+    .visualizar{
+        background-image: url("../../images/cms/symbols/visualizar.svg");
     }
 }
 #tabela-items .linha + .linha:nth-child(even) {
@@ -745,6 +751,7 @@ img.btn-logout:hover {
 .dash-wrapper{
     @include bloco(100%, 100%, 100%);
     display: grid;
+    align-items: flex-start;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 30px 30px;
@@ -756,7 +763,13 @@ img.btn-logout:hover {
 
     .two { grid-area: two; }
 
-    .three { grid-area: three; }
+    .three {
+        grid-area: three;
+        box-sizing: border-box;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        padding-bottom: 20px;
+    }
 
     .four { grid-area: four; }
 
@@ -779,4 +792,72 @@ img.btn-logout:hover {
             width: 90%;
         }
     }
+}
+.interact-card{
+    @include bloco($width: 100%, $height: auto);
+    border-radius: 3px;
+    background: $mediumgrey;
+    box-sizing: border-box;
+    position: relative;
+    @include display(flex, row, flex-start, center);
+    >figure{
+        @include bloco($width: 50px, $height: 50px);
+        min-width: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+        >img{
+            @include img-fit(50px, 50px);
+        }
+    }
+    >span{
+        @include texto(16px, $grey, 'Roboto Medium Italic');
+        margin: 0px;
+        @include position(absolute, null, 10px, 10px, null);
+    }
+    >div{
+        display: flex;
+        width: 100%;
+        >h2{
+            @include texto(18px, $black, 'Roboto Bold');
+            margin: 0px;
+        }
+        >p{
+            @include texto(16px, $grey, 'Roboto Medium Italic');
+            margin: 0px;
+        }
+    }
+}
+.contact-wrapper{
+    @include bloco($width: 100%, $height: auto);
+    .contact-title-row{
+        @include bloco($width: 100%, $height: auto);
+        @include display(flex, row, flex-start, center);
+        padding: 20px;
+        .mark{
+            @include texto(18px, $black, 'Roboto Medium');
+        }
+        >div{
+            @include bloco($width: auto, $height: auto);
+            background: $olivine;
+            border-radius: 5px;
+            >span{
+                @include texto(18px, $white, 'Roboto Bold');
+                padding: 12px;
+            }
+        }
+    }
+    .contact-table{
+        @include bloco($width: 100%, $height: auto);
+        border-collapse:collapse;
+    }
+}
+.title{
+    padding: 20px;
+    @include texto(18px, $black, 'Roboto Bold');
+}
+.table-result{
+    padding: 20px;
+    font-size: 18px;
+    color: $darkgrey;
+    font-family: 'Roboto Medium';
 }
