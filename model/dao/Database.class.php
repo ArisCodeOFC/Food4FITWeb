@@ -2,12 +2,12 @@
     /* Classe responsável por montar conexões com o banco de dados */
     class Database {
         /* Atributos de conexão */
-        const HOST = "127.0.0.1";
-        const USUARIO = "root";
-        const SENHA = "bcd127";
-        const DB = "db_food4fit";
+        private static $HOST = "127.0.0.1";
+        private static $USUARIO = "root";
+        private static $SENHA = "bcd127";
+        private static $DB = "db_food4fit";
         /* Define que o método "rowsCount()" do PDO irá retornar o número de linhas encontradas, e não o número de linhas alteradas, garantindo que o usuário não receba um erro caso um UPDATE não faça nenhuma alteração */
-        const CONFIG = array(
+        private static $CONFIG = array(
             PDO::MYSQL_ATTR_FOUND_ROWS => true
         );
 
@@ -18,7 +18,7 @@
         */
         public static function getConnection() {
             try {
-                $conn = new PDO("mysql:host=" . Database::HOST . ";dbname=" . Database::DB, Database::USUARIO, Database::SENHA, Database::CONFIG);
+                $conn = new PDO("mysql:host=" . Database::$HOST . ";dbname=" . Database::$DB, Database::$USUARIO, Database::$SENHA, Database::$CONFIG);
                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 $conn->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
                 $conn->setAttribute(PDO::ATTR_STRINGIFY_FETCHES, false);
