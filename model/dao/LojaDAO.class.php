@@ -1,4 +1,7 @@
 <?php
+
+    //DAO -> Somente banco de daods
+
     require_once("Database.class.php");
     class LojaDAO {
         public static function inserir($loja) {
