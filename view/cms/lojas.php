@@ -40,6 +40,7 @@
         </form>
     </section>
     <div class="shops-view">
+        <!-- Listando o conteudo do banco-->
         <?php foreach ($lojas as $loja) { ?>
             <section class="shop-card">
                 <h2><?= $loja->getEstado() ?> - <?php echo $loja->getAtivo() ? "Ativo" : "Desativado" ?></h2>
