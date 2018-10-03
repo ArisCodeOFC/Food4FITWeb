@@ -65,7 +65,7 @@
     /*Container-mãe da grelha genérica responsiva*/
     @include bloco(100%, 100%, 100%, false);
     box-sizing: border-box;
-    border: 30px solid #FCFCFC;
+    border: 30px solid transparent;
     margin: 0 auto;
     @include display(grid, false, flex-start, flex-start);
     grid-auto-flow: row;

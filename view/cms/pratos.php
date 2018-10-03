@@ -10,24 +10,37 @@
         </a>
     </div>
     <div class="generic-grid animate fadeInUp">
-        <div class="generic-card">
-            <img src="../assets/images/dishs/img1.jpg" alt="Teste" class="generic-card-img">
-            <div class="generic-card-overlay">
-                <span class="card-dish-name margin-bottom-20px">Frango Com Batatas</span>
-                <div class="card-dish-separator margin-bottom-15px"></div>
-                <p class="categoria-prato margin-bottom-30px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni magnam saepe reiciendis.</p>
+            <?php
+            for($i=1; $i < 15; $i ++ ){
 
 
-                <div class="edit-btns">
-                    <img src="../assets/images/icons/edit.svg" alt="Editar Prato">
-                    <img src="../assets/images/icons/delete-white.svg" alt="Excluir Prato">
-                </div>
-                <div class="status-prato">
-                    <span>
-                        Status - Ativado
+            ?>
+            <div class="generic-card">
+                <img src="../assets/images/dishs/img1.jpg" alt="Teste" class="generic-card-img">
+                <div class="generic-card-ovy">
+                    <span class="card-dish-name margin-bottom-20px">Frango Com Batatas</span>
+                    <div class="card-dish-separator margin-bottom-15px"></div>
+                    <p class="categoria-prato margin-bottom-30px">Categoria: Alguma Coisa</p>
+
+
+                    <div class="edit-btns">
+                        <img src="../assets/images/icons/edit.svg" alt="Editar Prato">
+                        <img src="../assets/images/icons/delete-white.svg" alt="Excluir Prato">
+                        <img src="../assets/images/icons/checked-white.svg" alt="">
+                    </div>
+                    <div class="margin-top-15px" style="width: auto; height: auto; display: flex; align-items: center;">
+                        <div class="switch_box margin-right-10px">
+                            <input type="checkbox" id="chkdish" name="chkdish" class="switch-styled" data-f4f-chk-reserve>
+                        </div>
+                        <label for="chkdish" style="display: block; ">Promoção</label>
+                    </div>
+                    <span class="avaliacoes-pratos">
+                        Ver Avaliações
                     </span>
                 </div>
             </div>
-        </div>
+            <?php
+            }
+            ?>
     </div>
 </div>

@@ -876,13 +876,10 @@ img.btn-logout:hover {
 
 //Pratos
 .pratos-wrapper{
-    width: 100%;
-    height: auto;
-    background-color: aquamarine;
+    @include bloco($width: 100%, $height: auto);
 }
-
 .edit-btns{
-	@include bloco($width: 62px, $maxwidth: null, $height: 30px);
+	@include bloco($width: auto, $maxwidth: null, $height: 30px);
 	@include display(flex, row, space-between, center);
 	@include position(absolute, 10px, $right: null, $bottom: null, $left: 10px);
 	-webkit-transition: 200ms ease-in-out;
@@ -892,6 +889,7 @@ img.btn-logout:hover {
 	        transition: 200ms ease-in-out;
 	>img{
 		@include img-fit(28px, 28px);
+        margin-right: 5px;
 		&:hover{
 			-webkit-transform: scale(1.04);
 			   -moz-transform: scale(1.04);
@@ -902,6 +900,18 @@ img.btn-logout:hover {
 	}
 }
 
+.generic-card-ovy{
+    /*Container acima do card da grelha genérica responsiva*/
+    @include bloco(100%, 100%, auto, false);
+    @include display(flex, column, center, center);
+    @include position(absolute, 0, 0, 0, 0);
+    border-radius: 10px;
+    overflow: hidden;
+    background: linear-gradient(transparent, rgba(0,0,0,0.5));
+    box-shadow: $shadow;
+    transition: 200ms ease-in-out;
+}
+
 .categoria-prato{
     @include texto(16px, $white, 'Roboto Regular', 21px, center);
     width: 80%;
@@ -909,6 +919,14 @@ img.btn-logout:hover {
 }
 
 .status-prato{
-    @include bloco($width: auto, $maxwidth: null, $height: 25px);
+    @include bloco($width: auto, $height: 25px);
 	@include position(absolute, 13px, 10px, $bottom: null, $left: null);
+    >span{
+        @include texto(18px, $white, 'Roboto Medium');
+    }
+}
+.avaliacoes-pratos{
+    @include position(absolute, null, null, 30px, 50%);
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }
