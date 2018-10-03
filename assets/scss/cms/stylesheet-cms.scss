@@ -1025,3 +1025,37 @@ img.btn-logout:hover {
     @include texto(16px, $grey, 'Roboto Medium Italic', 18px);
     @include position(absolute, null, 0px, 0px, null);
 }
+
+.fitsession-card-img{
+    /*Imagem do card da grelha genérica responsiva*/
+    @include img-fit(100%, 300px);
+    max-width: 100%;
+    border-radius: 10px;
+    transition: 300ms ease-in-out;
+}
+.fitsession-card-overlay{
+    /*Container acima do card da grelha genérica responsiva*/
+    @include bloco(100%, 100%, auto, false);
+    @include display(flex, column, center, center);
+    @include position(absolute, 0, 0, 0, 0);
+    border-radius: 10px;
+    overflow: hidden;
+    background: linear-gradient(transparent, rgba(0,0,0,0.5));
+    box-shadow: $shadow;
+    transition: 200ms ease-in-out;
+}
+.fitsession-name{
+    /*Nome do prato da grelha genérica responsiva*/
+    @include titulo(26px, $white, 'Roboto Bold', 32px, center);
+    width: 80%;
+    margin: 0 auto;
+    &:after{
+        content:"";
+        display: block;
+        width: 30px;
+        height: 3px;
+        border-radius: 30px;
+        background-color: $white;
+        margin: 15px auto 20px auto;
+    }
+}

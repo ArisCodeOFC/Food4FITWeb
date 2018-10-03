@@ -58,7 +58,7 @@
             <span class="image"><img src="../assets/images/cms/icons/pedidos.svg" alt="Pedidos"></span>
             <span class="label">Pedidos<span class="badge">12</span></span>
         </a>
-        <a href="#">
+        <a href="#" data-page-load="fit-session">
             <span class="image"><img src="../assets/images/cms/icons/fit-session.svg" alt="Fit Session"></span>
             <span class="label">Fit Session</span>
         </a>
