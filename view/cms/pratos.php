@@ -15,15 +15,17 @@
             <div class="generic-card-overlay">
                 <span class="card-dish-name margin-bottom-20px">Frango Com Batatas</span>
                 <div class="card-dish-separator margin-bottom-15px"></div>
-                <p class="card-dish-description margin-bottom-30px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni magnam saepe reiciendis.</p>
-                <div class="card-dish-price margin-bottom-30px"><!-- CONTAINER DO PREÇO DO PRATO NA INDEX -->
-                    <span class="padding-right-15px">R$ 9,90</span><!-- PREÇO -->
-                    <div><img src="assets/images/simbols/delivery-truck.svg" alt="Compra Rápida"></div><!-- COMPRA RAPIDA -->
-                </div>
+                <p class="categoria-prato margin-bottom-30px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni magnam saepe reiciendis.</p>
+
 
                 <div class="edit-btns">
-                    <img src="assets/images/icons/edit.svg" alt="Editar Prato">
-                    <img src="assets/images/icons/delete-white.svg" alt="Excluir Prato">
+                    <img src="../assets/images/icons/edit.svg" alt="Editar Prato">
+                    <img src="../assets/images/icons/delete-white.svg" alt="Excluir Prato">
+                </div>
+                <div class="status-prato">
+                    <span>
+                        Status - Ativado
+                    </span>
                 </div>
             </div>
         </div>

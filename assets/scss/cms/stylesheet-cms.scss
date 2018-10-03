@@ -880,3 +880,35 @@ img.btn-logout:hover {
     height: auto;
     background-color: aquamarine;
 }
+
+.edit-btns{
+	@include bloco($width: 62px, $maxwidth: null, $height: 30px);
+	@include display(flex, row, space-between, center);
+	@include position(absolute, 10px, $right: null, $bottom: null, $left: 10px);
+	-webkit-transition: 200ms ease-in-out;
+	   -moz-transition: 200ms ease-in-out;
+	    -ms-transition: 200ms ease-in-out;
+	     -o-transition: 200ms ease-in-out;
+	        transition: 200ms ease-in-out;
+	>img{
+		@include img-fit(28px, 28px);
+		&:hover{
+			-webkit-transform: scale(1.04);
+			   -moz-transform: scale(1.04);
+			    -ms-transform: scale(1.04);
+			     -o-transform: scale(1.04);
+			        transform: scale(1.04);
+		}
+	}
+}
+
+.categoria-prato{
+    @include texto(16px, $white, 'Roboto Regular', 21px, center);
+    width: 80%;
+    margin: 0 auto;
+}
+
+.status-prato{
+    @include bloco($width: auto, $maxwidth: null, $height: 25px);
+	@include position(absolute, 13px, 10px, $bottom: null, $left: null);
+}
