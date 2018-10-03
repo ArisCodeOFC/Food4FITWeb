@@ -967,3 +967,61 @@ img.btn-logout:hover {
     transition: 300ms ease-in-out;
 }
 
+.saude-wrapper{
+    @include bloco($width: 100%, $height: auto);
+    @include display(flex, row, null, null);
+}
+.saude-content{
+    @include bloco($width: 100%, $height: auto);
+    >h2{
+        @include texto(21px, $black, 'Roboto Bold', 23px, center);
+    }
+}
+.saude-flex{
+    @include bloco($width: 100%, $height: auto);
+    @include display(flex, row, null, null);
+    .column1{
+        @include bloco($width: 100%, $height: auto);
+        box-sizing: border-box;
+        padding-right: 30px;
+        padding-left: 15px;
+    }
+    .column2{
+        @include bloco($width: 100%, $height: auto);
+        box-sizing: border-box;
+        padding-left: 30px;
+        padding-right: 15px;
+    }
+}
+.publications-aside{
+   @include bloco(100%, 400px, 100vh);
+   background: $mediumgrey;
+   box-sizing: border-box;
+   border: 20px solid transparent;
+   overflow: auto;
+}
+.publications-aside>h2{
+    @include texto(18px, $black, 'Roboto Bold', 21px);
+}
+.publications-card{
+    @include bloco($width: 100%, $height: auto);
+    border-radius: 5px;
+    background: $lightgrey;
+    box-sizing: border-box;
+    border: 15px solid transparent;
+    position: relative;
+    margin-bottom: 20px;
+}
+.publications-card>h2{
+    @include texto(18px, $black, 'Roboto Bold', 21px);
+    width: 85%;
+    margin-bottom: 30px;
+}
+.publications-card>p{
+    @include texto(16px, $grey, 'Roboto Medium Italic', 18px);
+    @include position(absolute, null, null, 0px, 0px);
+}
+.publications-card>span{
+    @include texto(16px, $grey, 'Roboto Medium Italic', 18px);
+    @include position(absolute, null, 0px, 0px, null);
+}
