@@ -18,7 +18,7 @@
         */
         public static function getConnection() {
             try {
-                $conn = new PDO("mysql:host=" . Database::$HOST . ";dbname=" . Database::$DB, Database::$USUARIO, Database::$SENHA, Database::$CONFIG);
+                $conn = new PDO("mysql:host=" . Database::$HOST . ";dbname=" . Database::$DB . ";charset=utf8", Database::$USUARIO, Database::$SENHA, Database::$CONFIG);
                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 $conn->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
                 $conn->setAttribute(PDO::ATTR_STRINGIFY_FETCHES, false);

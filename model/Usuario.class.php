@@ -1,9 +1,8 @@
 <?php
     require_once("Model.class.php");
-    require_once("UploadModel.class.php");
 
     /* Classe modelo de Usuário */
-    class Usuario extends UploadModel {
+    class Usuario extends Model {
         /* Atributos */
         protected $id;
         protected $nome;
