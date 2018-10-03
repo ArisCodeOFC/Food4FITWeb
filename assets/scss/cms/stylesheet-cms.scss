@@ -929,4 +929,41 @@ img.btn-logout:hover {
     @include position(absolute, null, null, 30px, 50%);
     margin-right: -50%;
     transform: translate(-50%, -50%);
+}.center{
+    /*Container acima do card da grelha genérica responsiva*/
+    @include bloco(100%, 100%, auto, false);
+    @include display(flex, column, center, center);
+    @include position(absolute, 0, 0, 0, 0);
+    border-radius: 10px;
+    overflow: hidden;
+    background: linear-gradient(transparent, rgba(0,0,0,0.5));
+    box-shadow: $shadow;
+    transition: 200ms ease-in-out;
 }
+.session-name{
+    /*Nome do prato da grelha genérica responsiva*/
+    @include titulo(26px, $white, 'Roboto Bold', false, center);
+    width: 80%;
+    margin: 0 auto 15px auto;
+}
+.session-separator{
+    /*Separador da grelha genérica responsiva*/
+    width: 30px;
+    height: 3px;
+    border-radius: 30px;
+    background-color: $white;
+}
+.session-description{
+    /*Descrição do prato da grelha genérica responsiva*/
+    @include texto(16px, $white, 'Roboto Regular', 21px, center);
+    width: 80%;
+    margin: 0 auto;
+}
+.full-img{
+    /*Imagem do card da grelha genérica responsiva*/
+    @include img-fit(100%, 300px);
+    max-width: 100%;
+    border-radius: 10px;
+    transition: 300ms ease-in-out;
+}
+
