@@ -9,7 +9,7 @@
 
             if ($stmt->execute()) {
                 while ($rs = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                    $unidades[] = new UnidadeMedida(Model::convertArray($rs));
+                    $unidades[] = new UnidadeMedida($rs);
                 }
             }
 

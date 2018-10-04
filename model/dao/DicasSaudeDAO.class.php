@@ -10,7 +10,7 @@
 
             if($stmt->execute()){
                 while($rs = $stmt->fetch(PDO::FETCH_ASSOC)){
-                    $dicas = new DicasSaude(Model::convertArray($rs));
+                    $dicas = new DicasSaude($rs);
                 }
             }
 

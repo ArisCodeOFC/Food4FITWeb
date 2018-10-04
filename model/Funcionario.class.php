@@ -4,7 +4,7 @@
     /* Classe modelo de Funcionario */
     class Funcionario extends Model {
         /* Atributos */
-        public $id;
+        protected $id;
         public $matricula;
         public $nome;
         public $sobrenome;
@@ -35,6 +35,14 @@
             }
 
             return strtoupper($iniciaisNome);
+        }
+
+        public function getId() {
+            return $this->id;
+        }
+
+        public function setId($id) {
+            $this->id = $id;
         }
     }
 ?>

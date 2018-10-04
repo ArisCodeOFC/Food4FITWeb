@@ -40,7 +40,7 @@
             <img src="../assets/images/backgrounds/fitsession/img5.jpg" alt="Teste" class="fitsession-card-img">
             <div class="fitsession-card-overlay">
                 <span class="fitsession-name margin-bottom-15px">Vantagens da Comida Fitness</span>
-                <div class="btn-generic">
+                <div class="btn-generic" data-page-load="vantagem-comida-fitness" data-menu-link="fit-session" data-title="Vantagens da Comida Fitness">
                 	<span>Ver Mais</span>
                 </div>
             </div>

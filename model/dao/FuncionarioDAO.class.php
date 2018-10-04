@@ -19,7 +19,7 @@
 
             if ($stmt->execute()) {
                 while ($rs = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                    $funcionario = new Funcionario(Model::convertArray($rs));
+                    $funcionario = new Funcionario($rs);
                 }
             }
 

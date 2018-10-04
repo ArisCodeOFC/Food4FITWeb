@@ -12,6 +12,10 @@
         public function __construct($classe, $array = null) {
             // Verifica se o array não é nulo
             if ($array) {
+                if (gettype($array) === "array") {
+                    $array = Model::convertArray($array);
+                }
+
                 // Faz um loop em todas as propriedades do array
                 foreach ($array as $propriedade => $valor) {
                     // Verifica se o mesmo nome da propriedade do array existe na classe modelo

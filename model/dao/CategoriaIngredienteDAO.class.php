@@ -9,7 +9,7 @@
 
             if ($stmt->execute()) {
                 while ($rs = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                    $categorias[] = new CategoriaIngrediente(Model::convertArray($rs));
+                    $categorias[] = new CategoriaIngrediente($rs);
                 }
             }
 
@@ -25,7 +25,7 @@
             $categoria = null;
             if ($stmt->execute()) {
                 if ($rs = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                    $categoria = new CategoriaIngrediente(Model::convertArray($rs));
+                    $categoria = new CategoriaIngrediente($rs);
                 }
             }
 

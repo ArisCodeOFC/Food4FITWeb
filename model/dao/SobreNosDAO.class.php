@@ -9,7 +9,7 @@
 
             if ($stmt->execute()) {
                 while ($rs = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                    $itens[] = new ItemSobreNos(Model::convertArray($rs));
+                    $itens[] = new ItemSobreNos($rs);
                 }
             }
 
@@ -25,7 +25,7 @@
             $item = null;
             if ($stmt->execute()) {
                 if ($rs = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                    $item = new ItemSobreNos(Model::convertArray($rs));
+                    $item = new ItemSobreNos($rs);
                 }
             }
 

@@ -11,7 +11,7 @@
 
             if ($stmt->execute()) {
                 while ($rs = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                    $usuario = new Usuario(Model::convertArray($rs));
+                    $usuario = new Usuario($rs);
                 }
             }
 
