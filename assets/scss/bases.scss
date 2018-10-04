@@ -268,7 +268,7 @@
     padding-bottom: 15px;
     text-align: left;
 }
-    .form-subtitle{
+.form-subtitle{
     font-size: 16px;
     color: $darkgrey;
     font-family: "Roboto Light";
@@ -347,6 +347,19 @@
 	  	margin-bottom: 15px;
 	  	padding: 15px;
 	}
+    .label-fix{
+	  	font-size: 18px;
+	  	font-family: "Roboto Bold";
+	  	color: #000;
+	  	display: block;
+	}
+    .label-fix-result{
+        font-size: 16px;
+	  	font-family: "Roboto Medium Italic";
+	  	color: $grey;
+	  	display: block;
+
+    }
 }
 .form-row{
     width: 100%;

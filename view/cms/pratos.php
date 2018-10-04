@@ -20,7 +20,7 @@
                 <div class="generic-card-ovy">
                     <span class="card-dish-name margin-bottom-20px">Frango Com Batatas</span>
                     <div class="card-dish-separator margin-bottom-15px"></div>
-                    <p class="categoria-prato margin-bottom-30px">Categoria: Alguma Coisa</p>
+                    <p class="categoria-prato margin-bottom-30px"><b>Categoria:</b> Alguma Coisa</p>
 
 
                     <div class="edit-btns">
@@ -28,11 +28,11 @@
                         <img src="../assets/images/icons/delete-white.svg" alt="Excluir Prato">
                         <img src="../assets/images/icons/checked-white.svg" alt="">
                     </div>
-                    <div class="margin-top-15px" style="width: auto; height: auto; display: flex; align-items: center;">
+                    <div class="state-row padding-top-15px">
                         <div class="switch_box margin-right-10px">
                             <input type="checkbox" id="chkdish" name="chkdish" class="switch-styled" data-f4f-chk-reserve>
                         </div>
-                        <label for="chkdish" style="display: block; ">Promoção</label>
+                        <label for="chkdish">Promoção</label>
                     </div>
                     <span class="avaliacoes-pratos">
                         Ver Avaliações

@@ -62,7 +62,7 @@
             <span class="image"><img src="../assets/images/cms/icons/fit-session.svg" alt="Fit Session"></span>
             <span class="label">Fit Session</span>
         </a>
-        <a href="#">
+        <a href="#" data-page-load="parceiros">
             <span class="image"><img src="../assets/images/cms/icons/parceiros.svg" alt="Parceiros"></span>
             <span class="label">Parceiros</span>
         </a>

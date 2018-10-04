@@ -32,7 +32,7 @@
                 <span>4FIT</span>
                 <span id="subtitulo">Comida Fitness</span>
             </h2>
-            <form id="form-login" class="width-700px margin-auto" autocomplete="off">
+            <form id="form-login" class="width-700px margin-auto padding-top-30px" autocomplete="off">
                 <input type="text" name="matricula" placeholder="Matrícula" class="margin-bottom-20px" autocomplete="off" required>
                 <input type="password" name="senha" autocomplete="off" id="senha" placeholder="Senha" required>
                 <div id="rodape">

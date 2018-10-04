@@ -22,7 +22,6 @@ body {
 	font-family: "Roboto Regular";
 	position: relative;
 }
-
 #main-login {
     @include bloco(100%, 1200px, 100vh);
 	position: relative;
@@ -62,7 +61,6 @@ body {
     }
 }
 #form-login{
-    margin-bottom: 200px;
     >input{
         @include bloco($width: 100%, $height: 50px);
         display: block;
@@ -285,6 +283,130 @@ img.btn-logout:hover {
     font-family: "Roboto Bold";
 }
 
+.aside-register-menu{
+    @include bloco(100%, 400px, 100vh, auto);
+    background: $lightgrey;
+    @include position(absolute, 0px, 0px, 0px, null);
+    z-index: 999;
+    box-sizing: border-box;
+    border: 20px solid transparent;
+    overflow: auto;
+    transition: 200ms ease-in-out;
+    display: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+.aside-register-menu [data-imagem-upload] img {
+    @include img-fit(360px, 360px);
+    display: block;
+}
+
+.aside-register-menu{
+    input[type="file"] {
+	    display: none;
+    }
+    .file-label {
+        width: 360px;
+        height: 50px;
+        background-color: $olivine;
+        @include display(flex, row, center, center);
+        font-size: 16px;
+        text-transform: uppercase;
+        color: $white;
+        font-family: 'Roboto Bold';
+        border-radius: 5px;
+        margin: 20px auto 20px auto;
+        cursor: pointer;
+    }
+    .status {
+        display: block;
+        font-family: "Roboto Regular";
+        font-size: 18px;
+        margin: 0 20px;
+    }
+    .select-block {
+        display: flex;
+        align-items: center;
+        margin: 0 20px;
+        >label {
+            display: block;
+            font-family: "Roboto Medium";
+            font-size: 15px;
+        }
+    }
+}
+.cms-table{
+    @include bloco(100%, 100%, auto);
+    border-collapse: collapse;
+    z-index: 1;
+}
+#flex{
+    @include display(flex, row, flex-start, center);
+}
+.label-fix{
+    font-size: 18px;
+    font-family: "Roboto Bold";
+    color: #000;
+    display: block;
+}
+.label-fix-result{
+    font-size: 16px;
+    font-family: "Roboto Medium Italic";
+    max-width: 500px;
+    color: $grey;
+    display: block;
+    margin-bottom: 20px;
+}
+.label-fix-link{
+    font-size: 16px;
+    font-family: "Roboto Medium Italic";
+    color: $sunsetorange;
+    display: block;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+.cms-table>tbody>tr:first-child {
+   background: #f2f2f2;
+}
+.cms-table-title{
+    font-size: 18px;
+    color: $black;
+    font-family: 'Roboto Bold';
+    padding: 20px;
+    display: block;
+}
+.cms-table-result{
+    font-size: 18px;
+    color: $grey;
+    font-family: 'Roboto Medium';
+    padding: 20px;
+    display: block;
+}
+.cms-table-img{
+    @include img-fit(50px, 50px);
+    border-radius: 50%;
+    margin: 10px 0px 10px 10px;
+}
+.cms-table-opts{
+    @include bloco(auto, auto, 40px);
+    @include display(flex, row, flex-start, center);
+    >img{
+        @include img-fit(40px, 40px);
+        &:first-child{
+            padding-left: 20px;
+        }
+    }
+    >hr{
+        width: 3px;
+        height: 40px;
+        box-sizing: border-box;
+        border: none;
+        margin: 0px 10px 0px 10px;
+        background: $black;
+        border-radius: 5px;
+    }
+}
 .jq-toast-single {
     @include display(flex, column, center, center);
     @include texto(21px, $white, 'Roboto Bold', 20px);
@@ -392,32 +514,28 @@ img.btn-logout:hover {
     background-color: #EFEFEF;
     margin: 0 10px;
 }
-
-
 #tabs {
     @include bloco($width: 100%, $height: 110px);
     @include display(flex, $justifycontent: center, $alignitems: center);
-    >span {
-        @include bloco($width: 250px, $height: 70px);
-        @include texto(18px, #D9D9D9, 'Roboto Bold', 70px, center);
-        cursor: pointer;
-        &:first-child {
-            border-top-left-radius: 35px;
-            border-bottom-left-radius: 35px;
-        }
-        &:last-child {
-            border-top-right-radius: 35px;
-            border-bottom-right-radius: 35px;
-        }
-        .active {
-            color: $white;
-            background-color: #4d4d4d;
-        }
+}
+#tabs>span{
+    @include bloco($width: 250px, $height: 70px);
+    @include texto(18px, #D9D9D9, 'Roboto Bold', 70px, center);
+    cursor: pointer;
+    &:first-child {
+        border-top-left-radius: 35px;
+        border-bottom-left-radius: 35px;
+    }
+    &:last-child {
+        border-top-right-radius: 35px;
+        border-bottom-right-radius: 35px;
+    }
+    .active {
+        color: $white;
+        background-color: #4d4d4d;
     }
 }
-
-
-#tabs-content>* {
+#tabs-content>*{
     display: none;
     .active {
         display: block;
@@ -480,6 +598,7 @@ img.btn-logout:hover {
     box-shadow: 0px 0px 72px 10px rgba(0,0,0,0.1);
     transition: width 500ms;
     flex-shrink: 0;
+    z-index: 999;
 }
 #sidebar::-webkit-scrollbar {
     display: none;
@@ -621,8 +740,8 @@ img.btn-logout:hover {
     }
 }
 #form-right-side {
-    flex: 0 0 450px;
-    background-color: $mediumgrey;
+    @include bloco(100%, 450px);
+    background-color: $lightgrey;
     @include display(flex, column, space-between, null);
     box-sizing: border-box;
 }
@@ -639,7 +758,7 @@ img.btn-logout:hover {
     width: 400px;
     height: 400px;
     display: block;
-    margin: 20px 20px;
+    margin: 0px 20px 20px 20px;
 }
 
 #form-right-side{
@@ -651,7 +770,10 @@ img.btn-logout:hover {
         height: 50px;
         background-color: $olivine;
         @include display(flex, row, center, center);
-        @include texto(16px, $white, 'Roboto Bold');
+        font-size: 16px;
+        text-transform: uppercase;
+        color: $white;
+        font-family: 'Roboto Bold';
         border-radius: 5px;
         margin: 10px 20px;
         cursor: pointer;
@@ -676,8 +798,7 @@ img.btn-logout:hover {
 
 #btn-save {
     background-color: #6a6a6a;
-    width: 100%;
-    height: 50px;
+    @include bloco($width: 450px, $height: 50px);
     margin-top: 10px;
     @include display(flex, row, center, center);
     cursor: pointer;
@@ -929,7 +1050,17 @@ img.btn-logout:hover {
     @include position(absolute, null, null, 30px, 50%);
     margin-right: -50%;
     transform: translate(-50%, -50%);
-}.center{
+    color: $white;
+}
+.state-row{
+    width: auto; height: auto; display: flex; align-items: center;
+    >label{
+        display: block;
+        color: $white;
+    }
+}
+
+.center{
     /*Container acima do card da grelha genérica responsiva*/
     @include bloco(100%, 100%, auto, false);
     @include display(flex, column, center, center);
@@ -994,11 +1125,14 @@ img.btn-logout:hover {
     }
 }
 .publications-aside{
-   @include bloco(100%, 400px, 100vh);
-   background: $mediumgrey;
-   box-sizing: border-box;
-   border: 20px solid transparent;
-   overflow: auto;
+    @include bloco(100%, 400px, 100vh);
+    background: $mediumgrey;
+    box-sizing: border-box;
+    border: 20px solid transparent;
+    overflow: auto;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 .publications-aside>h2{
     @include texto(18px, $black, 'Roboto Bold', 21px);
@@ -1057,5 +1191,13 @@ img.btn-logout:hover {
         border-radius: 30px;
         background-color: $white;
         margin: 15px auto 20px auto;
+    }
+}
+
+.parceiros-wrapper{
+    @include bloco(100%, 100%, 100%);
+    position: relative;
+    >div:first-child{
+        @include display(flex, row, center, center);
     }
 }

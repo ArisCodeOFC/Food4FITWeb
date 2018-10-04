@@ -10,9 +10,9 @@
 
 					<span class="label-generic">Data:</span>
 					<div style="display: flex;">
-						<input type="text" class="input-generic" name="dia" id="dia">
-						<input type="text" class="input-generic" name="mes" id="mes">
-						<input type="text" class="input-generic" name="ano" id="ano">
+						<input type="text" class="input-generic margin-right-15px" name="dia" id="dia" placeholder="Dia">
+						<input type="text" class="input-generic" name="mes" id="mes" placeholder="Mês">
+						<input type="text" class="input-generic margin-left-15px" name="ano" id="ano" placeholder="Ano">
 					</div>
 					<label for="chkdish">Status:</label>
 					<div class="switch_box">

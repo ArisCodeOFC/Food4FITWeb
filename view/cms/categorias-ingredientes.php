@@ -27,7 +27,7 @@
         </div>
         <form id="form-right-side" class="form-generic" data-crud-form>
             <div class="form-generic-content">
-                <h3 id="titulo-acao" class="margin-left-20px margin-right-20px">Cadastrar uma Categoria</h3>
+                <h2 class="form-title margin-left-20px margin-top-20px">Cadastrar uma Categoria</h2>
                 <div data-imagem-upload data-bind="foto">
                     <img>
                     <label for="foto" class="file-label">Escolher Imagem</label>

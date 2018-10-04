@@ -12,8 +12,7 @@
             <div id="form-left-side" class="padding-left-20px padding-right-20px">
                 <div class="form-generic">
                     <div class="form-generic-content">
-                        <h3>Cadastrar um Ingrediente</h3>
-
+                        <h2 class="form-title">Cadastrar um Ingrediente</h2>
                         <div class="form-row">
                             <div class="form-column form-group-6">
                                 <label for="titulo" class="label-generic">Nome do Ingrediente:</label>
