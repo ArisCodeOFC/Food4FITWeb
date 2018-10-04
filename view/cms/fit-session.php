@@ -31,7 +31,7 @@
             <img src="../assets/images/backgrounds/fitsession/img3.jpg" alt="Teste" class="fitsession-card-img">
             <div class="fitsession-card-overlay">
                 <span class="fitsession-name margin-bottom-15px">Dicas de Saúde</span>
-                <div class="btn-generic">
+                <div class="btn-generic" data-page-load="dicas-saude" data-menu-link="fit-session" data-title="Dicas de Saúde">
                 	<span>Ver Mais</span>
                 </div>
             </div>

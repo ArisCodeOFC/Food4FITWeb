@@ -18,21 +18,6 @@ f4fApp.addController("CrudController", function($this, $element) {
     };
 
     $this.setup = function() {
-        $element.find("[data-sceditor]").each(function() {
-            if (!$(this).data("sceditor-instance")) {
-                var instance = $(this).sceditor({
-                    format: "xhtml",
-                    style: "../assets/public/css/sceditor.default.min.css",
-                    emoticons: {},
-                    toolbarExclude: "emoticon,youtube,print,maximize,source,table,quote,code",
-                    dateFormat: "day/month/year",
-                    resizeEnabled: false
-                }).sceditor("instance");
-
-                $(this).data("sceditor-instance", instance);
-            }
-        });
-
         $element.find("[data-imagem-upload] input").on("change", $this.uploadImage);
         $element.find("[data-form-submit]").on("click", $this.submitForm);
         $element.find("[data-form-cancel]").on("click", $this.cancelForm);
@@ -177,30 +162,7 @@ f4fApp.addController("CrudController", function($this, $element) {
     };
 
     $this._onFormSubmit = function(context) {
-        var formData = formToObject($this.formInstance.serializeArray());
-        this.formInstance.find("input[type=checkbox]:not(:checked)").map(function(index, input) {
-            return input.name;
-        }).get().forEach(function(name) {
-            formData[name] = "0";
-        });
-
-        $this.formInstance.find("[data-money-format]").each(function(index, element) {
-            formData[element.name] = element.value.replace(/\./g, "").replace(/,/g, ".");
-        });
-
-        $this.formInstance.find("[data-imagem-upload]").each(function() {
-            var input = $(this).find("input")[0];
-            if (input.files && input.files[0]) {
-                var file = input.files[0];
-                formData[$(input).attr("name")] = {
-                    fileName: file.name,
-                    fileSize: file.size,
-                    fileType: file.type,
-                    fileData: $(this).find("img").attr("src")
-                }
-            }
-        });
-
+        var formData = $this.formInstance.serializeObject();
         var url = $this.urls.insert;
         var isUpdate = false;
         if ($this.formInstance.data("object")) {

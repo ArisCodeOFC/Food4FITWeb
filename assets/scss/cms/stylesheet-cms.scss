@@ -455,6 +455,7 @@ img.btn-logout:hover {
                 height: 60px;
                 align-items: center;
                 justify-content: center;
+                text-align: center;
             }
         }
     }
@@ -530,14 +531,14 @@ img.btn-logout:hover {
         border-top-right-radius: 35px;
         border-bottom-right-radius: 35px;
     }
-    .active {
+    &.active {
         color: $white;
         background-color: #4d4d4d;
     }
 }
 #tabs-content>*{
     display: none;
-    .active {
+    &.active {
         display: block;
     }
 }
@@ -957,6 +958,7 @@ img.btn-logout:hover {
         @include bloco($width: 100%, $height: auto);
         @include display(flex, row, flex-start, center);
         padding: 20px;
+        box-sizing: border-box;
         >div{
             background-color: $olivine;
             @include bloco($width: auto, $height: auto);

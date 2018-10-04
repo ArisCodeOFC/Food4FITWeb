@@ -22,7 +22,7 @@ f4fApp.addController("HomeController", function($this, $element) {
         $element.find("#sidebar").toggleClass("collapse");
     });
 
-    $element.find("a[data-page-load]").click(function(event) {
+    $element.on("click", "[data-page-load]", function(event) {
         event.preventDefault();
         $this.loadView($(this).data("page-load"));
     });
@@ -45,16 +45,22 @@ f4fApp.addController("HomeController", function($this, $element) {
     });
 
     $this.loadView = function(pagina) {
-        var routerLink = $element.find("#sidebar nav a[data-page-load='" + pagina + "']");
+        var routerLink = $element.find("[data-page-load='" + pagina + "']");
         var controller = routerLink.data("pageController");
+        var menuLink = routerLink.data("menuLink");
+        var menuLinkElement = $element.find("[data-page-load='" + menuLink + "']");
+        var title = routerLink.data("title");
         $.get(pagina + ".php", function(conteudo) {
             $element.find("#page-content").html(conteudo);
             $element.find("#sidebar nav a").removeClass("active");
-            var texto = routerLink
+
+            var htmlElement = (menuLink ? menuLinkElement : routerLink)
                 .addClass("active")
                 .find(".label")
                 .contents()
-                .get(0).nodeValue;
+                .get(0);
+
+            var texto = title ? title : htmlElement ? htmlElement.nodeValue : "";
 
             $element.find("#titulo-pagina").text(texto);
             window.location.hash = "#/" + pagina;
@@ -63,6 +69,25 @@ f4fApp.addController("HomeController", function($this, $element) {
             if (controllerInstance && controllerInstance.onInit) {
                 controllerInstance.onInit();
             }
+
+            $this.initView($element.find("#page-content"));
         });
     };
+
+    $this.initView = function(element) {
+        element.find("[data-sceditor]").each(function() {
+            if (!$(this).data("sceditor-instance")) {
+                var instance = $(this).sceditor({
+                    format: "xhtml",
+                    style: "../assets/public/css/sceditor.default.min.css",
+                    emoticons: {},
+                    toolbarExclude: "emoticon,youtube,print,maximize,source,table,quote,code",
+                    dateFormat: "day/month/year",
+                    resizeEnabled: false
+                }).sceditor("instance");
+
+                $(this).data("sceditor-instance", instance);
+            }
+        });
+    }
 });

@@ -21,7 +21,7 @@
 				</div>
 				<div class="column1">
 					<label for="texto">Texto:</label>
-					<textarea name="texto" id="texto" class="textarea-generic height-800px"></textarea>
+					<textarea name="texto" id="texto" class="textarea-generic height-800px" data-sceditor></textarea>
 				</div>
 			</div>
 			<div class="form-row">

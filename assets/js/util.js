@@ -1,9 +1,41 @@
-$.fn.serializeArrayDisabled = function () {
+$.fn.serializeArrayDisabled = function() {
     var disabled = this.find(":input:disabled").removeAttr("disabled");
     var serialized = this.serializeArray();
     disabled.attr("disabled", "disabled");
     return serialized;
 };
+
+$.fn.serializeObject = function() {
+    var formData = formToObject(this.serializeArray());
+    this.find("input[type=checkbox]:not(:checked)").map(function(index, input) {
+        return input.name;
+    }).get().forEach(function(name) {
+        formData[name] = "0";
+    });
+
+    this.find("[data-money-format]").each(function(index, element) {
+        formData[element.name] = element.value.replace(/\./g, "").replace(/,/g, ".");
+    });
+
+    this.find("[data-imagem-upload]").each(function() {
+        var input = $(this).find("input")[0];
+        if (input.files && input.files[0]) {
+            var file = input.files[0];
+            formData[$(input).attr("name")] = {
+                fileName: file.name,
+                fileSize: file.size,
+                fileType: file.type,
+                fileData: $(this).find("img").attr("src")
+            }
+        }
+    });
+
+    this.find("[data-sceditor]").each(function() {
+        formData[this.name] = $(this).data("sceditor-instance").val();
+    });
+
+    return formData;
+}
 
 function formToObject(dados) {
     var resultado = {};

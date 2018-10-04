@@ -27,7 +27,7 @@
                         <input id="imagem" name="uploadData" type="file" accept="image/*">
                     </div>
 
-                    <input type="submit" name="submit">
+                    <input type="submit" name="submit" class="display-none">
                 </form>
                 <div class="controls">
                     <span class="cancel" data-form-cancel>Cancelar</span>

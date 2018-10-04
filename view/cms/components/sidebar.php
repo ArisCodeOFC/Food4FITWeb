@@ -22,7 +22,7 @@
             <span class="image"><img src="../assets/images/cms/icons/pagina-inicial.svg" alt="Dashboard"></span>
             <span class="label">Dashboard</span>
         </a>
-        <a href="#" data-page-load="dicas-saude">
+        <a href="#">
             <span class="image"><img src="../assets/images/cms/icons/diario-de-bordo.svg" alt="Diário de Bordo"></span>
             <span class="label">Diário de Bordo</span>
         </a>
