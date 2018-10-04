@@ -1,19 +1,18 @@
 <?php
     require_once("Database.class.php");
 
-    class DicasSaudeDAO {
-
+    class PorQueComidaFitnessDAO {
         public static function listar() {
             $itens = array();
             $conn = Database::getConnection();
             $stmt = $conn->prepare("SELECT v.id, v.id_funcionario, v.titulo, v.texto, v.ativo,  DATE_FORMAT(v.data, '%d/%m/%Y') AS data, CONCAT_WS(' ', f.nome, f.sobrenome) AS autor
-            FROM tbl_dica_saude AS v
-            INNER JOIN tbl_funcionario AS f ON f.id = v.id_funcionario
+            FROM tbl_vantagem_comida_fitness AS v
+            INNER JOIN tbl_why_comida_fitness AS f ON f.id = v.id_funcionario
             WHERE ORDER BY v.id DESC");
 
             if ($stmt->execute()) {
                 while ($rs = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                    $itens[] = new DicasSaude($rs);
+                    $itens[] = new PorQueComidaFitness($rs);
                 }
             }
 
@@ -24,7 +23,7 @@
         public static function selecionar($id) {
             $conn = Database::getConnection();
             $stmt = $conn->prepare("SELECT v.id, v.id_funcionario, v.titulo, v.texto, v.ativo,  DATE_FORMAT(v.data, '%d/%m/%Y') AS data, CONCAT_WS(' ', f.nome, f.sobrenome) AS autor
-            FROM tbl_dica_saude AS v
+            FROM tbl_why_comida_fitness AS v
             INNER JOIN tbl_funcionario AS f ON f.id = v.id_funcionario
             WHERE v.id = ?");
             $stmt->bindParam(1, $id);
@@ -32,7 +31,7 @@
             $item = null;
             if ($stmt->execute()) {
                 if ($rs = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                    $item = new DicasSaude($rs);
+                    $item = new PorQueComidaFitness($rs);
                 }
             }
 
@@ -42,7 +41,7 @@
 
         public static function inserir($item) {
             $conn = Database::getConnection();
-            $stmt = $conn->prepare("INSERT INTO tbl_dica_saude (id_funcionario, titulo, texto, ativo, data) VALUES (?, ?, ?, ?, NOW())");
+            $stmt = $conn->prepare("INSERT INTO tbl_why_comida_fitness (id_funcionario, titulo, texto, ativo, data) VALUES (?, ?, ?, ?, NOW())");
             $stmt->bindValue(1, $item->getIdFuncionario());
             $stmt->bindValue(2, $item->getTitulo());
             $stmt->bindValue(3, $item->getTexto());
@@ -50,8 +49,7 @@
 
             $resultado = null;
             if ($stmt->execute()) {
-                $resultado = DicasSaudeDAO::selecionar($conn->
-                                                       ,());
+                $resultado = PorQueComidaFitnessDAO::selecionar($conn->lastInsertId());
             }
 
             $conn = null;
@@ -60,7 +58,7 @@
 
         public static function atualizar($id, $item) {
             $conn = Database::getConnection();
-            $stmt = $conn->prepare("UPDATE tbl_dica_saude SET titulo = ?, texto = ?, ativo = ? WHERE id = ?");
+            $stmt = $conn->prepare("UPDATE tbl_why_comida_fitness SET titulo = ?, texto = ?, ativo = ? WHERE id = ?");
             $stmt->bindValue(1, $item->getTitulo());
             $stmt->bindValue(2, $item->getTexto());
             $stmt->bindValue(3, $item->isAtivo(), PDO::PARAM_INT);
@@ -72,7 +70,7 @@
 
         public static function ativar($id) {
             $conn = Database::getConnection();
-            $stmt = $conn->prepare("UPDATE tbl_dica_saude SET ativo = !ativo WHERE id = ?");
+            $stmt = $conn->prepare("UPDATE tbl_why_comida_fitness SET ativo = !ativo WHERE id = ?");
             $stmt->bindParam(1, $id);
             $resultado = $stmt->execute() ? $stmt->rowCount() : -1;
             $conn = null;
@@ -81,7 +79,7 @@
 
         public static function excluir($id) {
             $conn = Database::getConnection();
-            $stmt = $conn->prepare("DELETE FROM tbl_dica_saude WHERE id = ?");
+            $stmt = $conn->prepare("DELETE FROM tbl_why_comida_fitness WHERE id = ?");
             $stmt->bindParam(1, $id);
             $resultado = $stmt->execute() ? $stmt->rowCount() : -1;
             $conn = null;
