@@ -6,11 +6,16 @@
     class CategoriaIngredienteController extends Controller {
         /* Inicializa todas as rotas que serão tratadas */
         public function init() {
+            $this->criarRota("GET", "categoria-ingrediente", "listar");
             $this->criarRota("POST", "categoria-ingrediente", "inserir");
             $this->criarRota("GET", "categoria-ingrediente/{id}", "selecionarItem");
             $this->criarRota("PUT", "categoria-ingrediente/{id}", "atualizar");
             $this->criarRota("PUT", "categoria-ingrediente/{id}/ativar", "ativar");
             $this->criarRota("DELETE", "categoria-ingrediente/{id}", "excluir");
+        }
+
+        public function listar() {
+            $this->api->enviarResultado(CategoriaIngredienteDAO::listar());
         }
 
         public function inserir() {
@@ -77,7 +82,7 @@
             }
         }
 
-        public static function listar() {
+        public static function listarCategorias() {
             return CategoriaIngredienteDAO::listar();
         }
     }

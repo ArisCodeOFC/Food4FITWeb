@@ -54,6 +54,14 @@ f4fApp.addController("HomeController", function($this, $element) {
             $element.find("#page-content").html(conteudo);
             $element.find("#sidebar nav a").removeClass("active");
 
+            if (!title) {
+                title = $element.find("#page-content").find("[data-page-title]").data("pageTitle");
+            }
+
+            if (!controller) {
+                controller = $element.find("#page-content").find("[data-page-controller]").data("pageController");
+            }
+
             var htmlElement = (menuLink ? menuLinkElement : routerLink)
                 .addClass("active")
                 .find(".label")

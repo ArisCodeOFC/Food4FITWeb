@@ -23,6 +23,7 @@
         protected $sodio;
         protected $ingrediente;
         protected $categoria;
+        protected $unidadeMedida;
 
         public function __construct($json = null) {
             parent::__construct(__CLASS__, $json);

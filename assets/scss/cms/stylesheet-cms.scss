@@ -429,19 +429,19 @@ img.btn-logout:hover {
             align-items: center;
             justify-content: center;
         }
-        .image-large {
+        &.image-large {
             flex: 0 0 385px;
         }
-        .image-small {
+        &.image-small {
             flex: 0 0 185px;
         }
-        .medium {
+        &.medium {
             flex: 2 1 0;
         }
-        .large {
+        &.large {
             flex: 3 1 0;
         }
-        .full {
+        &.full {
             flex-grow: 1;
         }
     }
@@ -455,8 +455,10 @@ img.btn-logout:hover {
                 height: 60px;
                 align-items: center;
                 justify-content: center;
-                text-align: center;
             }
+        }
+        &.height-100 {
+            height: 100px;
         }
     }
     .toggle, .editar, .excluir{
@@ -1202,4 +1204,8 @@ img.btn-logout:hover {
     >div:first-child{
         @include display(flex, row, center, center);
     }
+}
+
+[data-crud-template] {
+    display: none;
 }

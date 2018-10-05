@@ -1,9 +1,8 @@
 <?php
     require_once("../../controller/IngredienteController.class.php");
     require_once("../../controller/CategoriaIngredienteController.class.php");
-    $ingredientes = IngredienteController::listar();
     $unidadesMedida = IngredienteController::listarUnidadesMedida();
-    $categorias = CategoriaIngredienteController::listar();
+    $categorias = CategoriaIngredienteController::listarCategorias();
 ?>
 
 <div data-crud-controller>
@@ -140,28 +139,28 @@
                 <div class="coluna medium">Preço</div>
                 <div class="coluna">Opções</div>
             </div>
-            <?php foreach ($ingredientes as $ingrediente) { ?>
-                <div class="linha" data-param-id="<?= $ingrediente->getId() ?>">
-                    <div class="coluna image-small">
-                        <img src="../<?= $ingrediente->getFoto() ?>" alt="<?= $ingrediente->getTitulo() ?>">
-                    </div>
-                    <div class="coluna middle-align medium"><span><?= $ingrediente->getTitulo() ?></span></div>
-                    <div class="coluna middle-align medium"><span><?= $ingrediente->getCategoria()->getTitulo() ?></span></div>
-                    <div class="coluna descricao large">
-                        <div>
-                            <?= strip_tags($ingrediente->getDescricao()) ?>
-                        </div>
-                    </div>
-                    <div class="coluna middle-align medium">
-                        <span>R$ <?= number_format($ingrediente->getPreco(), 2, ",", ".") ?></span>
-                    </div>
-                    <div class="coluna">
-                        <span class="toggle <?= $ingrediente->isAtivo() ? "desativar" : "ativar" ?>"></span><hr>
-                        <span class="editar"></span><hr>
-                        <span class="excluir"></span>
+        </div>
+        <div data-crud-template>
+            <div class="linha" data-param-id="${id}">
+                <div class="coluna image-small">
+                    <img src="../${foto}" alt="${titulo}">
+                </div>
+                <div class="coluna middle-align medium"><span>${titulo}</span></div>
+                <div class="coluna middle-align medium"><span>${categoria.titulo}</span></div>
+                <div class="coluna descricao large">
+                    <div>
+                        ${removeHtml(descricao)}
                     </div>
                 </div>
-            <?php } ?>
+                <div class="coluna middle-align medium">
+                    <span>R$ ${moneyFormat(preco)}</span>
+                </div>
+                <div class="coluna">
+                    <span class="toggle ${checkBoolean(ativo) ? 'desativar' : 'ativar'} ?>"></span><hr>
+                    <span class="editar"></span><hr>
+                    <span class="excluir"></span>
+                </div>
+            </div>
         </div>
     </div>
 </div>

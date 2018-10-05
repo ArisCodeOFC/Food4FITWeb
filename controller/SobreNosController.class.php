@@ -6,11 +6,16 @@
     class SobreNosController extends Controller {
         /* Inicializa todas as rotas que serão tratadas */
         public function init() {
+            $this->criarRota("GET", "sobre-nos", "listar");
             $this->criarRota("POST", "sobre-nos", "inserir");
             $this->criarRota("GET", "sobre-nos/{id}", "selecionarItem");
             $this->criarRota("PUT", "sobre-nos/{id}", "atualizar");
             $this->criarRota("PUT", "sobre-nos/{id}/ativar", "ativar");
             $this->criarRota("DELETE", "sobre-nos/{id}", "excluir");
+        }
+
+        public function listar() {
+            $this->api->enviarResultado(SobreNosDAO::listar());
         }
 
         public function inserir() {
@@ -64,10 +69,6 @@
             } else {
                 $this->api->enviarStatus(404, "Item não encontrado");
             }
-        }
-
-        public static function listar() {
-            return SobreNosDAO::listar();
         }
     }
 ?>

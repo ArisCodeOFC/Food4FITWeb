@@ -1,7 +1,7 @@
 var urlsBase = {
     list: "",
     insert: "",
-    get: "",
+    find: "",
     delete: "",
     update: "",
     toggle: ""
@@ -26,6 +26,7 @@ f4fApp.addController("CrudController", function($this, $element) {
         $this.listInstance.on("click", ".editar", $this.edit);
         $this.listInstance.on("click", ".toggle", $this.toggleStatus);
         $this.listInstance.on("click", ".excluir", $this.delete);
+        $this.reload();
     };
 
     $this.uploadImage = function() {
@@ -121,7 +122,10 @@ f4fApp.addController("CrudController", function($this, $element) {
     };
 
     $this.reload = function(event) {
-        event.preventDefault();
+        if (event) {
+            event.preventDefault();
+        }
+
         if ($this.parentController.reload) {
             $this.parentController.reload(this);
         } else {
@@ -134,7 +138,12 @@ f4fApp.addController("CrudController", function($this, $element) {
     };
 
     $this.buildTemplate = function(item) {
-        return $this.parentController.buildTemplate && $this.parentController.buildTemplate(item) || "";
+        $template = $this.parentController.buildTemplate && $this.parentController.buildTemplate(item);
+        if ($template) {
+            return $template;
+        } else {
+            return $element.find("[data-crud-template]").tmpl(item);
+        }
     };
 
     $this.onInsert = function() {
@@ -163,17 +172,20 @@ f4fApp.addController("CrudController", function($this, $element) {
 
     $this._onFormSubmit = function(context) {
         var formData = $this.formInstance.serializeObject();
-        var url = $this.urls.insert;
+        var method = $this.urls.insert[0];
+        var url = $this.urls.insert[1];
         var isUpdate = false;
+
         if ($this.formInstance.data("object")) {
             formData = $.extend(true, {}, $this.formInstance.data("object"), formData);
-            url = $this.buildUrl($this.urls.update, formData);
+            method = $this.urls.update[0];
+            url = $this.buildUrl($this.urls.update[1], formData);
             isUpdate = true;
         }
 
         if ($this.validateForm(formData)) {
             $.ajax({
-                type: isUpdate ? "PUT" : "POST",
+                type: method,
                 url: url,
                 data: JSON.stringify(formData),
                 success: function(item) {
@@ -198,9 +210,9 @@ f4fApp.addController("CrudController", function($this, $element) {
     };
 
     $this._edit = function(context) {
-        var url = $this.buildUrlFromData($this.urls.get, $(context).parent().parent().data());
+        var url = $this.buildUrlFromData($this.urls.find[1], $(context).parent().parent().data());
         $.ajax({
-            type: "GET",
+            type: $this.urls.find[0],
             url: url,
             success: function(item) {
                 var itemIterator = convertObject(item);
@@ -230,9 +242,9 @@ f4fApp.addController("CrudController", function($this, $element) {
 
     $this._toggleStatus = function(context) {
         var button = $(context);
-        var url = $this.buildUrlFromData($this.urls.toggle, button.parent().parent().data());
+        var url = $this.buildUrlFromData($this.urls.toggle[1], button.parent().parent().data());
         $.ajax({
-            type: "PUT",
+            type: $this.urls.toggle[0],
             url: url,
             success: function() {
                 button.toggleClass("ativar").toggleClass("desativar");
@@ -248,9 +260,9 @@ f4fApp.addController("CrudController", function($this, $element) {
     $this._delete = function(context) {
         f4fApp.showModal("Exclusão", "Deseja realmente excluir este item?", function() {
             var id = $(context).parent().parent().data("param-id");
-            var url = $this.buildUrlFromData($this.urls.delete, $(context).parent().parent().data());
+            var url = $this.buildUrlFromData($this.urls.delete[1], $(context).parent().parent().data());
             $.ajax({
-                type: "DELETE",
+                type: $this.urls.delete[0],
                 url: url,
                 success: function() {
                     $this.listInstance
@@ -272,10 +284,10 @@ f4fApp.addController("CrudController", function($this, $element) {
 
     $this._reload = function(context) {
         $.ajax({
-            type: "GET",
-            url: $this.urls.list,
+            type: $this.urls.list[0],
+            url: $this.urls.list[1],
             success: function(items) {
-                $this.listInstance.find(".linha:not(:first)").remove();
+                $this.listInstance.children(".linha:not(:first)").remove();
                 items.forEach(function(item) {
                     var template = $this.buildTemplate(item);
                     $this.listInstance.append(template);

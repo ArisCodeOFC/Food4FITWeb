@@ -1,37 +1,13 @@
 f4fApp.addController("CategoriaIngredienteController", function($this, $element) {
     $this.onInit = function() {
-        var crudController = f4fApp.buildCrud($element.find("[data-crud-controller]"));
-        if (crudController) {
-            crudController.onInit($this, {
-                insert: "../api/v1/categoria-ingrediente",
-                get: "../api/v1/categoria-ingrediente/{id}",
-                delete: "../api/v1/categoria-ingrediente/{id}",
-                update: "../api/v1/categoria-ingrediente/{id}",
-                toggle: "../api/v1/categoria-ingrediente/{id}/ativar"
-            });
-        }
-    };
-
-    $this.buildTemplate = function(categoria) {
-        var linha = $("<div class='linha'>").attr("data-param-id", categoria.id);
-
-        $("<div class='coluna image-small'>")
-            .append($("<img>").attr("src", "../" + categoria.foto).attr("alt", categoria.titulo))
-            .appendTo(linha);
-
-        $("<div class='coluna middle-left-align'>")
-            .append($("<span>").text(categoria.titulo))
-            .appendTo(linha);
-
-        $("<div class='coluna'>")
-            .append($("<span class='toggle'>").addClass(checkBoolean(categoria.ativo) ? "desativar" : "ativar"))
-            .append($("<hr>"))
-            .append($("<span class='editar'>"))
-            .append($("<hr>"))
-            .append($("<span class='excluir'>"))
-            .appendTo(linha);
-
-        return linha;
+        f4fApp.buildCrud($this, $element, {
+            list: ["GET", "../api/v1/categoria-ingrediente"],
+            insert: ["POST", "../api/v1/categoria-ingrediente"],
+            find: ["GET", "../api/v1/categoria-ingrediente/{id}"],
+            delete: ["DELETE", "../api/v1/categoria-ingrediente/{id}"],
+            update: ["PUT", "../api/v1/categoria-ingrediente/{id}"],
+            toggle: ["PUT", "../api/v1/categoria-ingrediente/{id}/ativar"]
+        });
     };
 
     $this.onInsert = function() {

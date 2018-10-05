@@ -5,11 +5,11 @@
 
     class PorQueComidaFitnessController extends Controller {
         public function init() {
-            $this->criarRota("POST", "vantagem_comida_fitness", "inserir");
-            $this->criarRota("GET", "vantagem_comida_fitness/{id}", "selecionarItem");
-            $this->criarRota("PUT", "vantagem_comida_fitness/{id}", "atualizar");
-            $this->criarRota("PUT", "vantagem_comida_fitness/{id}/ativar", "ativar");
-            $this->criarRota("DELETE", "vantagem_comida_fitness/{id}", "excluir");
+            $this->criarRota("POST", "porque_comida_fitness", "inserir");
+            $this->criarRota("GET", "porque_comida_fitness/{id}", "selecionarItem");
+            $this->criarRota("PUT", "porque_comida_fitness/{id}", "atualizar");
+            $this->criarRota("PUT", "porque_comida_fitness/{id}/ativar", "ativar");
+            $this->criarRota("DELETE", "porque_comida_fitness/{id}", "excluir");
         }
 
         public function inserir() {

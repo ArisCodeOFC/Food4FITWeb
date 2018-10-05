@@ -1,3 +1,5 @@
+<span data-page-title="Dicas de Saúde"></span>
+
 <div class="saude-wrapper">
 	<div class="saude-content form-generic">
 		<h2 class="padding-top-30px padding-bottom-30px">DICAS DE SAÚDE - PUBLICAÇÕES</h2>

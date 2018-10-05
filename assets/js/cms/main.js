@@ -36,8 +36,11 @@ var Application = function() {
             }
         },
 
-        buildCrud: function(element) {
-            return app.setElementController(element, "CrudController");
+        buildCrud: function(instance, element, urls) {
+            var crudController = app.setElementController(element, "CrudController");
+            if (crudController) {
+                crudController.onInit(instance, urls);
+            }
         }
     };
 

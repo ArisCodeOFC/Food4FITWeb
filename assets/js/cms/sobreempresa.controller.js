@@ -1,15 +1,13 @@
 f4fApp.addController("SobreEmpresaController", function($this, $element) {
     $this.onInit = function() {
-        var crudController = f4fApp.buildCrud($element.find("[data-crud-controller]"));
-        if (crudController) {
-            crudController.onInit($this, {
-                insert: "../api/v1/sobre-nos",
-                get: "../api/v1/sobre-nos/{id}",
-                delete: "../api/v1/sobre-nos/{id}",
-                update: "../api/v1/sobre-nos/{id}",
-                toggle: "../api/v1/sobre-nos/{id}/ativar"
-            });
-        }
+        f4fApp.buildCrud($this, $element, {
+            list: ["GET", "../api/v1/sobre-nos"],
+            insert: ["POST", "../api/v1/sobre-nos"],
+            find: ["GET", "../api/v1/sobre-nos/{id}"],
+            delete: ["DELETE", "../api/v1/sobre-nos/{id}"],
+            update: ["PUT", "../api/v1/sobre-nos/{id}"],
+            toggle: ["PUT", "../api/v1/sobre-nos/{id}/ativar"]
+        });
 
         $element.find("#tabs [data-for]").on("click", $this.changeTab);
     };
@@ -31,32 +29,6 @@ f4fApp.addController("SobreEmpresaController", function($this, $element) {
             .addClass("active")
             .siblings()
             .removeClass("active");
-    };
-
-    $this.buildTemplate = function(item) {
-        var linha = $("<div class='linha'>").attr("data-param-id", item.id);
-
-        $("<div class='coluna image-large'>")
-            .append($("<img>").attr("src", "../" + item.foto).attr("alt", item.titulo))
-            .appendTo(linha);
-
-        $("<div class='coluna middle-align medium'>")
-            .append($("<span>").text(item.titulo))
-            .appendTo(linha);
-
-        $("<div class='coluna descricao large'>")
-            .append($("<div>").text($(item.texto).text()))
-            .appendTo(linha);
-
-        $("<div class='coluna'>")
-            .append($("<span class='toggle'>").addClass(checkBoolean(item.ativo) ? "desativar" : "ativar"))
-            .append($("<hr>"))
-            .append($("<span class='editar'>"))
-            .append($("<hr>"))
-            .append($("<span class='excluir'>"))
-            .appendTo(linha);
-
-        return linha;
     };
 
     $this.onFormCancel = function() {

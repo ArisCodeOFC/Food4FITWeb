@@ -5,11 +5,16 @@
 
     class VantagemComidaFitnessController extends Controller {
         public function init() {
+            $this->criarRota("GET", "vantagem_comida_fitness", "listar");
             $this->criarRota("POST", "vantagem_comida_fitness", "inserir");
             $this->criarRota("GET", "vantagem_comida_fitness/{id}", "selecionarItem");
             $this->criarRota("PUT", "vantagem_comida_fitness/{id}", "atualizar");
             $this->criarRota("PUT", "vantagem_comida_fitness/{id}/ativar", "ativar");
             $this->criarRota("DELETE", "vantagem_comida_fitness/{id}", "excluir");
+        }
+
+        public function listar() {
+            $this->api->enviarResultado(VantagemComidaFitnessDAO::listar());
         }
 
         public function inserir() {

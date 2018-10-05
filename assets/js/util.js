@@ -81,3 +81,7 @@ function moneyFormat(value) {
 function checkBoolean(value) {
     return value == "true" || value == true || parseInt(value);
 }
+
+function removeHtml(html) {
+    return $($.parseHTML(html)).text();
+}

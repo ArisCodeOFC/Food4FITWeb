@@ -27,6 +27,7 @@
 	    <script src="../assets/public/js/jquery.toast.min.js"></script>
         <script src="../assets/public/js/jquery.sceditor.xhtml.min.js"></script>
 	    <script src="../assets/public/js/jquery.mask.min.js"></script>
+	    <script src="../assets/public/js/jquery.tmpl.min.js"></script>
 	    <script src="../assets/js/util.js"></script>
 	    <script src="../assets/js/cms/main.js"></script>
 	    <script src="../assets/js/cms/crud.controller.js"></script>
@@ -35,6 +36,7 @@
 	    <script src="../assets/js/cms/categoriaingrediente.controller.js"></script>
 	    <script src="../assets/js/cms/ingrediente.controller.js"></script>
 	    <script src="../assets/js/cms/loja.controller.js"></script>
+	    <script src="../assets/js/cms/vantagemcomidafitness.controller.js"></script>
     </head>
     <body>
         <section id="main" data-controller="HomeController">
