@@ -1,6 +1,7 @@
 <?php
     require_once("../../controller/LojaController.class.php");
     $lojas = LojaController::listar();
+    $ListaEstado = LojaController::listarEstado();
 ?>
 
 <div class="shops-wrapper">
@@ -16,11 +17,30 @@
             <label for="bairro" class="label-generic">Bairro:</label>
             <input type="text" name="bairro" id="bairro" class="input-generic" placeholder="Ex: JD. Gregório Antunes">
 
-            <label for="cidade" class="label-generic">Cidade:</label>
-            <input type="text" name="cidade" id="cidade" class="input-generic" placeholder="Ex: Olímpia">
-
             <label for="estado" class="label-generic">Estado:</label>
-            <input type="text" name="estado" id="estado" class="input-generic" placeholder="Ex: São Paulo">
+            <select type="text" name="estado" id="estado" class="input-generic" placeholder="Ex: São Paulo">
+                <?php
+
+                foreach($ListaEstado as $estado){
+                ?>
+
+
+
+                <option value="<?php echo($estado->getId()) ?>"><?php echo($estado->getEstado())?></option>
+                    <?php
+                        }
+                    ?>
+                </select>
+
+
+
+
+
+
+
+
+            <label for="cidade" class="label-generic">Cidade:</label>
+            <select type="text" name="cidade" id="cidade" class="input-generic" placeholder="Ex: Olímpia"> </select>
 
             <label for="cep" class="label-generic">CEP:</label>
             <input type="text" name="cep" id="cep" class="input-generic" placeholder="Ex: 17745-111">

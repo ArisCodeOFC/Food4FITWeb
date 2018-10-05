@@ -1,4 +1,12 @@
 <?php
+
+//SEMPRE QUE EU CRIAR UM OBJETO, COMEÇO PELA CLASS
+//Protected -> Pode ser acessado apenas por métodos da própria classe e classes filhas
+//construct -> Método chamado automáticamente quando eu chamo alguma NEW
+//Paret -> Classe que esta sendo extendida
+//Get ->
+//Set ->
+//json -> Parametro interno, pegando objetos e jogando automaticamente
     require_once("Model.class.php");
 
     class Loja extends Model {

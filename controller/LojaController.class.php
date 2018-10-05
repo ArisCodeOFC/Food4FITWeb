@@ -1,5 +1,7 @@
 <?php
 
+ //Em seguida após a DAO, vou para controller DO PHP (último apsso referente ao back-end)
+
 //loja.controler.js -> Enviando o conteudo dela para LojaController.class.php
 //Essa LojaController, pode pegar qualquer coisa vindo de outras plataformas
 //criarRota -> Vem do controller
@@ -18,6 +20,8 @@
     require_once("Controller.class.php");
     require_once(__DIR__ . "/../model/Loja.class.php");
     require_once(__DIR__ . "/../model/dao/LojaDAO.class.php");
+    require_once(__DIR__."/../model/Estado.class.php");
+    require_once(__DIR__."/../model/dao/EstadoDAO.class.php");
 
     class LojaController extends Controller {
         public function init() {
@@ -34,6 +38,10 @@
 
         public static function listar() {
             return LojaDAO::listar();
+        }
+
+        public static function listarEstado(){
+            return EstadoDAO::listar();
         }
     }
 ?>

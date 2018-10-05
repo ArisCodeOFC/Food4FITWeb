@@ -1,6 +1,7 @@
 <?php
 
-    //DAO -> Somente banco de daods
+    //Em seguida após a class, vou para DAO
+    //DAO -> Somente banco de dados
 
     require_once("Database.class.php");
     class LojaDAO {
@@ -16,6 +17,7 @@
             $stmt->bindParam(6, $loja->getComplemento());
             $stmt->execute();
 
+            //lastInsertId ->Pega o último ultimo ID inserido (próprio do PHP)
             $idEndereco = $conn->lastInsertId();
             if ($idEndereco) {
                 $stmt2 = $conn->prepare("INSERT INTO tbl_nossa_loja (id_endereco, latitude, longitude, funcionamento, ativo, telefone) VALUES (?, ?, ?, ?, ?, ?)");
@@ -35,6 +37,7 @@
             $conn = Database::getConnection();
             $lojas = array();
 
+            //Prepare -> Próprio PHP, vale igual ao prepare statatement
             $stmt = $conn->prepare("select l.*, e.logradouro, e.numero,
                 e.bairro, e.cep, e.complemento,
                 c.cidade, es.estado, es.UF as uf
@@ -43,6 +46,8 @@
                 inner join tbl_cidade as c on c.id = e.id_cidade
                 inner join tbl_estado as es on c.id_estado = es.id");
 
+            //stmt -> Steatement, coloca parametros dentro do SQL
+            //:: -> Static
             if ($stmt->execute()) {
                 while ($rs = $stmt->fetch(PDO::FETCH_ASSOC)) {
                     $loja = new Loja($rs);

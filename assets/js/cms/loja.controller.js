@@ -1,3 +1,5 @@
+ //Em seguida após a class VIEW, vou para controller.js
+//Interação com o usuario utilizando AJAX (OBRIGATORIO)
 //f4fApp -> Variavel que tem por padrão no CMS, representando o applicativo ao todo
 //addController -> Instanciando a controller
 //Função que representa a página que esou trabalhando
@@ -11,7 +13,24 @@
 f4fApp.addController("LojaController", function($this, $elemento) {
     $elemento.find("#form-loja").submit(function(evento) {
         evento.preventDefault();
-        // FAZER O AJAX
-        //../api/v1/loja/inserir -> Irei estar chamando LojaController.class.php
+     //Aqui faz o AJAX
+
+        $.ajax({
+            type:"POST",
+            //URL que eu coloquei no controller pegando a informacao do meio
+            url:"../api/v1/loja/inserir",
+            //data -> Dados do formulario
+            //serializeObject - > Pega todo meu formulario
+            //transformando em um objeto
+            //da quals erá pego pelo PHP
+            data:$elemento.find("#form-loja").serializeObject(),
+            //dados -> resultado do AJAX
+            success: function(dados){
+
+                alert('Deu certo!')
+            }
+        })
+
+
     });
 });
