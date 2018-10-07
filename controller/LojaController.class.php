@@ -22,6 +22,8 @@
     require_once(__DIR__ . "/../model/dao/LojaDAO.class.php");
     require_once(__DIR__."/../model/Estado.class.php");
     require_once(__DIR__."/../model/dao/EstadoDAO.class.php");
+    require_once(__DIR__."/../model/Cidade.class.php");
+    require_once(__DIR__."/../model/dao/CidadeDAO.class.php");
 
     class LojaController extends Controller {
         public function init() {
@@ -42,6 +44,11 @@
 
         public static function listarEstado(){
             return EstadoDAO::listar();
+        }
+
+        public static function listarCidade(){
+            return CidadeDAO::listar();
+
         }
     }
 ?>

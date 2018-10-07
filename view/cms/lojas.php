@@ -2,7 +2,10 @@
     require_once("../../controller/LojaController.class.php");
     $lojas = LojaController::listar();
     $ListaEstado = LojaController::listarEstado();
+    $ListaCidade = LojaController::listarCidade();
 ?>
+
+
 
 <div class="shops-wrapper">
     <section class="shop-form width-100 padding-bottom-30px form-generic">
@@ -24,23 +27,29 @@
                 foreach($ListaEstado as $estado){
                 ?>
 
-
-
                 <option value="<?php echo($estado->getId()) ?>"><?php echo($estado->getEstado())?></option>
+
+
                     <?php
                         }
                     ?>
                 </select>
 
-
-
-
-
-
-
-
             <label for="cidade" class="label-generic">Cidade:</label>
-            <select type="text" name="cidade" id="cidade" class="input-generic" placeholder="Ex: Olímpia"> </select>
+            <select type="text" name="cidade" id="cidade" class="input-generic" placeholder="Ex: Olímpia">
+
+                <?php
+
+                foreach($ListaCidade as $cidade){
+
+                ?>
+
+                <option value="<?php echo ($cidade->getId())?>"><?php echo ($cidade->getCidade())?></option>
+
+                <?php
+                    }
+                ?>
+            </select>
 
             <label for="cep" class="label-generic">CEP:</label>
             <input type="text" name="cep" id="cep" class="input-generic" placeholder="Ex: 17745-111">
