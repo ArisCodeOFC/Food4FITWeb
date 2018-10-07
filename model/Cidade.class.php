@@ -14,12 +14,12 @@
 		$this->id = $id;
 	}
 
-	public function getEstado(){
-		return $this->estado;
+	public function getIdEstado(){
+		return $this->idEstado;
 	}
 
-	public function setEstado($estado){
-		$this->estado = $estado;
+	public function setIdEstado($idEstado){
+		$this->estado = $idEstado;
 	}
 
 	public function getCidade(){
@@ -27,7 +27,7 @@
 	}
 
 	public function setCidade($cidade){
-		$this->uf = $cidade;
+		$this->cidade = $cidade;
 	}
 
     }

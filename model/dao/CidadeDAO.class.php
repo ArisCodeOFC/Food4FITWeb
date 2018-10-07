@@ -16,17 +16,13 @@
                 while ($resultado = $stmt->fetch(PDO::FETCH_ASSOC)){
                     $listarCidade = new Cidade();
                     $listarCidade->setId($resultado['id']);
-                    $listarCidade->setEstado($resultado['id_estado']);
+                    $listarCidade->setIdEstado($resultado['id_estado']);
                     $listarCidade->setCidade($resultado['cidade']);
 
                     $lista[] = $listarCidade;
 
-
-
                 }
             }
-
-
             $conn = null;
             return $lista;
         }

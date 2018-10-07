@@ -3,6 +3,8 @@
     $lojas = LojaController::listar();
     $ListaEstado = LojaController::listarEstado();
     $ListaCidade = LojaController::listarCidade();
+    //var_dump -> Debugar variavel
+    //var_dump($ListaCidade);
 ?>
 
 
@@ -41,6 +43,8 @@
                 <?php
 
                 foreach($ListaCidade as $cidade){
+
+
 
                 ?>
 
