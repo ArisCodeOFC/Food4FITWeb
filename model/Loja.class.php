@@ -14,7 +14,7 @@
         protected $latitude;
         protected $longitude;
         protected $funcionamento;
-        protected $ativo;
+        protected $ativo = true;
         protected $telefone;
         protected $logradouro;
         protected $cep;
