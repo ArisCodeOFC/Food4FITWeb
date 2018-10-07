@@ -1,4 +1,4 @@
-<span data-page-title="Dicas de Saúde"></span>
+<span data-page-controller="DicasSaudeController" data-page-title="Dicas de Saúde"></span>
 
 <div class="saude-wrapper">
 	<div class="saude-content form-generic">

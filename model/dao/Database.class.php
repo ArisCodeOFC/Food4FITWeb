@@ -4,7 +4,7 @@
         /* Atributos de conexão */
         private static $HOST = "127.0.0.1";
         private static $USUARIO = "root";
-        private static $SENHA = "1234";
+        private static $SENHA = "bcd127";
         private static $DB = "db_food4fit";
         /* Define que o método "rowsCount()" do PDO irá retornar o número de linhas encontradas, e não o número de linhas alteradas, garantindo que o usuário não receba um erro caso um UPDATE não faça nenhuma alteração */
         private static $CONFIG = array(

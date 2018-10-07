@@ -13,7 +13,7 @@
             <img src="../assets/images/backgrounds/fitsession/img2.jpg" alt="Teste" class="fitsession-card-img">
             <div class="fitsession-card-overlay">
                 <span class="fitsession-name margin-bottom-15px">Por Que a Comida Fitness</span>
-                <div class="btn-generic">
+                <div class="btn-generic" data-page-load="por-que-comida-fitness" data-menu-link="fit-session">
                 	<span>Ver Mais</span>
                 </div>
             </div>

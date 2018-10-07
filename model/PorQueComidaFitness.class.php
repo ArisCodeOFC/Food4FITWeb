@@ -8,6 +8,7 @@
         protected $texto;
         protected $ativo = true;
         protected $data;
+        protected $autor;
 
         public function __construct($json = null) {
             parent::__construct(__CLASS__, $json);
@@ -59,6 +60,14 @@
 
         public function setData($data) {
             $this->data = $data;
+        }
+
+        public function getAutor() {
+            return $this->autor;
+        }
+
+        public function setAutor($autor) {
+            $this->autor = $autor;
         }
     }
 ?>

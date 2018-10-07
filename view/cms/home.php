@@ -37,6 +37,7 @@
 	    <script src="../assets/js/cms/ingrediente.controller.js"></script>
 	    <script src="../assets/js/cms/loja.controller.js"></script>
 	    <script src="../assets/js/cms/vantagemcomidafitness.controller.js"></script>
+	    <script src="../assets/js/cms/porquecomidafitness.controller.js"></script>
     </head>
     <body>
         <section id="main" data-controller="HomeController">

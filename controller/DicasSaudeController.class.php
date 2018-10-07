@@ -5,11 +5,16 @@
 
     class DicasSaudeController extends Controller {
         public function init() {
+            $this->criarRota("GET", "dicas_saude", "listar");
             $this->criarRota("POST", "dicas_saude", "inserir");
             $this->criarRota("GET", "dicas_saude/{id}", "selecionarItem");
             $this->criarRota("PUT", "dicas_saude/{id}", "atualizar");
             $this->criarRota("PUT", "dicas_saude/{id}/ativar", "ativar");
             $this->criarRota("DELETE", "dicas_saude/{id}", "excluir");
+        }
+
+        public function listar() {
+            $this->api->enviarResultado(DicasSaudeDAO::listar());
         }
 
         public function inserir() {
@@ -35,7 +40,7 @@
 
         public function atualizar($id) {
             $item = new DicasSaude($this->dados);
-            if (DicasSaudeDAO::atualizar($id, $item)) {
+            if DicasSaudeDAO::atualizar($id, $item)) {
                 $this->api->enviarResultado($item);
             } else {
                 $this->api->enviarStatus(404, "Item não encontrado");
