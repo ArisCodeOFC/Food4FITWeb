@@ -27,10 +27,15 @@ f4fApp.addController("LojaController", function($this, $elemento) {
             //dados -> resultado do AJAX
             success: function(dados){
 
-                alert('Deu certo!')
+                listar();
             }
         })
-
-
     });
+
+        function listar(){
+            $.get("lista-nossas-lojas.php", function(dados){
+                $(".shops-view").replaceWith(dados);
+            })
+        }
+
 });

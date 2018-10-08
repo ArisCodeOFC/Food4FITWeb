@@ -40,6 +40,7 @@
 
         public static function listar() {
             return LojaDAO::listar();
+
         }
 
         public static function listarEstado(){
