@@ -2,14 +2,19 @@
 
     require_once("Database.class.php");
     class CidadeDAO {
-        public static function listar(){
+        public static function listar($idEstado){
 
 
             $lista = [];
 
             $conn = Database::getConnection();
 
-            $stmt = $conn->prepare("SELECT * FROM tbl_cidade");
+            $stmt = $conn->prepare("select c.id, c.id_estado, c.cidade, e.estado
+            FROM tbl_cidade as c
+            INNER JOIN tbl_estado as e
+            ON c.id_estado = e.id and e.id=?");
+            //bindParamn -> parametro que substitui interrogação
+            $stmt->bindParam(1, $idEstado);
 
 
             if($stmt->execute()){

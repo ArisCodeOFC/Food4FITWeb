@@ -2,9 +2,9 @@
 
 
     class Cidade{
-        private $id;
-        private $idEstado;
-        private $cidade;
+        public $id;
+        public $idEstado;
+        public $cidade;
 
     public function getId(){
 		return $this->id;
@@ -19,7 +19,7 @@
 	}
 
 	public function setIdEstado($idEstado){
-		$this->estado = $idEstado;
+		$this->idEstado = $idEstado;
 	}
 
 	public function getCidade(){

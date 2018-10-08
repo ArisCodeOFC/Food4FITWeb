@@ -27,9 +27,11 @@
 
     class LojaController extends Controller {
         public function init() {
-            $this->criarRota("POST", "loja/inserir", "inserir");
-            // caso eu quiser inserir outro (excluir)
+              // caso eu quiser inserir outro (excluir)
             //$this->criarRota("POST", "loja/inserir", "inserir");
+            $this->criarRota("POST", "loja/inserir", "inserir");
+            $this->criarRota("GET", "cidade/select/{idEstado}", "listarCidade");
+
         }
 
         public function inserir() {
@@ -47,8 +49,12 @@
             return EstadoDAO::listar();
         }
 
-        public static function listarCidade(){
-            return CidadeDAO::listar();
+        //Não terá static porque será uma ROTA
+        public function listarCidade($idEstado){
+            //Chamando DAO
+             $select = CidadeDAO::listar($idEstado);
+            $this->api->enviarResultado($select);
+
 
         }
     }
