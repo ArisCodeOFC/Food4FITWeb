@@ -22,7 +22,7 @@
                 <div class="coluna medium">${autor}</div>
                 <div class="coluna medium">${data}</div>
                 <div class="coluna">
-                    <span class="toggle ${checkBoolean(ativo) ? 'desativar' : 'ativar'} ?>"></span><hr>
+                    <span class="toggle ${checkBoolean(ativo) ? 'desativar' : 'ativar'}"></span><hr>
                     <span class="editar"></span><hr>
                     <span class="excluir"></span>
                 </div>
