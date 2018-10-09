@@ -60,5 +60,17 @@ f4fApp.addController("LojaController", function($this, $elemento) {
         });
 
     });
-
+    //Criando a função do botão excluir, pegando o id
+    //find -> procura dentro
+    //closet -> procura fora
+    //$elemento.find(".deletar-loja").click(function(){
+    //elemento -> representa a pagina inteira
+    //on -> quando voce clicar em tal coisa, irá executar outra
+    $elemento.on("click", ".deletar-loja", function(){
+        //pegando primeiro a section para depois pegar o atributo da data que eu coloquei (data-id)
+        var pegarId = $(this).closest(".shop-card").data("id");
+        $.get("../api/v1/loja/excluir/"+pegarId, function(){
+            listar();
+        });
+    });
 });
