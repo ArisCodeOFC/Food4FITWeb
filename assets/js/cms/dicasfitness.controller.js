@@ -1,12 +1,12 @@
-f4fApp.addController("DicasSaudeController", function($this, $element) {
+f4fApp.addController("DicasFitnessController", function($this, $element) {
     $this.onInit = function() {
         f4fApp.buildCrud($this, $element, {
-            list: ["GET", "../api/v1/dicas_saude"],
-            insert: ["POST", "../api/v1/dicas_saude"],
-            find: ["GET", "../api/v1/dicas_saude/{id}"],
-            delete: ["DELETE", "../api/v1/dicas_saude/{id}"],
-            update: ["PUT", "../api/v1/dicas_saude/{id}"],
-            toggle: ["PUT", "../api/v1/dicas_saude/{id}/ativar"]
+            list: ["GET", "../api/v1/dicas_fitness"],
+            insert: ["POST", "../api/v1/dicas_fitness"],
+            find: ["GET", "../api/v1/dicas_fitness/{id}"],
+            delete: ["DELETE", "../api/v1/dicas_fitness/{id}"],
+            update: ["PUT", "../api/v1/dicas_fitness/{id}"],
+            toggle: ["PUT", "../api/v1/dicas_fitness/{id}/ativar"]
         });
 
         $element.find("#btn-adicionar-publicacao").on("click", $this.showForm);
