@@ -52,7 +52,7 @@
         //Não terá static porque será uma ROTA
         public function listarCidade($idEstado){
             //Chamando DAO
-             $select = CidadeDAO::listar($idEstado);
+            $select = CidadeDAO::listar($idEstado);
             $this->api->enviarResultado($select);
 
 
