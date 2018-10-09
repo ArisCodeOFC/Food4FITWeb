@@ -58,5 +58,20 @@
             $conn = null;
             return $lojas;
         }
+
+        public static function excluir($id){
+            $conn = Database::getConnection();
+
+            $stmt = $conn->prepare("delete loja, endereco
+            FROM tbl_nossa_loja as loja
+            INNER JOIN tbl_endereco as endereco
+            ON endereco.id = loja.id_endereco
+            WHERE loja.id = ?");
+            $stmt->bindParam(1, $id);
+            $stmt->execute();
+
+            $conn = null;
+
+        }
     }
 ?>

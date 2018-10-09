@@ -25,12 +25,14 @@
     require_once(__DIR__."/../model/Cidade.class.php");
     require_once(__DIR__."/../model/dao/CidadeDAO.class.php");
 
+
     class LojaController extends Controller {
         public function init() {
               // caso eu quiser inserir outro (excluir)
             //$this->criarRota("POST", "loja/inserir", "inserir");
             $this->criarRota("POST", "loja/inserir", "inserir");
             $this->criarRota("GET", "cidade/select/{idEstado}", "listarCidade");
+            $this->criarRota("GET", "loja/excluir/{id}", "excluirDado");
 
         }
 
@@ -52,10 +54,13 @@
         //Não terá static porque será uma ROTA
         public function listarCidade($idEstado){
             //Chamando DAO
-             $select = CidadeDAO::listar($idEstado);
+            $select = CidadeDAO::listar($idEstado);
             $this->api->enviarResultado($select);
 
+        }
 
+        public function excluirDado($id){
+            LojaDAO::excluir($id);
         }
     }
 ?>
