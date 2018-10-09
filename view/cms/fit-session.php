@@ -4,7 +4,7 @@
             <img src="../assets/images/backgrounds/fitsession/img1.jpg" alt="Teste" class="fitsession-card-img">
             <div class="fitsession-card-overlay">
                 <span class="fitsession-name margin-bottom-15px">Personal Fitness</span>
-                <div class="btn-generic" data-page-load="personal-fitness" data-menu-link="personal-fitness">
+                <div class="btn-generic" data-page-load="personal-fitness" data-menu-link="fit-session">
                 	<span>Ver Mais</span>
                 </div>
             </div>

@@ -41,7 +41,7 @@
         <article class="generic-block"><!-- SEGUNDO CONTAINER-FILHO DO CABEÇALHO DA INDEX -->
             <h2 id="page-title">DESTAQUES</h2><!-- TÍTULO DA PÁGINA -->
             <div class="generic-grid animate fadeInUp">
-                <div class="generic-card">
+                <div class="generic-card one">
                     <img src="assets/images/dishs/img1.jpg" alt="Teste" class="generic-card-img">
                     <div class="generic-card-overlay">
                         <span class="card-dish-name margin-bottom-30px">Frango Com Batatas</span>
@@ -53,7 +53,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="generic-card">
+                <div class="generic-card two">
                     <img src="assets/images/dishs/img2.jpg" alt="Teste" class="generic-card-img">
                     <div class="generic-card-overlay">
                         <span class="card-dish-name margin-bottom-15px">Bife Com Legumes</span>
@@ -65,7 +65,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="generic-card">
+                <div class="generic-card three">
                     <img src="assets/images/dishs/img3.jpg" alt="Teste" class="generic-card-img">
                     <div class="generic-card-overlay">
                         <span class="card-dish-name margin-bottom-15px">Salada De Frutas</span>

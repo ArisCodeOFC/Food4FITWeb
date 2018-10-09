@@ -40,6 +40,7 @@
 	    <script src="../assets/js/cms/porquecomidafitness.controller.js"></script>
 	    <script src="../assets/js/cms/dicassaude.controller.js"></script>
 	    <script src="../assets/js/cms/dicasfitness.controller.js"></script>
+        <script src="../assets/js/cms/personalfitness.controller.js"></script>
     </head>
     <body>
         <section id="main" data-controller="HomeController">

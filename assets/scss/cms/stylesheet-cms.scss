@@ -451,6 +451,7 @@ img.btn-logout:hover {
             background-color: $mediumgrey;
             .coluna {
                 @include texto(18px, $black, 'Roboto Bold', 60px);
+                padding-left: 20px;
                 text-transform: uppercase;
                 height: 60px;
                 align-items: center;

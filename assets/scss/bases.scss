@@ -68,14 +68,84 @@
     border: 30px solid transparent;
     margin: 0 auto;
     @include display(grid, false, flex-start, flex-start);
-    display: -ms-grid;
+    display: -moz-grid;
     grid-auto-flow: row;
     grid-gap: 30px 30px;
     grid-auto-rows: auto;
     grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
-    -ms-grid-columns: 1fr 1fr 1fr;
-    -ms-grid-rows: auto;
-    -ms-grid-auto-flow: row;
+    -moz-grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS styles go here */
+
+    /* GRID GENÉRICO */
+	.generic-grid{
+	    /*Container-mãe da grelha genérica responsiva*/
+	    @include bloco(100%, 100%, 100%, false);
+	    box-sizing: border-box;
+	    border: 0px solid;
+	    margin: 0 auto;
+	    display:-ms-grid;
+   		display:grid;
+        -ms-grid-columns:1fr 1fr 1fr;
+        grid-template-columns:1fr 1fr 1fr;
+		grid-template-areas:"one two three";
+    }
+	.one{
+		-ms-grid-row:1;
+	    -ms-grid-column:1;
+	    grid-area:one;
+	}
+	.two{
+		-ms-grid-row:1;
+		-ms-grid-column:2;
+		grid-area:two;
+	}
+	.three{
+		-ms-grid-row:1;
+	    -ms-grid-column:3;
+	    grid-area:three;
+	}
+	.four{
+		-ms-grid-row:1;
+	    -ms-grid-column:1;
+	    -mg-grid-row: 2;
+	    grid-area:one;
+	}
+	.five{
+		-ms-grid-row:1;
+		-ms-grid-column:2;
+		-mg-grid-row: 2;
+		grid-area:two;
+	}
+	.six{
+		-ms-grid-row:1;
+	    -ms-grid-column:3;
+	    -mg-grid-row: 2;
+	    grid-area:three;
+	}
+	.seven{
+		-ms-grid-row:1;
+	    -ms-grid-column:1;
+	    -mg-grid-row: 3;
+	    grid-area:one;
+	}
+	.eight{
+		-ms-grid-row:1;
+		-ms-grid-column:2;
+		-mg-grid-row: 3;
+		grid-area:two;
+	}
+	.nine{
+		-ms-grid-row:1;
+	    -ms-grid-column:3;
+	    -mg-grid-row: 3;
+	    grid-area:three;
+	}
+	.generic-card{
+		box-sizing: border-box;
+		margin: 30px 15px 30px 15px;
+	}
 }
 .generic-card{
     /*Card da grelha genérica responsiva*/
@@ -94,7 +164,6 @@
         /*Ação ao mover o mouse no card da grelha genérica responsiva*/
         transform: scale(1.08);
     }
-
 }
 .generic-card-img{
     /*Imagem do card da grelha genérica responsiva*/
@@ -109,6 +178,7 @@
     @include bloco(100%, 100%, auto, false);
     @include display(flex, column, flex-end, center);
     @include position(absolute, 0, 0, 0, 0);
+    box-sizing: border-box;
     border-radius: 10px;
     overflow: hidden;
     background: linear-gradient(transparent, rgba(0,0,0,0.5));
@@ -408,7 +478,7 @@
 /* BOTÃO GENÉRICO */
 .btn-generic{
     /*Botão genérico*/
-    @include bloco($width: max-content, $height: auto);
+    @include bloco(auto, 120px, auto);
     @include display(flex, row, center, center);
     box-sizing: border-box;
     background: $olivine;
