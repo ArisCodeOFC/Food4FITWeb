@@ -2,7 +2,7 @@
     require_once("../../controller/LojaController.class.php");
     $lojas = LojaController::listar();
     $ListaEstado = LojaController::listarEstado();
-    $ListaCidade = LojaController::listarCidade();
+
     //var_dump -> Debugar variavel
    // var_dump($ListaCidade);
 ?>
@@ -24,6 +24,7 @@
 
             <label for="estado" class="label-generic">Estado:</label>
             <select type="text" name="estado" id="estado" class="input-generic" placeholder="Ex: São Paulo">
+            <option value="" disabled selected></option>
                 <?php
 
                 foreach($ListaEstado as $estado){
@@ -40,19 +41,7 @@
             <label for="cidade" class="label-generic">Cidade:</label>
             <select type="text" name="idCidade" id="cidade" class="input-generic" placeholder="Ex: Olímpia">
 
-                <?php
 
-                foreach($ListaCidade as $cidade){
-
-
-
-                ?>
-
-                <option value="<?php echo ($cidade->getId())?>"><?php echo ($cidade->getCidade())?></option>
-
-                <?php
-                    }
-                ?>
             </select>
 
             <label for="cep" class="label-generic">CEP:</label>

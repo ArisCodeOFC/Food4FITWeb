@@ -38,4 +38,12 @@ f4fApp.addController("LojaController", function($this, $elemento) {
             })
         }
 
+    $elemento.find("#estado").change(function(evento){
+             var id = $(this).val();
+        $.get("../api/v1/cidade/select/"+id,
+            function(lista){
+            alert(lista);
+        });
+    });
+
 });
