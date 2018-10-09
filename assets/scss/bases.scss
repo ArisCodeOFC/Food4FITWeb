@@ -68,10 +68,14 @@
     border: 30px solid transparent;
     margin: 0 auto;
     @include display(grid, false, flex-start, flex-start);
+    display: -ms-grid;
     grid-auto-flow: row;
     grid-gap: 30px 30px;
     grid-auto-rows: auto;
     grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    -ms-grid-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: auto;
+    -ms-grid-auto-flow: row;
 }
 .generic-card{
     /*Card da grelha genérica responsiva*/
@@ -151,6 +155,9 @@
     }
     &:hover{
         transform: scale(1.02);
+    }
+    &:active{
+        background: #C63939;
     }
 }
 
@@ -398,12 +405,12 @@
         }
     }
 }
-
 /* BOTÃO GENÉRICO */
 .btn-generic{
     /*Botão genérico*/
-    @include bloco(120px, 120px, auto);
-    @include display(flex, column, center, center);
+    @include bloco($width: max-content, $height: auto);
+    @include display(flex, row, center, center);
+    box-sizing: border-box;
     background: $olivine;
     border-radius: 5px;
     border: none;
@@ -413,22 +420,24 @@
     >span{
     	/*Texto do botão genérico*/
     	@include texto(16px, $white, 'Roboto Bold', 18px, center);
-    	max-width: 90%;
 	    margin: 0 auto;
 	    box-sizing: border-box;
-	    padding: 10px;
+	    padding: 14px;
     }
     &:hover{
 	    /*Ação ao mover o mouse no botão genérico*/
 	    transform: scale(1.02);
 	    cursor: pointer;
     }
+    &:active{
+        background: #799B63;
+    }
 }
 .btn-generic-disabled{
     /*Botão genérico desabilitado*/
     @include bloco(120px, 120px, auto);
     @include display(flex, column, center, center);
-    background: #9F9F9F;
+    background: $darkgrey;
     border-radius: 5px;
     border: none;
     outline: none;
