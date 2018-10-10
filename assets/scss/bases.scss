@@ -492,7 +492,7 @@
     	@include texto(16px, $white, 'Roboto Bold', 18px, center);
 	    margin: 0 auto;
 	    box-sizing: border-box;
-	    padding: 14px;
+	    padding: 10px;
     }
     &:hover{
 	    /*Ação ao mover o mouse no botão genérico*/
@@ -505,7 +505,7 @@
 }
 .btn-generic-disabled{
     /*Botão genérico desabilitado*/
-    @include bloco(120px, 120px, auto);
+    @include bloco(auto, 120px, auto);
     @include display(flex, column, center, center);
     background: $darkgrey;
     border-radius: 5px;
@@ -515,7 +515,6 @@
     span{
 	    /*Texto do botão genérico desativado*/
 	    @include texto(16px, $grey, 'Roboto Bold Italic', 18px, center);
-	    width: 90%;
 	    margin: 0 auto;
 	    box-sizing: border-box;
 	    padding: 10px;

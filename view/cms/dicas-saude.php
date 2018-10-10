@@ -54,19 +54,5 @@
             <input type="submit" name="submit" class="display-none">
         </form>
     </div>
-    <aside class="publications-aside">
-        <h2 class="padding-bottom-10px">Mais Lidas</h2>
-        <?php
-            for($i = 1; $i < 10; $i++){
-        ?>
-        <div class="publications-card">
-            <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
-            <p>André Sanchez</p>
-            <span>01/01/2018</span>
-        </div>
-        <?php
-            }
-        ?>
-    </aside>
 </div>
 
