@@ -47,6 +47,8 @@ f4fApp.addController("LojaController", function($this, $elemento) {
             //Pegar o select com jquery, pegando o ID da cidade
             //com empty
             $("#cidade").empty();
+
+            //console.log(lista);
             //Percorrendo a lista, fazendo um contador
             for(var contador = 0; contador < lista.length; contador++){
                 //Criando uma variavel, para pegar a cidade no indice que ela tiver, seguindo o contador
