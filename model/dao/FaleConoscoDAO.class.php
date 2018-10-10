@@ -5,7 +5,7 @@
         public static function listar() {
             $itens = array();
             $conn = Database::getConnection();
-            $stmt = $conn->prepare("SELECT * FROM db_food4fit.tbl_fale_conosco");
+            $stmt = $conn->prepare("SELECT * FROM tbl_fale_conosco");
 
             if ($stmt->execute()) {
                 while ($rs = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -19,7 +19,7 @@
 
         public static function selecionar($id) {
             $conn = Database::getConnection();
-            $stmt = $conn->prepare("SELECT * FROM db_food4fit.tbl_fale_conosco where id = ?");
+            $stmt = $conn->prepare("SELECT * FROM tbl_fale_conosco where id = ?");
             $stmt->bindParam(1, $id);
 
             $item = null;

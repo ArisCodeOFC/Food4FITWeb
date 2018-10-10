@@ -10,75 +10,67 @@
             $this->criarRota("POST", "fale_conosco", "inserir");
             $this->criarRota("GET", "fale_conosco/{id}", "selecionar");
             $this->criarRota("DELETE", "fale_conosco/{id}", "excluir");
-        }
-    }
-?>
-
-
-
-
-
-
-
-<?php
-
-
-    class IngredienteController extends Controller {
-        /* Inicializa todas as rotas que serão tratadas */
-        public function init() {
-            $this->criarRota("GET", "ingrediente", "listarTodos");
-            $this->criarRota("POST", "ingrediente", "inserir");
-            $this->criarRota("GET", "ingrediente/{id}", "selecionarItem");
-            $this->criarRota("DELETE", "ingrediente/{id}", "excluir");
+            //$this->criarRota("DELETE", "fale_conosco/{id}", "excluirMarcados");
         }
 
-        public function listarTodos() {
-            $this->api->enviarResultado(IngredienteController::listar());
+
+        public function listarTodos(){
+
         }
 
-        public function inserir() {
-            $ingrediente = new Ingrediente($this->dados);
-            if (!$ingrediente->getUnidadeMedida() || !$ingrediente->getCategoria()) {
+
+        public function inserir(){
+            $menssagem = new FaleConosco($this->dados);
+
+            if(!$menssagem){
                 $this->api->enviarStatus(403, "Preencha todos os campos.");
-            } else {
-                try {
-                    $ingrediente->startUpload("assets/images/ingredientes");
-                    $resultado = IngredienteDAO::inserir($ingrediente);
-                    if ($resultado) {
+            }else{
+                try{
+                    $resultado = FaleConoscoDAO::inserir($menssagem);
+                    if($resultado){
                         $this->api->enviarResultado($resultado);
-                    } else {
+                    }else{
                         $this->api->enviarStatus(500, "Não foi possível inserir.");
                     }
-
-                } catch (Exception $erro) {
-                    $this->api->enviarStatus(500, $erro->getMessage());
                 }
+
             }
         }
 
-        public function selecionarItem($id) {
-            $ingrediente = IngredienteDAO::selecionar($id);
-            if ($ingrediente) {
-                $this->api->enviarResultado($ingrediente);
+
+        public function selecionar(){
+            $menssagem = FaleConoscoDAO::selecionar($id);
+            if ($menssagem) {
+                $this->api->enviarResultado($menssagem);
             } else {
-                $this->api->enviarStatus(404, "Ingrediente não encontrado");
+                $this->api->enviarStatus(404, "Menssagem não encontrado");
             }
         }
 
 
-
-        public function excluir($id) {
-            if (IngredienteDAO::excluir($id)) {
+        public function excluir($id){
+            if(FaleConoscoDAO::excluir($id)){
                 $this->api->enviarStatus(204);
-            } else {
-                $this->api->enviarStatus(404, "Ingrediente não encontrado");
+            }else{
+                $this->api->enviarStatus(404, "Menssagem não encontrada");
             }
         }
 
-        public static function listar() {
-            return IngredienteDAO::listar();
+
+        public function excluirMarcados(){
+
         }
-
-
     }
+
+
+//        public function listarTodos() {
+//            $this->api->enviarResultado(IngredienteController::listar());
+//        }
+//
+//
+//        public static function listar() {
+//            return IngredienteDAO::listar();
+//        }
+
+
 ?>
