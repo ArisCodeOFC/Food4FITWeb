@@ -74,7 +74,10 @@ f4fApp.addController("LojaController", function($this, $elemento) {
         });
     });
 
-    $elemento.on("click", "loja-ativa", function(){
-       var pegarId = $(this).c
+    $elemento.on("click", ".loja-ativa", function(){
+       var pegarId = $(this).closest(".shop-card").data("id");
+        $.get("../api/v1/loja/ativar/"+pegarId, function(){
+            listar();
+        });
     });
 });
