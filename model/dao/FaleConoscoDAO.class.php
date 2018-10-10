@@ -5,14 +5,11 @@
         public static function listar() {
             $itens = array();
             $conn = Database::getConnection();
-            $stmt = $conn->prepare("SELECT v.id, v.id_funcionario, v.titulo, v.texto, v.ativo,  DATE_FORMAT(v.data, '%d/%m/%Y') AS data, CONCAT_WS(' ', f.nome, f.sobrenome) AS autor
-            FROM tbl_fale_conosco AS v
-            INNER JOIN tbl_funcionario AS f ON f.id = v.id_funcionario
-            ORDER BY v.id DESC");
+            $stmt = $conn->prepare("SELECT * FROM db_food4fit.tbl_fale_conosco");
 
             if ($stmt->execute()) {
                 while ($rs = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                    $itens[] = new DicasSaude($rs);
+                    $itens[] = new FaleConosco($rs);
                 }
             }
 
@@ -22,16 +19,13 @@
 
         public static function selecionar($id) {
             $conn = Database::getConnection();
-            $stmt = $conn->prepare("SELECT v.id, v.id_funcionario, v.titulo, v.texto, v.ativo,  DATE_FORMAT(v.data, '%d/%m/%Y') AS data, CONCAT_WS(' ', f.nome, f.sobrenome) AS autor
-            FROM tbl_fale_conosco AS v
-            INNER JOIN tbl_funcionario AS f ON f.id = v.id_funcionario
-            WHERE v.id = ?");
+            $stmt = $conn->prepare("SELECT * FROM db_food4fit.tbl_fale_conosco where id = ?");
             $stmt->bindParam(1, $id);
 
             $item = null;
             if ($stmt->execute()) {
                 if ($rs = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                    $item = new DicasSaude($rs);
+                    $item = new FaleConosco($rs);
                 }
             }
 
@@ -52,7 +46,7 @@
 
             $resultado = null;
             if ($stmt->execute()) {
-                $resultado = DicasSaudeDAO::selecionar($conn->lastInsertId());
+                $resultado = FaleConoscoDAO::selecionar($conn->lastInsertId());
             }
 
             $conn = null;
@@ -68,5 +62,7 @@
             $conn = null;
             return $resultado;
         }
+
+        //public static function exlcuisMarcados(){}
     }
 ?>

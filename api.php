@@ -12,6 +12,7 @@
     require_once("controller/DicasSaudeController.class.php");
     require_once("controller/DicasFitnessController.class.php");
     require_once("controller/UnidadeMedidaController.class.php");
+    require_once("controller/FaleConoscoController.class.php");
 
     /* Cria uma nova instância da classe APIController e inicializa todas as rotas */
     new APIController();
