@@ -73,5 +73,14 @@
             $conn = null;
 
         }
+        public static function ativar($id){
+            $conn = Database::getConnection();
+            $stmt = $conn->prepare("
+            UPDATE tbl_nossa_loja SET ativo = !ativo WHERE id = ?");
+            $stmt->bindParam(1, $id);
+            $stmt->execute();
+
+            $conn = null;
+        }
     }
 ?>

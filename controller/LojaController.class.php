@@ -28,11 +28,10 @@
 
     class LojaController extends Controller {
         public function init() {
-              // caso eu quiser inserir outro (excluir)
-            //$this->criarRota("POST", "loja/inserir", "inserir");
             $this->criarRota("POST", "loja/inserir", "inserir");
             $this->criarRota("GET", "cidade/select/{idEstado}", "listarCidade");
             $this->criarRota("GET", "loja/excluir/{id}", "excluirDado");
+            $this->criarRota("GET", "loja/ativar/{id}", "ativarItem");
 
         }
 
@@ -61,6 +60,10 @@
 
         public function excluirDado($id){
             LojaDAO::excluir($id);
+        }
+
+        public function ativarItem($id){
+            LojaDAO::ativar($id);
         }
     }
 ?>
