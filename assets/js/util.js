@@ -37,6 +37,22 @@ $.fn.serializeObject = function() {
     return formData;
 }
 
+$.fn.setObject = function(object) {
+    var object = convertObject(object);
+    for (var propriedade in object) {
+        this.find("[name='" + propriedade + "']").val(object[propriedade]);
+    }
+
+    this.data("f4f-form-object", object);
+    return this;
+}
+
+$.fn.getObject = function() {
+    var object = this.data("f4f-form-object") || [];
+    this.removeData("f4f-form-object");
+    return $.extend(true, {}, object, this.serializeObject());
+}
+
 function formToObject(dados) {
     var resultado = {};
     dados.forEach(function(item) {
