@@ -18,8 +18,10 @@
     <link rel="stylesheet" href="assets/css/mobile.css">
 	<script src="assets/public/js/jquery-3.3.1.min.js"></script>
 	<script src="assets/public/js/jquery.mask.min.js"></script>
+    <script src="assets/public/js/jquery.toast.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 	<script src="assets/js/form.js"></script>
+    <script src="assets/js/fale-conosco.js"></script>
 </head>
 <body>
 	<?php require_once("components/navbar.html"); ?><!-- BARRA DE NAVEGAÇÃO VIA PHP -->
@@ -49,7 +51,7 @@
                 <textarea id="comentario" name="comentario" class="textarea-generic" required></textarea>
                 <input type="submit" class="display-none">
             </form>
-            <div class="btn-generic margin-bottom-30px" data-f4f-form-submit="#form-contato">
+            <div class="btn-generic margin-bottom-30px"  data-f4f-form-submit="#form-contato">
                 <span>Enviar</span>
             </div>
         </div>
