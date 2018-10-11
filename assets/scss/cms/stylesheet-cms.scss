@@ -992,6 +992,31 @@ img.btn-logout:hover {
             }
         }
     }
+    table{
+        @include bloco($width: 100%, $height: auto);
+        border-collapse: collapse;
+        #contact-table-trow{
+            background-color: $mediumgrey;
+            >td{
+                >span{
+                    @include texto(18px, $black, 'Roboto Bold');
+                    padding: 12px;
+                }
+            }
+        }
+        .contact-table-rrow{
+            >td{
+                >span{
+                    @include texto(16px, $grey, 'Roboto Medium');
+                }
+                >div>img{
+                    @include img-fit(40px, 40px);
+                    display: inline-block;
+                    padding: 10px 0px 10px 0px;
+                }
+            }
+        }
+    }
 }
 .table-diario{
     @include bloco($width: 100%, $height: auto);
