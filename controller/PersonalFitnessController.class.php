@@ -5,11 +5,16 @@
 
     class PersonalFitnessController extends Controller {
         public function init() {
+            $this->criarRota("GET", "personal_fitness", "listar");
             $this->criarRota("POST", "personal_fitness", "inserir");
             $this->criarRota("GET", "personal_fitness/{id}", "selecionarItem");
             $this->criarRota("PUT", "personal_fitness/{id}", "atualizar");
             $this->criarRota("PUT", "personal_fitness/{id}/ativar", "ativar");
             $this->criarRota("DELETE", "personal_fitness/{id}", "excluir");
+        }
+
+        public function listar() {
+            $this->api->enviarResultado(PersonalFitnessDAO::listar());
         }
 
         public function inserir() {

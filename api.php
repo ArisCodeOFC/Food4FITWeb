@@ -8,6 +8,7 @@
     require_once("controller/LojaController.class.php");
     require_once("controller/UsuarioController.class.php");
     require_once("controller/VantagemComidaFitnessController.class.php");
+    require_once("controller/PersonalFitnessController.class.php");
     require_once("controller/PorQueComidaFitnessController.class.php");
     require_once("controller/DicasSaudeController.class.php");
     require_once("controller/DicasFitnessController.class.php");
