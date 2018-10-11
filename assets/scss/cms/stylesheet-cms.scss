@@ -1238,3 +1238,39 @@ img.btn-logout:hover {
         }
     }
 }
+
+.profile-wrapper{
+    @include bloco(100%, 100%, 90vh);
+    @include display(flex, row, center, center);
+}
+.profile-aside{
+    @include bloco(100%, 390px, 100%);
+    @include display(flex, column, center, center);
+    margin-right: 60px;
+    >figure{
+        @include bloco($width: 300px, $height: 300px);
+        border-radius: 50%;
+        box-sizing: border-box;
+        border: 6px solid $olivine;
+        margin: 0 auto 20px auto;
+        background-color: $olivine;
+        overflow: hidden;
+        position: relative;
+        >img{
+            @include img-fit(300px, 300px);
+        }
+    }
+    >h2{
+        @include texto(21px, $black, 'Roboto Bold', 28px, center);
+    }
+    >span{
+        @include texto(18px, $grey, 'Roboto Medium Italic', 28px, center);
+    }
+}
+.lbl-ext{
+    @include texto(18px, $black, 'Roboto Bold');
+}
+.lbl-result{
+    @include texto(16px, $grey, 'Roboto Regular');
+    margin-bottom: 20px;
+}

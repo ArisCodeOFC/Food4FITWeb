@@ -5,10 +5,10 @@
         public static function listar() {
             $itens = array();
             $conn = Database::getConnection();
-            $stmt = $conn->prepare("SELECT v.id, v.id_funcionario, v.titulo, v.texto, v.ativo,  DATE_FORMAT(v.data, '%d/%m/%Y') AS data, CONCAT_WS(' ', f.nome, f.sobrenome) AS autor
-            FROM tbl_personal_fitness AS v
-            INNER JOIN tbl_funcionario AS f ON f.id = v.id_funcionario
-            ORDER BY v.id DESC");
+            $stmt = $conn->prepare("SELECT p.id, p.id_funcionario, p.titulo, p.texto, p.ativo,  DATE_FORMAT(p.data, '%d/%m/%Y') AS data, CONCAT_WS(' ', f.nome, f.sobrenome) AS autor
+            FROM tbl_personal_fitness AS p
+            INNER JOIN tbl_funcionario AS f ON f.id = p.id_funcionario
+            ORDER BY p.id DESC");
 
             if ($stmt->execute()) {
                 while ($rs = $stmt->fetch(PDO::FETCH_ASSOC)) {
