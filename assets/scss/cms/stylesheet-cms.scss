@@ -1,5 +1,6 @@
 @import '../mixins.scss';
 @import '../colors.scss';
+@import '../keyframes.scss';
 
 .clearfix{
     &:after{
@@ -22,12 +23,53 @@ body {
 	font-family: "Roboto Regular";
 	position: relative;
 }
-#main-login {
-    @include bloco(100%, 1200px, 100vh);
+.main-login {
+    @include bloco(100%, 100%, 100vh);
 	position: relative;
 	margin: 0 auto;
 	background-color: $lightgrey;
-    @include display(flex, column, center, center);
+    @include display(flex, row, center, center);
+    .image-bg-login{
+        @include bloco(100%, 100%, 100vh);
+        background-image: url("../../images/cms/backgrounds/login-bg.jpg");
+        background-size: cover;
+        position: relative;
+        @include display(flex, column, center, center);
+        >h2{
+            @include texto(126px, $white, 'Roboto Black', 116px, left);
+            z-index: 999;
+            >span{
+                @include texto(24px, $mediumgrey, 'Roboto Medium Italic', 32px, left);
+            }
+        }
+        &:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: linear-gradient(45deg, rgba(156, 194, 131, .9), rgba(237, 191, 133, .2));
+        }
+    }
+    .form-login-wrapper{
+        @include bloco(100%, 100%, 100vh);
+        background: $white;
+        @include display(flex, column, center, center);
+        >figure{
+            @include bloco($width: 300px, $height: 300px);
+            >img{
+                @include img-fit(300px, 300px);
+                background-image: url("../../images/logo/logo.svg");
+                background-size: cover;
+                -webkit-animation: pulse 3s infinite ease-in-out;
+                -o-animation: pulse 3s infinite ease-in-out;
+                -ms-animation: pulse 3s infinite ease-in-out;
+                -moz-animation: pulse 3s infinite ease-in-out;
+                animation: pulse 3s infinite ease-in-out;
+            }
+        }
+    }
 }
 
 ::-webkit-scrollbar {
@@ -38,27 +80,6 @@ body {
 ::-webkit-scrollbar-thumb {
 	border-radius: 50px;
 	background-color: #9CC283;
-}
-
-#main-login{
-    #titulo {
-        @include texto(72px, $olivine, 'Roboto Black', auto, left);
-        text-transform: uppercase;
-        >span{
-            display: block;
-            font-size: 68px;
-        }
-        #subtitulo{
-            @include texto(21px, $grey, 'Roboto Medium', auto, left);
-            text-transform: uppercase;
-        }
-    }
-    #texto-nao-tenho-conta{
-        @include texto(21px, $grey, 'Roboto Medium Italic', 32px, center);
-        margin-top: 100px;
-        margin-bottom: 200px;
-        max-width: 800px;
-    }
 }
 #form-login{
     >input{
@@ -109,7 +130,6 @@ body {
     width: 100%;
     height: 100%;
 }
-
 
 .separator {
     width: 100%;
