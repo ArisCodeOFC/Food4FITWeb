@@ -1,7 +1,7 @@
 <?php
     require_once("Controller.class.php");
-    require_once(__DIR__ . "/../modelFaleConosco.class.php");
-    require_once(__DIR__ . "/../dao/modelFaleConoscoDAO.class.php");
+    require_once(__DIR__ . "/../model/FaleConosco.class.php");
+    require_once(__DIR__ . "/../model/dao/FaleConoscoDAO.class.php");
 
     class FaleConoscoController extends Controller{
         /* Inicializa todas as rotas que serão tratadas */
@@ -25,13 +25,11 @@
             if(!$menssagem){
                 $this->api->enviarStatus(403, "Preencha todos os campos.");
             }else{
-                try{
-                    $resultado = FaleConoscoDAO::inserir($menssagem);
-                    if($resultado){
-                        $this->api->enviarResultado($resultado);
-                    }else{
-                        $this->api->enviarStatus(500, "Não foi possível inserir.");
-                    }
+                $resultado = FaleConoscoDAO::inserir($menssagem);
+                if($resultado){
+                    $this->api->enviarResultado($resultado);
+                }else{
+                    $this->api->enviarStatus(500, "Não foi possível inserir.");
                 }
 
             }
