@@ -63,6 +63,17 @@
             return $resultado;
         }
 
-        //public static function exlcuisMarcados(){}
+
+        public static function marcarLido($id){
+            $conn = Database::getConnection();
+            $stmt = $conn->prepare("UPDATE tbl_fale_conosco SET lido=1 WHERE id=?");
+            $stmt->bindValue(1, $id);
+
+            $stmt->execute();
+
+            $conn = null;
+        }
+
+
     }
 ?>
