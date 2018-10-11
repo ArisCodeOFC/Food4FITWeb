@@ -23,7 +23,7 @@
             <input type="text" name="bairro" id="bairro" class="input-generic" placeholder="Ex: JD. Gregório Antunes">
 
             <label for="estado" class="label-generic">Estado:</label>
-            <select type="text" name="estado" id="estado" class="input-generic" placeholder="Ex: São Paulo">
+            <select type="text" name="idEstado" id="estado" class="input-generic" placeholder="Ex: São Paulo">
             <option value="" disabled selected></option>
                 <?php
 

@@ -12,15 +12,9 @@
                 <h2><?= $loja->getEstado() ?> - <?php echo $loja->getAtivo() ? "Ativo" : "Desativado" ?></h2>
                 <h3><?= $loja->getLogradouro() ?>, <?= $loja->getNumero() ?>, <?= $loja->getBairro() ?>, <?= $loja->getCidade() ?> - <?= $loja->getUf() ?>, <?= $loja->getCep() ?></h3>
                 <div>
-                    <span>Editar</span>
+                    <span class="loja-editar">Editar</span>
                     <span class="deletar-loja">Excluir</span>
-                    <?php
-//                        if(loja == ativo){
-//                            $seila = "Desativar";
-//                        }else{
-//                            $seila = "Ativar";
-//                        }
-                    ?>
+
                     <span class="loja-ativa">Ativar/Desativar</span>
                 </div>
             </section>

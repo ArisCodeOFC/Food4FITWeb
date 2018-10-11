@@ -32,6 +32,9 @@
             $this->criarRota("GET", "cidade/select/{idEstado}", "listarCidade");
             $this->criarRota("GET", "loja/excluir/{id}", "excluirDado");
             $this->criarRota("GET", "loja/ativar/{id}", "ativarItem");
+            //Post porque estou passandod ados de formulario
+            $this->criarRota("POST", "loja/editar/{id}", "editarInformacao");
+            $this->criarRota("GET", "loja/selecionar/{id}", "selecionar");
 
         }
 
@@ -46,6 +49,8 @@
 
         }
 
+        //Public static -> quando posso chamar um método sem dar um new
+        //Exemplo: DAO = new...
         public static function listarEstado(){
             return EstadoDAO::listar();
         }
@@ -64,6 +69,18 @@
 
         public function ativarItem($id){
             LojaDAO::ativar($id);
+        }
+
+        public function editarInformacao($id){
+            $informacao = new Loja($this->dados);
+            LojaDAO::editar($id, $informacao);
+        }
+
+        public function selecionar($id){
+            //Chamando a LojaDAO
+            $loja = LojaDAO::selecionar($id);
+            //Enviando resultado para Tela
+            $this->api->enviarResultado($loja);
         }
     }
 ?>
