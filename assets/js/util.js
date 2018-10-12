@@ -44,6 +44,7 @@ $.fn.setObject = function(object) {
     }
 
     this.data("f4f-form-object", object);
+    this.find("[data-mask]").trigger("input");
     return this;
 }
 
@@ -58,6 +59,8 @@ $.fn.clearObject = function() {
     if (this.get(0)) {
         this.get(0).reset();
     }
+
+    return this;
 }
 
 function formToObject(dados) {

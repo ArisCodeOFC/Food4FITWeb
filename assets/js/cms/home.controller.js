@@ -97,5 +97,7 @@ f4fApp.addController("HomeController", function($this, $element) {
                 $(this).data("sceditor-instance", instance);
             }
         });
+
+        $.applyDataMask();
     }
 });
