@@ -19,9 +19,11 @@ f4fApp.addController("LojaController", function($this, $elemento) {
 
         if (pegandoDados.id){
             URL = "../api/v1/loja/editar/"+pegandoDados.id;
+             f4fApp.abrirToast("Informação atualizada!")
 
         }else{
             URL = "../api/v1/loja/inserir";
+             f4fApp.abrirToast("Informação salva com sucesso!")
         }
 
         //Aqui faz o AJAX
@@ -89,9 +91,13 @@ f4fApp.addController("LojaController", function($this, $elemento) {
     $elemento.on("click", ".deletar-loja", function(){
         //pegando primeiro a section para depois pegar o atributo da data que eu coloquei (data-id)
         var pegarId = $(this).closest(".shop-card").data("id");
-        $.get("../api/v1/loja/excluir/"+pegarId, function(){
+          f4fApp.showModal("Confirmação", "Deseja realmente excluir esta informação?", function (){
+               $.get("../api/v1/loja/excluir/"+pegarId, function(){
             listar();
-        });
+
+            });
+         });
+
     });
 
     $elemento.on("click", ".loja-ativa", function(){
@@ -102,10 +108,12 @@ f4fApp.addController("LojaController", function($this, $elemento) {
     });
     $elemento.on("click", ".loja-editar", function(){
        var pegarId = $(this).closest(".shop-card").data("id");
+
         $.get("../api/v1/loja/selecionar/"+pegarId, function(dadosLoja){
             //Função para preencher formulario na hora de editar
             $elemento.find("#form-loja").setObject(dadosLoja);
             listarCidade(dadosLoja.idCidade);
+
         });
     });
 
