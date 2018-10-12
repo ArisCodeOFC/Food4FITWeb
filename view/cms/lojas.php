@@ -46,7 +46,7 @@
 
             <label for="cep" class="label-generic">CEP:</label>
             <input type="text" name="cep" id="cep" class="input-generic" placeholder="Ex: 17745-111" data-mask="00000-000"
-            pattern= "\d{5}-?\d{3}">
+            pattern= "\d{5}-\d{3}">
 
             <label for="latitude" class="label-generic">Latitude:</label>
             <input type="text" name="latitude" id="latitude" class="input-generic" placeholder="Ex:">
@@ -55,7 +55,7 @@
             <input type="text" name="longitude" id="longitude" class="input-generic" placeholder="Ex:">
 
             <label for="telefone" class="label-generic">Telefone Fixo:</label>
-            <input type="tel" name="telefone" id="telefone" class="input-generic" placeholder="Ex: (11) 98888-7777" data-mask="(00)0000-0000" pattern="[0-9]{3} [0-9]{5}-[0-9]{4}">
+            <input type="tel" name="telefone" id="telefone" class="input-generic" placeholder="Ex: (11) 98888-7777" data-mask="(00) 0000-0000" pattern="\(\d{2}\)\s\d{4}-\d{4}">
             <span id="message" class="padding-bottom-20px">Este será o telefone em que clientes próximos desta instalação irão<br>ligar caso exijam alguma informação.</span>
 
             <label for="funcionamento" class="label-generic">Horário de Funcionamento:</label>
