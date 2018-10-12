@@ -53,6 +53,13 @@ $.fn.getObject = function() {
     return $.extend(true, {}, object, this.serializeObject());
 }
 
+$.fn.clearObject = function() {
+    this.removeData("f4f-form-object");
+    if (this.get(0)) {
+        this.get(0).reset();
+    }
+}
+
 function formToObject(dados) {
     var resultado = {};
     dados.forEach(function(item) {
