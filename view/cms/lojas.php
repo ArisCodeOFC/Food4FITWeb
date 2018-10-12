@@ -50,7 +50,7 @@
             <label for="latitude" class="label-generic">Latitude:</label>
             <input type="text" name="latitude" id="latitude" class="input-generic" placeholder="Ex:">
 
-            <label for="Longitude" class="label-generic">Longitudee:</label>
+            <label for="Longitude" class="label-generic">Longitude:</label>
             <input type="text" name="longitude" id="longitude" class="input-generic" placeholder="Ex:">
 
             <label for="telefone" class="label-generic">Telefone:</label>
@@ -63,7 +63,7 @@
                 <button type="submit" class="btn-generic margin-right-20px">
                     <span>Salvar</span>
                 </button>
-                <span>Cancelar</span>
+                <span class="btn-cancelar">Cancelar</span>
             </div>
         </form>
     </section>

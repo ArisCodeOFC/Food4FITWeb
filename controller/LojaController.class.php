@@ -82,5 +82,6 @@
             //Enviando resultado para Tela
             $this->api->enviarResultado($loja);
         }
+
     }
 ?>

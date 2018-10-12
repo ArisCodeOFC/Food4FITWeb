@@ -38,6 +38,7 @@ f4fApp.addController("LojaController", function($this, $elemento) {
             success: function(dados){
 
                 listar();
+                $elemento.find("#form-loja").clearObject()
             }
         })
     });
@@ -107,4 +108,9 @@ f4fApp.addController("LojaController", function($this, $elemento) {
             listarCidade(dadosLoja.idCidade);
         });
     });
+
+    $elemento.on("click", ".btn-cancelar", function(){
+        $elemento.find("#form-loja").clearObject();
+    });
+
 });
