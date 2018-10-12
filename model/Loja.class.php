@@ -25,6 +25,7 @@
         protected $estado;
         protected $idCidade;
         protected $idEstado;
+        protected $idEndereco;
         protected $uf;
 
         public function __construct($json = null) {
@@ -157,6 +158,14 @@
 
         public function setUf($uf){
             $this->uf = $uf;
+        }
+
+        public function getIdEndereco(){
+            return $this->idEndereco;
+        }
+
+        public function setIdEndereco($idEndereco){
+            $this->idEndereco = $idEndereco;
         }
     }
 ?>

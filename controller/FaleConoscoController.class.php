@@ -7,7 +7,7 @@
         /* Inicializa todas as rotas que serão tratadas */
         public function init(){
             $this->criarRota("GET", "fale_conosco", "listarTodos");
-            $this->criarRota("POST", "fale_conosco", "inserir");
+            $this->criarRota("POST", "fale_conosco/inserir", "inserir");
             $this->criarRota("GET", "fale_conosco/{id}", "selecionar");
             $this->criarRota("DELETE", "fale_conosco/{id}", "excluir");
             //$this->criarRota("DELETE", "fale_conosco/{id}", "excluirMarcados");
@@ -36,7 +36,7 @@
         }
 
 
-        public function selecionar(){
+        public function selecionar($id){
             $menssagem = FaleConoscoDAO::selecionar($id);
             if ($menssagem) {
                 $this->api->enviarResultado($menssagem);

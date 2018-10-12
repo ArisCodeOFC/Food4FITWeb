@@ -69,7 +69,7 @@
     </nav>
     <div class="separator"></div>
     <nav>
-        <a href="#">
+        <a href="#" data-page-load="perfil">
             <span class="image"><img src="../assets/images/cms/icons/meu-perfil.svg" alt="Meu perfil"></span>
             <span class="label">Meu perfil</span>
         </a>

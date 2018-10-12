@@ -82,5 +82,58 @@
 
             $conn = null;
         }
+
+        public static function editar($id, $informacao){
+            $conn = Database::getConnection();
+            $stmt = $conn->prepare("UPDATE tbl_nossa_Loja
+            SET latitude = ?, longitude = ?, funcionamento = ?, telefone = ?
+            WHERE id = ? ");
+
+            $stmt->bindParam(1, $informacao->getLatitude());
+            $stmt->bindParam(2, $informacao->getLongitude());
+            $stmt->bindParam(3, $informacao->getFuncionamento());
+            $stmt->bindParam(4, $informacao->getTelefone());
+            $stmt->bindParam(5, $id);
+            $stmt->execute();
+
+            $stmt = $conn->prepare("UPDATE tbl_endereco
+            SET id_cidade = ?, logradouro = ?, Numero = ?, Bairro = ?, cep = ?, complemento = ?
+            WHERE id = ? ");
+
+            $stmt->bindParam(1, $informacao->getIdCidade());
+            $stmt->bindParam(2, $informacao->getLogradouro());
+            $stmt->bindParam(3, $informacao->getNumero());
+            $stmt->bindParam(4, $informacao->getBairro());
+            $stmt->bindParam(5, $informacao->getCep());
+            $stmt->bindParam(6, $informacao->getComplemento());
+            $stmt->bindParam(7, $informacao->getIdEndereco());
+            $stmt->execute();
+
+
+            $conn = null;
+        }
+
+            public static function selecionar($id) {
+            $loja = null;
+            $conn = Database::getConnection();
+            $stmt = $conn->prepare("select l.*, es.id as idEstado, e.logradouro, e.numero,
+                e.bairro, e.cep, e.complemento, c.id as idCidade,
+                c.cidade, es.estado,e.id as idEndereco, es.UF as uf
+                from tbl_nossa_loja as l
+                inner join tbl_endereco as e on l.id_endereco = e.id
+                inner join tbl_cidade as c on c.id = e.id_cidade
+                inner join tbl_estado as es on c.id_estado = es.id WHERE l.id = ?");
+
+                $stmt->bindParam(1, $id);
+
+                if ($stmt->execute()) {
+                    if ($rs = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                        $loja = new Loja($rs);
+                }
+            }
+
+                $conn = null;
+                return $loja;
+        }
     }
 ?>

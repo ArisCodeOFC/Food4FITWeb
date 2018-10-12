@@ -13,17 +13,27 @@
 f4fApp.addController("LojaController", function($this, $elemento) {
     $elemento.find("#form-loja").submit(function(evento) {
         evento.preventDefault();
-     //Aqui faz o AJAX
 
+        var pegandoDados = $elemento.find("#form-loja").getObject();
+        var URL = "";
+
+        if (pegandoDados.id){
+            URL = "../api/v1/loja/editar/"+pegandoDados.id;
+
+        }else{
+            URL = "../api/v1/loja/inserir";
+        }
+
+        //Aqui faz o AJAX
         $.ajax({
             type:"POST",
             //URL que eu coloquei no controller pegando a informacao do meio
-            url:"../api/v1/loja/inserir",
+            url:URL,
             //data -> Dados do formulario
             //serializeObject - > Pega todo meu formulario
             //transformando em um objeto
             //da quals erá pego pelo PHP
-            data:$elemento.find("#form-loja").serializeObject(),
+            data:pegandoDados,
             //dados -> resultado do AJAX
             success: function(dados){
 
@@ -40,7 +50,11 @@ f4fApp.addController("LojaController", function($this, $elemento) {
         }
 
     $elemento.find("#estado").change(function(evento){
-             var id = $(this).val();
+            listarCidade();
+    });
+
+    function listarCidade(idCidade){
+        var id = $('#estado').val();
         $.get("../api/v1/cidade/select/"+id,
             function(lista){
             //Limpar o select, antes de selecionar algum item
@@ -59,9 +73,12 @@ f4fApp.addController("LojaController", function($this, $elemento) {
                 //Estou adicionando no HTML
                 $("#cidade").append("<option value='"+cidade.id+"'>"+cidade.cidade+"</option>");
             }
+            if (idCidade){
+               $("#cidade").val(idCidade);
+            }
         });
+    }
 
-    });
     //Criando a função do botão excluir, pegando o id
     //find -> procura dentro
     //closet -> procura fora
@@ -80,6 +97,14 @@ f4fApp.addController("LojaController", function($this, $elemento) {
        var pegarId = $(this).closest(".shop-card").data("id");
         $.get("../api/v1/loja/ativar/"+pegarId, function(){
             listar();
+        });
+    });
+    $elemento.on("click", ".loja-editar", function(){
+       var pegarId = $(this).closest(".shop-card").data("id");
+        $.get("../api/v1/loja/selecionar/"+pegarId, function(dadosLoja){
+            //Função para preencher formulario na hora de editar
+            $elemento.find("#form-loja").setObject(dadosLoja);
+            listarCidade(dadosLoja.idCidade);
         });
     });
 });

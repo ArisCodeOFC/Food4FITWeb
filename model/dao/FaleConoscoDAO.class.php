@@ -35,8 +35,8 @@
 
         public static function inserir($item) {
             $conn = Database::getConnection();
-            $stmt = $conn->prepare("INSERT INTO tbl_fale_conosco (nome, sobrenome, email, telefone, celular, assunto, observacao) VALUES (?, ?, ?, ?, ?, ?, ?))");
-            $stmt->bindValue(1, $item->geNome());
+            $stmt = $conn->prepare("INSERT INTO tbl_fale_conosco (nome, sobrenome, email, telefone, celular, assunto, observacao) VALUES (?, ?, ?, ?, ?, ?, ?)");
+            $stmt->bindValue(1, $item->getNome());
             $stmt->bindValue(2, $item->getSobrenome());
             $stmt->bindValue(3, $item->getEmail());
             $stmt->bindValue(4, $item->getTelefone());
@@ -63,6 +63,17 @@
             return $resultado;
         }
 
-        //public static function exlcuisMarcados(){}
+
+        public static function marcarLido($id){
+            $conn = Database::getConnection();
+            $stmt = $conn->prepare("UPDATE tbl_fale_conosco SET lido=1 WHERE id=?");
+            $stmt->bindValue(1, $id);
+
+            $stmt->execute();
+
+            $conn = null;
+        }
+
+
     }
 ?>
