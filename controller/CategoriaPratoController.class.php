@@ -1,29 +1,29 @@
 <?php
     require_once("Controller.class.php");
-    require_once(__DIR__ . "/../model/CategoriaIngrediente.class.php");
-    require_once(__DIR__ . "/../model/dao/CategoriaIngredienteDAO.class.php");
+    require_once(__DIR__ . "/../model/CategoriaPrato.class.php");
+    require_once(__DIR__ . "/../model/dao/CategoriaPratoDAO.class.php");
 
-    class CategoriaIngredienteController extends Controller {
+    class CategoriaPratoController extends Controller {
         /* Inicializa todas as rotas que serão tratadas */
         public function init() {
-            $this->criarRota("GET", "categoria-ingrediente", "listar");
-            $this->criarRota("POST", "categoria-ingrediente", "inserir");
-            $this->criarRota("GET", "categoria-ingrediente/arvore", "getArvoreCategorias");
-            $this->criarRota("GET", "categoria-ingrediente/{id}", "selecionarItem");
-            $this->criarRota("PUT", "categoria-ingrediente/{id}", "atualizar");
-            $this->criarRota("PUT", "categoria-ingrediente/{id}/ativar", "ativar");
-            $this->criarRota("DELETE", "categoria-ingrediente/{id}", "excluir");
+            $this->criarRota("GET", "categoria-prato", "listar");
+            $this->criarRota("POST", "categoria-prato", "inserir");
+            $this->criarRota("GET", "categoria-prato/arvore", "getArvoreCategorias");
+            $this->criarRota("GET", "categoria-prato/{id}", "selecionarItem");
+            $this->criarRota("PUT", "categoria-prato/{id}", "atualizar");
+            $this->criarRota("PUT", "categoria-prato/{id}/ativar", "ativar");
+            $this->criarRota("DELETE", "categoria-prato/{id}", "excluir");
         }
 
         public function listar() {
-            $this->api->enviarResultado(CategoriaIngredienteDAO::listar());
+            $this->api->enviarResultado(CategoriaPratoDAO::listar());
         }
 
         public function inserir() {
-            $categoria = new CategoriaIngrediente($this->dados);
+            $categoria = new CategoriaPrato($this->dados);
             try {
                 $categoria->startUpload("assets/images/categorias");
-                if (CategoriaIngredienteDAO::inserir($categoria)) {
+                if (CategoriaPratoDAO::inserir($categoria)) {
                     $this->api->enviarResultado($categoria);
                 } else {
                     $this->api->enviarStatus(500, "Não foi possível inserir.");
@@ -35,7 +35,7 @@
         }
 
         public function selecionarItem($id) {
-            $categoria = CategoriaIngredienteDAO::selecionar($id);
+            $categoria = CategoriaPratoDAO::selecionar($id);
             if ($categoria) {
                 $this->api->enviarResultado($categoria);
             } else {
@@ -44,10 +44,10 @@
         }
 
         public function atualizar($id) {
-            $categoria = new CategoriaIngrediente($this->dados);
+            $categoria = new CategoriaPrato($this->dados);
             try {
                 $categoria->startUpload("assets/images/categorias");
-                if (CategoriaIngredienteDAO::atualizar($id, $categoria)) {
+                if (CategoriaPratoDAO::atualizar($id, $categoria)) {
                     $this->api->enviarResultado($categoria);
                 } else {
                     $this->api->enviarStatus(404, "Categoria não encontrada");
@@ -59,7 +59,7 @@
         }
 
         public function ativar($id) {
-            if (CategoriaIngredienteDAO::ativar($id)) {
+            if (CategoriaPratoDAO::ativar($id)) {
                $this->api->enviarStatus(204);
             } else {
                 $this->api->enviarStatus(404, "Categoria não encontrada");
@@ -68,7 +68,7 @@
 
         public function excluir($id) {
             try {
-                if (CategoriaIngredienteDAO::excluir($id)) {
+                if (CategoriaPratoDAO::excluir($id)) {
                     $this->api->enviarStatus(204);
                 } else {
                     $this->api->enviarStatus(404, "Categoria não encontrada");
@@ -76,7 +76,7 @@
 
             } catch (PDOException $error) {
                 if ($error->getCode()) {
-                    $this->api->enviarStatus(403, "Você não pode excluir esta categoria, pois ela possui ingredientes atrelados á ela.");
+                    $this->api->enviarStatus(403, "Você não pode excluir esta categoria, pois ela possui pratos atrelados á ela.");
                 } else {
                     throw $error;
                 }
@@ -90,7 +90,7 @@
         }
 
         public static function listarCategorias() {
-            return CategoriaIngredienteDAO::listar();
+            return CategoriaPratoDAO::listar();
         }
 
         public static function montarSelectCategorias() {

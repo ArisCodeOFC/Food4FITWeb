@@ -34,6 +34,7 @@
 	    <script src="../assets/js/cms/home.controller.js"></script>
 	    <script src="../assets/js/cms/sobreempresa.controller.js"></script>
 	    <script src="../assets/js/cms/categoriaingrediente.controller.js"></script>
+	    <script src="../assets/js/cms/categoriaprato.controller.js"></script>
 	    <script src="../assets/js/cms/ingrediente.controller.js"></script>
 	    <script src="../assets/js/cms/loja.controller.js"></script>
 	    <script src="../assets/js/cms/vantagemcomidafitness.controller.js"></script>

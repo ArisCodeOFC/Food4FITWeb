@@ -40,7 +40,7 @@
             <span class="image"><img src="../assets/images/cms/icons/ingredientes.svg" alt="Ingredientes"></span>
             <span class="label">Ingredientes</span>
         </a>
-        <a href="#">
+        <a href="#" data-page-load="categorias-prato" data-page-controller="CategoriaPratoController">
             <span class="image"><img src="../assets/images/cms/icons/categorias.svg" alt="Categorias de Pratos"></span>
             <span class="label">Categorias de Pratos</span>
         </a>
