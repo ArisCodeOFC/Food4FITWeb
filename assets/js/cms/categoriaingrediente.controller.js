@@ -10,13 +10,26 @@ f4fApp.addController("CategoriaIngredienteController", function($this, $element)
         });
     };
 
+    $this.atualizarSelect = function() {
+        $.get("../api/v1/categoria-ingrediente/arvore", function(data) {
+            $element
+                .find("#parent")
+                .children()
+                .remove(":not(:first-child)")
+                .parent()
+                .append($(data.select));
+        });
+    }
+
     $this.onInsert = function() {
         f4fApp.abrirToast("Categoria inserida com sucesso.");
+        $this.atualizarSelect();
     };
 
     $this.onUpdate = function() {
         f4fApp.abrirToast("Categoria atualizada com sucesso.");
         $element.find("#titulo-acao").text("Cadastrar uma Categoria");
+        $this.atualizarSelect();
     };
 
     $this.onEditStarted = function() {
@@ -29,6 +42,7 @@ f4fApp.addController("CategoriaIngredienteController", function($this, $element)
 
     $this.onDelete = function() {
         f4fApp.abrirToast("Categoria excluída com sucesso.");
+        $this.atualizarSelect();
     };
 
     $this.validateForm = function(data) {

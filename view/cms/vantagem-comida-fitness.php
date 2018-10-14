@@ -1,4 +1,4 @@
-<span data-page-controller="VantagemComidaFitnessController" data-page-title="Vantagens da Comida Fitness"></span>
+<span data-page-controller="VantagemComidaFitnessController" data-page-title="Vantagens da Comida Fitness" data-menu-link="fit-session"></span>
 
 <div class="saude-wrapper">
     <div class="saude-content" id="vantagens-lista">

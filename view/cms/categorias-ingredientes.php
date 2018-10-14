@@ -1,3 +1,8 @@
+<?php
+    require_once("../../controller/CategoriaIngredienteController.class.php");
+    $categorias = CategoriaIngredienteController::montarSelectCategorias();
+?>
+
 <div id="form-two-sides">
     <div id="form-left-side" class="no-padding">
         <div id="tabela-items" data-crud-list>
@@ -30,6 +35,13 @@
             <div class="margin-right-20px margin-left-20px margin-top-30px">
                 <label for="titulo" class="label-generic">Nome</label>
                 <input id="titulo" name="titulo" class="input-generic" required placeholder="Ex: Saladas">
+            </div>
+            <div class="margin-right-20px margin-left-20px margin-top-30px">
+                <label for="titulo" class="label-generic">Categoria Pai</label>
+                <select id="parent" name="parent" class="input-generic">
+                    <option value="" selected>Nenhuma categoria</option>
+                    <?= $categorias ?>
+                </select>
             </div>
         </div>
         <div>

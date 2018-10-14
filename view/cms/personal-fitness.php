@@ -1,4 +1,4 @@
-<span data-page-controller="PersonalFitnessController" data-page-title="Personal Fitness"></span>
+<span data-page-controller="PersonalFitnessController" data-page-title="Personal Fitness" data-menu-link="fit-session"></span>
 
 <div class="saude-wrapper">
     <div class="saude-content" id="personal-lista">

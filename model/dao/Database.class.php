@@ -2,8 +2,8 @@
     /* Classe responsável por montar conexões com o banco de dados */
     class Database {
         /* Atributos de conexão */
-        private static $HOST = "10.107.144.250";
-        //private static $HOST = "127.0.0.1";
+        //private static $HOST = "10.107.144.250";
+        private static $HOST = "127.0.0.1";
         private static $USUARIO = "root";
         private static $SENHA = "bcd127";
         //private static $SENHA = "";

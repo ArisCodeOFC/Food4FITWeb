@@ -5,10 +5,17 @@
     class Funcionario extends Model {
         /* Atributos */
         protected $id;
-        public $matricula;
-        public $nome;
-        public $sobrenome;
-        public $email;
+        protected $matricula;
+        protected $nome;
+        protected $sobrenome;
+        protected $email;
+        protected $dataEfetivacao;
+        protected $genero;
+        protected $dataNascimento;
+        protected $rg;
+        protected $cpf;
+        protected $salario;
+        protected $avatar;
 
         /*
         * Método construtor
@@ -43,6 +50,94 @@
 
         public function setId($id) {
             $this->id = $id;
+        }
+
+        public function getMatricula() {
+            return $this->matricula;
+        }
+
+        public function setMatricula($matricula) {
+            $this->matricula = $matricula;
+        }
+
+        public function getNome() {
+            return $this->nome;
+        }
+
+        public function setNome($nome) {
+            $this->nome = $nome;
+        }
+
+        public function getSobrenome() {
+            return $this->sobrenome;
+        }
+
+        public function setSobrenome($sobrenome) {
+            $this->sobrenome = $sobrenome;
+        }
+
+        public function getEmail() {
+            return $this->email;
+        }
+
+        public function setEmail($email) {
+            $this->email = $email;
+        }
+
+        public function getDataEfetivacao() {
+            return $this->dataEfetivacao;
+        }
+
+        public function setDataEfetivacao($dataEfetivacao) {
+            $this->dataEfetivacao = $dataEfetivacao;
+        }
+
+        public function getGenero() {
+            return $this->genero;
+        }
+
+        public function setGenero($genero) {
+            $this->genero = $genero;
+        }
+
+        public function getDataNascimento() {
+            return $this->dataNascimento;
+        }
+
+        public function setDataNascimento($dataNascimento) {
+            $this->dataNascimento = $dataNascimento;
+        }
+
+        public function getRg() {
+            return $this->rg;
+        }
+
+        public function setRg($rg) {
+            $this->rg = $rg;
+        }
+
+        public function getCpf() {
+            return $this->cpf;
+        }
+
+        public function setCpf($cpf) {
+            $this->cpf = $cpf;
+        }
+
+        public function getSalario() {
+            return $this->salario;
+        }
+
+        public function setSalario($salario) {
+            $this->salario = $salario;
+        }
+
+        public function getAvatar() {
+            return $this->avatar;
+        }
+
+        public function setAvatar($avatar) {
+            $this->avatar = $avatar;
         }
     }
 ?>

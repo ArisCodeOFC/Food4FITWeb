@@ -1,4 +1,4 @@
-<span data-page-controller="PorQueComidaFitnessController" data-page-title="Por Que da Comida Fitness"></span>
+<span data-page-controller="PorQueComidaFitnessController" data-page-title="Por Que da Comida Fitness" data-menu-link="fit-session"></span>
 
 <div class="saude-wrapper">
     <div class="saude-content" id="porque-lista">

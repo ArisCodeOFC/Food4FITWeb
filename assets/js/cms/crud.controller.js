@@ -215,6 +215,7 @@ f4fApp.addController("CrudController", function($this, $element) {
             type: $this.urls.find[0],
             url: url,
             success: function(item) {
+                $this.formInstance.get(0).reset();
                 var itemIterator = convertObject(item);
                 for (var key in itemIterator) {
                     var element = $this.formInstance.find("[name='" + key + "'], [data-bind='" + key + "']");

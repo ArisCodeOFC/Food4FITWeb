@@ -13,7 +13,7 @@
         public static function login($matricula, $senha) {
             $funcionario = null;
             $conn = Database::getConnection();
-            $stmt = $conn->prepare("SELECT id, nome, sobrenome, email, matricula FROM tbl_funcionario WHERE matricula = ? AND senha = ?");
+            $stmt = $conn->prepare("SELECT id, matricula, nome, sobrenome, email, DATE_FORMAT(data_efetivacao, '%d/%m/%Y') AS dataEfetivacao, genero, RG AS rg, CPF AS cpf, DATE_FORMAT(data_nasc, '%d/%m/%Y') AS dataNascimento, salario, avatar FROM tbl_funcionario WHERE matricula = ? AND senha = ?");
             $stmt->bindParam(1, $matricula);
             $stmt->bindValue(2, md5($senha));
 

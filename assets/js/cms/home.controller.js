@@ -1,7 +1,12 @@
 f4fApp.addController("HomeController", function($this, $element) {
     $this.onInit = function() {
-        $this.loadView(location.hash.replace(/[#\/]/g, "") || "dashboard");
+        $this.onHashChange();
+        $(window).on("hashchange", $this.onHashChange);
     };
+
+    $this.onHashChange = function() {
+        $this.loadView(location.hash.replace(/[#\/]/g, "") || "dashboard");
+    }
 
     $element.find(".btn-logout").click(function(event) {
         event.preventDefault();
@@ -56,6 +61,11 @@ f4fApp.addController("HomeController", function($this, $element) {
 
             if (!title) {
                 title = $element.find("#page-content").find("[data-page-title]").data("pageTitle");
+            }
+
+            if (!menuLink) {
+                menuLink = $element.find("#page-content").find("[data-menu-link]").data("menuLink");
+                menuLinkElement = $element.find("[data-page-load='" + menuLink + "']");
             }
 
             if (!controller) {

@@ -1,4 +1,4 @@
-<span data-page-controller="DicasFitnessController" data-page-title="Dicas Fitness"></span>
+<span data-page-controller="DicasFitnessController" data-page-title="Dicas Fitness" data-menu-link="fit-session"></span>
 
 <div class="saude-wrapper">
     <div class="saude-content" id="dicas-lista">

@@ -146,7 +146,6 @@ body {
     padding: 10px 0;
     box-sizing: border-box;
     #avatar {
-        background: linear-gradient(-45deg, #9CC283, #EDBF85);
         @include bloco($width: 50px, $height: 50px);
         @include display(flex, row, center, center);
         @include position(absolute, $top: 50%, $left: 0px, $right: null, $bottom: null);
@@ -154,11 +153,21 @@ body {
         transition: width 500ms, height 500ms;
         box-shadow: 5px 5px 10px rgba(0,0,0,.1);
         transform: translateY(-50%);
-        &:before{
-            content: attr(data-siglas);
-            vertical-align: middle;
-            @include texto(25px, $white, 'Roboto Bold', 25px, center);
-            transition: font-size 300ms;
+        box-sizing: border-box;
+        background-color: $olivine;
+        overflow: hidden;
+        position: relative;
+        >img{
+            @include img-fit(50px, 50px);
+        }
+        &[data-siglas] {
+            background: linear-gradient(-45deg, #9CC283, #EDBF85);
+            &:before{
+                content: attr(data-siglas);
+                vertical-align: middle;
+                @include texto(25px, $white, 'Roboto Bold', 25px, center);
+                transition: font-size 300ms;
+            }
         }
     }
     #informacoes {
@@ -577,10 +586,10 @@ img.btn-logout:hover {
         width: 100%;
         height: 250px;
         background-color: $mediumgrey;
-    }
-    >img {
-        width: 100%;
-        height: 100%;
+        >img {
+            width: 100%;
+            height: 100%;
+        }
     }
     >input {
         opacity: 0;
@@ -1283,6 +1292,13 @@ img.btn-logout:hover {
         position: relative;
         >img{
             @include img-fit(300px, 300px);
+        }
+        &[data-siglas] {
+            &:before{
+                content: attr(data-siglas);
+                vertical-align: middle;
+                @include texto(150px, $white, 'Roboto Bold', 300px, center);
+            }
         }
     }
     >h2{

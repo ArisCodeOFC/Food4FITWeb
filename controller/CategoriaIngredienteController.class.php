@@ -8,6 +8,7 @@
         public function init() {
             $this->criarRota("GET", "categoria-ingrediente", "listar");
             $this->criarRota("POST", "categoria-ingrediente", "inserir");
+            $this->criarRota("GET", "categoria-ingrediente/arvore", "getArvoreIngredientes");
             $this->criarRota("GET", "categoria-ingrediente/{id}", "selecionarItem");
             $this->criarRota("PUT", "categoria-ingrediente/{id}", "atualizar");
             $this->criarRota("PUT", "categoria-ingrediente/{id}/ativar", "ativar");
@@ -82,8 +83,37 @@
             }
         }
 
+        public function getArvoreIngredientes() {
+            $this->api->enviarResultado(array(
+                "select" => self::montarSelectCategorias()
+            ));
+        }
+
         public static function listarCategorias() {
             return CategoriaIngredienteDAO::listar();
+        }
+
+        public static function montarSelectCategorias() {
+            $resultado = "";
+            $categorias = self::listarCategorias();
+            foreach ($categorias as $categoria) {
+                if (!$categoria->getParent()) {
+                    $resultado .= "<option value='{$categoria->getId()}'>{$categoria->getTitulo()}</option>";
+                    self::recursiveSelect($categorias, 1, $categoria->getId(), $resultado);
+                }
+            }
+
+            return $resultado;
+        }
+
+        private static function recursiveSelect($categorias, $indent, $parent, &$resultado) {
+            foreach ($categorias as $categoria) {
+                if ($categoria->getParent() == $parent) {
+                    $space = str_repeat("&emsp;", $indent);
+                    $resultado .= "<option value='{$categoria->getId()}'>{$space}{$categoria->getTitulo()}</option>";
+                    self::recursiveSelect($categorias, $indent + 1, $categoria->getId(), $resultado);
+                }
+            }
         }
     }
 ?>

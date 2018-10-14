@@ -5,7 +5,7 @@
         public static function listar() {
             $categorias = array();
             $conn = Database::getConnection();
-            $stmt = $conn->prepare("SELECT id, titulo, foto, ativo FROM tbl_categoria_ingrediente ORDER BY id DESC");
+            $stmt = $conn->prepare("SELECT id, titulo, foto, ativo, id_categoria_ingrediente_parent AS parent FROM tbl_categoria_ingrediente ORDER BY id DESC");
 
             if ($stmt->execute()) {
                 while ($rs = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -19,7 +19,7 @@
 
         public static function selecionar($id) {
             $conn = Database::getConnection();
-            $stmt = $conn->prepare("SELECT id, titulo, foto, ativo FROM tbl_categoria_ingrediente WHERE id = ?");
+            $stmt = $conn->prepare("SELECT id, titulo, foto, ativo, id_categoria_ingrediente_parent AS parent FROM tbl_categoria_ingrediente WHERE id = ?");
             $stmt->bindParam(1, $id);
 
             $categoria = null;

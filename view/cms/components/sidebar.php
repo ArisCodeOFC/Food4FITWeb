@@ -7,11 +7,17 @@
     </div>
     <div class="separator"></div>
     <div id="perfil">
-        <div id="avatar" data-siglas="<?= $funcionario->getIniciaisNome(); ?>"></div>
+        <?php if ($funcionario->getAvatar()) { ?>
+            <figure id="avatar">
+                <img src="../assets/images/<?= $funcionario->getAvatar() ?>" alt="">
+            </figure>
+        <?php } else { ?>
+            <figure id="avatar" data-siglas="<?= $funcionario->getIniciaisNome(); ?>"></figure>
+        <?php } ?>
         <div id="informacoes">
             <div id="informacoes-content">
-                <span id="nome"><?= $funcionario->nome ?> <?= $funcionario->sobrenome ?></span>
-                <span id="email"><?= $funcionario->email ?></span>
+                <span id="nome"><?= $funcionario->getNome() ?> <?= $funcionario->getSobrenome() ?></span>
+                <span id="email"><?= $funcionario->getEmail() ?></span>
                 <a href="#" id="dropdown"></a>
             </div>
         </div>

@@ -1,12 +1,12 @@
 <?php
     require_once("Model.class.php");
-    require_once("UploadModel.class.php");
 
-    class CategoriaIngrediente extends UploadModel {
+    class CategoriaIngrediente extends Model {
         protected $id;
         protected $titulo;
         protected $foto;
         protected $ativo = false;
+        protected $parent;
 
         public function __construct($json = null) {
             parent::__construct(__CLASS__, $json);
@@ -42,6 +42,14 @@
 
         public function setAtivo($ativo) {
             $this->ativo = $ativo;
+        }
+
+        public function getParent() {
+            return $this->parent;
+        }
+
+        public function setParent($parent) {
+            $this->parent = $parent;
         }
     }
 ?>

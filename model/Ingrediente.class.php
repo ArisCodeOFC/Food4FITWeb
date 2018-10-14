@@ -1,11 +1,10 @@
 <?php
     require_once("Model.class.php");
-    require_once("UploadModel.class.php");
     require_once("UnidadeMedida.class.php");
     require_once("CategoriaIngrediente.class.php");
 
     /* Classe modelo de Ingrediente */
-    class Ingrediente extends UploadModel {
+    class Ingrediente extends Model {
         /* Atributos */
         protected $id;
         protected $titulo;
