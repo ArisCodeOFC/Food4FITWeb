@@ -1315,3 +1315,13 @@ img.btn-logout:hover {
     @include texto(16px, $grey, 'Roboto Regular');
     margin-bottom: 20px;
 }
+@-webkit-keyframes autofill {
+    to {
+        background: #E8E8E8;
+    }
+}
+
+input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+}

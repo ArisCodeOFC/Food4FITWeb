@@ -2343,4 +2343,13 @@ img.btn-logout:hover {
   text-decoration: none;
   margin-bottom: 20px; }
 
+@-webkit-keyframes autofill {
+  to {
+    background: #E8E8E8; } }
+
+/* line 1324, C:/xampp/htdocs/tcc/assets/scss/cms/stylesheet-cms.scss */
+input:-webkit-autofill {
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both; }
+
 /*# sourceMappingURL=../../css/cms/stylesheet-cms.map */
