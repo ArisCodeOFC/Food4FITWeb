@@ -17,15 +17,28 @@ $.fn.serializeObject = function() {
         formData[element.name] = element.value.replace(/\./g, "").replace(/,/g, ".");
     });
 
-    this.find("[data-imagem-upload]").each(function() {
-        var input = $(this).find("input")[0];
-        if (input.files && input.files[0]) {
-            var file = input.files[0];
-            formData[$(input).attr("name")] = {
+    this.find("[data-imagem-upload]").find("input").each(function() {
+        if (this.files && this.files[0]) {
+            var file = this.files[0];
+            var name = $(this).attr("name");
+            var obj = formData;
+            if (name.indexOf(".") != -1) {
+                nameObj = name.split(".")[0];
+                name = name.split(".")[1];
+                if (!formData[nameObj]) {
+                    formData[nameObj] = {};
+                }
+
+                obj = formData[nameObj];
+            }
+
+            obj[name] = {
                 fileName: file.name,
                 fileSize: file.size,
                 fileType: file.type,
-                fileData: $(this).find("img").attr("src")
+                fileData: $(this).parent().is("[data-target]") ?
+                                $(this).closest("[data-imagem-upload]").find("img[data-bind='" + $(this).parent().data("target") + "']").attr("src") :
+                                $(this).siblings("img").attr("src")
             }
         }
     });

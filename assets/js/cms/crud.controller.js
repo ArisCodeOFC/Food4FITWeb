@@ -1,10 +1,10 @@
 var urlsBase = {
-    list: "",
-    insert: "",
-    find: "",
-    delete: "",
-    update: "",
-    toggle: ""
+    list: ["GET", ""],
+    insert: ["POST", ""],
+    find: ["GET", ""],
+    delete: ["DELETE", ""],
+    update: ["PUT", ""],
+    toggle: ["PUT", ""]
 };
 
 f4fApp.addController("CrudController", function($this, $element) {
@@ -19,6 +19,7 @@ f4fApp.addController("CrudController", function($this, $element) {
 
     $this.setup = function() {
         $element.find("[data-imagem-upload] input").on("change", $this.uploadImage);
+        $element.find("[data-imagem-multi] .thumbnails img").on("click", $this.changeSelectedImage);
         $element.find("[data-form-submit]").on("click", $this.submitForm);
         $element.find("[data-form-cancel]").on("click", $this.cancelForm);
         $element.find("[data-list-reload]").on("click", $this.reload);
@@ -32,13 +33,22 @@ f4fApp.addController("CrudController", function($this, $element) {
     $this.uploadImage = function() {
         if (this.files && this.files[0]) {
             var reader = new FileReader();
-            var parent = $(this).parent();
+            var parent = $(this).closest("[data-imagem-upload]");
             reader.onload = function(event) {
-                parent.find("img").attr("src", event.target.result);
+                parent.children("img").attr("src", event.target.result);
+                if (parent.is("[data-imagem-multi]")) {
+                    parent.find(".thumbnails img.active").attr("src", event.target.result);
+                }
             }
 
             reader.readAsDataURL(this.files[0]);
         }
+    };
+
+    $this.changeSelectedImage = function() {
+        $(this).addClass("active").siblings().removeClass("active");
+        $element.find("[data-imagem-multi]>.image-upload[data-target='" + $(this).data("bind") + "']").addClass("active").siblings().removeClass("active");
+        $element.find("[data-imagem-multi]>img").attr("src", $(this).attr("src") || "");
     };
 
     $this.submitForm = function() {
@@ -188,6 +198,7 @@ f4fApp.addController("CrudController", function($this, $element) {
                 type: method,
                 url: url,
                 data: JSON.stringify(formData),
+                contentType: "application/json",
                 success: function(item) {
                     $this.resetForm();
                     var template = $this.buildTemplate(item || formData);
@@ -203,7 +214,11 @@ f4fApp.addController("CrudController", function($this, $element) {
                 },
 
                 error: function(error) {
-                    f4fApp.abrirToast(error.responseJSON.result);
+                    if (error.responseJSON) {
+                        f4fApp.abrirToast(error.responseJSON.result);
+                    } else {
+                        f4fApp.abrirToast("Não foi possível completar a requisição.");
+                    }
                 }
             });
         }
@@ -236,7 +251,11 @@ f4fApp.addController("CrudController", function($this, $element) {
             },
 
             error: function(error) {
-                f4fApp.abrirToast(error.responseJSON.result);
+                if (error.responseJSON) {
+                    f4fApp.abrirToast(error.responseJSON.result);
+                } else {
+                    f4fApp.abrirToast("Não foi possível completar a requisição.");
+                }
             }
         });
     };
@@ -253,7 +272,11 @@ f4fApp.addController("CrudController", function($this, $element) {
             },
 
             error: function(error) {
-                f4fApp.abrirToast(error.responseJSON.result);
+                if (error.responseJSON) {
+                    f4fApp.abrirToast(error.responseJSON.result);
+                } else {
+                    f4fApp.abrirToast("Não foi possível completar a requisição.");
+                }
             }
         });
     };
@@ -277,7 +300,11 @@ f4fApp.addController("CrudController", function($this, $element) {
                 },
 
                 error: function(error) {
-                    f4fApp.abrirToast(error.responseJSON.result);
+                    if (error.responseJSON) {
+                        f4fApp.abrirToast(error.responseJSON.result);
+                    } else {
+                        f4fApp.abrirToast("Não foi possível completar a requisição.");
+                    }
                 }
             });
         });
@@ -288,15 +315,21 @@ f4fApp.addController("CrudController", function($this, $element) {
             type: $this.urls.list[0],
             url: $this.urls.list[1],
             success: function(items) {
-                $this.listInstance.children(".linha:not(:first)").remove();
-                items.forEach(function(item) {
-                    var template = $this.buildTemplate(item);
-                    $this.listInstance.append(template);
-                });
+                if (items && items.forEach) {
+                    $this.listInstance.children(".linha:not(:first)").remove();
+                    items.forEach(function(item) {
+                        var template = $this.buildTemplate(item);
+                        $this.listInstance.append(template);
+                    });
+                }
             },
 
             error: function(error) {
-                f4fApp.abrirToast(error.responseJSON.result);
+                if (error.responseJSON) {
+                    f4fApp.abrirToast(error.responseJSON.result);
+                } else {
+                    f4fApp.abrirToast("Não foi possível completar a requisição.");
+                }
             }
         });
     };

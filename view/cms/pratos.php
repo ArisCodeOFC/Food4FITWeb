@@ -1,15 +1,97 @@
-<div class="pratos-wrapper">
-     <div id="page-actions">
-        <a href="#" id="btn-adicionar-ingrediente">
-            <img src="../assets/images/cms/symbols/adicionar.svg" alt="Adicionar">
-            <span>Adicionar Ingrediente</span>
-        </a>
-        <a href="#" data-list-reload>
-            <img src="../assets/images/cms/symbols/recarregar.svg" alt="Recarregar">
-            <span>Recarregar Listagem</span>
-        </a>
+<?php
+    require_once("../../controller/CategoriaPratoController.class.php");
+    $categorias = CategoriaPratoController::montarSelectCategorias();
+?>
+
+<form id="form-content" class="display-none" data-crud-form>
+    <div id="form-two-sides">
+        <div id="form-left-side" class="padding-left-20px padding-right-20px">
+            <div class="form-generic">
+                <div class="form-generic-content">
+                    <h2 class="form-title margin-top-20px">Cadastrar um Prato</h2>
+                    <div class="form-column">
+                        <label for="titulo" class="label-generic">Nome do Prato:</label>
+                        <input id="titulo" name="titulo" class="input-generic" required placeholder="Digite um nome para o prato...">
+                    </div>
+                    <div class="form-column">
+                        <label for="categoria" class="label-generic">Categoria:</label>
+                        <select id="categoria" name="categoria.id" class="input-generic" required>
+                            <option disabled selected value="">Selecione uma opção</option>
+                            <?= $categorias ?>
+                        </select>
+                    </div>
+                    <div class="form-column">
+                        <label for="resumo" class="label-generic">Resumo do Prato:</label>
+                        <textarea id="resumo" name="resumo" class="textarea-generic" required placeholder="Digite um resumo para o prato..."></textarea>
+                    </div>
+                    <div class="form-column">
+                        <label for="descricao" class="label-generic">Descrição do Prato:</label>
+                        <textarea id="descricao" name="descricao" class="textarea-generic" required data-sceditor></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="form-right-side">
+            <div class="padding-top-10px">
+                <div data-imagem-upload data-imagem-multi>
+                    <img>
+                    <div class="image-upload active" data-target="foto1">
+                        <label for="foto1" class="file-label">Escolher Imagem</label>
+                        <input id="foto1" name="uploadData.foto1" type="file" accept="image/*">
+                    </div>
+                    <div class="image-upload" data-target="foto2">
+                        <label for="foto2" class="file-label">Escolher Imagem</label>
+                        <input id="foto2" name="uploadData.foto2" type="file" accept="image/*">
+                    </div>
+                    <div class="image-upload" data-target="foto3">
+                        <label for="foto3" class="file-label">Escolher Imagem</label>
+                        <input id="foto3" name="uploadData.foto3" type="file" accept="image/*">
+                    </div>
+                    <div class="image-upload" data-target="foto4">
+                        <label for="foto4" class="file-label">Escolher Imagem</label>
+                        <input id="foto4" name="uploadData.foto4" type="file" accept="image/*">
+                    </div>
+                    <div class="thumbnails">
+                        <img data-bind="foto1" class="active">
+                        <img data-bind="foto2">
+                        <img data-bind="foto3">
+                        <img data-bind="foto4">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="preco-prato">
+                    <span>Preço Total: R$ 000,00</span>
+                </div>
+                <span class="status margin-bottom-10px">Status Inicial do Prato:</span>
+                <div class="select-block">
+                    <div class="switch_box">
+                        <input type="checkbox" name="ativo" id="ativo" class="switch-styled" value="1">
+                    </div>
+                    <label for="ativo" class="padding-left-15px">Ativado/Desativado</label>
+                </div>
+                <div id="btn-save" data-form-submit>
+                    <img src="../assets/images/cms/symbols/salvar.svg" alt="Salvar">
+                    <span>Salvar</span>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="generic-grid animate fadeInUp">
+    <input type="submit" name="submit" class="display-none">
+</form>
+<div id="list-content">
+    <div class="pratos-wrapper">
+         <div id="page-actions">
+            <a href="#" id="btn-adicionar-prato">
+                <img src="../assets/images/cms/symbols/adicionar.svg" alt="Adicionar">
+                <span>Adicionar Prato</span>
+            </a>
+            <a href="#" data-list-reload>
+                <img src="../assets/images/cms/symbols/recarregar.svg" alt="Recarregar">
+                <span>Recarregar Listagem</span>
+            </a>
+        </div>
+        <div class="generic-grid animate fadeInUp">
             <?php
             for($i=1; $i < 15; $i ++ ){
 
@@ -42,5 +124,6 @@
             <?php
             }
             ?>
+        </div>
     </div>
 </div>

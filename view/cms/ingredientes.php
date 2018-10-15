@@ -2,7 +2,7 @@
     require_once("../../controller/IngredienteController.class.php");
     require_once("../../controller/CategoriaIngredienteController.class.php");
     $unidadesMedida = IngredienteController::listarUnidadesMedida();
-    $categorias = CategoriaIngredienteController::listarCategorias();
+    $categorias = CategoriaIngredienteController::montarSelectCategorias();
 ?>
 
 <form id="form-content" class="display-none" data-crud-form>
@@ -10,7 +10,7 @@
         <div id="form-left-side" class="padding-left-20px padding-right-20px">
             <div class="form-generic">
                 <div class="form-generic-content">
-                    <h2 class="form-title">Cadastrar um Ingrediente</h2>
+                    <h2 class="form-title margin-top-20px">Cadastrar um Ingrediente</h2>
                     <div class="form-row">
                         <div class="form-column form-group-6">
                             <label for="titulo" class="label-generic">Nome do Ingrediente:</label>
@@ -38,9 +38,7 @@
                             <label for="categoria" class="label-generic">Categoria:</label>
                             <select id="categoria" name="categoria.id" class="input-generic" required>
                                 <option disabled selected value="">Selecione uma opção</option>
-                                <?php foreach ($categorias as $categoria) { ?>
-                                    <option value="<?= $categoria->getId() ?>"><?= $categoria->getTitulo() ?></option>
-                                <?php } ?>
+                                <?= $categorias ?>
                             </select>
                         </div>
                     </div>
@@ -96,7 +94,7 @@
             </div>
         </div>
         <div id="form-right-side">
-            <div data-imagem-upload data-bind="foto">
+            <div class="padding-top-10px" data-imagem-upload data-bind="foto">
                 <img>
                 <label for="foto" class="file-label">Escolher Imagem</label>
                 <input id="foto" name="uploadData" type="file" accept="image/*">

@@ -32,7 +32,7 @@
             <span class="image"><img src="../assets/images/cms/icons/diario-de-bordo.svg" alt="Diário de Bordo"></span>
             <span class="label">Diário de Bordo</span>
         </a>
-        <a href="#" data-page-load="pratos" data-page-controller="PratosController">
+        <a href="#" data-page-load="pratos" data-page-controller="PratoController">
             <span class="image"><img src="../assets/images/cms/icons/pratos.svg" alt="Pratos"></span>
             <span class="label">Pratos</span>
         </a>

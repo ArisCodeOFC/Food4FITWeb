@@ -777,6 +777,15 @@ img.btn-logout:hover {
     background-color: $lightgrey;
     @include display(flex, column, space-between, null);
     box-sizing: border-box;
+    div:last-of-type {
+        .preco-prato {
+            @include display(flex, column, center, center);
+            @include bloco($width: 100%, $height: 80px);
+            >span {
+                @include texto($size: 30px, $family: "Roboto Light", $align: center);
+            }
+        }
+    }
 }
 [data-crud-controller] {
     flex-grow: 1;
@@ -787,11 +796,32 @@ img.btn-logout:hover {
     font-family: "Roboto Italic";
 }
 
-#form-right-side [data-imagem-upload] img {
+#form-right-side [data-imagem-upload]>img {
     width: 400px;
     height: 400px;
     display: block;
     margin: 0px 20px 20px 20px;
+}
+
+#form-right-side [data-imagem-upload] {
+    .image-upload {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+}
+
+#form-right-side [data-imagem-upload] .thumbnails {
+    @include display(flex, row, space-around, center);
+    margin-top: 20px;
+    img {
+        @include img-fit(85px, 85px);
+        &.active {
+            border: solid $olivine 2px;
+            box-sizing: border-box;
+        }
+    }
 }
 
 #form-right-side{

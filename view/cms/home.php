@@ -43,6 +43,7 @@
 	    <script src="../assets/js/cms/dicasfitness.controller.js"></script>
         <script src="../assets/js/cms/personalfitness.controller.js"></script>
         <script src="../assets/js/cms/faleconosco.controller.js"></script>
+        <script src="../assets/js/cms/prato.controller.js"></script>
     </head>
     <body>
         <section id="main" data-controller="HomeController">
