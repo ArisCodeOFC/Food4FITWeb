@@ -6,16 +6,12 @@
     class FaleConoscoController extends Controller{
         /* Inicializa todas as rotas que serão tratadas */
         public function init(){
-            $this->criarRota("GET", "fale_conosco", "listarTodos");
+            $this->criarRota("GET", "fale_conosco/listar", "listar");
             $this->criarRota("POST", "fale_conosco/inserir", "inserir");
-            $this->criarRota("GET", "fale_conosco/{id}", "selecionar");
-            $this->criarRota("DELETE", "fale_conosco/{id}", "excluir");
-            //$this->criarRota("DELETE", "fale_conosco/{id}", "excluirMarcados");
-        }
-
-
-        public function listarTodos(){
-
+            $this->criarRota("GET", "fale_conosco/selecionar/{id}", "selecionar");
+            $this->criarRota("DELETE", "fale_conosco/excluir/{id}", "excluir");
+            //$this->criarRota("DELETE", "fale_conosco/excluirMarcados{id}", "excluirMarcados");
+            //$this->criarRota("PUT", "fale_conosco/marcarLido{id}", "marcarLido");
         }
 
 
@@ -55,20 +51,17 @@
         }
 
 
-        public function excluirMarcados(){
+        public function excluirMarcados($id){
+            for( $i = 0; $i < $id.length; $i ++){
+                $this->api->enviarResultado(FaleConoscoController::excluir($i));
+            }
+        }
 
+
+        public static function listar() {
+            return FaleConoscoDAO::listar();
         }
     }
-
-
-//        public function listarTodos() {
-//            $this->api->enviarResultado(IngredienteController::listar());
-//        }
-//
-//
-//        public static function listar() {
-//            return IngredienteDAO::listar();
-//        }
 
 
 ?>
