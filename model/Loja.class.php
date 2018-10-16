@@ -28,10 +28,6 @@
         protected $idEndereco;
         protected $uf;
 
-        public function __construct($json = null) {
-            parent::__construct(__CLASS__, $json);
-        }
-
         public function getId(){
             return $this->id;
         }

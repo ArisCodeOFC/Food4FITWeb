@@ -10,15 +10,6 @@
         protected $texto;
         protected $ativo = true;
 
-        /*
-        * Método construtor
-        * @param $json Objeto JSON para ser lido, por padrão nulo
-        */
-        public function __construct($json = null) {
-            /* Chama o construtor da classe Model */
-            parent::__construct(__CLASS__, $json);
-        }
-
         public function getId() {
             return $this->id;
         }

@@ -24,10 +24,6 @@
         protected $categoria;
         protected $unidadeMedida;
 
-        public function __construct($json = null) {
-            parent::__construct(__CLASS__, $json);
-        }
-
         public function getType($propriedade) {
             if ($propriedade === "unidadeMedida") {
                 return UnidadeMedida::class;

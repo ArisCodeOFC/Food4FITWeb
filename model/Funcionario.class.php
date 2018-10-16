@@ -18,15 +18,6 @@
         protected $avatar;
 
         /*
-        * Método construtor
-        * @param $json Objeto JSON para ser lido, por padrão nulo
-        */
-        public function __construct($json = null) {
-            /* Chama o construtor da classe Model */
-            parent::__construct(__CLASS__, $json);
-        }
-
-        /*
         * Pega as inicias do nome do funcionário
         * @return string Primeira letra do nome e do último nome caso exista
         */

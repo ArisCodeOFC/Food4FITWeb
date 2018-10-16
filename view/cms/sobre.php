@@ -42,9 +42,7 @@
         </div>
         <div data-crud-template>
             <div class="linha" data-param-id="${id}">
-                <div class="coluna image-large">
-                    <img src="../${foto}" alt="${titulo}">
-                </div>
+                <img src="../${foto}" alt="${titulo}">
                 <div class="coluna middle-align medium"><span>${titulo}</span></div>
                 <div class="coluna descricao large">
                     <div>

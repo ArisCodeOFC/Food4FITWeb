@@ -25,37 +25,25 @@
 
         /* Método contrutor */
         public function __construct() {
-            /* Desabilita a proteção CORS e diz que o resultado da resposta será um JSON */
-            header("Access-Control-Allow-Orgin: *");
-            header("Access-Control-Allow-Methods: *");
-            //error_reporting(0);
-
             /* Pega a url da requisição que foi mandada pelo arquivo .htaccess */
-            if (isset($_REQUEST["request"])) {
-                $this->url = $_REQUEST["request"];
+            if (isset($_GET["request"])) {
+                $this->url = $_GET["request"];
 
                 /* Define qual é o método HTTP que está sendo utilizado no momento */
                 $this->metodo = $_SERVER["REQUEST_METHOD"];
-                if ($this->metodo == "POST" && array_key_exists("HTTP_X_HTTP_METHOD", $_SERVER)) {
-                    if ($_SERVER["HTTP_X_HTTP_METHOD"] == "DELETE") {
-                        $this->metodo = "DELETE";
-                    } else if ($_SERVER["HTTP_X_HTTP_METHOD"] == "PUT") {
-                        $this->metodo = "PUT";
-                    } else {
-                        $this->enviarStatus(405, "Metodo não autorizado");
-                        return;
-                    }
-                }
 
                 /* Verfica se o método da requsição é autorizado pela API e decodifica os dados recebidos em formato JSON (ou via URL caso a requisição seja em GET) */
                 if ($this->metodo == "POST" || $this->metodo == "PUT" || $this->metodo == "DELETE") {
+                    /* Verfica se os dados que foram enviados é um JSON */
                     if (json_decode(file_get_contents("php://input"))) {
                         $this->dados = json_decode(file_get_contents("php://input"));
                     } else {
+                        /* Transforma $_POST em um objeto do PHP */
                         $this->dados = (object) $_POST;
                     }
 
                 } else if ($this->metodo == "GET") {
+                    /* Transforma $_GET em um objeto do PHP */
                     $this->dados = (object) $_GET;
                 } else {
                     $this->enviarStatus(405, "Metodo não autorizado");
@@ -95,33 +83,36 @@
             echo(preg_replace("/,\s*\"[^\"]+\":null|\"[^\"]+\":null,?/", "", json_encode($resultado, JSON_UNESCAPED_UNICODE)));
         }
 
+
         /*
         * Cria uma rota para ser tratada pela api
         * @param $metodo método HTTP que será tratado por esta rota (GET, POST, PUT, DELETE),
-        * @param $rota a rota a ser tratada pela api (Exemplo: "usuarios/{idUsuario}/tarefas/{idTarefas}")
+        * @param $rota a rota a ser tratada pela api (Exemplo: "usuarios/{idUsuario}/tarefas/{idTarefa}")
         * @param $funcao uma função que será executada caso a rota esteja correta
         */
         public function criarRota($metodo, $rota, $funcao) {
-            /* Verifica se o método HTTP requisitado pela rota é o mesmo que foi recebido */
+            /* Verifica a API ainda não teve sucesso e se o método HTTP requisitado pela rota é o mesmo que foi recebido */
             if (!$this->sucesso && $metodo == $this->metodo) {
+
+                /* Substitui / por \\/ na rota */
+                $rota = str_replace("/", "\\/", $rota);
+
+                /* Substitui qualquer coisa que esteja entre {} por uma expressão regular que o PHP consiga capturar */
+                $rota = preg_replace("/\{(\w+)\}/", "(\w+)", $rota);
+
                 /* Cria uma expressão regular para procurar os parâmetros da url entre {} */
-                $regex = "/^" . str_replace("/", "\\/", preg_replace("/\{(\w+)\}/", "(?P<$1>\w+)", $rota)) . "\/{0,}$/";
+                $regex = "/^" . $rota . "$/";
+
                 /* Joga os parâmetros da url em um array */
                 preg_match($regex, $this->url, $resultado);
+
                 /* Verifica se a rota consiste com a requisição do usuário */
                 if (!empty($resultado)) {
-                    /* Remove os indíces numéricos do resultado da expressão regular, deixando apenas os parâmetros da url */
-                    foreach (range(0, floor(count($resultado) / 2)) as $index) {
-                        unset($resultado[$index]);
-                    }
+                    /* Remove o primeiro índice do resultado */
+                    array_shift($resultado);
 
-                    /* Chama a função, passando o resultado da expressão regular como parâmetros para a função */
-                    try {
-                        call_user_func_array($funcao, $resultado);
-                    } catch (PDOException $erro) {
-                        /* Caso algum erro de banco de dados tenha acontecido durante a execução, ele é interceptado e o cliente recebe um status de erro 500 */
-                        $this->enviarStatus(500, "Erro no banco de dados. " . (count($erro->errorInfo) >= 3 ? $erro->errorInfo[2] : $erro->getMessage()));
-                    }
+                    /* Chama a função, passando o resultado da expressão regular como parâmetros */
+                    call_user_func_array($funcao, $resultado);
 
                     /* Define que a API foi executada com sucesso */
                     $this->sucesso = true;
@@ -133,17 +124,18 @@
         public function inicializar() {
             /* Faz um loop em todas as classes PHP */
             foreach (get_declared_classes() as $nomeClasse) {
-                /* Verifica se a classe implementa a interface "InterfaceAPI" */
+                /* Verifica se a classe extende a classe "Controller" */
                 if (in_array("Controller", class_parents($nomeClasse))) {
-                    /* Cria uma nova instância da classe e inicializa ela */
+                    /* Cria uma nova instância da classe */
                     $classe = new $nomeClasse($this);
+                    /* Chama o método init dessa nova classe */
                     $classe->init();
                 }
             }
 
-            /* Caso nenhuma rota tenha sido encontrada, retorna um erro 404 */
+            /* Caso nenhuma rota tenha sido encontrada, retorna uma mensagem */
             if (!$this->sucesso) {
-                $this->enviarStatus(404, "Rota não encontrada");
+                $this->enviarResultado(array("erro" => "Rota não encontrada"));
             }
         }
     }

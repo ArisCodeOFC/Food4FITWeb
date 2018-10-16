@@ -10,7 +10,7 @@
         * @param $classe Classe modelo que o json será descarregado (__CLASS no escopo de uma classe modelo)
         * @param $dados Array de dados para serem descarregados na classe
         */
-        public function __construct($classe, $array = null) {
+        public function __construct($array = null) {
             // Verifica se o array não é nulo
             if ($array) {
                 if (gettype($array) === "array") {
@@ -20,7 +20,7 @@
                 // Faz um loop em todas as propriedades do array
                 foreach ($array as $propriedade => $valor) {
                     // Verifica se o mesmo nome da propriedade do array existe na classe modelo
-                    if (property_exists($classe, $propriedade)) {
+                    if (property_exists($this, $propriedade)) {
                         $type = $this->getType($propriedade);
                         if ($type) {
                             $this->{$propriedade} = new $type($valor);
